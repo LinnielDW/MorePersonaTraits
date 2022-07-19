@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <WeaponTraitDef>
+        <defName>MPT_ResearchBonus</defName>
+        <label>insightful</label>
+        <description>This weapon's persona speaks long forgotten truths to its wielder. The wielder gains extra research speed so long as the weapon is held.</description>
+        <commonality>0.8</commonality>
+        <equippedStatOffsets>
+            <ResearchSpeed>0.2</ResearchSpeed>
+        </equippedStatOffsets>
+        <marketValueOffset>700</marketValueOffset>
+        <exclusionTags>
+            <li>MPT_ResearchBonus</li>
+        </exclusionTags>
+    </WeaponTraitDef>
+</Defs>
