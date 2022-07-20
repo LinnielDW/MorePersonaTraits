@@ -17,7 +17,7 @@
         </exclusionTags>
     </WeaponTraitDef>
     <HediffDef>
-        <defName>MPT_HediffResearchUpf</defName>
+        <defName>MPT_HediffResearchUp</defName>
         <label>psychic truth</label>
         <description>Research speed is increased by the assistance of a bonded weapon.</description>
         <isBad>false</isBad>
@@ -32,7 +32,7 @@
 
 
     <WeaponTraitDef>
-        <defName>MPT_BondedResearchUp</defName>
+        <defName>MPT_BondedResearchDown</defName>
         <label>rambling</label>
         <description>This persona constantly rambles useless distractions into their bond's mind. The bonded pawn takes
             a -15% hit to their research speed so long as the bond holds.
@@ -44,7 +44,7 @@
         </bondedHediffs>
         <exclusionTags>
             <li>MPT_ResearchOffset</li>
-            <li><li>NeverBond</li></li>
+            <li>NeverBond</li>
         </exclusionTags>
     </WeaponTraitDef>
     <HediffDef>
