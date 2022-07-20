@@ -40,6 +40,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MorePersonaTraits.cs" />
+    <Compile Include="MorePersonaTraitsWeaponTraitExtension.cs" />
+    <Compile Include="OnHitWorker.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
