@@ -42,6 +42,13 @@
     <Compile Include="MorePersonaTraits.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Templates\BonusFields\statOffsets.txt" />
+    <Content Include="Templates\Examples\BondedTemplate.xml" />
+    <Content Include="Templates\Examples\HeldTemplate.xml" />
+    <Content Include="Templates\README.md" />
+    <Content Include="Templates\WeaponTraitOutline.xml" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 
   <Target Name="CopyCustomContent" AfterTargets="AfterBuild">

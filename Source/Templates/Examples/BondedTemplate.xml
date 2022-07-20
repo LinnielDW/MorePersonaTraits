@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <WeaponTraitDef>
+        <defName>MPT_BondedTemplate</defName>
+        <label>bonded_trait_template</label>
+        <description>This weapon shouldn't have this trait as this is a template. This effect is persistant to the bonded pawn so long as they are bound to this weapon.</description>
+        <commonality>0.0</commonality>
+        <bondedHediffs>
+            <li>MPT_BondedHediffStatOffsetTemplate</li>
+        </bondedHediffs>
+        <marketValueOffset>-0</marketValueOffset>
+        <exclusionTags>
+            <li>MPT_Template</li>
+        </exclusionTags>
+    </WeaponTraitDef>
+    
+    <HediffDef>
+        <defName>MPT_BondedHediffStatOffsetTemplate</defName>
+        <label>bonded_hediff_statoffset_template</label>
+        <description>This hediff should nver appear on a pawn as this is a template. This hediff is caused by being bonded to a persona and will persist so long as the bond does.</description>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statOffsets>
+                    <ResearchSpeed>0.0</ResearchSpeed>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+</Defs>
