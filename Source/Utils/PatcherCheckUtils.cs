@@ -17,7 +17,7 @@ namespace MorePersonaTraits.Utils
             }
             catch
             {
-                // Log.Warning("Persona Weapon does not have any traits with on-hit effects.");
+                // Log.Warning("Equipment is not a persona weapon or does not have any persona traits with on-hit effects.");
                 return false;
             }
         }
