@@ -8,7 +8,7 @@ namespace MorePersonaTraits.Utils
 {
     public class DebugUtils
     {
-        [DebugAction("Spawning", "SpawnPersonaWeapon", true, false, allowedGameStates = AllowedGameStates.PlayingOnMap)]
+        [DebugAction("Spawning", "[MPT] SpawnPersonaWeapon", true, false, allowedGameStates = AllowedGameStates.PlayingOnMap)]
         private static void SpawnPersonaWeapon()
         {
             List<DebugMenuOption> list = new List<DebugMenuOption>();
