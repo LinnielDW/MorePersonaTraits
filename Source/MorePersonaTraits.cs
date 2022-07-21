@@ -1,4 +1,5 @@
-﻿using System;
+﻿using System.Reflection;
+using HarmonyLib;
 using Verse;
 
 namespace MorePersonaTraits
@@ -7,7 +8,8 @@ namespace MorePersonaTraits
     {
         public MorePersonaTraits(ModContentPack content) : base(content)
         {
-
+            var harmony = new Harmony("com.arquebus.rimworld.mod.morepersonatraits");
+            harmony.PatchAll(Assembly.GetExecutingAssembly());
         }
     }
 }
