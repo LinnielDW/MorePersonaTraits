@@ -40,12 +40,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Extensions\MorePersonaTraitsWeaponTraitExtension.cs" />
+    <Compile Include="Extensions\WeaponTraitOnHitExtension.cs" />
     <Compile Include="OnHitWorkerClasses\OnHitWorker.cs" />
-    <Compile Include="OnHitWorkerClasses\OnHitWorker_Test.cs" />
     <Compile Include="Patches\PatchOnDamage.cs" />
     <Compile Include="MorePersonaTraits.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Templates\OnHitWorker_Template.cs" />
     <Compile Include="Utils\PatcherCheckUtils.cs" />
     <Compile Include="Utils\OnHitUtils.cs" />
   </ItemGroup>
@@ -53,8 +53,9 @@
     <Content Include="Templates\BonusFields\statOffsets.txt" />
     <Content Include="Templates\Examples\BondedTemplate.xml" />
     <Content Include="Templates\Examples\HeldTemplate.xml" />
+    <Content Include="Templates\Examples\OnHitTemplate.xml" />
     <Content Include="Templates\README.md" />
-    <Content Include="Templates\WeaponTraitOutline.xml" />
+    <Content Include="Templates\WeaponTraitTemplateExplaination.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 

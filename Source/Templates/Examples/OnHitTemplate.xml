@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <WeaponTraitDef>
+        <defName>MPT_OnHitTemplate</defName>
+        <label>onhit_trait_template</label>
+        <description>This weapon shouldn't have this trait as this is a template. This effect has a chance of happening when you deal damage with this weapon.</description>
+        <commonality>0.0</commonality>
+        <marketValueOffset>0</marketValueOffset>
+        <exclusionTags>
+            <li>MPT_Template</li>
+        </exclusionTags>
+        <modExtensions>
+            <li Class="MorePersonaTraits.WeaponTraitOnHitExtension">
+                <OnHitWorkerClass>MorePersonaTraits.Templates.OnHitWorker_Template</OnHitWorkerClass>
+                <ProcChance>0.0</ProcChance>
+                <ProcMagnitude>0.0</ProcMagnitude>
+            </li>
+        </modExtensions>
+    </WeaponTraitDef>
+</Defs>

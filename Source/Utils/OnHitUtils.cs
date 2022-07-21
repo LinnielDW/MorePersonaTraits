@@ -6,7 +6,7 @@ namespace MorePersonaTraits.Utils
 {
     public static class OnHitUtils
     {
-        public static void applyOnHitEffects(List<MorePersonaTraitsWeaponTraitExtension> onHitExtensions,
+        public static void applyOnHitEffects(List<WeaponTraitOnHitExtension> onHitExtensions,
             Thing targetThing, Thing originThing)
         {
             foreach (var extension in onHitExtensions)

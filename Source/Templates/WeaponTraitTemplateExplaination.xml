@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <!--Base field. Each WeaponTraitDef will be its own trait ingame-->
+    <WeaponTraitDef>
+        <!--Unique identifier-->
+        <defName>MPT_HeldTemplate</defName>
+        <!--name ingame-->
+        <label>held_trait_template</label>
+        <!--ingame description (onhover)-->
+        <description>This weapon shouldn't have this trait as this is a template. This effect will last for as long as
+            the weapon is held.
+        </description>
+        <!--Rarity multiplier. Accepts decimals. 1 is normal rarity, 0 will never spawn-->
+        <commonality>0.0</commonality>
+        <!-- Silver trade value change. Accepts positive and negative whole number values -->
+        <marketValueOffset>0</marketValueOffset>
+        <!-- A list of tags to create trait exclusivity. When a trait is spawned on a weapon, if another trait is added, the new trait cannot have the same exclusion tag.
+            These tags work as 'magic strings' and don't need to be declared elsewhere. -->
+        <exclusionTags>
+            <li>MPT_Template</li>
+        </exclusionTags>
+
+        <!-- Optional field. A list of stat modifiers that will only be conveyed when the item is in the active equip slot. -->
+        <!-- The offsets are represented as a key value pair where the key is the container field (in this example ResearchSpeed) and the numeric value is what is inside. Accepts positive and negative decimal values.-->
+        <equippedStatOffsets>
+            <ResearchSpeed>0.0</ResearchSpeed>
+        </equippedStatOffsets>
+
+        <!-- Optional field. A list of heddifs to be applied to the bondded pawn. These heddifs will be present for as long as there is a bond between weapon and pawn. -->
+        <!-- Connected Hediff is missing in this example. See BondedTemplate.xml for connected hediff. -->
+        <!-- For consistancy, the NeverBond exclusionTag should be used with such weapons. -->
+        <bondedHediffs>
+            <li>MPT_BondedHediffStatOffsetTemplate</li>
+        </bondedHediffs>
+
+        <!-- Optional field. Contains a list of all Extension fields that the mod may need. -->
+        <modExtensions>
+            <!-- A container for the data for On-Hit functionality uses. -->
+            <!-- Note: If you wish to use this functionality, you must keep this class name the same. -->
+            <li Class="MorePersonaTraits.Templates.WeaponTraitOnHitExtension">
+                <!-- The .cs file used to store the logic of the OnHit effect. Note the use of namespace prefix. For an example of the worker, see OnHitWorker_Template.cs -->
+                <OnHitWorkerClass>MorePersonaTraits.OnHitWorker_Template</OnHitWorkerClass>
+                <!-- Chance the effect will happen. 0 for never, 1 for always. Default is 0 -->
+                <ProcChance>0.0</ProcChance>
+                <!-- The strength of the effect. Default is 0 -->
+                <ProcMagnitude>0.0</ProcMagnitude>
+            </li>
+        </modExtensions>
+    </WeaponTraitDef>
+
+</Defs>
