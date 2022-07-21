@@ -57,16 +57,19 @@
         </stages>
     </HediffDef>
     
-<!--    <WeaponTraitDef>-->
-<!--        <defName>MPT_OnHitWorkerTest</defName>-->
-<!--        <label>onhit-test</label>-->
-<!--        <description>onhit worker test</description>-->
-<!--        <commonality>5</commonality>-->
-<!--        <modExtensions>-->
-<!--            <li Class="MorePersonaTraits.WeaponTraitOnHitExtension">-->
-<!--                <OnHitWorkerClass>MorePersonaTraits.OnHitWorker_Template</OnHitWorkerClass>-->
-<!--            </li>-->
-<!--        </modExtensions>-->
-<!--    </WeaponTraitDef>-->
+    <WeaponTraitDef>
+        <defName>MPT_OnHitPlague</defName>
+        <label>plague bringer</label>
+        <description>This weapon revels in the art of slow and agonizing death. Upon hitting a target, has a 35% chance to apply/increase the target's plague by 15%.</description>
+        <commonality>5</commonality>
+        <modExtensions>
+            <li Class="MorePersonaTraits.Extensions.WeaponTraitOnHitExtension">
+                <OnHitWorkerClass>MorePersonaTraits.OnHitWorkerClasses.OnHitWorker_ApplyHediffOnTarget</OnHitWorkerClass>
+                <TargetThingHediff>Plague</TargetThingHediff>
+                <ProcMagnitude>0.15</ProcMagnitude>
+                <ProcChance>0.35</ProcChance>
+            </li>
+        </modExtensions>
+    </WeaponTraitDef>
 
 </Defs>
