@@ -17,7 +17,7 @@
     <HediffDef>
         <defName>MPT_HediffResearchUp</defName>
         <label>psychic truth</label>
-        <description>Research speed is increased by the assistance of a bonded weapon.</description>
+        <description>Research speed is increased by my bonded weapon.</description>
         <isBad>false</isBad>
         <stages>
             <li>
@@ -45,7 +45,7 @@
     <HediffDef>
         <defName>MPT_HediffResearchDown</defName>
         <label>psychic mental derailment</label>
-        <description>Research speed is decreased by the pressence of a bonded weapon.</description>
+        <description>Research speed is decreased by my bonded weapon.</description>
         <isBad>false</isBad>
         <stages>
             <li>
