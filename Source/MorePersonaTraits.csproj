@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="Extensions\WeaponTraitOnHitExtension.cs" />
     <Compile Include="OnHitWorkerClasses\OnHitWorker.cs" />
+    <Compile Include="OnHitWorkerClasses\OnHitWorker_ApplyHediffOnTarget.cs" />
     <Compile Include="Patches\PatchOnDamage.cs" />
     <Compile Include="MorePersonaTraits.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
