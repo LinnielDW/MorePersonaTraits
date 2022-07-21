@@ -5,6 +5,8 @@ using Verse;
 
 namespace MorePersonaTraits.Patches
 {
+    //Implementation directly inspired by alattalatta's bullet patch implementation in Infusion 2. 
+    //Not sure if will use it, but will keep it around for now.
     [HarmonyPatch(typeof(Bullet))]
     [HarmonyPatch("Impact")]
     public static class PatchOnDamageBullet
@@ -12,7 +14,6 @@ namespace MorePersonaTraits.Patches
         static void Postfix(Thing hitThing, Bullet __instance)
         {
             //TODO: check if this works on proj weapons
-
             var primary = ((Pawn) __instance.Launcher).equipment.Primary;
             if (PatcherCheckUtils.hasOnHitWorker(primary))
             {
