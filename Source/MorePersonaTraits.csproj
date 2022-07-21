@@ -20,6 +20,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
+    <BaseIntermediateOutputPath>..\obj\</BaseIntermediateOutputPath>
     <ModLocation>D:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\MorePersonaTraits</ModLocation>
   </PropertyGroup>
   <ItemGroup>
