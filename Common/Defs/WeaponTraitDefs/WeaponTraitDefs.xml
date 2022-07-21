@@ -3,7 +3,7 @@
     <WeaponTraitDef>
         <defName>MPT_BondedResearchUp</defName>
         <label>insightful</label>
-        <description>This persona speaks long forgotten truths to its bond. The person bonded to it gains extra research speed so long as they are bonded.</description>
+        <description>This weapon's persona speaks long forgotten truths to its bond. The person bonded to it gains extra research speed so long as they are bonded.</description>
         <commonality>0.5</commonality>
         <marketValueOffset>700</marketValueOffset>
         <bondedHediffs>
@@ -32,7 +32,7 @@
     <WeaponTraitDef>
         <defName>MPT_BondedResearchDown</defName>
         <label>rambling</label>
-        <description>This persona constantly rambles useless distractions into their bond's mind. The bonded pawn takes a -15% hit to their research speed so long as the bond holds.</description>
+        <description>This weapon's persona constantly rambles useless distractions into their bond's mind. The bonded pawn takes a -15% hit to their research speed so long as the bond holds.</description>
         <commonality>0.5</commonality>
         <marketValueOffset>-700</marketValueOffset>
         <bondedHediffs>
