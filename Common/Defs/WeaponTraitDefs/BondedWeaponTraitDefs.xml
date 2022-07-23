@@ -83,4 +83,32 @@
             </li>
         </stages>
     </HediffDef>
+    
+    <WeaponTraitDef>
+        <defName>MPT_BondedGlobalWorkspeedDown</defName>
+        <label>slacking</label>
+        <description>This weapon's persona seeks to 'conserve the high energy state of the universe' by resisting energy state changes made willingly by its boonded. The bonded pawn loses 40% global work speed.</description>
+        <bondedHediffs>
+            <li>MPT_HediffGlobalWorkspeedDown</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_BondedGlobalWorkspeed</li>
+            <li>NeverBond</li>
+        </exclusionTags>
+        <commonality>0.25</commonality>
+        <marketValueOffset>-1000</marketValueOffset>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_HediffGlobalWorkspeedDown</defName>
+        <label>psychic energy state change inhibitor</label>
+        <description>My global work speed is decreased by my bonded weapon.</description>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statOffsets>
+                    <WorkSpeedGlobal>-0.4</WorkSpeedGlobal>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
 </Defs>
