@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <WeaponTraitDef>
+        <defName>MPT_HeldMeleeHitChanceUp</defName>
+        <label>conclusive</label>
+        <description>This weapon has better things to be doing than being waved at things and thus seeks to end fights quickly. While held, it provides its wielder with an increased chance to hit their target.</description>
+        <commonality>0.5</commonality>
+        <marketValueOffset>400</marketValueOffset>
+        <equippedStatOffsets>
+            <MeleeHitChance>3</MeleeHitChance>
+        </equippedStatOffsets>
+        <exclusionTags>
+            <li>MPT_HeldMeleeHitChance</li>
+        </exclusionTags>
+    </WeaponTraitDef>
+</Defs>
