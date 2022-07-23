@@ -3,7 +3,7 @@
     <WeaponTraitDef>
         <defName>MPT_HeldMeleeHitChanceUp</defName>
         <label>conclusive</label>
-        <description>This weapon has better things to be doing than being waved at things and thus seeks to end fights quickly. While held, it provides its wielder with an increased chance to hit their target.</description>
+        <description>This weapon's persona has better things to be doing than being used to wave at things and thus seeks to end fights quickly. While held, it provides its wielder with an increased chance to hit their target.</description>
         <commonality>0.5</commonality>
         <marketValueOffset>400</marketValueOffset>
         <equippedStatOffsets>
