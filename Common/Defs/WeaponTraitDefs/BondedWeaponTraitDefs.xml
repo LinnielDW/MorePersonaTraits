@@ -57,19 +57,30 @@
     </HediffDef>
     
     <WeaponTraitDef>
-        <defName>MPT_OnHitPlague</defName>
-        <label>plague bringer</label>
-        <description>This weapon revels in the art of slow and agonizing death. Upon hitting a target, has a 35% chance to apply/increase the target's plague by 15%.</description>
-        <commonality>0.5</commonality>
-        <marketValueOffset>500</marketValueOffset>
-        <modExtensions>
-            <li Class="MorePersonaTraits.Extensions.WeaponTraitOnHitExtension">
-                <OnHitWorkerClass>MorePersonaTraits.OnHitWorkerClasses.OnHitWorker_ApplyHediffOnTarget</OnHitWorkerClass>
-                <TargetThingHediff>Plague</TargetThingHediff>
-                <ProcMagnitude>0.15</ProcMagnitude>
-                <ProcChance>0.35</ProcChance>
-            </li>
-        </modExtensions>
+        <defName>MPT_BondedGlobalWorkspeedUp</defName>
+        <label>driven</label>
+        <description>This weapon's persona fills it's bond with energy, driving it forward. The bonded pawn gains a 40% increase to global work speed.</description>
+        <bondedHediffs>
+            <li>MPT_HediffGlobalWorkspeedUp</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_BondedGlobalWorkspeed</li>
+            <li>NeverBond</li>
+        </exclusionTags>
+        <commonality>0.25</commonality>
+        <marketValueOffset>1000</marketValueOffset>
     </WeaponTraitDef>
-
+    <HediffDef>
+        <defName>MPT_HediffGlobalWorkspeedUp</defName>
+        <label>psychic work drive</label>
+        <description>My global work speed is increased by my bonded weapon.</description>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statOffsets>
+                    <WorkSpeedGlobal>0.4</WorkSpeedGlobal>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
 </Defs>
