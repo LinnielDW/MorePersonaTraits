@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using RimWorld;
 using Verse;
@@ -8,7 +7,7 @@ namespace MorePersonaTraits.Utils
 {
     public class DebugUtils
     {
-        [DebugAction("Spawning", "[MPT] SpawnPersonaWeapon", true, false, allowedGameStates = AllowedGameStates.PlayingOnMap)]
+        [DebugAction("Spawning", "[MPT] SpawnPersonaWeapon", true, allowedGameStates = AllowedGameStates.PlayingOnMap)]
         private static void SpawnPersonaWeapon()
         {
             List<DebugMenuOption> list = new List<DebugMenuOption>();
@@ -20,11 +19,11 @@ namespace MorePersonaTraits.Utils
                 orderby d.defName
                 select d)
             {
-                list.Add(new DebugMenuOption(localDef.defName, DebugMenuOptionMode.Action, delegate()
-                {
-                    // DebugThingPlaceHelper.DebugSpawn(localDef, UI.MouseCell(), -1, false, null);
-                    Find.WindowStack.Add(new Dialog_DebugOptionListLister(ChooseWeaponTraits(localDef)));
-                }));
+                list.Add(new DebugMenuOption(localDef.defName, DebugMenuOptionMode.Action,
+                    delegate
+                    {
+                        Find.WindowStack.Add(new Dialog_DebugOptionListLister(ChooseWeaponTraits(localDef)));
+                    }));
             }
 
             Find.WindowStack.Add(new Dialog_DebugOptionListLister(list));
@@ -32,15 +31,12 @@ namespace MorePersonaTraits.Utils
 
         private static List<DebugMenuOption> ChooseWeaponTraits(ThingDef localDef)
         {
-            List<DebugMenuOption> list = new List<DebugMenuOption>();
+            var list = new List<DebugMenuOption>();
 
-            foreach (WeaponTraitDef weaponTraitDef in DefDatabase<WeaponTraitDef>.AllDefsListForReading)
+            foreach (var weaponTraitDef in DefDatabase<WeaponTraitDef>.AllDefsListForReading)
             {
                 list.Add(new DebugMenuOption(weaponTraitDef.defName, DebugMenuOptionMode.Tool,
-                    delegate()
-                    {
-                        DebugSpawnPersonaWeapon(localDef, weaponTraitDef, UI.MouseCell(), -1, false, null);
-                    }));
+                    delegate { DebugSpawnPersonaWeapon(localDef, weaponTraitDef, UI.MouseCell(), -1, false, null); }));
             }
 
             return list;
@@ -56,25 +52,24 @@ namespace MorePersonaTraits.Utils
         {
             if (stackCount <= 0)
                 stackCount = def.stackLimit;
-            ThingDef stuff = GenStuff.RandomStuffFor(def);
-            Thing thing = ThingMaker.MakeThing(def, stuff);
-            if (thingStyleDef != null)
-                thing.StyleDef = thingStyleDef;
-            thing.TryGetComp<CompQuality>()?.SetQuality(QualityUtility.GenerateQualityRandomEqualChance(),
-                ArtGenerationContext.Colony);
-            if (thing.def.Minifiable)
-                thing = (Thing) thing.MakeMinified();
-            thing.stackCount = stackCount;
 
-            thing.TryGetComp<CompBladelinkWeapon>()?.TraitsListForReading.Clear();
-            thing.TryGetComp<CompBladelinkWeapon>()?.TraitsListForReading.Add(weaponTraitDef);
+            var personaWeaponThing = ThingMaker.MakeThing(def, GenStuff.RandomStuffFor(def));
+
+            if (thingStyleDef != null)
+                personaWeaponThing.StyleDef = thingStyleDef;
+            personaWeaponThing.TryGetComp<CompQuality>()?.SetQuality(QualityUtility.GenerateQualityRandomEqualChance(),
+                ArtGenerationContext.Colony);
+            if (personaWeaponThing.def.Minifiable)
+                personaWeaponThing = personaWeaponThing.MakeMinified();
+            personaWeaponThing.stackCount = stackCount;
+
+            personaWeaponThing.TryGetComp<CompBladelinkWeapon>()?.TraitsListForReading.Clear();
+            personaWeaponThing.TryGetComp<CompBladelinkWeapon>()?.TraitsListForReading.Add(weaponTraitDef);
 
             if (direct)
-                GenPlace.TryPlaceThing(thing, c, Find.CurrentMap, ThingPlaceMode.Direct, (Action<Thing, int>) null,
-                    (Predicate<IntVec3>) null, new Rot4());
+                GenPlace.TryPlaceThing(personaWeaponThing, c, Find.CurrentMap, ThingPlaceMode.Direct);
             else
-                GenPlace.TryPlaceThing(thing, c, Find.CurrentMap, ThingPlaceMode.Near, (Action<Thing, int>) null,
-                    (Predicate<IntVec3>) null, new Rot4());
+                GenPlace.TryPlaceThing(personaWeaponThing, c, Find.CurrentMap, ThingPlaceMode.Near);
         }
     }
 }
