@@ -5,7 +5,7 @@
         <label>insightful</label>
         <description>This weapon's persona speaks long forgotten truths to its bond. The person bonded to it gains extra research speed so long as they are bonded.</description>
         <commonality>0.5</commonality>
-        <marketValueOffset>700</marketValueOffset>
+        <marketValueOffset>500</marketValueOffset>
         <bondedHediffs>
             <li>MPT_HediffResearchUp</li>
         </bondedHediffs>
@@ -33,7 +33,7 @@
         <label>rambling</label>
         <description>This weapon's persona constantly rambles useless distractions into their bond's mind. The bonded pawn takes a -15% hit to their research speed so long as the bond holds.</description>
         <commonality>0.5</commonality>
-        <marketValueOffset>-700</marketValueOffset>
+        <marketValueOffset>-500</marketValueOffset>
         <bondedHediffs>
             <li>MPT_HediffResearchDown</li>
         </bondedHediffs>
