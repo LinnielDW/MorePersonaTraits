@@ -37,6 +37,12 @@
       <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\UnityEngine.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <CommonFiles Update="..\Common\Defs\WeaponTraitDefs\OnHitWeaponTraitDefs.xml">
+      <Link>WeaponTraitDefs\OnHitWeaponTraitDefs</Link>
+    </CommonFiles>
+    <CommonFiles Update="..\Common\Defs\WeaponTraitDefs\HeldWeaponTraitDefs.xml">
+      <Link>WeaponTraitDefs\HeldWeaponTraitDefs.xml</Link>
+    </CommonFiles>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Extensions\WeaponTraitOnHitExtension.cs" />
