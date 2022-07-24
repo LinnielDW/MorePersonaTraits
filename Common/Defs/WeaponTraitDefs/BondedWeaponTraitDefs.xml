@@ -302,7 +302,7 @@
         <stages>
             <li>
                 <statOffsets>
-                    <SurgerySuccessChanceFactor>0.25</SurgerySuccessChanceFactor>
+                    <RestRateMultiplier>0.25</RestRateMultiplier>
                 </statOffsets>
             </li>
         </stages>
@@ -330,7 +330,7 @@
         <stages>
             <li>
                 <statOffsets>
-                    <SurgerySuccessChanceFactor>-0.25</SurgerySuccessChanceFactor>
+                    <RestRateMultiplier>-0.25</RestRateMultiplier>
                 </statOffsets>
             </li>
         </stages>
