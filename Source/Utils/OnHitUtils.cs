@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using MorePersonaTraits.Extensions;
 using Verse;
 
@@ -6,7 +6,7 @@ namespace MorePersonaTraits.Utils
 {
     public static class OnHitUtils
     {
-        public static void applyOnHitEffects(List<WeaponTraitOnHitExtension> onHitExtensions,
+        public static void attemptApplyOnHitEffects(List<WeaponTraitOnHitExtension> onHitExtensions,
             Thing targetThing, Thing originThing)
         {
             float rand = Rand.Value;

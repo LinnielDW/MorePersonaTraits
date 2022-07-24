@@ -13,7 +13,7 @@ namespace MorePersonaTraits.Patches
         {
             if (PatcherCheckUtils.hasOnHitWorker(__instance.EquipmentSource))
             {
-                OnHitUtils.applyOnHitEffects(
+                OnHitUtils.attemptApplyOnHitEffects(
                     PatcherCheckUtils.getOnHitExtensions(__instance.EquipmentSource),
                     target.Thing,
                     __instance.CasterPawn
