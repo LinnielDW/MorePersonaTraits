@@ -52,3 +52,5 @@ MiningYield,
 AnimalProductsSellImprovement,
 PruningSpeed,
 HungerRateMultiplier
+
+//TODO: investigate stages tags in hediffdef and capacity offsets
