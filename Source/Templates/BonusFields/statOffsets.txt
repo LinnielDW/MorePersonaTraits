@@ -3,7 +3,7 @@ WorkSpeedGlobal,
 MeditationFocusGain,
 MoveSpeed,
 ShootingAccuracyPawn,
-TradePriceImprovement,ó
+TradePriceImprovement,
 WorkToBuild,
 Comfort,
 SurgerySuccessChanceFactor,
