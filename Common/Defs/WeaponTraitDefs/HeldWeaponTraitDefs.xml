@@ -13,4 +13,36 @@
             <li>MPT_HeldMeleeHitChance</li>
         </exclusionTags>
     </WeaponTraitDef>
+    
+    <WeaponTraitDef>
+        <defName>MPT_HeldArmorRatingUp</defName>
+        <label>non-newtonian</label>
+        <description>This weapon's persona subtly modifies the atoms near the wearer's skin increasing their attenuation to knetic energy before impact. While held, it provides its wielder with increased armor rating.</description>
+        <commonality>0.5</commonality>
+        <marketValueOffset>400</marketValueOffset>
+        <equippedStatOffsets>
+            <ArmorRating_Sharp>0.17</ArmorRating_Sharp>
+            <ArmorRating_Blunt>0.05</ArmorRating_Blunt>
+            <ArmorRating_Heat>0.15</ArmorRating_Heat>
+        </equippedStatOffsets>
+        <exclusionTags>
+            <li>MPT_HeldArmorRating</li>
+        </exclusionTags>
+    </WeaponTraitDef>
+    
+    <WeaponTraitDef>
+        <defName>MPT_HeldArmorRatingDown</defName>
+        <label>bond sundering</label>
+        <description>This weapon's persona weakens the natural forces binding molecular structures together around its weilder. While held, it provides its wielder with reduced armor rating.</description>
+        <commonality>0.5</commonality>
+        <marketValueOffset>-400</marketValueOffset>
+        <equippedStatOffsets>
+            <ArmorRating_Sharp>-0.17</ArmorRating_Sharp>
+            <ArmorRating_Blunt>-0.05</ArmorRating_Blunt>
+            <ArmorRating_Heat>-0.15</ArmorRating_Heat>
+        </equippedStatOffsets>
+        <exclusionTags>
+            <li>MPT_HeldArmorRating</li>
+        </exclusionTags>
+    </WeaponTraitDef>
 </Defs>
