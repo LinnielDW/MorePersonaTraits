@@ -447,4 +447,60 @@
             </li>
         </stages>
     </HediffDef>
+    
+    <WeaponTraitDef>
+        <defName>MPT_BondedGlobalLearningFactorUp</defName>
+        <label>keen</label>
+        <description>This weapon's persona picks up new concepts very quickly and can help explain it to its bond. The bonded pawn gains 20% learning speed.</description>
+        <bondedHediffs>
+            <li>MPT_HediffGlobalLearningFactorUp</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_BondedGlobalLearningFactor</li>
+            <li>NeverBond</li>
+        </exclusionTags>
+        <commonality>0.4</commonality>
+        <marketValueOffset>500</marketValueOffset>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_HediffGlobalLearningFactorUp</defName>
+        <label>psychic tutor</label>
+        <description>My learning rate is enhanced by my bonded weapon.</description>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statOffsets>
+                    <GlobalLearningFactor>0.2</GlobalLearningFactor>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <WeaponTraitDef>
+        <defName>MPT_BondedGlobalLearningFactorDown</defName>
+        <label>asinine</label>
+        <description>This weapon's persona seems to contain vast knowledge of a universe with fundamentally different laws of nature, insisting that the way we see the universe is wrong. While interesting, it is mostly useless; causing the bonded pawn learn 20% slower.</description>
+        <bondedHediffs>
+            <li>MPT_HediffGlobalLearningFactorDown</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_BondedGlobalLearningFactor</li>
+            <li>NeverBond</li>
+        </exclusionTags>
+        <commonality>0.4</commonality>
+        <marketValueOffset>-500</marketValueOffset>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_HediffGlobalLearningFactorDown</defName>
+        <label>psychic ignorance</label>
+        <description>My learning rate is being hampered by my bonded weapon.</description>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statOffsets>
+                    <MedicalTendQualityOffset>-0.2</MedicalTendQualityOffset>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
 </Defs>
