@@ -59,7 +59,7 @@
     <WeaponTraitDef>
         <defName>MPT_BondedGlobalWorkspeedUp</defName>
         <label>driven</label>
-        <description>This weapon's persona fills it's bond with energy, driving it forward. The bonded pawn gains a 40% increase to global work speed.</description>
+        <description>This weapon's persona fills it's bond with energy, driving it forward. The bonded pawn gains a 20% increase to global work speed.</description>
         <bondedHediffs>
             <li>MPT_HediffGlobalWorkspeedUp</li>
         </bondedHediffs>
@@ -67,7 +67,7 @@
             <li>MPT_BondedGlobalWorkspeed</li>
             <li>NeverBond</li>
         </exclusionTags>
-        <commonality>0.25</commonality>
+        <commonality>0.4</commonality>
         <marketValueOffset>1000</marketValueOffset>
     </WeaponTraitDef>
     <HediffDef>
@@ -78,7 +78,7 @@
         <stages>
             <li>
                 <statOffsets>
-                    <WorkSpeedGlobal>0.4</WorkSpeedGlobal>
+                    <WorkSpeedGlobal>0.2</WorkSpeedGlobal>
                 </statOffsets>
             </li>
         </stages>
@@ -87,7 +87,7 @@
     <WeaponTraitDef>
         <defName>MPT_BondedGlobalWorkspeedDown</defName>
         <label>slacking</label>
-        <description>This weapon's persona seeks to 'conserve the high energy state of the universe' by resisting energy state changes made willingly by its boonded. The bonded pawn loses 40% global work speed.</description>
+        <description>This weapon's persona seeks to 'conserve the high energy state of the universe' by resisting energy state changes made willingly by it's boonded. The bonded pawn loses 20% global work speed.</description>
         <bondedHediffs>
             <li>MPT_HediffGlobalWorkspeedDown</li>
         </bondedHediffs>
@@ -95,7 +95,7 @@
             <li>MPT_BondedGlobalWorkspeed</li>
             <li>NeverBond</li>
         </exclusionTags>
-        <commonality>0.25</commonality>
+        <commonality>0.4</commonality>
         <marketValueOffset>-1000</marketValueOffset>
     </WeaponTraitDef>
     <HediffDef>
@@ -106,7 +106,7 @@
         <stages>
             <li>
                 <statOffsets>
-                    <WorkSpeedGlobal>-0.4</WorkSpeedGlobal>
+                    <WorkSpeedGlobal>-0.2</WorkSpeedGlobal>
                 </statOffsets>
             </li>
         </stages>
