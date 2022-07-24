@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using MorePersonaTraits.Extensions;
 using Verse;
 
@@ -12,6 +12,7 @@ namespace MorePersonaTraits.Utils
             float rand = Rand.Value;
             foreach (var extension in onHitExtensions)
             {
+                //TODO: change prochance to be inversely proportional to attackspeed
                 if (rand <= extension.ProcChance)
                 {
                     // Log.Warning("Onhit has proc'ed. Executing OnHit effect");
