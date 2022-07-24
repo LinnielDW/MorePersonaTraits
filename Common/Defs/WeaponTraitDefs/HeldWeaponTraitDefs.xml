@@ -31,7 +31,7 @@
     <WeaponTraitDef>
         <defName>MPT_HeldArmorRatingUp</defName>
         <label>non-newtonian</label>
-        <description>This weapon's persona subtly modifies the atoms near the wearer's skin increasing their attenuation to knetic energy before impact. While held, it provides its wielder with increased armor rating.</description>
+        <description>This weapon's persona subtly modifies the atoms near the wielder's skin increasing their attenuation to knetic energy before impact. While held, it provides its wielder with increased armor rating.</description>
         <commonality>0.5</commonality>
         <marketValueOffset>400</marketValueOffset>
         <equippedStatOffsets>
