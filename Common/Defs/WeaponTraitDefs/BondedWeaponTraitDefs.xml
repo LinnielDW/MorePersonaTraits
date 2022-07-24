@@ -367,7 +367,7 @@
     <WeaponTraitDef>
         <defName>MPT_BondedImmunityGainSpeedDown</defName>
         <label>amico-immunomasochist</label>
-        <description>This weapon's persona has the strangely specific hobby of enjoying the extended pain and suffering that comes from watching their bond's body attempts to fight off infectious agent, and will take steps to enjoy that hobby for as long as possible. The bonded pawn loses 5% of their immunity gain speed.</description>
+        <description>This weapon's persona has the strangely specific hobby of watching the extended pain and suffering that comes from their bond's body attempts to fight off infectious agents, and will take steps to enjoy that hobby for as long as possible. The bonded pawn loses 5% of their immunity gain speed.</description>
         <bondedHediffs>
             <li>MPT_HediffImmunityGainSpeedDown</li>
         </bondedHediffs>
