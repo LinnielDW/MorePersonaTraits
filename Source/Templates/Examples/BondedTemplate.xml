@@ -11,6 +11,7 @@
         <marketValueOffset>-0</marketValueOffset>
         <exclusionTags>
             <li>MPT_Template</li>
+            <li>NeverBond</li>
         </exclusionTags>
     </WeaponTraitDef>
     
