@@ -111,4 +111,60 @@
             </li>
         </stages>
     </HediffDef>
+    
+    <WeaponTraitDef>
+        <defName>MPT_BondedShootingAccuracyPawnUp</defName>
+        <label>spotter</label>
+        <description>This weapon's persona excels at giving marksman adivce to it's bond. The bonded pawn gains +3 to shooting accuracy.</description>
+        <bondedHediffs>
+            <li>MPT_HediffShootingAccuracyPawnUp</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_BondedShootingAccuracyPawn</li>
+            <li>NeverBond</li>
+        </exclusionTags>
+        <commonality>0.4</commonality>
+        <marketValueOffset>500</marketValueOffset>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_HediffShootingAccuracyPawnUp</defName>
+        <label>psychic spotter</label>
+        <description>My shooting accuracy is increased by my bonded weapon.</description>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statOffsets>
+                    <ShootingAccuracyPawn>3</ShootingAccuracyPawn>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+    
+    <WeaponTraitDef>
+        <defName>MPT_BondedShootingAccuracyPawnDown</defName>
+        <label>protagonist-maker</label>
+        <description>This weapon's persona has romatasised the idea of 'plot armour' and will take steps to witness with it's bond. The bonded pawn takes a -3 to shooting accuracy.</description>
+        <bondedHediffs>
+            <li>MPT_HediffShootingAccuracyPawnDown</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_BondedShootingAccuracyPawn</li>
+            <li>NeverBond</li>
+        </exclusionTags>
+        <commonality>0.4</commonality>
+        <marketValueOffset>-500</marketValueOffset>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_HediffShootingAccuracyPawnDown</defName>
+        <label>psychic oversightedness</label>
+        <description>My shooting accuracy is decreased by my bonded weapon.</description>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statOffsets>
+                    <ShootingAccuracyPawn>-3</ShootingAccuracyPawn>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
 </Defs>
