@@ -223,4 +223,60 @@
             </li>
         </stages>
     </HediffDef>
+    
+    <WeaponTraitDef>
+        <defName>MPT_BondedSurgerySuccessChanceFactorUp</defName>
+        <label>exact</label>
+        <description>This weapon's persona helps guide the hand of the surgeon it is bonded to. The bonded pawn gains 10% to their surgery success chance.</description>
+        <bondedHediffs>
+            <li>MPT_HediffSurgerySuccessChanceFactorUp</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_BondedSurgerySuccessChanceFactor</li>
+            <li>NeverBond</li>
+        </exclusionTags>
+        <commonality>0.4</commonality>
+        <marketValueOffset>500</marketValueOffset>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_HediffSurgerySuccessChanceFactorUp</defName>
+        <label>psychic surgery guidance</label>
+        <description>My surgery success chance is increased by my bonded weapon.</description>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statOffsets>
+                    <SurgerySuccessChanceFactor>0.1</SurgerySuccessChanceFactor>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <WeaponTraitDef>
+        <defName>MPT_BondedSurgerySuccessChanceFactorDown</defName>
+        <label>careless</label>
+        <description>This weapon's persona tends to make their bond miss critical details. The bonded pawn loses 10% to their surgery success chance.</description>
+        <bondedHediffs>
+            <li>MPT_HediffSurgerySuccessChanceFactorDown</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_BondedSurgerySuccessChanceFactor</li>
+            <li>NeverBond</li>
+        </exclusionTags>
+        <commonality>0.4</commonality>
+        <marketValueOffset>-500</marketValueOffset>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_HediffSurgerySuccessChanceFactorDown</defName>
+        <label>psychic carelessness</label>
+        <description>My surgery success chance is being hampered by my bonded weapon.</description>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statOffsets>
+                    <SurgerySuccessChanceFactor>-0.1</SurgerySuccessChanceFactor>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
 </Defs>
