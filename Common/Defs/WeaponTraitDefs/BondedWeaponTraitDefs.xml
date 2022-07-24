@@ -498,7 +498,7 @@
         <stages>
             <li>
                 <statOffsets>
-                    <MedicalTendQualityOffset>-0.2</MedicalTendQualityOffset>
+                    <GlobalLearningFactor>-0.2</GlobalLearningFactor>
                 </statOffsets>
             </li>
         </stages>
