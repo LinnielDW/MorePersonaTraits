@@ -279,4 +279,60 @@
             </li>
         </stages>
     </HediffDef>
+    
+    <WeaponTraitDef>
+        <defName>MPT_BondedRestRateMultiplierUp</defName>
+        <label>cosy</label>
+        <description>This weapon's persona sooothes their bonded helping them get a good night's sleep. The bonded pawn gains 25% rest rate.</description>
+        <bondedHediffs>
+            <li>MPT_HediffRestRateMultiplierUp</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_BondedRestRateMultiplier</li>
+            <li>NeverBond</li>
+        </exclusionTags>
+        <commonality>0.4</commonality>
+        <marketValueOffset>500</marketValueOffset>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_HediffRestRateMultiplierUp</defName>
+        <label>psychic sweet dreams</label>
+        <description>My rest rate is increased by my bonded weapon.</description>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statOffsets>
+                    <SurgerySuccessChanceFactor>0.25</SurgerySuccessChanceFactor>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <WeaponTraitDef>
+        <defName>MPT_BondedRestRateMultiplierDown</defName>
+        <label>doomsaying</label>
+        <description>This weapon's persona can't help but provide dreams of the horrors that might lay ahead. The bonded pawn loses 25% rest rate.</description>
+        <bondedHediffs>
+            <li>MPT_HediffRestRateMultiplierDown</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_BondedRestRateMultiplier</li>
+            <li>NeverBond</li>
+        </exclusionTags>
+        <commonality>0.4</commonality>
+        <marketValueOffset>-500</marketValueOffset>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_HediffRestRateMultiplierDown</defName>
+        <label>psychic restlessness</label>
+        <description>My rest rate is being hampered by my bonded weapon.</description>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statOffsets>
+                    <SurgerySuccessChanceFactor>-0.25</SurgerySuccessChanceFactor>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
 </Defs>
