@@ -15,6 +15,20 @@
     </WeaponTraitDef>
     
     <WeaponTraitDef>
+        <defName>MPT_HeldMeleeHitChanceDown</defName>
+        <label>squemish</label>
+        <description>This weapon's persona really doesn't like touching the soft warm insides of things. While held, it provides its wielder with a decreased chance to hit their target.</description>
+        <commonality>0.5</commonality>
+        <marketValueOffset>-400</marketValueOffset>
+        <equippedStatOffsets>
+            <MeleeHitChance>-3</MeleeHitChance>
+        </equippedStatOffsets>
+        <exclusionTags>
+            <li>MPT_HeldMeleeHitChance</li>
+        </exclusionTags>
+    </WeaponTraitDef>
+    
+    <WeaponTraitDef>
         <defName>MPT_HeldArmorRatingUp</defName>
         <label>non-newtonian</label>
         <description>This weapon's persona subtly modifies the atoms near the wearer's skin increasing their attenuation to knetic energy before impact. While held, it provides its wielder with increased armor rating.</description>
