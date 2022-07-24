@@ -407,7 +407,7 @@
         <marketValueOffset>500</marketValueOffset>
     </WeaponTraitDef>
     <HediffDef>
-        <defName>MPT_HediffMedicalTendQualityOffsetdUp</defName>
+        <defName>MPT_HediffMedicalTendQualityOffsetUp</defName>
         <label>psychic bandage application guidelines</label>
         <description>My tend quality is enhanced by my bonded weapon.</description>
         <isBad>false</isBad>
