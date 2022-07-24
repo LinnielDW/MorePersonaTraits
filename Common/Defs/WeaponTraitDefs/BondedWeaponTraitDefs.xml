@@ -335,4 +335,60 @@
             </li>
         </stages>
     </HediffDef>
+    
+    <WeaponTraitDef>
+        <defName>MPT_BondedImmunityGainSpeedUp</defName>
+        <label>vital</label>
+        <description>This weapon's persona has extensive knowledge on protein folding and is able to provide this knowledge to the immune system of their bond. The bonded pawn gains 5% immunity gain speed.</description>
+        <bondedHediffs>
+            <li>MPT_HediffImmunityGainSpeedUp</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_BondedImmunityGainSpeed</li>
+            <li>NeverBond</li>
+        </exclusionTags>
+        <commonality>0.4</commonality>
+        <marketValueOffset>500</marketValueOffset>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_HediffImmunityGainSpeedUp</defName>
+        <label>psychically charged antibodies</label>
+        <description>My immunity gain speed is enhanced by my bonded weapon.</description>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statOffsets>
+                    <ImmunityGainSpeed>0.05</ImmunityGainSpeed>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <WeaponTraitDef>
+        <defName>MPT_BondedImmunityGainSpeedDown</defName>
+        <label>amico-immunomasochist</label>
+        <description>This weapon's persona has the strangely specific hobby of enjoying the extended pain and suffering that comes from watching their bond's body attempts to fight off infectious agent, and will take steps to enjoy that hobby for as long as possible. The bonded pawn loses 5% of their immunity gain speed.</description>
+        <bondedHediffs>
+            <li>MPT_HediffImmunityGainSpeedDown</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_BondedImmunityGainSpeed</li>
+            <li>NeverBond</li>
+        </exclusionTags>
+        <commonality>0.4</commonality>
+        <marketValueOffset>-500</marketValueOffset>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_HediffImmunityGainSpeedDown</defName>
+        <label>psychically hampered immune response</label>
+        <description>My immunity gain speed being hampered by my bonded weapon.</description>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statOffsets>
+                    <ImmunityGainSpeed>-0.05</ImmunityGainSpeed>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
 </Defs>
