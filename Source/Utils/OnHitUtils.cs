@@ -1,22 +1,21 @@
 ﻿using System.Collections.Generic;
-using MorePersonaTraits.Extensions;
+using MorePersonaTraits.OnHitWorkerClasses;
 using Verse;
 
 namespace MorePersonaTraits.Utils
 {
     public static class OnHitUtils
     {
-        public static void attemptApplyOnHitEffects(List<WeaponTraitOnHitExtension> onHitExtensions,
-            Thing targetThing, Thing originThing)
+        public static void attemptApplyOnHitEffects(List<OnHitWorker> onHitWorkers, Thing targetThing,
+            Thing originThing)
         {
             float rand = Rand.Value;
-            foreach (var extension in onHitExtensions)
+            foreach (var onHitWorker in onHitWorkers)
             {
-                //TODO: change prochance to be inversely proportional to attackspeed
-                if (rand <= extension.ProcChance)
+                if (rand <= onHitWorker.ProcChance)
                 {
                     // Log.Warning("Onhit has proc'ed. Executing OnHit effect");
-                    extension.OnHitWorker.OnHitEffect(targetThing, originThing);
+                    onHitWorker.OnHitEffect(targetThing, originThing);
                 }
                 else
                 {

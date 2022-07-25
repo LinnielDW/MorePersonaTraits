@@ -8,10 +8,13 @@
         <marketValueOffset>400</marketValueOffset>
         <modExtensions>
             <li Class="MorePersonaTraits.Extensions.WeaponTraitOnHitExtension">
-                <OnHitWorkerClass>MorePersonaTraits.OnHitWorkerClasses.OnHitWorker_ApplyHediffOnTarget</OnHitWorkerClass>
-                <TargetThingHediffDef>Plague</TargetThingHediffDef>
-                <ProcMagnitude>0.15</ProcMagnitude>
-                <ProcChance>0.35</ProcChance>
+                <OnHitWorkers>
+                    <li Class="MorePersonaTraits.OnHitWorkerClasses.OnHitWorker_ApplyHediff">
+                        <HediffDef>Plague</HediffDef>
+                        <ProcMagnitude>0.15</ProcMagnitude>
+                        <ProcChance>0.35</ProcChance>
+                    </li>
+                </OnHitWorkers>
             </li>
         </modExtensions>
     </WeaponTraitDef>
