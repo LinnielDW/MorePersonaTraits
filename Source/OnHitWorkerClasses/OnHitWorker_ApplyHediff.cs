@@ -1,4 +1,6 @@
-﻿using Verse;
+﻿using System;
+using MorePersonaTraits.Utils;
+using Verse;
 
 namespace MorePersonaTraits.OnHitWorkerClasses
 {
@@ -8,25 +10,7 @@ namespace MorePersonaTraits.OnHitWorkerClasses
 
         public override void OnHitEffect(Thing hitThing, Thing originThing)
         {
-            if (TargetSelf)
-            {
-                if (PawnValid(originThing))
-                {
-                    ApplyHediffToPawn(originThing as Pawn);
-                }
-            }
-            else
-            {
-                if (PawnValid(hitThing))
-                {
-                    ApplyHediffToPawn(hitThing as Pawn);
-                }
-            }
-        }
-
-        private bool PawnValid(Thing thing)
-        {
-            return thing != null && thing is Pawn;
+            OnHitEffect(hitThing, originThing, ApplyHediffToPawn);
         }
 
         private void ApplyHediffToPawn(Pawn pawn)

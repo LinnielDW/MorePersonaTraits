@@ -1,4 +1,5 @@
-﻿using MorePersonaTraits.OnHitWorkerClasses;
+﻿using System;
+using MorePersonaTraits.OnHitWorkerClasses;
 using Verse;
 
 namespace MorePersonaTraits.Templates
@@ -7,7 +8,12 @@ namespace MorePersonaTraits.Templates
     {
         public override void OnHitEffect(Thing hitThing, Thing originThing)
         {
-            Log.Warning("OnHitWorker_Template on-hit effect has been activated.");
+            OnHitEffect(hitThing, originThing, DebugApply);
+        }
+
+        private void DebugApply(Pawn thing)
+        {
+            Log.Warning("OnHitWorker_Template on-hit effect has been activated by " + thing.Name);
         }
     }
 }

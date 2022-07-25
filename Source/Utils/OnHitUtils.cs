@@ -23,5 +23,11 @@ namespace MorePersonaTraits.Utils
                 }
             }
         }
+        
+        
+        public static bool PawnValid(Thing thing)
+        {
+            return thing != null && thing is Pawn;
+        }
     }
 }

@@ -1,5 +1,5 @@
-﻿using MorePersonaTraits.Extensions;
-using RimWorld;
+﻿using System;
+using MorePersonaTraits.Utils;
 using Verse;
 
 namespace MorePersonaTraits.OnHitWorkerClasses
@@ -10,9 +10,28 @@ namespace MorePersonaTraits.OnHitWorkerClasses
         public float ProcMagnitude = 0f;
         public bool TargetSelf = false;
         
-        //todo add basedamage to arguements
+        //todo add basedamage to arguements so severity can be scaled by damage x magnitude
         public virtual void OnHitEffect(Thing hitThing, Thing originThing)
         {
+            OnHitEffect(hitThing, originThing, delegate {  });
+        }
+
+        public virtual void OnHitEffect(Thing hitThing, Thing originThing, Action<Pawn> apply)
+        {
+            if (TargetSelf)
+            {
+                if (OnHitUtils.PawnValid(originThing))
+                {
+                    apply(originThing as Pawn);
+                }
+            }
+            else
+            {
+                if (OnHitUtils.PawnValid(hitThing))
+                {
+                    apply(hitThing as Pawn);
+                }
+            }
         }
     }
 }
