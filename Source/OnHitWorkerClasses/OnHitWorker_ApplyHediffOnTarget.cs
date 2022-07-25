@@ -8,18 +8,26 @@ namespace MorePersonaTraits.OnHitWorkerClasses
         {
             if (hitThing != null && hitThing is Pawn hitPawn)
             {
-                var hediffOnPawn = hitPawn.health?.hediffSet?.GetFirstHediffOfDef(WeaponTraitOnHitExtension.TargetThingHediff);
+                ApplyHediffToPawn(hitPawn, WeaponTraitOnHitExtension.TargetThingHediffDef);
+            }
+        }
 
-                if (hediffOnPawn != null)
-                {
-                    hediffOnPawn.Severity += WeaponTraitOnHitExtension.ProcMagnitude;
-                }
-                else
-                {
-                    var hediff = HediffMaker.MakeHediff(WeaponTraitOnHitExtension.TargetThingHediff, hitPawn);
-                    hediff.Severity = WeaponTraitOnHitExtension.ProcMagnitude;
-                    hitPawn.health.AddHediff(hediff);
-                }
+        private void ApplyHediffToPawn(Pawn pawn, HediffDef hediffDef)
+        {
+            Hediff hediff = pawn.health?.hediffSet?.GetFirstHediffOfDef(hediffDef);
+
+            if (hediff != null)
+            {
+                hediff.Severity += WeaponTraitOnHitExtension.ProcMagnitude;
+                
+                //if has duration, set duration
+                //if has stacks, add stack
+            }
+            else
+            {
+                hediff = HediffMaker.MakeHediff(WeaponTraitOnHitExtension.TargetThingHediffDef, pawn);
+                hediff.Severity = WeaponTraitOnHitExtension.ProcMagnitude;
+                pawn.health.AddHediff(hediff);
             }
         }
     }

@@ -12,8 +12,8 @@ namespace MorePersonaTraits.Extensions
 
         public Type OnHitWorkerClass = typeof(OnHitWorker);
 
-        public HediffDef TargetThingHediff = null;
-        public HediffDef OriginThingHediff = null;
+        public HediffDef TargetThingHediffDef = null;
+        public HediffDef OriginThingHediffDef = null;
         public ThoughtDef TargetThingThoughtDef = null;
         public ThoughtDef OriginThingThoughtDef = null;
 

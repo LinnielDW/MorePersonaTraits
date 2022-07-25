@@ -9,7 +9,7 @@
         <modExtensions>
             <li Class="MorePersonaTraits.Extensions.WeaponTraitOnHitExtension">
                 <OnHitWorkerClass>MorePersonaTraits.OnHitWorkerClasses.OnHitWorker_ApplyHediffOnTarget</OnHitWorkerClass>
-                <TargetThingHediff>Plague</TargetThingHediff>
+                <TargetThingHediffDef>Plague</TargetThingHediffDef>
                 <ProcMagnitude>0.15</ProcMagnitude>
                 <ProcChance>0.35</ProcChance>
             </li>
