@@ -18,5 +18,25 @@
             </li>
         </modExtensions>
     </WeaponTraitDef>
+    
+    <WeaponTraitDef>
+        <defName>MPT_OnHitPlagueSelf</defName>
+        <label>plague magnet</label>
+        <description>This weapon's persona seems to attract the most exotic of baterium at the most inopportune times. Upon hitting a target, there is a small chance that the user will contract the plague.</description>
+        <commonality>0.5</commonality>
+        <marketValueOffset>-800</marketValueOffset>
+        <modExtensions>
+            <li Class="MorePersonaTraits.Extensions.WeaponTraitOnHitExtension">
+                <OnHitWorkers>
+                    <li Class="MorePersonaTraits.OnHitWorkerClasses.OnHitWorker_ApplyHediff">
+                        <HediffDef>Plague</HediffDef>
+                        <ProcMagnitude>0.02</ProcMagnitude>
+                        <ProcChance>0.02</ProcChance>
+                        <TargetSelf>true</TargetSelf>
+                    </li>
+                </OnHitWorkers>
+            </li>
+        </modExtensions>
+    </WeaponTraitDef>
 
 </Defs>
