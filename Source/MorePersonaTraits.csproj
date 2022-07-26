@@ -52,6 +52,7 @@
     <Compile Include="OnHitWorkerClasses\OnHitWorker_AddedDamage.cs" />
     <Compile Include="OnHitWorkerClasses\OnHitWorker_ApplyHediff.cs" />
     <Compile Include="OnHitWorkerClasses\OnHitWorker_ApplyThought.cs" />
+    <Compile Include="OnHitWorkerClasses\OnHitWorker_Weather.cs" />
     <Compile Include="Patches\PatchOnDamage.cs" />
     <Compile Include="MorePersonaTraits.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
