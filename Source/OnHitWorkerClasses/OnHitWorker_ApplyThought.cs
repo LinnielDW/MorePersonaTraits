@@ -12,8 +12,7 @@ namespace MorePersonaTraits.OnHitWorkerClasses
         {
             OnHitEffect(hitThing, originThing, ApplyThoughtToPawn);
         }
-        
-        
+
         private void ApplyThoughtToPawn(Pawn pawn)
         {
             //TODO: TEST THIS

@@ -143,7 +143,7 @@
     <WeaponTraitDef>
         <defName>MPT_BondedShootingAccuracyPawnDown</defName>
         <label>protagonist-maker</label>
-        <description>This weapon's persona has romatasised the idea of 'plot armour' and will take steps to witness with it's bond. The bonded pawn takes a -3 to shooting accuracy.</description>
+        <description>This weapon's persona has romatasised the idea of 'plot armour' and will take steps to make it with it's bond. The bonded pawn takes a -3 to shooting accuracy.</description>
         <bondedHediffs>
             <li>MPT_HediffShootingAccuracyPawnDown</li>
         </bondedHediffs>
