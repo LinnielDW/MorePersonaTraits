@@ -9,6 +9,7 @@ namespace MorePersonaTraits.OnHitWorkerClasses
         public float ProcChance = 0f;
         public float ProcMagnitude = 0f;
         public bool TargetSelf = false;
+        public bool RequiresBothLiving = false;
         
         //todo add basedamage to arguements so severity can be scaled by damage x magnitude
         public virtual void OnHitEffect(Thing hitThing, Thing originThing)
@@ -18,6 +19,11 @@ namespace MorePersonaTraits.OnHitWorkerClasses
 
         public virtual void OnHitEffect(Thing hitThing, Thing originThing, Action<Pawn> apply)
         {
+            if (RequiresBothLiving && !(OnHitUtils.IsLivingPawn(hitThing) && OnHitUtils.IsLivingPawn(originThing)))
+            {
+                return;
+            }
+
             if (TargetSelf)
             {
                 if (OnHitUtils.IsLivingPawn(originThing))
