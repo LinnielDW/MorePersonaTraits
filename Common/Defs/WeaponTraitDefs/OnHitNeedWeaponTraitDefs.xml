@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <WeaponTraitDef>
+        <defName>MPT_OnHitFoodSelfUp</defName>
+        <label>replenishing</label>
+        <description>This weapon's persona insists that an army cannot march on an empty stomach. Upon hitting a living target, there is a chance that the wielder's food will be increased slightly.</description>
+        <commonality>0.5</commonality>
+        <marketValueOffset>400</marketValueOffset>
+        <exclusionTags>
+            <li>MPT_OnHitFood</li>
+        </exclusionTags>
+        <modExtensions>
+            <li Class="MorePersonaTraits.Extensions.WeaponTraitOnHitExtension">
+                <OnHitWorkers>
+                    <li Class="MorePersonaTraits.OnHitWorkerClasses.OnHitWorker_ApplyNeed">
+                        <NeedDef>Food</NeedDef>
+                        <ProcChance>0.4</ProcChance>
+                        <ProcMagnitude>0.1</ProcMagnitude>
+                        <TargetSelf>true</TargetSelf>
+                        <RequiresBothLiving>true</RequiresBothLiving>
+                    </li>
+                </OnHitWorkers>
+            </li>
+        </modExtensions>
+    </WeaponTraitDef>
+    
+    <WeaponTraitDef>
+        <defName>MPT_OnHitFoodSelfDown</defName>
+        <label>coneseur</label>
+        <description>This weapon's persona requires a little extra to be convinced to do battle. Upon hitting a living thing, the wielder has a chance of losing a small amount of their food.</description>
+        <commonality>0.5</commonality>
+        <marketValueOffset>-400</marketValueOffset>
+        <exclusionTags>
+            <li>MPT_OnHitFood</li>
+        </exclusionTags>
+        <modExtensions>
+            <li Class="MorePersonaTraits.Extensions.WeaponTraitOnHitExtension">
+                <OnHitWorkers>
+                    <li Class="MorePersonaTraits.OnHitWorkerClasses.OnHitWorker_ApplyNeed">
+                        <NeedDef>Food</NeedDef>
+                        <ProcChance>0.4</ProcChance>
+                        <ProcMagnitude>-0.05</ProcMagnitude>
+                        <TargetSelf>true</TargetSelf>
+                        <RequiresBothLiving>true</RequiresBothLiving>
+                    </li>
+                </OnHitWorkers>
+            </li>
+        </modExtensions>
+    </WeaponTraitDef>
+</Defs>
