@@ -31,8 +31,8 @@
         <stackedEffectMultiplier>1</stackedEffectMultiplier>
         <stages>
             <li>
-                <label>{WEAPON}'s psychic stalwart</label>
-                <description>{WEAPON}'s words echo inside my head, pushing me forward, despite my own interests.</description>
+                <label>psychic stalwart</label>
+                <description>My bonded weapon's words echo inside my head, pushing me forward, despite my own interests.</description>
                 <baseMoodEffect>2</baseMoodEffect>
             </li>
         </stages>
