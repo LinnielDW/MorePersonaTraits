@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+<!--    <WeaponTraitDef>-->
+<!--        <defName>MPT_OnKill_NeedFilledFood</defName>-->
+<!--        <label>communing</label>-->
+<!--        <description>This weapon's persona says it is connected to something about someone's last meal and knows how to replicate it. Upon slaying a living thing with this weapon, it has a chance to fill the wielder's hunger.</description>-->
+
+<!--        <commonality>1</commonality>-->
+<!--        <marketValueOffset>500</marketValueOffset>-->
+<!--        <exclusionTags>-->
+<!--            <li>KillThoughts</li>-->
+<!--        </exclusionTags>-->
+<!--    </WeaponTraitDef>-->
+</Defs>

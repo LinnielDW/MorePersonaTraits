@@ -48,6 +48,12 @@
     <CommonFiles Update="..\Common\Defs\WeaponTraitDefs\OnHitThoughtWeaponTraitDefs.xml">
       <Link>WeaponTraitDefs\OnHitThoughtWeaponTraitDefs.xml</Link>
     </CommonFiles>
+    <CommonFiles Update="..\Common\Defs\WeaponTraitDefs\OnHitNeedWeaponTraitDefs.xml">
+      <Link>WeaponTraitDefs\OnHitNeedWeaponTraitDefs.xml</Link>
+    </CommonFiles>
+    <CommonFiles Update="..\Common\Defs\WeaponTraitDefs\OnKillWeaponTraitDefs.xml">
+      <Link>WeaponTraitDefs\OnKillWeaponTraitDefs.xml</Link>
+    </CommonFiles>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BondedWorkerClasses\BondedWorker.cs" />
@@ -67,6 +73,7 @@
     <Compile Include="Utils\DebugUtils.cs" />
     <Compile Include="Utils\PatcherCheckUtils.cs" />
     <Compile Include="Utils\OnHitUtils.cs" />
+    <Compile Include="WeaponTraitWorkerClasses\WeaponTraitWorker_NeedFilledOnKill.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Templates\BonusFields\statOffsets.txt" />
