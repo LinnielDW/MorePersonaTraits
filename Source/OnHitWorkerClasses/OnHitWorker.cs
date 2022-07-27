@@ -13,7 +13,7 @@ namespace MorePersonaTraits.OnHitWorkerClasses
         //todo add basedamage to arguements so severity can be scaled by damage x magnitude
         public virtual void OnHitEffect(Thing hitThing, Thing originThing)
         {
-            OnHitEffect(hitThing, originThing, delegate {  });
+            // OnHitEffect(hitThing, originThing, delegate {  });
         }
 
         public virtual void OnHitEffect(Thing hitThing, Thing originThing, Action<Pawn> apply)

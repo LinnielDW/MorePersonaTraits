@@ -1,5 +1,4 @@
-﻿using System;
-using RimWorld;
+﻿using RimWorld;
 using Verse;
 
 namespace MorePersonaTraits.OnHitWorkerClasses
@@ -7,7 +6,7 @@ namespace MorePersonaTraits.OnHitWorkerClasses
     public class OnHitWorker_ApplyThought : OnHitWorker
     {
         public ThoughtDef ThoughtDef = null;
-        
+
         public override void OnHitEffect(Thing hitThing, Thing originThing)
         {
             OnHitEffect(hitThing, originThing, ApplyThoughtToPawn);
@@ -15,8 +14,7 @@ namespace MorePersonaTraits.OnHitWorkerClasses
 
         private void ApplyThoughtToPawn(Pawn pawn)
         {
-            //TODO: TEST THIS
-            pawn.needs.mood.thoughts.memories.TryGainMemory(ThoughtDef);
+            pawn.needs?.mood?.thoughts.memories.TryGainMemory(ThoughtDef);
         }
     }
 }
