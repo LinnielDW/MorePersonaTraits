@@ -39,18 +39,25 @@
       <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\UnityEngine.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <CommonFiles Update="..\Common\Defs\WeaponTraitDefs\OnHitWeaponTraitDefs.xml">
-      <Link>WeaponTraitDefs\OnHitWeaponTraitDefs</Link>
+    <CommonFiles Update="..\Common\Defs\WeaponTraitDefs\OnHitHediffWeaponTraitDefs.xml">
+      <Link>WeaponTraitDefs\OnHitHediffWeaponTraitDefs</Link>
     </CommonFiles>
     <CommonFiles Update="..\Common\Defs\WeaponTraitDefs\HeldWeaponTraitDefs.xml">
       <Link>WeaponTraitDefs\HeldWeaponTraitDefs.xml</Link>
     </CommonFiles>
+    <CommonFiles Update="..\Common\Defs\WeaponTraitDefs\OnHitThoughtWeaponTraitDefs.xml">
+      <Link>WeaponTraitDefs\OnHitThoughtWeaponTraitDefs.xml</Link>
+    </CommonFiles>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BondedWorkerClasses\BondedWorker.cs" />
+    <Compile Include="BondedWorkerClasses\BondedWorker_ChemicalAny.cs" />
+    <Compile Include="Extensions\WeaponTraitBondedNeedExtension.cs" />
     <Compile Include="Extensions\WeaponTraitOnHitExtension.cs" />
     <Compile Include="OnHitWorkerClasses\OnHitWorker.cs" />
     <Compile Include="OnHitWorkerClasses\OnHitWorker_AddedDamage.cs" />
     <Compile Include="OnHitWorkerClasses\OnHitWorker_ApplyHediff.cs" />
+    <Compile Include="OnHitWorkerClasses\OnHitWorker_ApplyNeed.cs" />
     <Compile Include="OnHitWorkerClasses\OnHitWorker_ApplyThought.cs" />
     <Compile Include="OnHitWorkerClasses\OnHitWorker_Weather.cs" />
     <Compile Include="Patches\PatchOnDamage.cs" />
