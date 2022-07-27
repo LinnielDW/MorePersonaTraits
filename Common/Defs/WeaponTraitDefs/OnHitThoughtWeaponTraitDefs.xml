@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
     <WeaponTraitDef>
-        <defName>MPT_OnHitThoughtUp</defName>
+        <defName>MPT_OnHitThoughtSelfUp</defName>
         <label>stoneward</label>
         <description>This weapon has taken an immortal vow to be there when they are needed most. They will try to guide their wielder to also uphold this vow, especially when life is at its hardest. Upon hitting a target, there is a chance that the wielder will gain a small mood increase, stacking 16 times.</description>
         <commonality>0.5</commonality>
@@ -33,7 +33,7 @@
             <li>
                 <label>psychic stalwart</label>
                 <description>My bonded weapon's words echo inside my head, pushing me forward, despite my own interests.</description>
-                <baseMoodEffect>2</baseMoodEffect>
+                <baseMoodEffect>5</baseMoodEffect>
             </li>
         </stages>
     </ThoughtDef>
