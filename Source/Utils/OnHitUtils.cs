@@ -25,9 +25,9 @@ namespace MorePersonaTraits.Utils
         }
         
         
-        public static bool PawnValid(Thing thing)
+        public static bool IsLivingPawn(Thing thing)
         {
-            return thing != null && thing is Pawn;
+            return thing != null && !thing.Destroyed && thing is Pawn && !(thing as Pawn).Dead;
         }
     }
 }

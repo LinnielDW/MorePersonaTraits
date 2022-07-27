@@ -20,14 +20,14 @@ namespace MorePersonaTraits.OnHitWorkerClasses
         {
             if (TargetSelf)
             {
-                if (OnHitUtils.PawnValid(originThing))
+                if (OnHitUtils.IsLivingPawn(originThing))
                 {
                     apply(originThing as Pawn);
                 }
             }
             else
             {
-                if (OnHitUtils.PawnValid(hitThing))
+                if (OnHitUtils.IsLivingPawn(hitThing))
                 {
                     apply(hitThing as Pawn);
                 }
