@@ -65,7 +65,6 @@
   <ItemGroup>
     <Compile Include="Extensions\WeaponTraitBondedNeedExtension.cs" />
     <Compile Include="Extensions\WeaponTraitOnHitExtension.cs" />
-    <Compile Include="Patches\PatchNeeds.cs" />
     <Compile Include="WorkerClasses\BondedWorkerClasses\BondedWorker.cs" />
     <Compile Include="WorkerClasses\BondedWorkerClasses\BondedWorker_ChemicalAny.cs" />
     <Compile Include="WorkerClasses\OnHitWorkerClasses\OnHitWorker.cs" />
