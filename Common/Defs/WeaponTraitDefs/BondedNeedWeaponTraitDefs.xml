@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+<!--    TODO: See PatchNeeds.cs-->
+<!--    <WeaponTraitDef>-->
+<!--        <defName>MPT_BondedNeedDrugDesire</defName>-->
+<!--        <label>MPT_BondedNeedDrugDesire</label>-->
+<!--        <description>impl.</description>-->
+<!--        <commonality>0.5</commonality>-->
+<!--        <marketValueOffset>400</marketValueOffset>-->
+<!--        <exclusionTags>-->
+<!--            <li>MPT_BondedNeed</li>-->
+<!--        </exclusionTags>-->
+<!--        <modExtensions>-->
+<!--            <li Class="MorePersonaTraits.Extensions.WeaponTraitBondedNeedExtension">-->
+<!--                <BondedWorker Class="MorePersonaTraits.WorkerClasses.BondedWorkerClasses.BondedWorker_ChemicalAny">-->
+<!--                    <NeedDef>DrugDesirePsychic</NeedDef>-->
+<!--                </BondedWorker>-->
+<!--            </li>-->
+<!--        </modExtensions>-->
+<!--    </WeaponTraitDef>-->
+</Defs>

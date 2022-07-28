@@ -68,6 +68,7 @@
     <Compile Include="Patches\PatchNeeds.cs" />
     <Compile Include="WorkerClasses\BondedWorkerClasses\BondedWorker.cs" />
     <Compile Include="WorkerClasses\BondedWorkerClasses\BondedWorker_ChemicalAny.cs" />
+    <Compile Include="WorkerClasses\BondedWorkerClasses\Need_Chemical_Any_Psychic.cs" />
     <Compile Include="WorkerClasses\OnHitWorkerClasses\OnHitWorker.cs" />
     <Compile Include="WorkerClasses\OnHitWorkerClasses\OnHitWorker_AddedDamage.cs" />
     <Compile Include="WorkerClasses\OnHitWorkerClasses\OnHitWorker_ApplyHediff.cs" />

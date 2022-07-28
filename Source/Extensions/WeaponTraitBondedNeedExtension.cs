@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using MorePersonaTraits.OnHitWorkerClasses;
-using RimWorld;
+﻿using MorePersonaTraits.WorkerClasses.BondedWorkerClasses;
 using Verse;
 
 namespace MorePersonaTraits.Extensions
@@ -13,6 +10,6 @@ namespace MorePersonaTraits.Extensions
             return new WeaponTraitBondedNeedExtension();
         }
 
-        // public List<OnHitWorker> OnHitWorkers = null;
+        public BondedWorker BondedWorker = null;
     }
 }

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+<!--    <NeedDef>-->
+<!--        <defName>DrugDesirePsychic</defName>-->
+<!--        <needClass>MorePersonaTraits.Need_Chemical_Any_Psychic</needClass>-->
+<!--        <label>chemical</label>-->
+<!--        <description>Chemical expresses the desire to ingest drugs caused by a Psychic force. When above a certain level it will create good mood, but when below a certain level it will create increasingly bad mood.</description>-->
+<!--        <minIntelligence>Humanlike</minIntelligence>-->
+<!--        <colonistAndPrisonersOnly>true</colonistAndPrisonersOnly>-->
+<!--        <listPriority>150</listPriority>-->
+<!--        <freezeWhileSleeping>true</freezeWhileSleeping>-->
+<!--        <fallPerDay>0.071</fallPerDay>-->
+<!--    </NeedDef>-->
+</Defs>
