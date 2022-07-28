@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <BaseIntermediateOutputPath>..\obj\</BaseIntermediateOutputPath>
@@ -61,6 +61,9 @@
       <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <CommonFiles Update="..\Common\Defs\WeaponTraitDefs\BondedAddictionWeaponTraitDefs.xml">
+      <Link>WeaponTraitDefs\BondedAddictionWeaponTraitDefs.xml</Link>
+    </CommonFiles>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Extensions\WeaponTraitOnHitExtension.cs" />
