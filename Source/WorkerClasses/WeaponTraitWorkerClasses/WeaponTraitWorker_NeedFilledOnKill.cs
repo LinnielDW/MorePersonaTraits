@@ -5,6 +5,7 @@ namespace MorePersonaTraits.WeaponTraitWorkerClasses
 {
     public class WeaponTraitWorker_NeedFilledOnKill : WeaponTraitWorker
     {
+        //TODO: implement
         public override void Notify_KilledPawn(Pawn pawn)
         {
             base.Notify_KilledPawn(pawn);
