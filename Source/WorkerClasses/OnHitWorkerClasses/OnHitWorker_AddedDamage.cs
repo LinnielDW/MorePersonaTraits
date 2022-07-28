@@ -1,7 +1,7 @@
 ﻿using System;
 using Verse;
 
-namespace MorePersonaTraits.OnHitWorkerClasses
+namespace MorePersonaTraits.WorkerClasses.OnHitWorkerClasses
 {
     public class OnHitWorker_AddedDamage : OnHitWorker
     {

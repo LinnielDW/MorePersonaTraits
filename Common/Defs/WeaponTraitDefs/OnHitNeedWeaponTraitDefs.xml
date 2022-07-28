@@ -12,7 +12,7 @@
         <modExtensions>
             <li Class="MorePersonaTraits.Extensions.WeaponTraitOnHitExtension">
                 <OnHitWorkers>
-                    <li Class="MorePersonaTraits.OnHitWorkerClasses.OnHitWorker_ApplyNeed">
+                    <li Class="MorePersonaTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_ApplyNeed">
                         <NeedDef>Food</NeedDef>
                         <ProcChance>0.4</ProcChance>
                         <ProcMagnitude>0.1</ProcMagnitude>
@@ -36,7 +36,7 @@
         <modExtensions>
             <li Class="MorePersonaTraits.Extensions.WeaponTraitOnHitExtension">
                 <OnHitWorkers>
-                    <li Class="MorePersonaTraits.OnHitWorkerClasses.OnHitWorker_ApplyNeed">
+                    <li Class="MorePersonaTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_ApplyNeed">
                         <NeedDef>Food</NeedDef>
                         <ProcChance>0.4</ProcChance>
                         <ProcMagnitude>-0.05</ProcMagnitude>

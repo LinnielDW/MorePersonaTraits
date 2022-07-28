@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using MorePersonaTraits.OnHitWorkerClasses;
+using MorePersonaTraits.WorkerClasses.OnHitWorkerClasses;
 using RimWorld;
 using Verse;
 

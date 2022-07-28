@@ -2,7 +2,7 @@
 using MorePersonaTraits.Utils;
 using Verse;
 
-namespace MorePersonaTraits.OnHitWorkerClasses
+namespace MorePersonaTraits.WorkerClasses.OnHitWorkerClasses
 {
     public class OnHitWorker
     {

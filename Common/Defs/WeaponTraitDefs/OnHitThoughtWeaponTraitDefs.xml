@@ -13,7 +13,7 @@
         <modExtensions>
             <li Class="MorePersonaTraits.Extensions.WeaponTraitOnHitExtension">
                 <OnHitWorkers>
-                    <li Class="MorePersonaTraits.OnHitWorkerClasses.OnHitWorker_ApplyThought">
+                    <li Class="MorePersonaTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_ApplyThought">
                         <ThoughtDef>MPT_OnHitThoughtSelfGood</ThoughtDef>
                         <ProcChance>0.8</ProcChance>
                         <TargetSelf>true</TargetSelf>

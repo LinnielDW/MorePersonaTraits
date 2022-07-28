@@ -54,18 +54,27 @@
     <CommonFiles Update="..\Common\Defs\WeaponTraitDefs\OnKillWeaponTraitDefs.xml">
       <Link>WeaponTraitDefs\OnKillWeaponTraitDefs.xml</Link>
     </CommonFiles>
+    <CommonFiles Update="..\Common\Defs\WeaponTraitDefs\BondedNeedWeaponTraitDefs.xml">
+      <Link>WeaponTraitDefs\BondedNeedWeaponTraitDefs.xml</Link>
+    </CommonFiles>
+    <Reference Include="UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BondedWorkerClasses\BondedWorker.cs" />
-    <Compile Include="BondedWorkerClasses\BondedWorker_ChemicalAny.cs" />
     <Compile Include="Extensions\WeaponTraitBondedNeedExtension.cs" />
     <Compile Include="Extensions\WeaponTraitOnHitExtension.cs" />
-    <Compile Include="OnHitWorkerClasses\OnHitWorker.cs" />
-    <Compile Include="OnHitWorkerClasses\OnHitWorker_AddedDamage.cs" />
-    <Compile Include="OnHitWorkerClasses\OnHitWorker_ApplyHediff.cs" />
-    <Compile Include="OnHitWorkerClasses\OnHitWorker_ApplyNeed.cs" />
-    <Compile Include="OnHitWorkerClasses\OnHitWorker_ApplyThought.cs" />
-    <Compile Include="OnHitWorkerClasses\OnHitWorker_Weather.cs" />
+    <Compile Include="Patches\PatchNeeds.cs" />
+    <Compile Include="WorkerClasses\BondedWorkerClasses\BondedWorker.cs" />
+    <Compile Include="WorkerClasses\BondedWorkerClasses\BondedWorker_ChemicalAny.cs" />
+    <Compile Include="WorkerClasses\OnHitWorkerClasses\OnHitWorker.cs" />
+    <Compile Include="WorkerClasses\OnHitWorkerClasses\OnHitWorker_AddedDamage.cs" />
+    <Compile Include="WorkerClasses\OnHitWorkerClasses\OnHitWorker_ApplyHediff.cs" />
+    <Compile Include="WorkerClasses\OnHitWorkerClasses\OnHitWorker_ApplyNeed.cs" />
+    <Compile Include="WorkerClasses\OnHitWorkerClasses\OnHitWorker_ApplyThought.cs" />
+    <Compile Include="WorkerClasses\OnHitWorkerClasses\OnHitWorker_Weather.cs" />
+    <Compile Include="WorkerClasses\WeaponTraitWorkerClasses\WeaponTraitWorker_NeedFilledOnKill.cs" />
     <Compile Include="Patches\PatchOnDamage.cs" />
     <Compile Include="MorePersonaTraits.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -73,7 +82,6 @@
     <Compile Include="Utils\DebugUtils.cs" />
     <Compile Include="Utils\PatcherCheckUtils.cs" />
     <Compile Include="Utils\OnHitUtils.cs" />
-    <Compile Include="WeaponTraitWorkerClasses\WeaponTraitWorker_NeedFilledOnKill.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Templates\BonusFields\statOffsets.txt" />
@@ -85,6 +93,9 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Lib.Harmony" Version="2.2.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="WorkerClasses" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 

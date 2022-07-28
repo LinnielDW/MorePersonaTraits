@@ -1,5 +1,5 @@
 ﻿using System;
-using MorePersonaTraits.OnHitWorkerClasses;
+using MorePersonaTraits.WorkerClasses.OnHitWorkerClasses;
 using Verse;
 
 namespace MorePersonaTraits.Templates

@@ -9,7 +9,7 @@
         <modExtensions>
             <li Class="MorePersonaTraits.Extensions.WeaponTraitOnHitExtension">
                 <OnHitWorkers>
-                    <li Class="MorePersonaTraits.OnHitWorkerClasses.OnHitWorker_ApplyHediff">
+                    <li Class="MorePersonaTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_ApplyHediff">
                         <HediffDef>Plague</HediffDef>
                         <ProcMagnitude>0.15</ProcMagnitude>
                         <ProcChance>0.35</ProcChance>
@@ -28,7 +28,7 @@
         <modExtensions>
             <li Class="MorePersonaTraits.Extensions.WeaponTraitOnHitExtension">
                 <OnHitWorkers>
-                    <li Class="MorePersonaTraits.OnHitWorkerClasses.OnHitWorker_ApplyHediff">
+                    <li Class="MorePersonaTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_ApplyHediff">
                         <HediffDef>Plague</HediffDef>
                         <ProcMagnitude>0.02</ProcMagnitude>
                         <ProcChance>0.02</ProcChance>

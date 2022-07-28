@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using MorePersonaTraits.Extensions;
-using MorePersonaTraits.OnHitWorkerClasses;
+using MorePersonaTraits.WorkerClasses.OnHitWorkerClasses;
 using RimWorld;
 using Verse;
 
