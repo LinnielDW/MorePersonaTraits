@@ -63,10 +63,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Extensions\WeaponTraitBondedNeedExtension.cs" />
     <Compile Include="Extensions\WeaponTraitOnHitExtension.cs" />
-    <Compile Include="WorkerClasses\BondedWorkerClasses\BondedWorker.cs" />
-    <Compile Include="WorkerClasses\BondedWorkerClasses\BondedWorker_ChemicalAny.cs" />
     <Compile Include="WorkerClasses\OnHitWorkerClasses\OnHitWorker.cs" />
     <Compile Include="WorkerClasses\OnHitWorkerClasses\OnHitWorker_AddedDamage.cs" />
     <Compile Include="WorkerClasses\OnHitWorkerClasses\OnHitWorker_ApplyHediff.cs" />
