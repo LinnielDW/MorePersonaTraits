@@ -68,6 +68,7 @@
   <ItemGroup>
     <Compile Include="Extensions\WeaponTraitOnHitExtension.cs" />
     <Compile Include="Patches\UIPatches.cs" />
+    <Compile Include="WeaponTraitDefDisplayStats.cs" />
     <Compile Include="WorkerClasses\OnHitWorkerClasses\OnHitWorker.cs" />
     <Compile Include="WorkerClasses\OnHitWorkerClasses\OnHitWorker_AddedDamage.cs" />
     <Compile Include="WorkerClasses\OnHitWorkerClasses\OnHitWorker_ApplyHediff.cs" />

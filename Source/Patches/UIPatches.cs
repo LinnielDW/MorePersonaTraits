@@ -1,7 +1,9 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using HarmonyLib;
+using MorePersonaTraits.Extensions;
+using MorePersonaTraits.WorkerClasses.OnHitWorkerClasses;
 using RimWorld;
 using Verse;
 
@@ -61,6 +63,107 @@ namespace MorePersonaTraits.Patches
             }
         }
     }
+
+    [HarmonyPatch(typeof(Def))]
+    [HarmonyPatch("SpecialDisplayStats")]
+    public static class PatchWeaponTraitDefDisplayStats
+    {
+        static IEnumerable<StatDrawEntry> Postfix(IEnumerable<StatDrawEntry> values, Def __instance)
+        {
+            var statEntries = new List<StatDrawEntry>();
+            if (__instance is WeaponTraitDef traitDef)
+            {
+                if(traitDef.equippedStatOffsets != null)
+                {
+                    foreach (var equippedOffset in traitDef.equippedStatOffsets)
+                    {
+                        statEntries.Add(
+                            new StatDrawEntry(
+                                StatCategoryDefOf.EquippedStatOffsets,
+                                equippedOffset.stat.label,
+                                equippedOffset.ValueToStringAsOffset,
+                                equippedOffset.stat.description,
+                                6010,
+                                null,
+                                null,
+                                false
+                            )
+                        );
+                    }
+                }
+
+                if (traitDef.GetModExtension<WeaponTraitOnHitExtension>() != null && traitDef.GetModExtension<WeaponTraitOnHitExtension>().OnHitWorkers != null)
+                {
+                    foreach (var worker in traitDef.GetModExtension<WeaponTraitOnHitExtension>().OnHitWorkers)
+                    {
+                        statEntries.Add(new StatDrawEntry(
+                            StatCategoryDefOf.Weapon,
+                            "Onhit Effect",
+                            workerLabel(worker),
+                            ReportText(worker),
+                            6010,
+                            null,
+                            null,
+                            false
+                        ));
+                    }
+                }
+
+                if (traitDef.bondedHediffs != null)
+                {
+                    foreach (var hediff in traitDef.bondedHediffs)
+                    {
+                        statEntries.AddRange(hediff.SpecialDisplayStats(StatRequest.ForEmpty()));
+                    }
+                }
+            }
+
+            statEntries.AddRange(values);
+            return statEntries;
+        }
+
+        private static TaggedString ReportText(OnHitWorker worker)
+        {
+            Log.Warning(worker.ToString());
+            return "MPT_OnHitDesc".Translate(
+                worker.ProcChance.ToStringPercent(),
+                workerEffect(worker),
+                worker.TargetSelf ? "MPT_TargetSelf".Translate() : "MPT_TargetTarget".Translate(),
+                worker.ProcMagnitude > 0f ? "MPT_MagnitudeDesc".Translate(worker.ProcMagnitude.ToStringPercent()) : TaggedString.Empty
+            );
+        }
+
+        private static string workerEffect(OnHitWorker worker)
+        {
+            switch(worker)
+            {
+                case OnHitWorker_ApplyHediff onHit:
+                    return "MPT_ApplyHediffDesc".Translate(onHit.HediffDef.LabelCap);
+                case OnHitWorker_ApplyNeed onHit:
+                    return onHit.ProcMagnitude > 0f ? "MPT_NeedOffsetTypeUpDesc".Translate(onHit.NeedDef.LabelCap) : "MPT_NeedOffsetTypeDownDesc".Translate(onHit.NeedDef.LabelCap);
+                case OnHitWorker_ApplyThought onHit:
+                    return "MPT_GiveThoughDesc".Translate(onHit.ThoughtDef.Label, onHit.ThoughtDef.stackLimit > 1 ? "MPT_ThoughtStackDesc".Translate(onHit.ThoughtDef.stackLimit) : TaggedString.Empty);
+                default:
+                    return "";
+            }
+        }
+
+        private static string workerLabel(OnHitWorker worker)
+        {
+            switch (worker)
+            {
+                case OnHitWorker_ApplyHediff onHit:
+                    return onHit.HediffDef.label;
+                case OnHitWorker_ApplyNeed onHit:
+                    return onHit.NeedDef.label;
+                case OnHitWorker_ApplyThought onHit:
+                    return onHit.ThoughtDef.Label;
+                default:
+                    return "";
+            }
+        }
+    }
+
 
     [HarmonyPatch(typeof(Pawn))]
     [HarmonyPatch("SpecialDisplayStats")]
