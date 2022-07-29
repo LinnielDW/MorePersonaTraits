@@ -6,6 +6,9 @@
         <description>This weapon revels in the art of slow and agonizing death. Upon hitting a target, has a 35% chance to apply/increase the target's plague by 15%.</description>
         <commonality>0.5</commonality>
         <marketValueOffset>400</marketValueOffset>
+        <descriptionHyperlinks>
+            <HediffDef>Plague</HediffDef>
+        </descriptionHyperlinks>
         <modExtensions>
             <li Class="MorePersonaTraits.Extensions.WeaponTraitOnHitExtension">
                 <OnHitWorkers>
@@ -25,6 +28,9 @@
         <description>This weapon's persona seems to attract the most exotic of baterium at the most inopportune times. Upon hitting a target, there is a small chance that the user will contract the plague.</description>
         <commonality>0.5</commonality>
         <marketValueOffset>-800</marketValueOffset>
+        <descriptionHyperlinks>
+            <HediffDef>Plague</HediffDef>
+        </descriptionHyperlinks>
         <modExtensions>
             <li Class="MorePersonaTraits.Extensions.WeaponTraitOnHitExtension">
                 <OnHitWorkers>

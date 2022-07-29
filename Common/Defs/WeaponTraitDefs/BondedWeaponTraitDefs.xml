@@ -18,6 +18,9 @@
         <defName>MPT_HediffResearchUp</defName>
         <label>psychic truth</label>
         <description>Research speed is increased by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_BondedResearchUp</WeaponTraitDef>
+        </descriptionHyperlinks>
         <isBad>false</isBad>
         <stages>
             <li>
@@ -46,6 +49,9 @@
         <defName>MPT_HediffResearchDown</defName>
         <label>psychic mental derailment</label>
         <description>Research speed is decreased by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_BondedResearchDown</WeaponTraitDef>
+        </descriptionHyperlinks>
         <isBad>false</isBad>
         <stages>
             <li>
@@ -74,6 +80,9 @@
         <defName>MPT_HediffGlobalWorkspeedUp</defName>
         <label>psychic work drive</label>
         <description>My global work speed is increased by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_BondedGlobalWorkspeedUp</WeaponTraitDef>
+        </descriptionHyperlinks>
         <isBad>false</isBad>
         <stages>
             <li>
@@ -102,6 +111,9 @@
         <defName>MPT_HediffGlobalWorkspeedDown</defName>
         <label>psychic energy state change inhibitor</label>
         <description>My global work speed is decreased by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_BondedGlobalWorkspeedDown</WeaponTraitDef>
+        </descriptionHyperlinks>
         <isBad>false</isBad>
         <stages>
             <li>
@@ -130,6 +142,9 @@
         <defName>MPT_HediffShootingAccuracyPawnUp</defName>
         <label>psychic spotter</label>
         <description>My shooting accuracy is increased by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_BondedShootingAccuracyPawnUp</WeaponTraitDef>
+        </descriptionHyperlinks>
         <isBad>false</isBad>
         <stages>
             <li>
@@ -158,6 +173,9 @@
         <defName>MPT_HediffShootingAccuracyPawnDown</defName>
         <label>psychic oversightedness</label>
         <description>My shooting accuracy is decreased by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_BondedShootingAccuracyPawnDown</WeaponTraitDef>
+        </descriptionHyperlinks>
         <isBad>false</isBad>
         <stages>
             <li>
@@ -186,6 +204,9 @@
         <defName>MPT_HediffTradePriceImprovementUp</defName>
         <label>psychic negotiation assistance</label>
         <description>My trade prices are increased by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_BondedTradePriceImprovementUp</WeaponTraitDef>
+        </descriptionHyperlinks>
         <isBad>false</isBad>
         <stages>
             <li>
@@ -214,6 +235,9 @@
         <defName>MPT_HediffTradePriceImprovementDown</defName>
         <label>psychically induced spontaneous laughter</label>
         <description>My trade prices are being hampered by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_BondedTradePriceImprovementDown</WeaponTraitDef>
+        </descriptionHyperlinks>
         <isBad>false</isBad>
         <stages>
             <li>
@@ -242,6 +266,9 @@
         <defName>MPT_HediffSurgerySuccessChanceFactorUp</defName>
         <label>psychic surgery guidance</label>
         <description>My surgery success chance is increased by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_BondedSurgerySuccessChanceFactorUp</WeaponTraitDef>
+        </descriptionHyperlinks>
         <isBad>false</isBad>
         <stages>
             <li>
@@ -270,6 +297,9 @@
         <defName>MPT_HediffSurgerySuccessChanceFactorDown</defName>
         <label>psychic carelessness</label>
         <description>My surgery success chance is being hampered by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_BondedSurgerySuccessChanceFactorDown</WeaponTraitDef>
+        </descriptionHyperlinks>
         <isBad>false</isBad>
         <stages>
             <li>
@@ -298,6 +328,9 @@
         <defName>MPT_HediffRestRateMultiplierUp</defName>
         <label>psychic sweet dreams</label>
         <description>My rest rate is increased by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_BondedRestRateMultiplierUp</WeaponTraitDef>
+        </descriptionHyperlinks>
         <isBad>false</isBad>
         <stages>
             <li>
@@ -326,6 +359,9 @@
         <defName>MPT_HediffRestRateMultiplierDown</defName>
         <label>psychic restlessness</label>
         <description>My rest rate is being hampered by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_BondedRestRateMultiplierDown</WeaponTraitDef>
+        </descriptionHyperlinks>
         <isBad>false</isBad>
         <stages>
             <li>
@@ -354,6 +390,9 @@
         <defName>MPT_HediffImmunityGainSpeedUp</defName>
         <label>psychically charged antibodies</label>
         <description>My immunity gain speed is enhanced by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_BondedImmunityGainSpeedUp</WeaponTraitDef>
+        </descriptionHyperlinks>
         <isBad>false</isBad>
         <stages>
             <li>
@@ -382,6 +421,9 @@
         <defName>MPT_HediffImmunityGainSpeedDown</defName>
         <label>psychically hampered immune response</label>
         <description>My immunity gain speed being hampered by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_BondedImmunityGainSpeedDown</WeaponTraitDef>
+        </descriptionHyperlinks>
         <isBad>false</isBad>
         <stages>
             <li>
@@ -410,6 +452,9 @@
         <defName>MPT_HediffMedicalTendQualityOffsetUp</defName>
         <label>psychic bandage application guidelines</label>
         <description>My tend quality is enhanced by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_BondedMedicalTendQualityOffsetUp</WeaponTraitDef>
+        </descriptionHyperlinks>
         <isBad>false</isBad>
         <stages>
             <li>
@@ -438,6 +483,9 @@
         <defName>MPT_HediffMedicalTendQualityOffsetDown</defName>
         <label>psychic questionable first aid guidance</label>
         <description>My tend quality is being hampered by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_BondedMedicalTendQualityOffsetDown</WeaponTraitDef>
+        </descriptionHyperlinks>
         <isBad>false</isBad>
         <stages>
             <li>
@@ -467,6 +515,9 @@
         <defName>MPT_HediffGlobalLearningFactorUp</defName>
         <label>psychic tutor</label>
         <description>My learning rate is enhanced by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_BondedGlobalLearningFactorUp</WeaponTraitDef>
+        </descriptionHyperlinks>
         <isBad>false</isBad>
         <stages>
             <li>
@@ -495,6 +546,9 @@
         <defName>MPT_HediffGlobalLearningFactorDown</defName>
         <label>psychic ignorance</label>
         <description>My learning rate is being hampered by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_BondedGlobalLearningFactorDown</WeaponTraitDef>
+        </descriptionHyperlinks>
         <isBad>false</isBad>
         <stages>
             <li>
