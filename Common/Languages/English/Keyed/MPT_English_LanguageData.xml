@@ -17,4 +17,5 @@
     
     <MPT_TargetSelf>the wielder</MPT_TargetSelf>
     <MPT_TargetTarget>the target</MPT_TargetTarget>
+    <MPT_OnhitEffectLabel>On-hit Effect</MPT_OnhitEffectLabel>
 </LanguageData>

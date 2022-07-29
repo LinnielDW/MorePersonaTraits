@@ -97,9 +97,9 @@ namespace MorePersonaTraits.Patches
                     foreach (var worker in traitDef.GetModExtension<WeaponTraitOnHitExtension>().OnHitWorkers)
                     {
                         statEntries.Add(new StatDrawEntry(
-                            StatCategoryDefOf.Weapon,
-                            "Onhit Effect",
+                            MPT_StatCategoryDefOf.MPT_OnHitEffects,
                             workerLabel(worker),
+                            ReportText(worker),
                             ReportText(worker),
                             6010,
                             null,

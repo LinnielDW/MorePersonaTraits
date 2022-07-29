@@ -67,6 +67,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Extensions\WeaponTraitOnHitExtension.cs" />
+    <Compile Include="MPT_StatCategoryDefOf.cs" />
     <Compile Include="Patches\UIPatches.cs" />
     <Compile Include="WeaponTraitDefDisplayStats.cs" />
     <Compile Include="WorkerClasses\OnHitWorkerClasses\OnHitWorker.cs" />
