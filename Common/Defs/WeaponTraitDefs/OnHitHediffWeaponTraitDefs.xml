@@ -3,7 +3,7 @@
     <WeaponTraitDef>
         <defName>MPT_OnHitPlague</defName>
         <label>plague bringer</label>
-        <description>This weapon revels in the art of slow and agonizing death. Upon hitting a target, this weapon has a chance to apply/increase the target's plague%.</description>
+        <description>This weapon revels in the art of slow and agonizing death. Upon hitting a target, this weapon has a chance to apply/increase the target's plague.</description>
         <commonality>0.5</commonality>
         <marketValueOffset>400</marketValueOffset>
         <descriptionHyperlinks>
