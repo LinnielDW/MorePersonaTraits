@@ -17,7 +17,7 @@
     <WeaponTraitDef>
         <defName>MPT_HeldMeleeHitChanceDown</defName>
         <label>squemish</label>
-        <description>This weapon's persona really doesn't like touching the soft warm insides of things. While held, it provides its wielder with a decreased chance to hit their target.</description>
+        <description>This weapon's persona really doesn't like touching the soft warm insides of things.\nWhile held, it provides its wielder with a decreased chance to hit their target.</description>
         <commonality>0.5</commonality>
         <marketValueOffset>-400</marketValueOffset>
         <equippedStatOffsets>
@@ -31,7 +31,7 @@
     <WeaponTraitDef>
         <defName>MPT_HeldArmorRatingUp</defName>
         <label>non-newtonian</label>
-        <description>This weapon's persona subtly modifies the atoms near the wielder's skin increasing their attenuation to knetic energy before impact. While held, it provides its wielder with increased armor rating.</description>
+        <description>This weapon's persona subtly modifies the atoms near the wielder's skin increasing their attenuation to knetic energy before impact.\nWhile held, it provides its wielder with increased armor rating.</description>
         <commonality>0.5</commonality>
         <marketValueOffset>400</marketValueOffset>
         <equippedStatOffsets>
@@ -47,7 +47,7 @@
     <WeaponTraitDef>
         <defName>MPT_HeldArmorRatingDown</defName>
         <label>bond sundering</label>
-        <description>This weapon's persona weakens the natural forces binding molecular structures together around its weilder. While held, it provides its wielder with reduced armor rating.</description>
+        <description>This weapon's persona weakens the natural forces binding molecular structures together around its weilder.\nWhile held, it provides its wielder with reduced armor rating.</description>
         <commonality>0.5</commonality>
         <marketValueOffset>-400</marketValueOffset>
         <equippedStatOffsets>

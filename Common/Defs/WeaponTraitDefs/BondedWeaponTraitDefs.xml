@@ -3,7 +3,7 @@
     <WeaponTraitDef>
         <defName>MPT_BondedResearchUp</defName>
         <label>insightful</label>
-        <description>This weapon's persona speaks long forgotten truths to its bond. The person bonded to it gains extra research speed so long as they are bonded.</description>
+        <description>This weapon's persona speaks long forgotten truths to its bond.\nThe person bonded to it gains extra research speed so long as they are bonded.</description>
         <commonality>0.5</commonality>
         <marketValueOffset>500</marketValueOffset>
         <bondedHediffs>
@@ -34,7 +34,7 @@
     <WeaponTraitDef>
         <defName>MPT_BondedResearchDown</defName>
         <label>rambling</label>
-        <description>This weapon's persona constantly rambles useless distractions into their bond's mind. The bonded pawn takes a hit to their research speed so long as the bond holds.</description>
+        <description>This weapon's persona constantly rambles useless distractions into their bond's mind.\nThe bonded pawn takes a hit to their research speed so long as the bond holds.</description>
         <commonality>0.5</commonality>
         <marketValueOffset>-500</marketValueOffset>
         <bondedHediffs>
@@ -65,7 +65,7 @@
     <WeaponTraitDef>
         <defName>MPT_BondedGlobalWorkspeedUp</defName>
         <label>driven</label>
-        <description>This weapon's persona fills it's bond with energy, driving it forward. The bonded pawn gains increased to global work speed.</description>
+        <description>This weapon's persona fills it's bond with energy, driving it forward.\nThe bonded pawn gains increased to global work speed.</description>
         <bondedHediffs>
             <li>MPT_HediffGlobalWorkspeedUp</li>
         </bondedHediffs>
@@ -96,7 +96,7 @@
     <WeaponTraitDef>
         <defName>MPT_BondedGlobalWorkspeedDown</defName>
         <label>slacking</label>
-        <description>This weapon's persona seeks to 'conserve the high energy state of the universe' by resisting energy state changes made willingly by it's boonded. The bonded pawn loses some global work speed.</description>
+        <description>This weapon's persona seeks to 'conserve the high energy state of the universe' by resisting energy state changes made willingly by it's boonded.\nThe bonded pawn loses some global work speed.</description>
         <bondedHediffs>
             <li>MPT_HediffGlobalWorkspeedDown</li>
         </bondedHediffs>
@@ -127,7 +127,7 @@
     <WeaponTraitDef>
         <defName>MPT_BondedShootingAccuracyPawnUp</defName>
         <label>spotter</label>
-        <description>This weapon's persona excels at giving marksman adivce to it's bond. The bonded pawn gains shooting accuracy.</description>
+        <description>This weapon's persona excels at giving marksman adivce to it's bond.\nThe bonded pawn gains shooting accuracy.</description>
         <bondedHediffs>
             <li>MPT_HediffShootingAccuracyPawnUp</li>
         </bondedHediffs>
@@ -158,7 +158,7 @@
     <WeaponTraitDef>
         <defName>MPT_BondedShootingAccuracyPawnDown</defName>
         <label>protagonist-maker</label>
-        <description>This weapon's persona has romatasised the idea of 'plot armour' and will take steps to make it with it's bond. The bonded pawn takes a penalty shooting accuracy.</description>
+        <description>This weapon's persona has romatasised the idea of 'plot armour' and will take steps to make it with it's bond.\nThe bonded pawn takes a penalty shooting accuracy.</description>
         <bondedHediffs>
             <li>MPT_HediffShootingAccuracyPawnDown</li>
         </bondedHediffs>
@@ -189,7 +189,7 @@
     <WeaponTraitDef>
         <defName>MPT_BondedTradePriceImprovementUp</defName>
         <label>poker faced</label>
-        <description>This weapon's persona is great at reading a negotiation and whispers tips to it's bond to help close a deal. The bonded pawn gains an increase to their trade price improvement.</description>
+        <description>This weapon's persona is great at reading a negotiation and whispers tips to it's bond to help close a deal.\nThe bonded pawn gains an increase to their trade price improvement.</description>
         <bondedHediffs>
             <li>MPT_HediffTradePriceImprovementUp</li>
         </bondedHediffs>
@@ -220,7 +220,7 @@
     <WeaponTraitDef>
         <defName>MPT_BondedTradePriceImprovementDown</defName>
         <label>begrimed</label>
-        <description>This weapon's persona cracks the most inappropriate jokes when it's bond is attempting to be composed around others. The bonded pawn loses some of their trade price improvement.</description>
+        <description>This weapon's persona cracks the most inappropriate jokes when it's bond is attempting to be composed around others.\nThe bonded pawn loses some of their trade price improvement.</description>
         <bondedHediffs>
             <li>MPT_HediffTradePriceImprovementDown</li>
         </bondedHediffs>
@@ -251,7 +251,7 @@
     <WeaponTraitDef>
         <defName>MPT_BondedSurgerySuccessChanceFactorUp</defName>
         <label>exact</label>
-        <description>This weapon's persona helps guide the hand of the surgeon it is bonded to. The bonded pawn gains increased surgery success chance.</description>
+        <description>This weapon's persona helps guide the hand of the surgeon it is bonded to.\nThe bonded pawn gains increased surgery success chance.</description>
         <bondedHediffs>
             <li>MPT_HediffSurgerySuccessChanceFactorUp</li>
         </bondedHediffs>
@@ -282,7 +282,7 @@
     <WeaponTraitDef>
         <defName>MPT_BondedSurgerySuccessChanceFactorDown</defName>
         <label>careless</label>
-        <description>This weapon's persona tends to make their bond miss critical details. The bonded pawn loses some of their surgery success chance.</description>
+        <description>This weapon's persona tends to make their bond miss critical details.\nThe bonded pawn loses some of their surgery success chance.</description>
         <bondedHediffs>
             <li>MPT_HediffSurgerySuccessChanceFactorDown</li>
         </bondedHediffs>
@@ -313,7 +313,7 @@
     <WeaponTraitDef>
         <defName>MPT_BondedRestRateMultiplierUp</defName>
         <label>cosy</label>
-        <description>This weapon's persona sooothes their bonded helping them get a good night's sleep. The bonded pawn has increased rest rate.</description>
+        <description>This weapon's persona sooothes their bonded helping them get a good night's sleep.\nThe bonded pawn has increased rest rate.</description>
         <bondedHediffs>
             <li>MPT_HediffRestRateMultiplierUp</li>
         </bondedHediffs>
@@ -344,7 +344,7 @@
     <WeaponTraitDef>
         <defName>MPT_BondedRestRateMultiplierDown</defName>
         <label>doomsaying</label>
-        <description>This weapon's persona can't help but provide dreams of the horrors that might lay ahead. The bonded pawn has reduced rest rate.</description>
+        <description>This weapon's persona can't help but provide dreams of the horrors that might lay ahead.\nThe bonded pawn has reduced rest rate.</description>
         <bondedHediffs>
             <li>MPT_HediffRestRateMultiplierDown</li>
         </bondedHediffs>
@@ -375,7 +375,7 @@
     <WeaponTraitDef>
         <defName>MPT_BondedImmunityGainSpeedUp</defName>
         <label>vital</label>
-        <description>This weapon's persona has extensive knowledge on protein folding and is able to provide this knowledge to the immune system of their bond. The bonded pawn gains increased immunity gain speed.</description>
+        <description>This weapon's persona has extensive knowledge on protein folding and is able to provide this knowledge to the immune system of their bond.\nThe bonded pawn gains increased immunity gain speed.</description>
         <bondedHediffs>
             <li>MPT_HediffImmunityGainSpeedUp</li>
         </bondedHediffs>
@@ -406,7 +406,7 @@
     <WeaponTraitDef>
         <defName>MPT_BondedImmunityGainSpeedDown</defName>
         <label>amico-immunomasochist</label>
-        <description>This weapon's persona has the strangely specific hobby of watching the extended pain and suffering that comes from their bond's body attempts to fight off infectious agents, and will take steps to enjoy that hobby for as long as possible. The bonded pawn loses some of their immunity gain speed.</description>
+        <description>This weapon's persona has the strangely specific hobby of watching the extended pain and suffering that comes from their bond's body attempts to fight off infectious agents, and will take steps to enjoy that hobby for as long as possible.\nThe bonded pawn loses some of their immunity gain speed.</description>
         <bondedHediffs>
             <li>MPT_HediffImmunityGainSpeedDown</li>
         </bondedHediffs>
@@ -437,7 +437,7 @@
     <WeaponTraitDef>
         <defName>MPT_BondedMedicalTendQualityOffsetUp</defName>
         <label>tender</label>
-        <description>This weapon's persona is both tender in heart and a tender at heart. Providing it's bonded pawn gains increased tend quality.</description>
+        <description>This weapon's persona is both tender in heart and a tender at heart.\nProviding it's bonded pawn gains increased tend quality.</description>
         <bondedHediffs>
             <li>MPT_HediffMedicalTendQualityOffsetUp</li>
         </bondedHediffs>
@@ -468,7 +468,7 @@
     <WeaponTraitDef>
         <defName>MPT_BondedMedicalTendQualityOffsetDown</defName>
         <label>embalmer</label>
-        <description>This weapon's persona is more concerned in the process of preserving biological remains than the preservation of life and 'helpfully' encourages its bond to do the same. The bonded pawn loses some tend quality.</description>
+        <description>This weapon's persona is more concerned in the process of preserving biological remains than the preservation of life and 'helpfully' encourages its bond to do the same.\nThe bonded pawn loses some tend quality.</description>
         <bondedHediffs>
             <li>MPT_HediffMedicalTendQualityOffsetDown</li>
         </bondedHediffs>
@@ -499,7 +499,7 @@
     <WeaponTraitDef>
         <defName>MPT_BondedGlobalLearningFactorUp</defName>
         <label>elsecaller</label>
-        <description>This weapon's persona has taken an immortal vow to reach their full potential and will help their bonded in any and all cases of self improvement. The bonded pawn gains increased learning speed.</description>
+        <description>This weapon's persona has taken an immortal vow to reach their full potential and will help their bonded in any and all cases of self improvement.\nThe bonded pawn gains increased learning speed.</description>
         <bondedHediffs>
             <li>MPT_HediffGlobalLearningFactorUp</li>
         </bondedHediffs>
@@ -531,7 +531,7 @@
     <WeaponTraitDef>
         <defName>MPT_BondedGlobalLearningFactorDown</defName>
         <label>asinine</label>
-        <description>This weapon's persona seems to contain vast knowledge of a universe with fundamentally different laws of nature, insisting that the way we see the universe is wrong. While interesting, it is mostly useless; causing the bonded pawn to learn slower.</description>
+        <description>This weapon's persona seems to contain vast knowledge of a universe with fundamentally different laws of nature, insisting that the way we see the universe is wrong.\nWhile interesting, it is mostly useless; causing the bonded pawn to learn slower.</description>
         <bondedHediffs>
             <li>MPT_HediffGlobalLearningFactorDown</li>
         </bondedHediffs>
