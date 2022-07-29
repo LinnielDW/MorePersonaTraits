@@ -17,7 +17,6 @@
         </descriptionHyperlinks>
     </WeaponTraitDef>
     
-    
     <HediffDef>
         <defName>MPT_HediffBondedNeedChemical_WakeUp</defName>
         <label>psychic wakeup addiction</label>

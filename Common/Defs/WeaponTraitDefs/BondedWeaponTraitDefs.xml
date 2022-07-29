@@ -189,7 +189,7 @@
     <WeaponTraitDef>
         <defName>MPT_BondedTradePriceImprovementUp</defName>
         <label>poker faced</label>
-        <description>This weapon's persona is great at reading a negotiation and whispers tips to it's bond to help close a deal.\nThe bonded pawn gains an increase to their trade price improvement.</description>
+        <description>This weapon's persona is great at reading a negotiation and whispers tips to it's bond to help close a deal.\nThe bonded pawn gains an edge in negotiations and trades.</description>
         <bondedHediffs>
             <li>MPT_HediffTradePriceImprovementUp</li>
         </bondedHediffs>
@@ -203,7 +203,7 @@
     <HediffDef>
         <defName>MPT_HediffTradePriceImprovementUp</defName>
         <label>psychic negotiation assistance</label>
-        <description>My trade prices are increased by my bonded weapon.</description>
+        <description>My trade prices and negotiation abilities are increased by my bonded weapon.</description>
         <descriptionHyperlinks>
             <WeaponTraitDef>MPT_BondedTradePriceImprovementUp</WeaponTraitDef>
         </descriptionHyperlinks>
@@ -212,6 +212,7 @@
             <li>
                 <statOffsets>
                     <TradePriceImprovement>0.1</TradePriceImprovement>
+                    <NegotiationAbility>0.5</NegotiationAbility>
                 </statOffsets>
             </li>
         </stages>
@@ -220,7 +221,7 @@
     <WeaponTraitDef>
         <defName>MPT_BondedTradePriceImprovementDown</defName>
         <label>begrimed</label>
-        <description>This weapon's persona cracks the most inappropriate jokes when it's bond is attempting to be composed around others.\nThe bonded pawn loses some of their trade price improvement.</description>
+        <description>This weapon's persona cracks the most inappropriate jokes when it's bond is attempting to be composed around others.\nThe bonded pawn has a harder time trading and negotiating.</description>
         <bondedHediffs>
             <li>MPT_HediffTradePriceImprovementDown</li>
         </bondedHediffs>
@@ -234,7 +235,7 @@
     <HediffDef>
         <defName>MPT_HediffTradePriceImprovementDown</defName>
         <label>psychically induced spontaneous laughter</label>
-        <description>My trade prices are being hampered by my bonded weapon.</description>
+        <description>My trade prices and negotiation abilities are being hampered by my bonded weapon.</description>
         <descriptionHyperlinks>
             <WeaponTraitDef>MPT_BondedTradePriceImprovementDown</WeaponTraitDef>
         </descriptionHyperlinks>
@@ -243,6 +244,7 @@
             <li>
                 <statOffsets>
                     <TradePriceImprovement>-0.1</TradePriceImprovement>
+                    <NegotiationAbility>-0.5</NegotiationAbility>
                 </statOffsets>
             </li>
         </stages>
