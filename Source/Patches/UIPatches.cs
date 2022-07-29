@@ -26,6 +26,17 @@ namespace MorePersonaTraits.Patches
                 false
             );
 
+            foreach (var statDrawEntry in HyperlinkedTraitStatDrawEntries(__instance)) yield return statDrawEntry;
+
+            foreach (var existingEntry in values)
+            {
+                if (existingEntry.LabelCap != "Stat_Thing_PersonaWeaponTrait_Label".Translate().CapitalizeFirst())
+                    yield return existingEntry;
+            }
+        }
+
+        private static IEnumerable<StatDrawEntry> HyperlinkedTraitStatDrawEntries(CompBladelinkWeapon __instance)
+        {
             if (!__instance.TraitsListForReading.NullOrEmpty())
             {
                 StringBuilder stringBuilder = new StringBuilder();
@@ -54,12 +65,6 @@ namespace MorePersonaTraits.Patches
                     from traitDef in __instance.TraitsListForReading select new Dialog_InfoCard.Hyperlink(traitDef),
                     false
                 );
-            }
-
-            foreach (var value in values)
-            {
-                if (value.LabelCap != "Stat_Thing_PersonaWeaponTrait_Label".Translate().CapitalizeFirst())
-                    yield return value;
             }
         }
     }
