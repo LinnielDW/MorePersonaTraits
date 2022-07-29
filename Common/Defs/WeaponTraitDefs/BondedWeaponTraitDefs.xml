@@ -65,7 +65,7 @@
     <WeaponTraitDef>
         <defName>MPT_BondedGlobalWorkspeedUp</defName>
         <label>driven</label>
-        <description>This weapon's persona fills it's bond with energy, driving it forward.\nThe bonded pawn gains increased to global work speed.</description>
+        <description>This weapon's persona fills its bond with energy, driving it forward.\nThe bonded pawn gains increased to global work speed.</description>
         <bondedHediffs>
             <li>MPT_HediffGlobalWorkspeedUp</li>
         </bondedHediffs>
@@ -96,7 +96,7 @@
     <WeaponTraitDef>
         <defName>MPT_BondedGlobalWorkspeedDown</defName>
         <label>slacking</label>
-        <description>This weapon's persona seeks to 'conserve the high energy state of the universe' by resisting energy state changes made willingly by it's boonded.\nThe bonded pawn loses some global work speed.</description>
+        <description>This weapon's persona seeks to 'conserve the high energy state of the universe' by resisting energy state changes made willingly by its boonded.\nThe bonded pawn loses some global work speed.</description>
         <bondedHediffs>
             <li>MPT_HediffGlobalWorkspeedDown</li>
         </bondedHediffs>
@@ -127,7 +127,7 @@
     <WeaponTraitDef>
         <defName>MPT_BondedShootingAccuracyPawnUp</defName>
         <label>spotter</label>
-        <description>This weapon's persona excels at giving marksman adivce to it's bond.\nThe bonded pawn gains shooting accuracy.</description>
+        <description>This weapon's persona excels at giving marksman adivce to its bond.\nThe bonded pawn gains shooting accuracy.</description>
         <bondedHediffs>
             <li>MPT_HediffShootingAccuracyPawnUp</li>
         </bondedHediffs>
@@ -158,7 +158,7 @@
     <WeaponTraitDef>
         <defName>MPT_BondedShootingAccuracyPawnDown</defName>
         <label>protagonist-maker</label>
-        <description>This weapon's persona has romatasised the idea of 'plot armour' and will take steps to make it with it's bond.\nThe bonded pawn takes a penalty shooting accuracy.</description>
+        <description>This weapon's persona has romatasised the idea of 'plot armour' and will take steps to make it with its bond.\nThe bonded pawn takes a penalty shooting accuracy.</description>
         <bondedHediffs>
             <li>MPT_HediffShootingAccuracyPawnDown</li>
         </bondedHediffs>
@@ -189,7 +189,7 @@
     <WeaponTraitDef>
         <defName>MPT_BondedTradePriceImprovementUp</defName>
         <label>poker faced</label>
-        <description>This weapon's persona is great at reading a negotiation and whispers tips to it's bond to help close a deal.\nThe bonded pawn gains an edge in negotiations and trades.</description>
+        <description>This weapon's persona is great at reading a negotiation and whispers tips to its bond to help close a deal.\nThe bonded pawn gains an edge in negotiations and trades.</description>
         <bondedHediffs>
             <li>MPT_HediffTradePriceImprovementUp</li>
         </bondedHediffs>
@@ -221,7 +221,7 @@
     <WeaponTraitDef>
         <defName>MPT_BondedTradePriceImprovementDown</defName>
         <label>begrimed</label>
-        <description>This weapon's persona cracks the most inappropriate jokes when it's bond is attempting to be composed around others.\nThe bonded pawn has a harder time trading and negotiating.</description>
+        <description>This weapon's persona cracks the most inappropriate jokes when its bond is attempting to be composed around others.\nThe bonded pawn has a harder time trading and negotiating.</description>
         <bondedHediffs>
             <li>MPT_HediffTradePriceImprovementDown</li>
         </bondedHediffs>
@@ -439,7 +439,7 @@
     <WeaponTraitDef>
         <defName>MPT_BondedMedicalTendQualityOffsetUp</defName>
         <label>tender</label>
-        <description>This weapon's persona is both tender in heart and a tender at heart.\nProviding it's bonded pawn gains increased tend quality.</description>
+        <description>This weapon's persona is both tender in heart and a tender at heart.\nProviding its bonded pawn gains increased tend quality.</description>
         <bondedHediffs>
             <li>MPT_HediffMedicalTendQualityOffsetUp</li>
         </bondedHediffs>
@@ -595,7 +595,7 @@
     <WeaponTraitDef>
         <defName>MPT_BondedMentalBreakThresholdUp</defName>
         <label>twitchy</label>
-        <description>This weapon's persona is easily distressed. It's uneasy energy rubs off on their bond.\nThe bonded pawn is more suseptible to mental breaks.</description>
+        <description>This weapon's persona is easily distressed. Its uneasy energy rubs off on their bond.\nThe bonded pawn is more suseptible to mental breaks.</description>
         <bondedHediffs>
             <li>MPT_HediffMentalBreakThresholdUp</li>
         </bondedHediffs>
