@@ -66,7 +66,7 @@ namespace MorePersonaTraits.Patches
 
     [HarmonyPatch(typeof(Def))]
     [HarmonyPatch("SpecialDisplayStats")]
-    public static class PatchWeaponTraitDefDisplayStats
+    public static class PatchWeaponTraitDefSpecialDisplayStats
     {
         static IEnumerable<StatDrawEntry> Postfix(IEnumerable<StatDrawEntry> values, Def __instance)
         {
