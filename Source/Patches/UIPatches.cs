@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using HarmonyLib;
 using RimWorld;
 using Verse;
@@ -21,9 +23,41 @@ namespace MorePersonaTraits.Patches
                 Gen.YieldSingle(new Dialog_InfoCard.Hyperlink(__instance.CodedPawn, -1)),
                 false
             );
+
+            if (!__instance.TraitsListForReading.NullOrEmpty())
+            {
+                StringBuilder stringBuilder = new StringBuilder();
+                stringBuilder.AppendLine("Stat_Thing_PersonaWeaponTrait_Desc".Translate());
+                stringBuilder.AppendLine();
+                for (int i = 0; i < __instance.TraitsListForReading.Count; i++)
+                {
+                    stringBuilder.AppendLine(__instance.TraitsListForReading[i].LabelCap + ": " +
+                                             __instance.TraitsListForReading[i].description);
+                    if (i < __instance.TraitsListForReading.Count - 1)
+                    {
+                        stringBuilder.AppendLine();
+                    }
+                }
+
+                yield return new StatDrawEntry(
+                    __instance.parent.def.IsMeleeWeapon
+                        ? StatCategoryDefOf.Weapon_Melee
+                        : StatCategoryDefOf.Weapon_Ranged,
+                    "Stat_Thing_PersonaWeaponTrait_Label".Translate(),
+                    (from x in __instance.TraitsListForReading select x.label).ToCommaList(false, false)
+                    .CapitalizeFirst(),
+                    stringBuilder.ToString(),
+                    1104,
+                    null,
+                    from traitDef in __instance.TraitsListForReading select new Dialog_InfoCard.Hyperlink(traitDef),
+                    false
+                );
+            }
+
             foreach (var value in values)
             {
-                yield return value;
+                if (value.LabelCap != "Stat_Thing_PersonaWeaponTrait_Label".Translate().CapitalizeFirst())
+                    yield return value;
             }
         }
     }
