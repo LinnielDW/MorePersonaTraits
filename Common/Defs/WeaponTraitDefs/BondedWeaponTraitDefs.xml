@@ -560,4 +560,66 @@
             </li>
         </stages>
     </HediffDef>
+
+    <WeaponTraitDef>
+        <defName>MPT_BondedMentalBreakThresholdDown</defName>
+        <label>annealed</label>
+        <description>This weapon's persona has endured far worse than anything the rim could throw at it. This resolve seems to rub off on their bond.\nThe bonded pawn does not breakdown so easily.</description>
+        <bondedHediffs>
+            <li>MPT_HediffMentalBreakThresholdDown</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_BondedMentalBreakThreshold</li>
+            <li>NeverBond</li>
+        </exclusionTags>
+        <commonality>0.4</commonality>
+        <marketValueOffset>500</marketValueOffset>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_HediffMentalBreakThresholdDown</defName>
+        <label>psychic steadiness</label>
+        <description>My mental break threshold is strengthened by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_BondedMentalBreakThresholdDown</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statOffsets>
+                    <MentalBreakThreshold>-0.08</MentalBreakThreshold>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <WeaponTraitDef>
+        <defName>MPT_BondedMentalBreakThresholdUp</defName>
+        <label>twitchy</label>
+        <description>This weapon's persona is easily distressed. It's uneasy energy rubs off on their bond.\nThe bonded pawn is more suseptible to mental breaks.</description>
+        <bondedHediffs>
+            <li>MPT_HediffMentalBreakThresholdUp</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_BondedMentalBreakThreshold</li>
+            <li>NeverBond</li>
+        </exclusionTags>
+        <commonality>0.4</commonality>
+        <marketValueOffset>-500</marketValueOffset>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_HediffMentalBreakThresholdUp</defName>
+        <label>psychic uneasiness</label>
+        <description>My mental break threshold is hampered by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_BondedMentalBreakThresholdUp</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statOffsets>
+                    <MentalBreakThreshold>0.08</MentalBreakThreshold>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
 </Defs>
