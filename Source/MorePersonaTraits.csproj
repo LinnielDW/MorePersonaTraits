@@ -70,6 +70,8 @@
     <Compile Include="MPT_StatCategoryDefOf.cs" />
     <Compile Include="Patches\UIPatches.cs" />
     <Compile Include="WeaponTraitDefDisplayStats.cs" />
+    <Compile Include="WorkerClasses\ItemWorkerClasses\CompTargetable_SingleBladelink.cs" />
+    <Compile Include="WorkerClasses\ItemWorkerClasses\CompTargetEffect_BladeDelinker.cs" />
     <Compile Include="WorkerClasses\OnHitWorkerClasses\OnHitWorker.cs" />
     <Compile Include="WorkerClasses\OnHitWorkerClasses\OnHitWorker_AddedDamage.cs" />
     <Compile Include="WorkerClasses\OnHitWorkerClasses\OnHitWorker_ApplyHediff.cs" />
@@ -95,9 +97,6 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Lib.Harmony" Version="2.2.2" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="WorkerClasses" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 
