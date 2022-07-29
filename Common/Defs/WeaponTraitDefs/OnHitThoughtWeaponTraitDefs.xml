@@ -6,9 +6,6 @@
         <description>This weapon has taken an immortal vow to be there when they are needed most. They will try to guide their wielder to also uphold this vow, especially when life is at its hardest. Upon hitting a target, there is a chance that the wielder will gain a small mood increase, stacking multiple times.</description>
         <commonality>0.5</commonality>
         <marketValueOffset>400</marketValueOffset>
-        <descriptionHyperlinks>
-            <ThoughtDef>MPT_OnHitThoughtSelfGood</ThoughtDef>
-        </descriptionHyperlinks>
         <exclusionTags>
             <li>NeverBond</li>
             <li>Radiant</li>
