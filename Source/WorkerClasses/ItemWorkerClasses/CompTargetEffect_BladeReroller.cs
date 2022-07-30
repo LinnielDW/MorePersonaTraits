@@ -32,17 +32,19 @@ namespace MorePersonaTraits.WorkerClasses.ItemWorkerClasses
                 .Invoke(compBladelink);
 
             traits.Clear();
-            InitializeTraits(traits);
+            InitializeTraits(traits, compBladelink);
         }
 
-        private void InitializeTraits(List<WeaponTraitDef> existingTraits)
+        private void InitializeTraits(List<WeaponTraitDef> existingTraits, CompBladelinkWeapon compBladelink)
         {
             if (existingTraits == null) existingTraits = new List<WeaponTraitDef>();
 
             //TODO: Get this from a setting
-            int randomInRange = new IntRange(1, 2).RandomInRange;
+            var range = AccessTools
+                .FieldRefAccess<IntRange>(typeof(CompBladelinkWeapon), "TraitsRange")
+                .Invoke(compBladelink);
 
-            for (var index = 0; index < randomInRange; ++index)
+            for (var index = 0; index < range.RandomInRange; ++index)
             {
                 var availableTraits = DefDatabase<WeaponTraitDef>.AllDefs
                     .Where(possibleTrait => CanAddTrait(existingTraits, possibleTrait))
@@ -53,11 +55,11 @@ namespace MorePersonaTraits.WorkerClasses.ItemWorkerClasses
             }
         }
 
-        private bool CanAddTrait(List<WeaponTraitDef> existingTraits, WeaponTraitDef traitToAdd)
+        private static bool CanAddTrait(List<WeaponTraitDef> existingTraits, WeaponTraitDef traitToAdd)
         {
             if (!existingTraits.NullOrEmpty())
             {
-                return existingTraits.Exists(existingTrait => traitToAdd.Overlaps(existingTrait));
+                return !existingTraits.Exists(existingTrait => traitToAdd.Overlaps(existingTrait));
             }
 
             return true;
