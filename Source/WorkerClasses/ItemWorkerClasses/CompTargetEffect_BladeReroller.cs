@@ -9,9 +9,6 @@ namespace MorePersonaTraits.WorkerClasses.ItemWorkerClasses
 {
     public class CompTargetEffect_BladeReroller : CompTargetEffect
     {
-        // private static readonly AccessTools.FieldRef<object, List<WeaponTraitDef>> weaponTraitsField =
-        //     AccessTools.FieldRefAccess<List<WeaponTraitDef>>(typeof(CompBladelinkWeapon), "traits");
-
         public override void DoEffectOn(Pawn user, Thing target)
         {
             try
