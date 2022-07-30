@@ -6,6 +6,13 @@ namespace MorePersonaTraits.WorkerClasses.ItemWorkerClasses
 {
     public class CompTargetable_SingleBladelink : CompTargetable
     {
+        public CompProperties_TargetableSingleBladelink Props
+        {
+            get
+            {
+                return (CompProperties_TargetableSingleBladelink) props;
+            }
+        }
         protected override TargetingParameters GetTargetingParameters()
         {
             return new TargetingParameters
@@ -14,7 +21,7 @@ namespace MorePersonaTraits.WorkerClasses.ItemWorkerClasses
                 canTargetBuildings = false,
                 canTargetItems = true,
                 mapObjectTargetsMustBeAutoAttackable = false,
-                validator = x => x.Thing.TryGetComp<CompBladelinkWeapon>() != null && x.Thing.TryGetComp<CompBladelinkWeapon>().CodedPawn != null && BaseTargetValidator(x.Thing)
+                validator = x => x.Thing.TryGetComp<CompBladelinkWeapon>() != null && ValidateBondRequires(x) && BaseTargetValidator(x.Thing)
             };
         }
 
@@ -29,6 +36,12 @@ namespace MorePersonaTraits.WorkerClasses.ItemWorkerClasses
             {
                 return true;
             }
+        }
+
+        private bool ValidateBondRequires(TargetInfo x)
+        {
+            if (Props.RequiresBond) return x.Thing.TryGetComp<CompBladelinkWeapon>().CodedPawn != null;
+            return true;
         }
     }
 }

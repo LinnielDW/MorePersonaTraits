@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
     <ThingDef ParentName="ArtifactBase">
         <defName>MPT_BladelinkUncoder</defName>
@@ -20,8 +20,9 @@
         </statBases>
         <drawGUIOverlay>false</drawGUIOverlay>
         <comps>
-            <li Class="CompProperties_Targetable">
+            <li Class="MorePersonaTraits.WorkerClasses.ItemWorkerClasses.CompProperties_TargetableSingleBladelink">
                 <compClass>MorePersonaTraits.WorkerClasses.ItemWorkerClasses.CompTargetable_SingleBladelink</compClass>
+                <RequiresBond>true</RequiresBond>
             </li>
             <!--TODO: experiment with sound to find a good one.-->
             <li Class="CompProperties_UseEffectArtifact">
