@@ -6,13 +6,6 @@ namespace MorePersonaTraits.WorkerClasses.ItemWorkerClasses
 {
     public class CompTargetable_SingleBladelink : CompTargetable
     {
-        public CompProperties_TargetableSingleBladelink Props
-        {
-            get
-            {
-                return (CompProperties_TargetableSingleBladelink) props;
-            }
-        }
         protected override TargetingParameters GetTargetingParameters()
         {
             return new TargetingParameters
@@ -21,7 +14,9 @@ namespace MorePersonaTraits.WorkerClasses.ItemWorkerClasses
                 canTargetBuildings = false,
                 canTargetItems = true,
                 mapObjectTargetsMustBeAutoAttackable = false,
-                validator = x => x.Thing.TryGetComp<CompBladelinkWeapon>() != null && ValidateBondRequires(x) && BaseTargetValidator(x.Thing)
+                validator = targetInfo =>
+                    targetInfo.Thing.TryGetComp<CompBladelinkWeapon>() != null && ValidateBondRequires(targetInfo) &&
+                    BaseTargetValidator(targetInfo.Thing)
             };
         }
 
@@ -30,17 +25,12 @@ namespace MorePersonaTraits.WorkerClasses.ItemWorkerClasses
             yield return targetChosenByPlayer;
         }
 
-        protected override bool PlayerChoosesTarget
-        {
-            get
-            {
-                return true;
-            }
-        }
+        protected override bool PlayerChoosesTarget => true;
 
-        private bool ValidateBondRequires(TargetInfo x)
+        private bool ValidateBondRequires(TargetInfo targetInfo)
         {
-            if (Props.RequiresBond) return x.Thing.TryGetComp<CompBladelinkWeapon>().CodedPawn != null;
+            if (((CompProperties_TargetableSingleBladelink) Props).RequiresBond)
+                return targetInfo.Thing.TryGetComp<CompBladelinkWeapon>().CodedPawn != null;
             return true;
         }
     }
