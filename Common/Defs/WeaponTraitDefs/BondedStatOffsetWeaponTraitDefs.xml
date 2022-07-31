@@ -1055,4 +1055,62 @@
             </li>
         </stages>
     </HediffDef>
+
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_BondedPainShockThresholdUp</defName>
+        <label>sturdy</label>
+        <description>This weapons persona won't allow their bond to kowtow so easily. They will march on, even if its the last thing they'll do.\nThe bonded pawn has an increased pain threshold.</description>
+        <bondedHediffs>
+            <li>MPT_HediffPainShockThresholdUp</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_BondedPainShockThreshold</li>
+        </exclusionTags>
+        <marketValueOffset>500</marketValueOffset>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_HediffPainShockThresholdUp</defName>
+        <label>psychic adrenaline</label>
+        <description>My pain threshold is being increased by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_BondedPainShockThresholdUp</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statOffsets>
+                    <PainShockThreshold>0.35</PainShockThreshold>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_BondedPainShockThresholdDown</defName>
+        <label>shaken</label>
+        <description>This weapons persona has a will which is easily destressed. Even the slightest pain is enough to send this persona and their wielder to the floor.\nThe bonded pawn has a decreased pain threshold.</description>
+        <bondedHediffs>
+            <li>MPT_HediffPainShockThresholdDown</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_BondedPainShockThreshold</li>
+        </exclusionTags>
+        <marketValueOffset>-500</marketValueOffset>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_HediffPainShockThresholdDown</defName>
+        <label>bonded_hediff_statoffset_template_down</label>
+        <description>My PainShockThreshold is being hampered by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_BondedPainShockThresholdDown</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statOffsets>
+                    <PainShockThreshold>-0.35</PainShockThreshold>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
 </Defs>
