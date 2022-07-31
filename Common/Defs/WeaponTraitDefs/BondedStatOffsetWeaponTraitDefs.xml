@@ -491,7 +491,7 @@
 
     <WeaponTraitDef ParentName="BondedWeaponTraitBase">
         <defName>MPT_BondedGlobalLearningFactorUp</defName>
-        <label>elsecaller</label>
+        <label>tutoring</label>
         <description>This weapons persona has taken an immortal vow to reach their full potential and will help their bonded in any and all cases of self improvement.\nThe bonded pawn gains increased learning speed.</description>
         <bondedHediffs>
             <li>MPT_HediffGlobalLearningFactorUp</li>
@@ -505,7 +505,7 @@
     </WeaponTraitDef>
     <HediffDef>
         <defName>MPT_HediffGlobalLearningFactorUp</defName>
-        <label>psychic tutor</label>
+        <label>psychic elsecaller</label>
         <description>My learning rate is enhanced by my bonded weapon.</description>
         <descriptionHyperlinks>
             <WeaponTraitDef>MPT_BondedGlobalLearningFactorUp</WeaponTraitDef>
