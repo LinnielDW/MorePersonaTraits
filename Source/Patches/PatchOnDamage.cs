@@ -17,8 +17,8 @@ namespace MorePersonaTraits.Patches
             var primary = ((Pawn) __instance.Launcher).equipment.Primary;
             if (PatcherCheckUtils.hasOnHitWorker(primary))
             {
-                OnHitUtils.applyOnHitEffects(
-                    PatcherCheckUtils.getOnHitExtensions(__instance),
+                OnHitUtils.attemptApplyOnHitEffects(
+                    PatcherCheckUtils.getOnHitWorkers(__instance),
                     hitThing,
                     __instance.Launcher
                 );
