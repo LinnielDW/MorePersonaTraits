@@ -731,4 +731,66 @@
             </li>
         </stages>
     </HediffDef>
+    
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_BondedPlantSpeedUp</defName>
+        <label>green grater</label>
+        <description>This weapons persona seems to have a personal vendeta against any and all that is green and is more than happy to assist in cutting it down.\nThe bonded pawn gains increased plat working and pruning speed.</description>
+        <bondedHediffs>
+            <li>MPT_HediffPlantSpeedUp</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_BondedPlantSpeed</li>
+        </exclusionTags>
+        <commonality>0.4</commonality>
+        <marketValueOffset>500</marketValueOffset>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_HediffPlantSpeedUp</defName>
+        <label>psychic flaura cleave instruction</label>
+        <description>My plant working and pruning speed is increased by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_BondedPlantSpeedUp</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statOffsets>
+                    <PlantWorkSpeed>0.5</PlantWorkSpeed>
+                    <PruningSpeed>0.15</PruningSpeed>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_BondedPlantSpeedDown</defName>
+        <label>penzai</label>
+        <description>This weapons persona takes more joy from the process of cutting plants into nice shapes, willing their bond to (impractically) cut plants in odd angles.\nThe bonded pawn loses plat working and pruning speed.</description>
+        <bondedHediffs>
+            <li>MPT_HediffPlantSpeedDown</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_BondedPlantSpeed</li>
+        </exclusionTags>
+        <commonality>0.4</commonality>
+        <marketValueOffset>-500</marketValueOffset>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_HediffPlantSpeedDown</defName>
+        <label>psychic pruning inhibitor</label>
+        <description>My plant working and pruning speed is being hampered by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_BondedPlantSpeedDown</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statOffsets>
+                    <PlantWorkSpeed>-0.5</PlantWorkSpeed>
+                    <PruningSpeed>-0.15</PruningSpeed>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
 </Defs>
