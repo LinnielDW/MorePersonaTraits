@@ -765,7 +765,7 @@
 
     <WeaponTraitDef ParentName="BondedWeaponTraitBase">
         <defName>MPT_BondedPlantSpeedDown</defName>
-        <label>penzai</label>
+        <label>penzaister</label>
         <description>This weapons persona takes more joy from the process of cutting plants into nice shapes, willing their bond to (impractically) cut plants in odd angles.\nThe bonded pawn loses plat working and pruning speed.</description>
         <bondedHediffs>
             <li>MPT_HediffPlantSpeedDown</li>
@@ -789,6 +789,66 @@
                 <statOffsets>
                     <PlantWorkSpeed>-0.5</PlantWorkSpeed>
                     <PruningSpeed>-0.15</PruningSpeed>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+    
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_BondedConstructionSpeedUp</defName>
+        <label>mason</label>
+        <description>This weapons persona has a great knowledge of the local techtonics, ground stability and material load balancing, telling things that their bond would not otherwise immediately realise.\nThe bonded pawn gains increased construction speed.</description>
+        <bondedHediffs>
+            <li>MPT_HediffConstructionSpeedUp</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_BondedConstructionSpeed</li>
+        </exclusionTags>
+        <commonality>0.4</commonality>
+        <marketValueOffset>500</marketValueOffset>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_HediffConstructionSpeedUp</defName>
+        <label>psychic bedrock identifier</label>
+        <description>My construction speed is being increased by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_BondedConstructionSpeedUp</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statOffsets>
+                    <ConstructionSpeed>0.5</ConstructionSpeed>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_BondedConstructionSpeedDown</defName>
+        <label>lightheaded</label>
+        <description>This weapons persona claims it used to be a gardener of chairs. Their bond doesn't really know how one can garden chairs and is thoroughly confused when given assistance in chair related activities.\nThe bonded pawn loses construction speed.</description>
+        <bondedHediffs>
+            <li>MPT_HediffConstructionSpeedDown</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_BondedConstructionSpeed</li>
+        </exclusionTags>
+        <commonality>0.4</commonality>
+        <marketValueOffset>-500</marketValueOffset>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_HediffConstructionSpeedDown</defName>
+        <label>psychic stall stalling</label>
+        <description>My construction speed is being hampered by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_BondedConstructionSpeedDown</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statOffsets>
+                    <ConstructionSpeed>-0.5</ConstructionSpeed>
                 </statOffsets>
             </li>
         </stages>
