@@ -1034,4 +1034,60 @@
             </li>
         </stages>
     </HediffDef>
+
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_BondedSocialFightChanceFactorDown</defName>
+        <label>standoff standoffer</label>
+        <description>This weapons persona only wishes to be drawn when truely required and otherwise be left to their own devices.\nThe bonded pawn is less likely to get into social fights.</description>
+        <bondedHediffs>
+            <li>MPT_HediffSocialFightChanceFactorDown</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_BondedSocialFightChanceFactor</li>
+        </exclusionTags>
+        <commonality>0.4</commonality>
+        <marketValueOffset>500</marketValueOffset>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_HediffSocialFightChanceFactorDown</defName>
+        <label>psychic aggression disperser</label>
+        <description>My chance to get into social fights is being reduced by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_BondedSocialFightChanceFactorDown</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <SocialFightChanceFactor>0.25</SocialFightChanceFactor>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_BondedSocialFightChanceFactorUp</defName>
+        <label>upstarter</label>
+        <description>This weapons persona wishes its wielder to be prepared for when tragedy strikes and encourages their bond to seek out any opportunity to hone their fighting skills.\nThe bonded pawn is more likely to get into social fights.</description>
+        <bondedHediffs>
+            <li>MPT_HediffSocialFightChanceFactorUp</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_BondedSocialFightChanceFactor</li>
+        </exclusionTags>
+        <commonality>0.4</commonality>
+        <marketValueOffset>-500</marketValueOffset>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_HediffSocialFightChanceFactorUp</defName>
+        <label>psychically provoked</label>
+        <description>My chance to get into social fights is being increased by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_BondedSocialFightChanceFactorUp</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <SocialFightChanceFactor>4</SocialFightChanceFactor>
+            </li>
+        </stages>
+    </HediffDef>
 </Defs>
