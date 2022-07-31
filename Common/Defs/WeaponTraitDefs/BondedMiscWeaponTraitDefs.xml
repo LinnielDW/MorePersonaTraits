@@ -34,7 +34,7 @@
         </stages>
     </HediffDef>
     
-    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+    <!--<WeaponTraitDef ParentName="BondedWeaponTraitBase">
         <defName>MPT_BondedImmuneParasite</defName>
         <label>parasn't</label>
         <description>This weapons persona is totally disgusted that its wielder would be host to little worms and hooks and ejects them from their bonds body before they can take hold.\nThe bonded pawn is immune to new infections of gut worms and muscle parasites.</description>
@@ -63,7 +63,7 @@
                 </makeImmuneTo>
             </li>
         </stages>
-    </HediffDef>
+    </HediffDef>-->
     
     <WeaponTraitDef ParentName="BondedWeaponTraitBase">
         <defName>MPT_BondedImmuneMechanite</defName>
@@ -83,7 +83,7 @@
         <label>psychic mechanite disruptor</label>
         <description>My bonded weapon is providing me with immunity to unsolicited fibrous or sensory mechanites.</description>
         <descriptionHyperlinks>
-            <WeaponTraitDef>MPT_BondedImmuneParasite</WeaponTraitDef>
+            <WeaponTraitDef>MPT_BondedImmuneMechanite</WeaponTraitDef>
         </descriptionHyperlinks>
         <isBad>false</isBad>
         <stages>
