@@ -66,7 +66,7 @@
             </li>
         </stages>
     </HediffDef>
-    
+
     <WeaponTraitDef ParentName="BondedWeaponTraitBase">
         <defName>MPT_BondedGlobalWorkspeedUp</defName>
         <label>driven</label>
@@ -96,7 +96,7 @@
             </li>
         </stages>
     </HediffDef>
-    
+
     <WeaponTraitDef ParentName="BondedWeaponTraitBase">
         <defName>MPT_BondedGlobalWorkspeedDown</defName>
         <label>slacking</label>
@@ -126,7 +126,7 @@
             </li>
         </stages>
     </HediffDef>
-    
+
     <WeaponTraitDef ParentName="BondedWeaponTraitBase">
         <defName>MPT_BondedShootingAccuracyPawnUp</defName>
         <label>spotter</label>
@@ -156,7 +156,7 @@
             </li>
         </stages>
     </HediffDef>
-    
+
     <WeaponTraitDef ParentName="BondedWeaponTraitBase">
         <defName>MPT_BondedShootingAccuracyPawnDown</defName>
         <label>protagonist-maker</label>
@@ -186,7 +186,7 @@
             </li>
         </stages>
     </HediffDef>
-    
+
     <WeaponTraitDef ParentName="BondedWeaponTraitBase">
         <defName>MPT_BondedTradePriceImprovementUp</defName>
         <label>poker faced</label>
@@ -248,7 +248,7 @@
             </li>
         </stages>
     </HediffDef>
-    
+
     <WeaponTraitDef ParentName="BondedWeaponTraitBase">
         <defName>MPT_BondedSurgerySuccessChanceFactorUp</defName>
         <label>exact</label>
@@ -308,7 +308,7 @@
             </li>
         </stages>
     </HediffDef>
-    
+
     <WeaponTraitDef ParentName="BondedWeaponTraitBase">
         <defName>MPT_BondedRestRateMultiplierUp</defName>
         <label>cosy</label>
@@ -368,7 +368,7 @@
             </li>
         </stages>
     </HediffDef>
-    
+
     <WeaponTraitDef ParentName="BondedWeaponTraitBase">
         <defName>MPT_BondedImmunityGainSpeedUp</defName>
         <label>vital</label>
@@ -428,7 +428,7 @@
             </li>
         </stages>
     </HediffDef>
-    
+
     <WeaponTraitDef ParentName="BondedWeaponTraitBase">
         <defName>MPT_BondedMedicalTendQualityOffsetUp</defName>
         <label>tender</label>
@@ -488,7 +488,7 @@
             </li>
         </stages>
     </HediffDef>
-    
+
     <WeaponTraitDef ParentName="BondedWeaponTraitBase">
         <defName>MPT_BondedGlobalLearningFactorUp</defName>
         <label>elsecaller</label>
@@ -731,7 +731,7 @@
             </li>
         </stages>
     </HediffDef>
-    
+
     <WeaponTraitDef ParentName="BondedWeaponTraitBase">
         <defName>MPT_BondedPlantSpeedUp</defName>
         <label>green grater</label>
@@ -793,7 +793,7 @@
             </li>
         </stages>
     </HediffDef>
-    
+
     <WeaponTraitDef ParentName="BondedWeaponTraitBase">
         <defName>MPT_BondedConstructionSpeedUp</defName>
         <label>mason</label>
@@ -853,7 +853,7 @@
             </li>
         </stages>
     </HediffDef>
-    
+
     <WeaponTraitDef ParentName="BondedWeaponTraitBase">
         <defName>MPT_BondedInjuryHealingFactorUp</defName>
         <label>hermetic</label>
@@ -913,7 +913,7 @@
             </li>
         </stages>
     </HediffDef>
-    
+
     <!--AimingDelayFactor-->
     <WeaponTraitDef ParentName="BondedWeaponTraitBase">
         <defName>MPT_BondedAimingDelayFactorDown</defName>
@@ -974,7 +974,7 @@
             </li>
         </stages>
     </HediffDef>
-    
+
     <WeaponTraitDef ParentName="BondedWeaponTraitBase">
         <defName>MPT_BondedGeneralLaborSpeedUp</defName>
         <label>generalist</label>
