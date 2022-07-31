@@ -625,8 +625,8 @@
     </WeaponTraitDef>
     <HediffDef>
         <defName>MPT_HediffCookSpeedUp</defName>
-        <label>psychic uneasiness</label>
-        <description>My mental break threshold is hampered by my bonded weapon.</description>
+        <label>psychic burger-flipping assistance</label>
+        <description>My cooking speed is increased by my bonded weapon.</description>
         <descriptionHyperlinks>
             <WeaponTraitDef>MPT_BondedCookSpeedUp</WeaponTraitDef>
         </descriptionHyperlinks>
