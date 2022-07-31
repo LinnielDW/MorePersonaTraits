@@ -669,4 +669,66 @@
             </li>
         </stages>
     </HediffDef>
+
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_BondedMiningSpeedUp</defName>
+        <label>ground pounding</label>
+        <description>This weapons persona likes to mention that in addition to a tool of war, they are also a great tool of mining.\nThe bonded pawn has increased mining and drilling speed.</description>
+        <bondedHediffs>
+            <li>MPT_HediffMiningSpeedUp</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_BondedMiningSpeed</li>
+        </exclusionTags>
+        <commonality>0.4</commonality>
+        <marketValueOffset>500</marketValueOffset>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_HediffMiningSpeedUp</defName>
+        <label>psychic imperfection identifier</label>
+        <description>My mining and drilling speed is increased by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_BondedMiningSpeedUp</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statOffsets>
+                    <MiningSpeed>0.5</MiningSpeed>
+                    <DeepDrillingSpeed>0.5</DeepDrillingSpeed>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_BondedMiningSpeedDown</defName>
+        <label>speluncaphobic</label>
+        <description>This weapons persona has had a bad experience regarding caves and will attempt to inhib its pawn from digging too deeply or too greedily.\nThe bonded pawn loses mining and drilling speed.</description>
+        <bondedHediffs>
+            <li>MPT_HediffMiningSpeedDown</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_BondedMiningSpeed</li>
+        </exclusionTags>
+        <commonality>0.4</commonality>
+        <marketValueOffset>-500</marketValueOffset>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_HediffMiningSpeedDown</defName>
+        <label>psychic lithoid deflection</label>
+        <description>My mining and drilling speed is hampered by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_BondedMiningSpeedDown</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statOffsets>
+                    <MiningSpeed>-0.5</MiningSpeed>
+                    <DeepDrillingSpeed>-0.5</DeepDrillingSpeed>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
 </Defs>
