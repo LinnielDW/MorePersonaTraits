@@ -47,4 +47,52 @@
             </li>
         </modExtensions>
     </WeaponTraitDef>
+    
+    <WeaponTraitDef>
+        <defName>MPT_OnHitRestSelfUp</defName>
+        <label>energising</label>
+        <description>This weapons persona revels in the thrill of battle, jolting their user awake with every step and every blow.\nUpon hitting a living target, there is a chance that the wielders rest will be increased slightly.</description>
+        <commonality>0.5</commonality>
+        <marketValueOffset>400</marketValueOffset>
+        <exclusionTags>
+            <li>MPT_OnHitRest</li>
+        </exclusionTags>
+        <modExtensions>
+            <li Class="MorePersonaTraits.Extensions.WeaponTraitOnHitExtension">
+                <OnHitWorkers>
+                    <li Class="MorePersonaTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_ApplyNeed">
+                        <NeedDef>Rest</NeedDef>
+                        <ProcChance>0.4</ProcChance>
+                        <ProcMagnitude>0.05</ProcMagnitude>
+                        <TargetSelf>true</TargetSelf>
+                        <RequiresBothLiving>true</RequiresBothLiving>
+                    </li>
+                </OnHitWorkers>
+            </li>
+        </modExtensions>
+    </WeaponTraitDef>
+    
+    <WeaponTraitDef>
+        <defName>MPT_OnHitRestSelfDown</defName>
+        <label>lethargic</label>
+        <description>This weapons persona wishes to go back to the rack and while out its time in rest. Its wielder will have to give it some of its own rest if it wishes to wield it in battle.\nUpon hitting a living thing, the wielder has a chance of losing a small amount of their rest.</description>
+        <commonality>0.5</commonality>
+        <marketValueOffset>-400</marketValueOffset>
+        <exclusionTags>
+            <li>MPT_OnHitRest</li>
+        </exclusionTags>
+        <modExtensions>
+            <li Class="MorePersonaTraits.Extensions.WeaponTraitOnHitExtension">
+                <OnHitWorkers>
+                    <li Class="MorePersonaTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_ApplyNeed">
+                        <NeedDef>Rest</NeedDef>
+                        <ProcChance>0.4</ProcChance>
+                        <ProcMagnitude>-0.05</ProcMagnitude>
+                        <TargetSelf>true</TargetSelf>
+                        <RequiresBothLiving>true</RequiresBothLiving>
+                    </li>
+                </OnHitWorkers>
+            </li>
+        </modExtensions>
+    </WeaponTraitDef>
 </Defs>
