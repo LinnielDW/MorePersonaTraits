@@ -64,6 +64,9 @@
     <CommonFiles Update="..\Common\Defs\WeaponTraitDefs\BondedAddictionWeaponTraitDefs.xml">
       <Link>WeaponTraitDefs\BondedAddictionWeaponTraitDefs.xml</Link>
     </CommonFiles>
+    <CommonFiles Update="..\Common\Defs\WeaponTraitDefs\BondedMiscWeaponTraitDefs.xml">
+      <Link>WeaponTraitDefs\BondedMiscWeaponTraitDefs.xml</Link>
+    </CommonFiles>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Extensions\WeaponTraitDefExtension.cs" />

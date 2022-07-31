@@ -28,6 +28,9 @@
         <description>This weapons persona seems to attract the most exotic of baterium at the most inopportune times.\nUpon hitting a target, there is a small chance that the user will contract the plague.</description>
         <commonality>0.5</commonality>
         <marketValueOffset>-800</marketValueOffset>
+        <exclusionTags>
+            <li>MPT_PlagueImmune</li>
+        </exclusionTags>
         <descriptionHyperlinks>
             <HediffDef>Plague</HediffDef>
         </descriptionHyperlinks>
