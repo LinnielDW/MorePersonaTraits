@@ -79,7 +79,7 @@
     <Compile Include="WorkerClasses\ItemWorkerClasses\CompProperties_TargetableSingleBladelink.cs" />
     <Compile Include="WorkerClasses\ItemWorkerClasses\CompTargetable_SingleBladelink.cs" />
     <Compile Include="WorkerClasses\ItemWorkerClasses\CompTargetEffect_BladeDelinker.cs" />
-    <Compile Include="WorkerClasses\ItemWorkerClasses\CompTargetEffect_BladeReroller.cs" />
+    <Compile Include="WorkerClasses\ItemWorkerClasses\CompTargetEffect_TraitReroller.cs" />
     <Compile Include="WorkerClasses\OnHitWorkerClasses\OnHitWorker.cs" />
     <Compile Include="WorkerClasses\OnHitWorkerClasses\OnHitWorker_AddedDamage.cs" />
     <Compile Include="WorkerClasses\OnHitWorkerClasses\OnHitWorker_ApplyHediff.cs" />

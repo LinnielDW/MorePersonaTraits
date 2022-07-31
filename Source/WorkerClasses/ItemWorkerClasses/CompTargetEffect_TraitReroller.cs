@@ -7,7 +7,7 @@ using Verse;
 
 namespace MorePersonaTraits.WorkerClasses.ItemWorkerClasses
 {
-    public class CompTargetEffect_BladeReroller : CompTargetEffect
+    public class CompTargetEffect_TraitReroller : CompTargetEffect
     {
         public override void DoEffectOn(Pawn user, Thing target)
         {
