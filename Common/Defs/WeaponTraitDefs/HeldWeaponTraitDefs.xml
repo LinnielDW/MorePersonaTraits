@@ -59,4 +59,32 @@
             <li>MPT_HeldArmorRating</li>
         </exclusionTags>
     </WeaponTraitDef>
+    
+    <WeaponTraitDef>
+        <defName>MPT_HeldPawnBeautyUp</defName>
+        <label>enchanting</label>
+        <description>This weapons persona exudes an alluring psychic aura, leaving any who gaze upon their wielder nonplussed.\nWhile held, it provides its wielder with an increase to their beauty.</description>
+        <commonality>0.5</commonality>
+        <marketValueOffset>400</marketValueOffset>
+        <equippedStatOffsets>
+            <PawnBeauty>1.5</PawnBeauty>
+        </equippedStatOffsets>
+        <exclusionTags>
+            <li>MPT_HeldPawnBeauty</li>
+        </exclusionTags>
+    </WeaponTraitDef>
+    
+    <WeaponTraitDef>
+        <defName>MPT_HeldPawnBeautyDown</defName>
+        <label>repellent</label>
+        <description>This weapons persona emits an unnearving psychic aura, anyone gazing upon the wielder will immediately find themselves wishing to excuse themselves.\nWhile held, it conveys its wielder with a hit to their beauty.</description>
+        <commonality>0.5</commonality>
+        <marketValueOffset>-400</marketValueOffset>
+        <equippedStatOffsets>
+            <PawnBeauty>-1.5</PawnBeauty>
+        </equippedStatOffsets>
+        <exclusionTags>
+            <li>MPT_HeldPawnBeauty</li>
+        </exclusionTags>
+    </WeaponTraitDef>
 </Defs>
