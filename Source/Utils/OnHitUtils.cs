@@ -1,19 +1,33 @@
 ﻿using System.Collections.Generic;
-using MorePersonaTraits.Extensions;
+using MorePersonaTraits.WorkerClasses.OnHitWorkerClasses;
 using Verse;
 
 namespace MorePersonaTraits.Utils
 {
     public static class OnHitUtils
     {
-        public static void applyOnHitEffects(List<WeaponTraitOnHitExtension> onHitExtensions,
-            Thing targetThing, Thing originThing)
+        public static void attemptApplyOnHitEffects(List<OnHitWorker> onHitWorkers, Thing targetThing,
+            Thing originThing)
         {
-            foreach (var extension in onHitExtensions)
+            float rand = Rand.Value;
+            foreach (var onHitWorker in onHitWorkers)
             {
-                //TODO: compare rand to proc chance.
-                extension.OnHitWorker.OnHitEffect(targetThing, originThing);
+                if (rand <= onHitWorker.ProcChance)
+                {
+                    // Log.Warning("Onhit has proc'ed. Executing OnHit effect");
+                    onHitWorker.OnHitEffect(targetThing, originThing);
+                }
+                else
+                {
+                    // Log.Warning("Onhit proc missed. Skipping onhit effect.");
+                }
             }
+        }
+        
+        
+        public static bool IsLivingPawn(Thing thing)
+        {
+            return thing != null && !thing.Destroyed && thing is Pawn && !(thing as Pawn).Dead;
         }
     }
 }

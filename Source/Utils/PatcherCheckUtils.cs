@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using MorePersonaTraits.Extensions;
+using MorePersonaTraits.WorkerClasses.OnHitWorkerClasses;
 using RimWorld;
 using Verse;
 
@@ -13,22 +14,22 @@ namespace MorePersonaTraits.Utils
             try
             {
                 return equipment.GetComp<CompBladelinkWeapon>().TraitsListForReading
-                    .Exists(trait => trait.GetModExtension<WeaponTraitOnHitExtension>().OnHitWorker != null);
+                    .Exists(trait => trait.GetModExtension<WeaponTraitOnHitExtension>().OnHitWorkers != null);
             }
             catch
             {
-                // Log.Warning("Persona Weapon does not have any traits with on-hit effects.");
+                // Log.Warning("Equipment is not a persona weapon or does not have any persona traits with on-hit effects.");
                 return false;
             }
         }
 
-        public static List<WeaponTraitOnHitExtension> getOnHitExtensions(ThingWithComps equipment)
+        public static List<OnHitWorker> getOnHitWorkers(ThingWithComps equipment)
         {
             try
             {
                 return equipment.GetComp<CompBladelinkWeapon>().TraitsListForReading
-                    .FindAll(trait => trait.GetModExtension<WeaponTraitOnHitExtension>().OnHitWorker != null)
-                    .Select(trait => trait.GetModExtension<WeaponTraitOnHitExtension>())
+                    .FindAll(trait => trait.GetModExtension<WeaponTraitOnHitExtension>().OnHitWorkers != null)
+                    .SelectMany(trait => trait.GetModExtension<WeaponTraitOnHitExtension>().OnHitWorkers)
                     .ToList();
             }
             catch

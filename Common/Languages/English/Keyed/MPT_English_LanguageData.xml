@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+    <MPT_BondedPawnDesc>The person this persona weapon is bonded to.</MPT_BondedPawnDesc>
+    <MPT_BondedTo>Bonded To</MPT_BondedTo>
+    <MPT_BondedWeaponDesc>The persona weapon this person is bonded to.</MPT_BondedWeaponDesc>
+    <MPT_OnHitDesc>Upon landing a hit, the persona weapon has a {0} chance to {1} {2}{3}.</MPT_OnHitDesc>
+
+    <MPT_MagnitudeDesc> by {0}</MPT_MagnitudeDesc>
+    <MPT_BothLivingDesc>This effect requires both the target and the wielder to be living.</MPT_BothLivingDesc>
+    
+    <MPT_NeedOffsetTypeUpDesc>increase the {0} of</MPT_NeedOffsetTypeUpDesc>
+    <MPT_NeedOffsetTypeDownDesc>decrease the {0} of</MPT_NeedOffsetTypeDownDesc>
+    <MPT_ApplyHediffDesc>apply/increase the severity of {0} to</MPT_ApplyHediffDesc>
+    <MPT_GiveThoughDesc>give {0}{1} to</MPT_GiveThoughDesc>
+    <MPT_ThoughtStackDesc> (stacking up to {0} times)</MPT_ThoughtStackDesc>
+    
+    <MPT_TargetSelf>the wielder</MPT_TargetSelf>
+    <MPT_TargetTarget>the target</MPT_TargetTarget>
+</LanguageData>

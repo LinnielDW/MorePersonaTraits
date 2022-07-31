@@ -1,28 +1,61 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-    <WeaponTraitDef>
-        <defName>MPT_BondedTemplate</defName>
-        <label>bonded_trait_template</label>
-        <description>This weapon shouldn't have this trait as this is a template. This effect is persistant to the bonded pawn so long as they are bound to this weapon.</description>
-        <commonality>0.0</commonality>
+    <!--TemplateStat-->
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_BondedTemplateStatUp</defName>
+        <label>bonded_trait_template_up</label>
+        <description>This weapons persona shouldn't have this trait as this is a template.\nThe bonded pawn gains increased TemplateStat.</description>
         <bondedHediffs>
-            <li>MPT_BondedHediffStatOffsetTemplate</li>
+            <li>MPT_HediffTemplateStatUp</li>
         </bondedHediffs>
-        <marketValueOffset>-0</marketValueOffset>
         <exclusionTags>
-            <li>MPT_Template</li>
+            <li>MPT_BondedTemplateStat</li>
         </exclusionTags>
+        <commonality>0.4</commonality>
+        <marketValueOffset>500</marketValueOffset>
     </WeaponTraitDef>
-    
     <HediffDef>
-        <defName>MPT_BondedHediffStatOffsetTemplate</defName>
-        <label>bonded_hediff_statoffset_template</label>
-        <description>This hediff should nver appear on a pawn as this is a template. This hediff is caused by being bonded to a persona and will persist so long as the bond does.</description>
+        <defName>MPT_HediffTemplateStatUp</defName>
+        <label>bonded_hediff_statoffset_template_up</label>
+        <description>My TemplateStat is being increased by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_BondedTemplateStatUp</WeaponTraitDef>
+        </descriptionHyperlinks>
         <isBad>false</isBad>
         <stages>
             <li>
                 <statOffsets>
-                    <ResearchSpeed>0.0</ResearchSpeed>
+                    <TemplateStat>4</TemplateStat>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_BondedTemplateStatDown</defName>
+        <label>bonded_trait_template_down</label>
+        <description>This weapons persona shouldn't have this trait as this is a template.\nThe bonded pawn loses TemplateStat.</description>
+        <bondedHediffs>
+            <li>MPT_HediffTemplateStatDown</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_BondedTemplateStat</li>
+        </exclusionTags>
+        <commonality>0.4</commonality>
+        <marketValueOffset>-500</marketValueOffset>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_HediffTemplateStatDown</defName>
+        <label>bonded_hediff_statoffset_template_down</label>
+        <description>My TemplateStat is being hampered by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_BondedTemplateStatDown</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statOffsets>
+                    <TemplateStat>-0.0</TemplateStat>
                 </statOffsets>
             </li>
         </stages>

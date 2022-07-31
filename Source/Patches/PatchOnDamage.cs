@@ -34,8 +34,8 @@ namespace MorePersonaTraits.Patches
         {
             if (PatcherCheckUtils.hasOnHitWorker(__instance.EquipmentSource))
             {
-                OnHitUtils.applyOnHitEffects(
-                    PatcherCheckUtils.getOnHitExtensions(__instance.EquipmentSource),
+                OnHitUtils.attemptApplyOnHitEffects(
+                    PatcherCheckUtils.getOnHitWorkers(__instance.EquipmentSource),
                     target.Thing,
                     __instance.CasterPawn
                 );

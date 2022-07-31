@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <WeaponTraitDef>
+        <defName>MPT_HeldMeleeHitChanceUp</defName>
+        <label>conclusive</label>
+        <description>This weapons persona has better things to be doing than being used to wave at things and thus seeks to end fights quickly. While held, it provides its wielder with an increased chance to hit their target.</description>
+        <commonality>0.5</commonality>
+        <marketValueOffset>400</marketValueOffset>
+        <equippedStatOffsets>
+            <MeleeHitChance>3</MeleeHitChance>
+        </equippedStatOffsets>
+        <exclusionTags>
+            <li>MPT_HeldMeleeHitChance</li>
+        </exclusionTags>
+    </WeaponTraitDef>
+
+    <WeaponTraitDef>
+        <defName>MPT_HeldMeleeHitChanceDown</defName>
+        <label>squemish</label>
+        <description>This weapons persona really doesn't like touching the soft warm insides of things.\nWhile held, it provides its wielder with a decreased chance to hit their target.</description>
+        <commonality>0.5</commonality>
+        <marketValueOffset>-400</marketValueOffset>
+        <equippedStatOffsets>
+            <MeleeHitChance>-3</MeleeHitChance>
+        </equippedStatOffsets>
+        <exclusionTags>
+            <li>MPT_HeldMeleeHitChance</li>
+        </exclusionTags>
+    </WeaponTraitDef>
+
+    <WeaponTraitDef>
+        <defName>MPT_HeldArmorRatingUp</defName>
+        <label>non-newtonian</label>
+        <description>This weapons persona subtly modifies the atoms near the wielders skin increasing their attenuation to knetic energy before impact.\nWhile held, it provides its wielder with increased armor rating.</description>
+        <commonality>0.5</commonality>
+        <marketValueOffset>400</marketValueOffset>
+        <equippedStatOffsets>
+            <ArmorRating_Sharp>0.17</ArmorRating_Sharp>
+            <ArmorRating_Blunt>0.05</ArmorRating_Blunt>
+            <ArmorRating_Heat>0.15</ArmorRating_Heat>
+        </equippedStatOffsets>
+        <exclusionTags>
+            <li>MPT_HeldArmorRating</li>
+        </exclusionTags>
+    </WeaponTraitDef>
+
+    <WeaponTraitDef>
+        <defName>MPT_HeldArmorRatingDown</defName>
+        <label>bond sundering</label>
+        <description>This weapons persona weakens the natural forces binding molecular structures together around its weilder.\nWhile held, it provides its wielder with reduced armor rating.</description>
+        <commonality>0.5</commonality>
+        <marketValueOffset>-400</marketValueOffset>
+        <equippedStatOffsets>
+            <ArmorRating_Sharp>-0.17</ArmorRating_Sharp>
+            <ArmorRating_Blunt>-0.05</ArmorRating_Blunt>
+            <ArmorRating_Heat>-0.15</ArmorRating_Heat>
+        </equippedStatOffsets>
+        <exclusionTags>
+            <li>MPT_HeldArmorRating</li>
+        </exclusionTags>
+    </WeaponTraitDef>
+
+    <WeaponTraitDef>
+        <defName>MPT_HeldPawnBeautyUp</defName>
+        <label>enchanting</label>
+        <description>This weapons persona exudes an alluring psychic aura, leaving any who gaze upon their wielder nonplussed.\nWhile held, it provides its wielder with an increase to their beauty.</description>
+        <commonality>0.5</commonality>
+        <marketValueOffset>400</marketValueOffset>
+        <equippedStatOffsets>
+            <PawnBeauty>1.5</PawnBeauty>
+        </equippedStatOffsets>
+        <exclusionTags>
+            <li>MPT_HeldPawnBeauty</li>
+        </exclusionTags>
+    </WeaponTraitDef>
+
+    <WeaponTraitDef>
+        <defName>MPT_HeldPawnBeautyDown</defName>
+        <label>repellent</label>
+        <description>This weapons persona emits an unnearving psychic aura, anyone gazing upon the wielder will immediately find themselves wishing to excuse themselves.\nWhile held, it conveys its wielder with a hit to their beauty.</description>
+        <commonality>0.5</commonality>
+        <marketValueOffset>-400</marketValueOffset>
+        <equippedStatOffsets>
+            <PawnBeauty>-1.5</PawnBeauty>
+        </equippedStatOffsets>
+        <exclusionTags>
+            <li>MPT_HeldPawnBeauty</li>
+        </exclusionTags>
+    </WeaponTraitDef>
+
+    <WeaponTraitDef>
+        <defName>MPT_HeldMeleeDodgeChanceUp</defName>
+        <label>edgedancer</label>
+        <description>This weapons persona provides their wielder with astounding poise and grace. Even the most funbling wielder will move through a battlefield like a ribbon on the wind.\nWhile held, it provides its wielder with increased melee dodge chance.</description>
+        <commonality>0.5</commonality>
+        <marketValueOffset>400</marketValueOffset>
+        <equippedStatOffsets>
+            <MeleeDodgeChance>15</MeleeDodgeChance>
+        </equippedStatOffsets>
+        <exclusionTags>
+            <li>MPT_HeldMeleeDodgeChance</li>
+        </exclusionTags>
+    </WeaponTraitDef>
+
+    <WeaponTraitDef>
+        <defName>MPT_HeldMeleeDodgeChanceDown</defName>
+        <label>bewitched</label>
+        <description>This weapons persona seems to draw the ire of all its weapon cousins, scentient or otherwised.\nWhile held, it reduces its wielders melee dodge chance.</description>
+        <commonality>0.5</commonality>
+        <marketValueOffset>-400</marketValueOffset>
+        <equippedStatOffsets>
+            <MeleeDodgeChance>-10</MeleeDodgeChance>
+        </equippedStatOffsets>
+        <exclusionTags>
+            <li>MPT_HeldMeleeDodgeChance</li>
+        </exclusionTags>
+    </WeaponTraitDef>
+</Defs>

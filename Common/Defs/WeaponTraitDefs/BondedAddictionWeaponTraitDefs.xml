@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_BondedNeedChemical_WakeUp</defName>
+        <label>wake-up addicted</label>
+        <description>This weapons persona is suffering from a wake-up addiction. So long as the bond holds, their bonded pawn will have to regularly consume the drug to avaid withdrawal as if they were addicted themselves.\nThis form of the addiction will experience reduced withdrawal symptom effects and their bonded cannot gain the addicted to the drug themselves.</description>
+        <bondedHediffs>
+            <li>MPT_HediffBondedNeedChemical_WakeUp</li>
+        </bondedHediffs>
+        <marketValueOffset>-500</marketValueOffset>
+        <descriptionHyperlinks>
+            <ThingDef>WakeUp</ThingDef>
+        </descriptionHyperlinks>
+    </WeaponTraitDef>
+    
+    <HediffDef>
+        <defName>MPT_HediffBondedNeedChemical_WakeUp</defName>
+        <label>psychic wakeup addiction</label>
+        <description>Because of their bonded weapons wake-up addiction, this person needs to regularly consume the drug to avoid withdrawal symptoms.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_BondedNeedChemical_WakeUp</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <hediffClass>Hediff_Addiction</hediffClass>
+        <causesNeed>Chemical_WakeUp</causesNeed>
+        <stages>
+            <li></li>
+            <li>
+                <label>withdrawal</label>
+                <restFallFactorOffset>0.15</restFallFactorOffset>
+                <socialFightChanceFactor>1.5</socialFightChanceFactor>
+                <capMods>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <offset>-0.15</offset>
+                    </li>
+                    <li>
+                        <capacity>Manipulation</capacity>
+                        <offset>-0.13</offset>
+                    </li>
+                    <li>
+                        <capacity>Moving</capacity>
+                        <offset>-0.1</offset>
+                    </li>
+                </capMods>
+                <mentalStateGivers>
+                    <li>
+                        <mentalState>Binging_DrugExtreme</mentalState>
+                        <mtbDays>40</mtbDays>
+                    </li>
+                    <li>
+                        <mentalState>Wander_Psychotic</mentalState>
+                        <mtbDays>10</mtbDays>
+                    </li>
+                </mentalStateGivers>
+            </li>
+        </stages>
+    </HediffDef>
+    <ThoughtDef>
+        <defName>PsychicWakeUpWithdrawal</defName>
+        <workerClass>ThoughtWorker_Hediff</workerClass>
+        <hediff>MPT_HediffBondedNeedChemical_WakeUp</hediff>
+        <validWhileDespawned>true</validWhileDespawned>
+        <stages>
+            <li>
+                <visible>false</visible>
+            </li>
+            <li>
+                <label>psychic wake-up withdrawal</label>
+                <description>My bonded weapons withdrawal is affecting me. I feel all fuzzy and unfocused. And I'm so tired.</description>
+                <baseMoodEffect>-22</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+</Defs>
