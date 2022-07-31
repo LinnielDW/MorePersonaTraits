@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
     <ThingDef ParentName="ArtifactBase">
         <defName>MPT_BladelinkUncoder</defName>
@@ -64,6 +64,40 @@
             <li>
                 <compClass>MorePersonaTraits.WorkerClasses.ItemWorkerClasses.CompTargetEffect_TraitReroller</compClass>
             </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="ArtifactBase">
+        <defName>MPT_BladelinkExalt</defName>
+        <label>Persona Weapon Quirk</label>
+        <description>A one-use psychic persona effector. The psychic surge discovers a new trait of a targetted weapon persona.</description>
+        <graphicData>
+            <!--TODO: Make a different graphic-->
+            <texPath>Things/Item/Equipment/WeaponSpecial/OrbitalTargeter</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <resourceReadoutPriority>Middle</resourceReadoutPriority>
+        <stackLimit>1</stackLimit>
+        <tradeNeverStack>true</tradeNeverStack>
+        <tradeability>Sellable</tradeability>
+        <useHitPoints>true</useHitPoints>
+        <statBases>
+            <MarketValue>500</MarketValue>
+            <MaxHitPoints>80</MaxHitPoints>
+        </statBases>
+        <drawGUIOverlay>false</drawGUIOverlay>
+        <comps>
+            <li Class="MorePersonaTraits.WorkerClasses.ItemWorkerClasses.CompProperties_TargetableSingleBladelink">
+                <compClass>MorePersonaTraits.WorkerClasses.ItemWorkerClasses.CompTargetable_SingleBladelink</compClass>
+            </li>
+            <!--TODO: experiment with sound to find a good one.-->
+            <li Class="CompProperties_UseEffectArtifact">
+                <sound>PsychicInsanityLanceCast</sound>
+            </li>
+            <!-- TODO: write exalt functionality -->
+<!--            <li>-->
+<!--                <compClass>MorePersonaTraits.WorkerClasses.ItemWorkerClasses.CompTargetEffect_BladeExalt</compClass>-->
+<!--            </li>-->
         </comps>
     </ThingDef>
 </Defs>
