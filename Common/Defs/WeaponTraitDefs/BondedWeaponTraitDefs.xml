@@ -913,4 +913,65 @@
             </li>
         </stages>
     </HediffDef>
+    
+    <!--AimingDelayFactor-->
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_BondedAimingDelayFactorDown</defName>
+        <label>trigger-triggered</label>
+        <description>This weapons persona is easily triggered, specifically by bullets. Or was it that bullets were easily triggered by it? Perhaps both.\nThe bonded pawn gains increased firing speed. This is NOT restricted to this weapon.</description>
+        <bondedHediffs>
+            <li>MPT_HediffAimingDelayFactorDown</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_BondedAimingDelayFactor</li>
+        </exclusionTags>
+        <commonality>0.4</commonality>
+        <marketValueOffset>500</marketValueOffset>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_HediffAimingDelayFactorDown</defName>
+        <label>psychic bullet burster</label>
+        <description>My firing speed is being increased by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_BondedAimingDelayFactorDown</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statOffsets>
+                    <AimingDelayFactor>-0.25</AimingDelayFactor>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_BondedAimingDelayFactorUp</defName>
+        <label>reevesite</label>
+        <description>This weapons persona idolises a supposedly breathtaking hacker named Bill and recounts how he hacked an Archotech Persona with timebending bullets. Resolving that it can't bend time, this persona pays tribute to their hacker idol by just slows down their bonds trigger finger instead.\nThe bonded pawn loses firing speed. This is NOT restricted to this weapon.</description>
+        <bondedHediffs>
+            <li>MPT_HediffAimingDelayFactorUp</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_BondedAimingDelayFactor</li>
+        </exclusionTags>
+        <commonality>0.4</commonality>
+        <marketValueOffset>-500</marketValueOffset>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_HediffAimingDelayFactorUp</defName>
+        <label>psychically induced personal bullet-time</label>
+        <description>My firing speed is being hampered by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_BondedAimingDelayFactorUp</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statOffsets>
+                    <AimingDelayFactor>0.25</AimingDelayFactor>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
 </Defs>
