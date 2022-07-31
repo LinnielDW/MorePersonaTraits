@@ -974,4 +974,64 @@
             </li>
         </stages>
     </HediffDef>
+    
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_BondedGeneralLaborSpeedUp</defName>
+        <label>generalist</label>
+        <description>This weapons persona conveys a sense of urgency in all things, rubbing off onto their bond.\nThe bonded pawn gains increased general labor speed.</description>
+        <bondedHediffs>
+            <li>MPT_HediffGeneralLaborSpeedUp</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_BondedGeneralLaborSpeed</li>
+        </exclusionTags>
+        <commonality>0.4</commonality>
+        <marketValueOffset>500</marketValueOffset>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_HediffGeneralLaborSpeedUp</defName>
+        <label>psychic alacrity</label>
+        <description>My general labor speed is being increased by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_BondedGeneralLaborSpeedUp</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statOffsets>
+                    <GeneralLaborSpeed>0.15</GeneralLaborSpeed>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_BondedGeneralLaborSpeedDown</defName>
+        <label>slothful</label>
+        <description>This weapons persona influences their bonds way of working, reducing their work done to a snails pace.\nThe bonded pawn has reduced general labor speed.</description>
+        <bondedHediffs>
+            <li>MPT_HediffGeneralLaborSpeedDown</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_BondedGeneralLaborSpeed</li>
+        </exclusionTags>
+        <commonality>0.4</commonality>
+        <marketValueOffset>-500</marketValueOffset>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_HediffGeneralLaborSpeedDown</defName>
+        <label>psychic meanderings</label>
+        <description>My general labor speed is being hampered by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_BondedGeneralLaborSpeedDown</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statOffsets>
+                    <GeneralLaborSpeed>-0.15</GeneralLaborSpeed>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
 </Defs>
