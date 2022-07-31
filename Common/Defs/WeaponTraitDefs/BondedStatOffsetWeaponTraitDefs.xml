@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
     <WeaponTraitDef Name="BondedWeaponTraitBase" Abstract="True">
+        <commonality>0.4</commonality>
         <modExtensions>
             <li Class="MorePersonaTraits.Extensions.WeaponTraitDefExtension">
                 <AllowNeverBond>false</AllowNeverBond>
@@ -11,7 +12,6 @@
         <defName>MPT_BondedResearchUp</defName>
         <label>insightful</label>
         <description>This weapons persona speaks long forgotten truths to its bond.\nThe person bonded to it gains extra research speed so long as they are bonded.</description>
-        <commonality>0.5</commonality>
         <marketValueOffset>500</marketValueOffset>
         <bondedHediffs>
             <li>MPT_HediffResearchUp</li>
@@ -41,7 +41,6 @@
         <defName>MPT_BondedResearchDown</defName>
         <label>rambling</label>
         <description>This weapons persona constantly rambles useless distractions into their bonds mind.\nThe bonded pawn takes a hit to their research speed so long as the bond holds.</description>
-        <commonality>0.5</commonality>
         <marketValueOffset>-500</marketValueOffset>
         <bondedHediffs>
             <li>MPT_HediffResearchDown</li>
@@ -77,7 +76,6 @@
         <exclusionTags>
             <li>MPT_BondedGlobalWorkspeed</li>
         </exclusionTags>
-        <commonality>0.4</commonality>
         <marketValueOffset>1000</marketValueOffset>
     </WeaponTraitDef>
     <HediffDef>
@@ -107,7 +105,6 @@
         <exclusionTags>
             <li>MPT_BondedGlobalWorkspeed</li>
         </exclusionTags>
-        <commonality>0.4</commonality>
         <marketValueOffset>-1000</marketValueOffset>
     </WeaponTraitDef>
     <HediffDef>
@@ -137,7 +134,6 @@
         <exclusionTags>
             <li>MPT_BondedShootingAccuracyPawn</li>
         </exclusionTags>
-        <commonality>0.4</commonality>
         <marketValueOffset>500</marketValueOffset>
     </WeaponTraitDef>
     <HediffDef>
@@ -167,7 +163,6 @@
         <exclusionTags>
             <li>MPT_BondedShootingAccuracyPawn</li>
         </exclusionTags>
-        <commonality>0.4</commonality>
         <marketValueOffset>-500</marketValueOffset>
     </WeaponTraitDef>
     <HediffDef>
@@ -197,7 +192,6 @@
         <exclusionTags>
             <li>MPT_BondedTradePriceImprovement</li>
         </exclusionTags>
-        <commonality>0.4</commonality>
         <marketValueOffset>500</marketValueOffset>
     </WeaponTraitDef>
     <HediffDef>
@@ -228,7 +222,6 @@
         <exclusionTags>
             <li>MPT_BondedTradePriceImprovement</li>
         </exclusionTags>
-        <commonality>0.4</commonality>
         <marketValueOffset>-500</marketValueOffset>
     </WeaponTraitDef>
     <HediffDef>
@@ -259,7 +252,6 @@
         <exclusionTags>
             <li>MPT_BondedSurgerySuccessChanceFactor</li>
         </exclusionTags>
-        <commonality>0.4</commonality>
         <marketValueOffset>500</marketValueOffset>
     </WeaponTraitDef>
     <HediffDef>
@@ -289,7 +281,6 @@
         <exclusionTags>
             <li>MPT_BondedSurgerySuccessChanceFactor</li>
         </exclusionTags>
-        <commonality>0.4</commonality>
         <marketValueOffset>-500</marketValueOffset>
     </WeaponTraitDef>
     <HediffDef>
@@ -319,7 +310,6 @@
         <exclusionTags>
             <li>MPT_BondedRestRateMultiplier</li>
         </exclusionTags>
-        <commonality>0.4</commonality>
         <marketValueOffset>500</marketValueOffset>
     </WeaponTraitDef>
     <HediffDef>
@@ -349,7 +339,6 @@
         <exclusionTags>
             <li>MPT_BondedRestRateMultiplier</li>
         </exclusionTags>
-        <commonality>0.4</commonality>
         <marketValueOffset>-500</marketValueOffset>
     </WeaponTraitDef>
     <HediffDef>
@@ -379,7 +368,6 @@
         <exclusionTags>
             <li>MPT_BondedImmunityGainSpeed</li>
         </exclusionTags>
-        <commonality>0.4</commonality>
         <marketValueOffset>500</marketValueOffset>
     </WeaponTraitDef>
     <HediffDef>
@@ -409,7 +397,6 @@
         <exclusionTags>
             <li>MPT_BondedImmunityGainSpeed</li>
         </exclusionTags>
-        <commonality>0.4</commonality>
         <marketValueOffset>-500</marketValueOffset>
     </WeaponTraitDef>
     <HediffDef>
@@ -439,7 +426,6 @@
         <exclusionTags>
             <li>MPT_BondedMedicalTendQualityOffset</li>
         </exclusionTags>
-        <commonality>0.4</commonality>
         <marketValueOffset>500</marketValueOffset>
     </WeaponTraitDef>
     <HediffDef>
@@ -469,7 +455,6 @@
         <exclusionTags>
             <li>MPT_BondedMedicalTendQualityOffset</li>
         </exclusionTags>
-        <commonality>0.4</commonality>
         <marketValueOffset>-500</marketValueOffset>
     </WeaponTraitDef>
     <HediffDef>
@@ -500,7 +485,6 @@
             <li>MPT_BondedGlobalLearningFactor</li>
             <li>Radiant</li>
         </exclusionTags>
-        <commonality>0.4</commonality>
         <marketValueOffset>500</marketValueOffset>
     </WeaponTraitDef>
     <HediffDef>
@@ -530,7 +514,6 @@
         <exclusionTags>
             <li>MPT_BondedGlobalLearningFactor</li>
         </exclusionTags>
-        <commonality>0.4</commonality>
         <marketValueOffset>-500</marketValueOffset>
     </WeaponTraitDef>
     <HediffDef>
@@ -560,7 +543,6 @@
         <exclusionTags>
             <li>MPT_BondedMentalBreakThreshold</li>
         </exclusionTags>
-        <commonality>0.4</commonality>
         <marketValueOffset>500</marketValueOffset>
     </WeaponTraitDef>
     <HediffDef>
@@ -590,7 +572,6 @@
         <exclusionTags>
             <li>MPT_BondedMentalBreakThreshold</li>
         </exclusionTags>
-        <commonality>0.4</commonality>
         <marketValueOffset>-500</marketValueOffset>
     </WeaponTraitDef>
     <HediffDef>
@@ -620,7 +601,6 @@
         <exclusionTags>
             <li>MPT_BondedCookSpeed</li>
         </exclusionTags>
-        <commonality>0.4</commonality>
         <marketValueOffset>500</marketValueOffset>
     </WeaponTraitDef>
     <HediffDef>
@@ -650,7 +630,6 @@
         <exclusionTags>
             <li>MPT_BondedCookSpeed</li>
         </exclusionTags>
-        <commonality>0.4</commonality>
         <marketValueOffset>-500</marketValueOffset>
     </WeaponTraitDef>
     <HediffDef>
@@ -680,7 +659,6 @@
         <exclusionTags>
             <li>MPT_BondedMiningSpeed</li>
         </exclusionTags>
-        <commonality>0.4</commonality>
         <marketValueOffset>500</marketValueOffset>
     </WeaponTraitDef>
     <HediffDef>
@@ -711,7 +689,6 @@
         <exclusionTags>
             <li>MPT_BondedMiningSpeed</li>
         </exclusionTags>
-        <commonality>0.4</commonality>
         <marketValueOffset>-500</marketValueOffset>
     </WeaponTraitDef>
     <HediffDef>
@@ -742,7 +719,6 @@
         <exclusionTags>
             <li>MPT_BondedPlantSpeed</li>
         </exclusionTags>
-        <commonality>0.4</commonality>
         <marketValueOffset>500</marketValueOffset>
     </WeaponTraitDef>
     <HediffDef>
@@ -773,7 +749,6 @@
         <exclusionTags>
             <li>MPT_BondedPlantSpeed</li>
         </exclusionTags>
-        <commonality>0.4</commonality>
         <marketValueOffset>-500</marketValueOffset>
     </WeaponTraitDef>
     <HediffDef>
@@ -804,7 +779,6 @@
         <exclusionTags>
             <li>MPT_BondedConstructionSpeed</li>
         </exclusionTags>
-        <commonality>0.4</commonality>
         <marketValueOffset>500</marketValueOffset>
     </WeaponTraitDef>
     <HediffDef>
@@ -834,7 +808,6 @@
         <exclusionTags>
             <li>MPT_BondedConstructionSpeed</li>
         </exclusionTags>
-        <commonality>0.4</commonality>
         <marketValueOffset>-500</marketValueOffset>
     </WeaponTraitDef>
     <HediffDef>
@@ -864,7 +837,6 @@
         <exclusionTags>
             <li>MPT_BondedInjuryHealingFactor</li>
         </exclusionTags>
-        <commonality>0.4</commonality>
         <marketValueOffset>500</marketValueOffset>
     </WeaponTraitDef>
     <HediffDef>
@@ -894,7 +866,6 @@
         <exclusionTags>
             <li>MPT_BondedInjuryHealingFactor</li>
         </exclusionTags>
-        <commonality>0.4</commonality>
         <marketValueOffset>-500</marketValueOffset>
     </WeaponTraitDef>
     <HediffDef>
@@ -925,7 +896,6 @@
         <exclusionTags>
             <li>MPT_BondedAimingDelayFactor</li>
         </exclusionTags>
-        <commonality>0.4</commonality>
         <marketValueOffset>500</marketValueOffset>
     </WeaponTraitDef>
     <HediffDef>
@@ -955,7 +925,6 @@
         <exclusionTags>
             <li>MPT_BondedAimingDelayFactor</li>
         </exclusionTags>
-        <commonality>0.4</commonality>
         <marketValueOffset>-500</marketValueOffset>
     </WeaponTraitDef>
     <HediffDef>
@@ -985,7 +954,6 @@
         <exclusionTags>
             <li>MPT_BondedGeneralLaborSpeed</li>
         </exclusionTags>
-        <commonality>0.4</commonality>
         <marketValueOffset>500</marketValueOffset>
     </WeaponTraitDef>
     <HediffDef>
@@ -1015,7 +983,6 @@
         <exclusionTags>
             <li>MPT_BondedGeneralLaborSpeed</li>
         </exclusionTags>
-        <commonality>0.4</commonality>
         <marketValueOffset>-500</marketValueOffset>
     </WeaponTraitDef>
     <HediffDef>
@@ -1045,7 +1012,6 @@
         <exclusionTags>
             <li>MPT_BondedSocialFightChanceFactor</li>
         </exclusionTags>
-        <commonality>0.4</commonality>
         <marketValueOffset>500</marketValueOffset>
     </WeaponTraitDef>
     <HediffDef>
@@ -1073,7 +1039,6 @@
         <exclusionTags>
             <li>MPT_BondedSocialFightChanceFactor</li>
         </exclusionTags>
-        <commonality>0.4</commonality>
         <marketValueOffset>-500</marketValueOffset>
     </WeaponTraitDef>
     <HediffDef>

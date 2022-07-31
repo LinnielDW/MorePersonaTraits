@@ -7,7 +7,6 @@
         <bondedHediffs>
             <li>MPT_HediffBondedNeedChemical_WakeUp</li>
         </bondedHediffs>
-        <commonality>0.4</commonality>
         <marketValueOffset>-500</marketValueOffset>
         <descriptionHyperlinks>
             <ThingDef>WakeUp</ThingDef>

@@ -4,7 +4,6 @@
         <defName>MPT_BondedImmunePenoxycyline</defName>
         <label>penoxycylined</label>
         <description>This weapons persona gives its bond permenant Penoxycyline effects so long as the bond holds. That being immunity to malaria, sleeping sickness, and the plague.</description>
-        <commonality>0.5</commonality>
         <marketValueOffset>300</marketValueOffset>
         <bondedHediffs>
             <li>MPT_HediffImmunePenoxycyline</li>
@@ -69,7 +68,6 @@
         <defName>MPT_BondedImmuneMechanite</defName>
         <label>machan't</label>
         <description>This weapons persona once got into a heated debate with a mechanite swarm and has never trusted them since. It will do its best to protect its host from any non-consensual mechanites.\nThe bonded pawn is immune to sensory or fibrous mechanites so long as the bond remains.</description>
-        <commonality>0.5</commonality>
         <marketValueOffset>300</marketValueOffset>
         <bondedHediffs>
             <li>MPT_HediffImmuneMechanite</li>
