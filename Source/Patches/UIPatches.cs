@@ -129,7 +129,6 @@ namespace MorePersonaTraits.Patches
 
         private static TaggedString ReportText(OnHitWorker worker)
         {
-            Log.Warning(worker.ToString());
             return "MPT_OnHitDesc".Translate(
                 worker.ProcChance.ToStringPercent(),
                 workerEffect(worker),
