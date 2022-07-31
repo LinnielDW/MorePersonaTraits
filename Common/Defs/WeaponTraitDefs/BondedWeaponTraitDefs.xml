@@ -853,4 +853,64 @@
             </li>
         </stages>
     </HediffDef>
+    
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_BondedInjuryHealingFactorUp</defName>
+        <label>hermetic</label>
+        <description>This weapons persona seems to transmit some sort of pancacea via a psychic connection.\nThe bonded pawn gains increased injury healing speed.</description>
+        <bondedHediffs>
+            <li>MPT_HediffInjuryHealingFactorUp</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_BondedInjuryHealingFactor</li>
+        </exclusionTags>
+        <commonality>0.4</commonality>
+        <marketValueOffset>500</marketValueOffset>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_HediffInjuryHealingFactorUp</defName>
+        <label>psychic stem cell multiplier</label>
+        <description>My injury healing speed is being increased by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_BondedInjuryHealingFactorUp</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statOffsets>
+                    <InjuryHealingFactor>0.12</InjuryHealingFactor>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_BondedInjuryHealingFactorDown</defName>
+        <label>dehiscent</label>
+        <description>This weapons persona believes in an open hearted stance on life. Unfortunately, it took that quite literally.\nThe bonded pawn loses injury healing speed.</description>
+        <bondedHediffs>
+            <li>MPT_HediffInjuryHealingFactorDown</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_BondedInjuryHealingFactor</li>
+        </exclusionTags>
+        <commonality>0.4</commonality>
+        <marketValueOffset>-500</marketValueOffset>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_HediffInjuryHealingFactorDown</defName>
+        <label>psychically induced necrosis</label>
+        <description>My injury healing speed is being hampered by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_BondedInjuryHealingFactorDown</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statOffsets>
+                    <InjuryHealingFactor>-0.12</InjuryHealingFactor>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
 </Defs>
