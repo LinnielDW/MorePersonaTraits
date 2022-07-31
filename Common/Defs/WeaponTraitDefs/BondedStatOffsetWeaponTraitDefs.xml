@@ -1058,7 +1058,7 @@
         <isBad>false</isBad>
         <stages>
             <li>
-                <SocialFightChanceFactor>0.25</SocialFightChanceFactor>
+                <socialFightChanceFactor>0.25</socialFightChanceFactor>
             </li>
         </stages>
     </HediffDef>
@@ -1086,7 +1086,7 @@
         <isBad>false</isBad>
         <stages>
             <li>
-                <SocialFightChanceFactor>4</SocialFightChanceFactor>
+                <socialFightChanceFactor>4</socialFightChanceFactor>
             </li>
         </stages>
     </HediffDef>
