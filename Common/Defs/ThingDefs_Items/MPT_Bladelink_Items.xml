@@ -69,7 +69,7 @@
 
     <ThingDef ParentName="ArtifactBase">
         <defName>MPT_BladelinkExalt</defName>
-        <label>Persona Weapon Quirk</label>
+        <label>Persona Weapon Quirker</label>
         <description>A one-use psychic persona effector. The psychic surge discovers a new trait of a targetted weapon persona.</description>
         <graphicData>
             <!--TODO: Make a different graphic-->
@@ -95,9 +95,9 @@
                 <sound>PsychicInsanityLanceCast</sound>
             </li>
             <!-- TODO: write exalt functionality -->
-<!--            <li>-->
-<!--                <compClass>MorePersonaTraits.WorkerClasses.ItemWorkerClasses.CompTargetEffect_BladelinkExalt</compClass>-->
-<!--            </li>-->
+            <li>
+                <compClass>MorePersonaTraits.WorkerClasses.ItemWorkerClasses.CompTargetEffect_BladelinkExalt</compClass>
+            </li>
         </comps>
     </ThingDef>
 </Defs>
