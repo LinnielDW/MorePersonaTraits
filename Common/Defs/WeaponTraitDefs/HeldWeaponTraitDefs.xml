@@ -13,7 +13,7 @@
             <li>MPT_HeldMeleeHitChance</li>
         </exclusionTags>
     </WeaponTraitDef>
-    
+
     <WeaponTraitDef>
         <defName>MPT_HeldMeleeHitChanceDown</defName>
         <label>squemish</label>
@@ -27,7 +27,7 @@
             <li>MPT_HeldMeleeHitChance</li>
         </exclusionTags>
     </WeaponTraitDef>
-    
+
     <WeaponTraitDef>
         <defName>MPT_HeldArmorRatingUp</defName>
         <label>non-newtonian</label>
@@ -43,7 +43,7 @@
             <li>MPT_HeldArmorRating</li>
         </exclusionTags>
     </WeaponTraitDef>
-    
+
     <WeaponTraitDef>
         <defName>MPT_HeldArmorRatingDown</defName>
         <label>bond sundering</label>
@@ -59,7 +59,7 @@
             <li>MPT_HeldArmorRating</li>
         </exclusionTags>
     </WeaponTraitDef>
-    
+
     <WeaponTraitDef>
         <defName>MPT_HeldPawnBeautyUp</defName>
         <label>enchanting</label>
@@ -73,7 +73,7 @@
             <li>MPT_HeldPawnBeauty</li>
         </exclusionTags>
     </WeaponTraitDef>
-    
+
     <WeaponTraitDef>
         <defName>MPT_HeldPawnBeautyDown</defName>
         <label>repellent</label>
@@ -85,6 +85,34 @@
         </equippedStatOffsets>
         <exclusionTags>
             <li>MPT_HeldPawnBeauty</li>
+        </exclusionTags>
+    </WeaponTraitDef>
+
+    <WeaponTraitDef>
+        <defName>MPT_HeldMeleeDodgeChanceUp</defName>
+        <label>edgedancer</label>
+        <description>This weapons persona provides their wielder with astounding poise and grace. Even the most funbling wielder will move through a battlefield like a ribbon on the wind.\nWhile held, it provides its wielder with increased melee dodge chance.</description>
+        <commonality>0.5</commonality>
+        <marketValueOffset>400</marketValueOffset>
+        <equippedStatOffsets>
+            <MeleeDodgeChance>15</MeleeDodgeChance>
+        </equippedStatOffsets>
+        <exclusionTags>
+            <li>MPT_HeldMeleeDodgeChance</li>
+        </exclusionTags>
+    </WeaponTraitDef>
+
+    <WeaponTraitDef>
+        <defName>MPT_HeldMeleeDodgeChanceDown</defName>
+        <label>bewitched</label>
+        <description>This weapons persona seems to draw the ire of all its weapon cousins, scentient or otherwised.\nWhile held, it reduces its wielders melee dodge chance.</description>
+        <commonality>0.5</commonality>
+        <marketValueOffset>-400</marketValueOffset>
+        <equippedStatOffsets>
+            <MeleeDodgeChance>-10</MeleeDodgeChance>
+        </equippedStatOffsets>
+        <exclusionTags>
+            <li>MPT_HeldMeleeDodgeChance</li>
         </exclusionTags>
     </WeaponTraitDef>
 </Defs>
