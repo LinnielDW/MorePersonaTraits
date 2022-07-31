@@ -3,7 +3,7 @@
     <WeaponTraitDef>
         <defName>MPT_OnHitPlague</defName>
         <label>plague bringer</label>
-        <description>This weapon revels in the art of slow and agonizing death.\nUpon hitting a target, this weapon has a chance to apply/increase the targets plague.</description>
+        <description>This weapons persona revels in the art of slow and agonizing death.\nUpon hitting a target, this weapon has a chance to apply/increase the targets plague.</description>
         <commonality>0.5</commonality>
         <marketValueOffset>400</marketValueOffset>
         <descriptionHyperlinks>
@@ -39,6 +39,54 @@
                 <OnHitWorkers>
                     <li Class="MorePersonaTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_ApplyHediff">
                         <HediffDef>Plague</HediffDef>
+                        <ProcMagnitude>0.02</ProcMagnitude>
+                        <ProcChance>0.02</ProcChance>
+                        <TargetSelf>true</TargetSelf>
+                    </li>
+                </OnHitWorkers>
+            </li>
+        </modExtensions>
+    </WeaponTraitDef>
+    
+    <WeaponTraitDef>
+        <defName>MPT_OnHitFlu</defName>
+        <label>flu carrier</label>
+        <description>This weapons persona once experienced flight and now wishes that any and all that it comes into contact with 'flu'.\nUpon hitting a target, this weapon has a chance to apply/increase the targets flu.</description>
+        <commonality>0.5</commonality>
+        <marketValueOffset>400</marketValueOffset>
+        <descriptionHyperlinks>
+            <HediffDef>Flu</HediffDef>
+        </descriptionHyperlinks>
+        <modExtensions>
+            <li Class="MorePersonaTraits.Extensions.WeaponTraitOnHitExtension">
+                <OnHitWorkers>
+                    <li Class="MorePersonaTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_ApplyHediff">
+                        <HediffDef>Flu</HediffDef>
+                        <ProcMagnitude>0.35</ProcMagnitude>
+                        <ProcChance>0.5</ProcChance>
+                    </li>
+                </OnHitWorkers>
+            </li>
+        </modExtensions>
+    </WeaponTraitDef>
+    
+    <WeaponTraitDef>
+        <defName>MPT_OnHitFluSelf</defName>
+        <label>flu-prone</label>
+        <description>This weapons persona attracts maladies anywhere it goes. Their bond will always be suffering from a runny nose or shortness of breath.\nUpon hitting a target, there is a small chance that the user will contract the flu.</description>
+        <commonality>0.5</commonality>
+        <marketValueOffset>-800</marketValueOffset>
+        <exclusionTags>
+            <li>MPT_FluImmune</li>
+        </exclusionTags>
+        <descriptionHyperlinks>
+            <HediffDef>Flu</HediffDef>
+        </descriptionHyperlinks>
+        <modExtensions>
+            <li Class="MorePersonaTraits.Extensions.WeaponTraitOnHitExtension">
+                <OnHitWorkers>
+                    <li Class="MorePersonaTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_ApplyHediff">
+                        <HediffDef>Flu</HediffDef>
                         <ProcMagnitude>0.02</ProcMagnitude>
                         <ProcChance>0.02</ProcChance>
                         <TargetSelf>true</TargetSelf>
