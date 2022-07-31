@@ -3,7 +3,7 @@
     <WeaponTraitDef>
         <defName>MPT_OnHitPlague</defName>
         <label>plague bringer</label>
-        <description>This weapon revels in the art of slow and agonizing death.\nUpon hitting a target, this weapon has a chance to apply/increase the target's plague.</description>
+        <description>This weapon revels in the art of slow and agonizing death.\nUpon hitting a target, this weapon has a chance to apply/increase the targets plague.</description>
         <commonality>0.5</commonality>
         <marketValueOffset>400</marketValueOffset>
         <descriptionHyperlinks>
@@ -25,7 +25,7 @@
     <WeaponTraitDef>
         <defName>MPT_OnHitPlagueSelf</defName>
         <label>plague magnet</label>
-        <description>This weapon's persona seems to attract the most exotic of baterium at the most inopportune times.\nUpon hitting a target, there is a small chance that the user will contract the plague.</description>
+        <description>This weapons persona seems to attract the most exotic of baterium at the most inopportune times.\nUpon hitting a target, there is a small chance that the user will contract the plague.</description>
         <commonality>0.5</commonality>
         <marketValueOffset>-800</marketValueOffset>
         <descriptionHyperlinks>

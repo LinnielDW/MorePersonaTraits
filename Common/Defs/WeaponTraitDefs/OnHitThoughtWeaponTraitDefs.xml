@@ -34,7 +34,7 @@
         <stages>
             <li>
                 <label>psychic stoneward</label>
-                <description>My bonded weapon's words echo inside my head, pushing me forward, despite my own interests.</description>
+                <description>My bonded weapons words echo inside my head, pushing me forward, despite my own interests.</description>
                 <baseMoodEffect>5</baseMoodEffect>
             </li>
         </stages>

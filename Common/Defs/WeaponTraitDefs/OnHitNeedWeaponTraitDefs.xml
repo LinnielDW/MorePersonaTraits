@@ -3,7 +3,7 @@
     <WeaponTraitDef>
         <defName>MPT_OnHitFoodSelfUp</defName>
         <label>replenishing</label>
-        <description>This weapon's persona insists that an army cannot march on an empty stomach.\nUpon hitting a living target, there is a chance that the wielder's food will be increased slightly.</description>
+        <description>This weapons persona insists that an army cannot march on an empty stomach.\nUpon hitting a living target, there is a chance that the wielders food will be increased slightly.</description>
         <commonality>0.5</commonality>
         <marketValueOffset>400</marketValueOffset>
         <exclusionTags>
@@ -27,7 +27,7 @@
     <WeaponTraitDef>
         <defName>MPT_OnHitFoodSelfDown</defName>
         <label>coneseur</label>
-        <description>This weapon's persona requires a little extra to be convinced to do battle.\nUpon hitting a living thing, the wielder has a chance of losing a small amount of their food.</description>
+        <description>This weapons persona requires a little extra to be convinced to do battle.\nUpon hitting a living thing, the wielder has a chance of losing a small amount of their food.</description>
         <commonality>0.5</commonality>
         <marketValueOffset>-400</marketValueOffset>
         <exclusionTags>

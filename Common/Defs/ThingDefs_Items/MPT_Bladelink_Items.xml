@@ -3,7 +3,7 @@
     <ThingDef ParentName="ArtifactBase">
         <defName>MPT_BladelinkUncoder</defName>
         <label>Persona Weapon Bond Breaker</label>
-        <description>A one-use psychic persona effector. The psychic surge destroys a weapon persona's connections, removing all memories of friendship, loyalties and severing its psychic bond.</description>
+        <description>A one-use psychic persona effector. The psychic surge destroys a weapon personas connections, removing all memories of friendship, loyalties and severing its psychic bond.</description>
         <graphicData>
             <!--TODO: Make a different graphic-->
             <texPath>Things/Item/Equipment/WeaponSpecial/OrbitalTargeter</texPath>
