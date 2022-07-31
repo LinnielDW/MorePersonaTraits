@@ -18,7 +18,6 @@
         </bondedHediffs>
         <exclusionTags>
             <li>MPT_ResearchOffset</li>
-            <!--<li>NeverBond</li>-->
         </exclusionTags>
     </WeaponTraitDef>
     <HediffDef>
@@ -49,7 +48,6 @@
         </bondedHediffs>
         <exclusionTags>
             <li>MPT_ResearchOffset</li>
-            <!--<li>NeverBond</li>-->
         </exclusionTags>
     </WeaponTraitDef>
     <HediffDef>
@@ -78,7 +76,6 @@
         </bondedHediffs>
         <exclusionTags>
             <li>MPT_BondedGlobalWorkspeed</li>
-            <!--<li>NeverBond</li>-->
         </exclusionTags>
         <commonality>0.4</commonality>
         <marketValueOffset>1000</marketValueOffset>
@@ -109,7 +106,6 @@
         </bondedHediffs>
         <exclusionTags>
             <li>MPT_BondedGlobalWorkspeed</li>
-            <!--<li>NeverBond</li>-->
         </exclusionTags>
         <commonality>0.4</commonality>
         <marketValueOffset>-1000</marketValueOffset>
@@ -140,7 +136,6 @@
         </bondedHediffs>
         <exclusionTags>
             <li>MPT_BondedShootingAccuracyPawn</li>
-            <!--<li>NeverBond</li>-->
         </exclusionTags>
         <commonality>0.4</commonality>
         <marketValueOffset>500</marketValueOffset>
@@ -171,7 +166,6 @@
         </bondedHediffs>
         <exclusionTags>
             <li>MPT_BondedShootingAccuracyPawn</li>
-            <!--<li>NeverBond</li>-->
         </exclusionTags>
         <commonality>0.4</commonality>
         <marketValueOffset>-500</marketValueOffset>
@@ -202,7 +196,6 @@
         </bondedHediffs>
         <exclusionTags>
             <li>MPT_BondedTradePriceImprovement</li>
-            <!--<li>NeverBond</li>-->
         </exclusionTags>
         <commonality>0.4</commonality>
         <marketValueOffset>500</marketValueOffset>
@@ -234,7 +227,6 @@
         </bondedHediffs>
         <exclusionTags>
             <li>MPT_BondedTradePriceImprovement</li>
-            <!--<li>NeverBond</li>-->
         </exclusionTags>
         <commonality>0.4</commonality>
         <marketValueOffset>-500</marketValueOffset>
@@ -266,7 +258,6 @@
         </bondedHediffs>
         <exclusionTags>
             <li>MPT_BondedSurgerySuccessChanceFactor</li>
-            <!--<li>NeverBond</li>-->
         </exclusionTags>
         <commonality>0.4</commonality>
         <marketValueOffset>500</marketValueOffset>
@@ -297,7 +288,6 @@
         </bondedHediffs>
         <exclusionTags>
             <li>MPT_BondedSurgerySuccessChanceFactor</li>
-            <!--<li>NeverBond</li>-->
         </exclusionTags>
         <commonality>0.4</commonality>
         <marketValueOffset>-500</marketValueOffset>
@@ -328,7 +318,6 @@
         </bondedHediffs>
         <exclusionTags>
             <li>MPT_BondedRestRateMultiplier</li>
-            <!--<li>NeverBond</li>-->
         </exclusionTags>
         <commonality>0.4</commonality>
         <marketValueOffset>500</marketValueOffset>
@@ -359,7 +348,6 @@
         </bondedHediffs>
         <exclusionTags>
             <li>MPT_BondedRestRateMultiplier</li>
-            <!--<li>NeverBond</li>-->
         </exclusionTags>
         <commonality>0.4</commonality>
         <marketValueOffset>-500</marketValueOffset>
@@ -390,7 +378,6 @@
         </bondedHediffs>
         <exclusionTags>
             <li>MPT_BondedImmunityGainSpeed</li>
-            <!--<li>NeverBond</li>-->
         </exclusionTags>
         <commonality>0.4</commonality>
         <marketValueOffset>500</marketValueOffset>
@@ -421,7 +408,6 @@
         </bondedHediffs>
         <exclusionTags>
             <li>MPT_BondedImmunityGainSpeed</li>
-            <!--<li>NeverBond</li>-->
         </exclusionTags>
         <commonality>0.4</commonality>
         <marketValueOffset>-500</marketValueOffset>
@@ -452,7 +438,6 @@
         </bondedHediffs>
         <exclusionTags>
             <li>MPT_BondedMedicalTendQualityOffset</li>
-            <!--<li>NeverBond</li>-->
         </exclusionTags>
         <commonality>0.4</commonality>
         <marketValueOffset>500</marketValueOffset>
@@ -483,7 +468,6 @@
         </bondedHediffs>
         <exclusionTags>
             <li>MPT_BondedMedicalTendQualityOffset</li>
-            <!--<li>NeverBond</li>-->
         </exclusionTags>
         <commonality>0.4</commonality>
         <marketValueOffset>-500</marketValueOffset>
@@ -514,7 +498,6 @@
         </bondedHediffs>
         <exclusionTags>
             <li>MPT_BondedGlobalLearningFactor</li>
-            <!--<li>NeverBond</li>-->
             <li>Radiant</li>
         </exclusionTags>
         <commonality>0.4</commonality>
@@ -546,7 +529,6 @@
         </bondedHediffs>
         <exclusionTags>
             <li>MPT_BondedGlobalLearningFactor</li>
-            <!--<li>NeverBond</li>-->
         </exclusionTags>
         <commonality>0.4</commonality>
         <marketValueOffset>-500</marketValueOffset>
@@ -577,7 +559,6 @@
         </bondedHediffs>
         <exclusionTags>
             <li>MPT_BondedMentalBreakThreshold</li>
-            <!--<li>NeverBond</li>-->
         </exclusionTags>
         <commonality>0.4</commonality>
         <marketValueOffset>500</marketValueOffset>
@@ -608,7 +589,6 @@
         </bondedHediffs>
         <exclusionTags>
             <li>MPT_BondedMentalBreakThreshold</li>
-            <!--<li>NeverBond</li>-->
         </exclusionTags>
         <commonality>0.4</commonality>
         <marketValueOffset>-500</marketValueOffset>
@@ -639,7 +619,6 @@
         </bondedHediffs>
         <exclusionTags>
             <li>MPT_BondedCookSpeed</li>
-            <!--<li>NeverBond</li>-->
         </exclusionTags>
         <commonality>0.4</commonality>
         <marketValueOffset>500</marketValueOffset>
