@@ -639,4 +639,34 @@
             </li>
         </stages>
     </HediffDef>
+
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_BondedCookSpeedDown</defName>
+        <label>slow-cooker</label>
+        <description>This weapons persona claims that it was a slow-cooker in a previous life and that all food should be cooked that way.\nThe bonded pawn loses cooking speed.</description>
+        <bondedHediffs>
+            <li>MPT_HediffCookSpeedDown</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_BondedCookSpeed</li>
+        </exclusionTags>
+        <commonality>0.4</commonality>
+        <marketValueOffset>-500</marketValueOffset>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_HediffCookSpeedDown</defName>
+        <label>psychic Maillard reaction inhibition</label>
+        <description>My cooking speed is hampered by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_BondedCookSpeedDown</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statOffsets>
+                    <CookSpeed>4</CookSpeed>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
 </Defs>
