@@ -32,7 +32,7 @@ namespace MorePersonaTraits.WorkerClasses.ItemWorkerClasses
                 .Invoke(compBladelink);
 
             traits.Clear();
-            TraitUtils.InitializeTraits(traits, compBladelink);
+            TraitUtils.InitializeTraits(compBladelink);
         }
     }
 }

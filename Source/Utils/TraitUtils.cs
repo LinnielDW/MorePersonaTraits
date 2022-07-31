@@ -9,9 +9,9 @@ namespace MorePersonaTraits.Utils
 {
     public class TraitUtils
     {
-        public static void InitializeTraits(List<WeaponTraitDef> existingTraits, CompBladelinkWeapon compBladelink)
+        public static void InitializeTraits(CompBladelinkWeapon compBladelink)
         {
-            if (compBladelink.TraitsListForReading == null) existingTraits = new List<WeaponTraitDef>();
+            if (compBladelink.TraitsListForReading == null) compBladelink.TraitsListForReading?.Clear();
 
             //TODO: Get this from a setting
             var range = AccessTools
@@ -21,20 +21,25 @@ namespace MorePersonaTraits.Utils
 
             for (var index = 0; index < range.RandomInRange; ++index)
             {
-                var availableTraits = DefDatabase<WeaponTraitDef>.AllDefs
-                    .Where(possibleTrait => CanAddTrait(existingTraits, possibleTrait, compBladelink))
-                    .ToList();
+                var availableTraits = AvailableTraits(compBladelink);
 
-                if (!availableTraits.NullOrEmpty())
-                    existingTraits.Add(availableTraits.RandomElementByWeight(x => x.commonality));
+                if (!availableTraits.NullOrEmpty() && compBladelink.TraitsListForReading != null)
+                    compBladelink.TraitsListForReading.Add(availableTraits.RandomElementByWeight(x => x.commonality));
             }
         }
 
-        private static bool CanAddTrait(List<WeaponTraitDef> existingTraits, WeaponTraitDef traitToAdd, CompBladelinkWeapon compBladelinkWeapon)
+        public static List<WeaponTraitDef> AvailableTraits(CompBladelinkWeapon compBladelink)
         {
-            if (!existingTraits.NullOrEmpty())
+            return DefDatabase<WeaponTraitDef>.AllDefs
+                .Where(possibleTrait => CanAddTrait(possibleTrait, compBladelink))
+                .ToList();
+        }
+
+        private static bool CanAddTrait(WeaponTraitDef traitToAdd, CompBladelinkWeapon compBladelinkWeapon)
+        {
+            if (!compBladelinkWeapon.TraitsListForReading.NullOrEmpty())
             {
-                return !existingTraits.Exists(existingTrait => traitToAdd.Overlaps(existingTrait) || !CanAddBondTrait(traitToAdd, compBladelinkWeapon.TraitsListForReading));
+                return !compBladelinkWeapon.TraitsListForReading.Exists(existingTrait => traitToAdd.Overlaps(existingTrait) || !CanAddBondTrait(traitToAdd, compBladelinkWeapon.TraitsListForReading));
             }
 
             return true;

@@ -96,7 +96,7 @@
             </li>
             <!-- TODO: write exalt functionality -->
 <!--            <li>-->
-<!--                <compClass>MorePersonaTraits.WorkerClasses.ItemWorkerClasses.CompTargetEffect_BladeExalt</compClass>-->
+<!--                <compClass>MorePersonaTraits.WorkerClasses.ItemWorkerClasses.CompTargetEffect_BladelinkExalt</compClass>-->
 <!--            </li>-->
         </comps>
     </ThingDef>
