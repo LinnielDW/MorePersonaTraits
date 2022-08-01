@@ -5,6 +5,7 @@ using Verse;
 
 namespace MorePersonaTraits.WorkerClasses.ItemWorkerClasses
 {
+    //TODO: remove
     public class CompTargetable_SingleBladelinkTraitRemovable : CompTargetable
     {
         protected override TargetingParameters GetTargetingParameters()
