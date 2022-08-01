@@ -77,7 +77,6 @@
     <Compile Include="Utils\FieldRefUtils.cs" />
     <Compile Include="Utils\TargetUtils.cs" />
     <Compile Include="Utils\TraitUtils.cs" />
-    <Compile Include="WeaponTraitDefDisplayStats.cs" />
     <Compile Include="WorkerClasses\ItemWorkerClasses\CompProperties_TargetableSingleBladelink.cs" />
     <Compile Include="WorkerClasses\ItemWorkerClasses\CompTargetable_SingleBladelink.cs" />
     <Compile Include="WorkerClasses\ItemWorkerClasses\CompTargetable_SingleBladelinkTraitAddable.cs" />

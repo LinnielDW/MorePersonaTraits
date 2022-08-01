@@ -2,6 +2,7 @@
 using MorePersonaTraits.Utils;
 using RimWorld;
 using Verse;
+// ReSharper disable UnusedMember.Local
 
 namespace MorePersonaTraits.Patches
 {
