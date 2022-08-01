@@ -1,20 +1,23 @@
 ﻿using RimWorld;
 using Verse;
 
-namespace MorePersonaTraits.WeaponTraitWorkerClasses
+namespace MorePersonaTraits.WorkerClasses.WeaponTraitWorkerClasses
 {
     public class WeaponTraitWorker_NeedFilledOnKill : WeaponTraitWorker
     {
-        //TODO: implement
+        //TODO: test
+        public NeedDef NeedDef = null;
+
         public override void Notify_KilledPawn(Pawn pawn)
         {
             base.Notify_KilledPawn(pawn);
-            // pawn.needs.TryGetNeed()
-            // if (psychicEntropy == null)
-            // {
-            //     return;
-            // }
-            // psychicEntropy.OffsetPsyfocusDirectly(0.2f);
+            var x = pawn.needs.TryGetNeed(NeedDef);
+            if (x == null)
+            {
+                return;
+            }
+
+            x.CurLevel = x.MaxLevel;
         }
     }
 }

@@ -32,7 +32,7 @@ namespace MorePersonaTraits.Utils
             }
         }
 
-        [DebugAction("Spawning", "[MPT] Reroll Weapon Traits", true, false, actionType = DebugActionType.ToolMap, allowedGameStates = AllowedGameStates.PlayingOnMap)]
+        [DebugAction("Spawning", "[MPT] Reroll Weapon Traits", true, actionType = DebugActionType.ToolMap, allowedGameStates = AllowedGameStates.PlayingOnMap)]
         private static void RerollTraits()
         {
             foreach (var weapon in (from t in Find.CurrentMap.thingGrid.ThingsAt(UI.MouseCell())
@@ -40,18 +40,18 @@ namespace MorePersonaTraits.Utils
                 select t).Cast<ThingWithComps>())
             {
                 weapon.TryGetComp<CompBladelinkWeapon>().TraitsListForReading.Clear();
-                TraitUtils.InitializeTraits(weapon.TryGetComp<CompBladelinkWeapon>());
+                weapon.TryGetComp<CompBladelinkWeapon>().InitializeTraits();
             }
         }
 
-        [DebugAction("Spawning", "[MPT] Justaddmorelol", true, false, actionType = DebugActionType.ToolMap, allowedGameStates = AllowedGameStates.PlayingOnMap)]
+        [DebugAction("Spawning", "[MPT] Justaddmorelol", true, actionType = DebugActionType.ToolMap, allowedGameStates = AllowedGameStates.PlayingOnMap)]
         private static void JustAddMore()
         {
             foreach (var weapon in (from t in Find.CurrentMap.thingGrid.ThingsAt(UI.MouseCell())
                 where t is ThingWithComps && (t as ThingWithComps).TryGetComp<CompBladelinkWeapon>() != null
                 select t).Cast<ThingWithComps>())
             {
-                TraitUtils.InitializeTraits(weapon.TryGetComp<CompBladelinkWeapon>());
+                weapon.TryGetComp<CompBladelinkWeapon>().InitializeTraits();
             }
         }
 
@@ -60,7 +60,7 @@ namespace MorePersonaTraits.Utils
         {
             List<DebugMenuOption> list = new List<DebugMenuOption>();
             foreach (ThingDef localDef in from def in DefDatabase<ThingDef>.AllDefs
-                where def.equipmentType == EquipmentType.Primary &&
+                where /*def.equipmentType == EquipmentType.Primary &&*/
                       def.comps.Exists(p => p.compClass == typeof(CompBladelinkWeapon))
                 select def
                 into d
@@ -111,8 +111,8 @@ namespace MorePersonaTraits.Utils
                 personaWeaponThing = personaWeaponThing.MakeMinified();
             personaWeaponThing.stackCount = stackCount;
 
-            personaWeaponThing.TryGetComp<CompBladelinkWeapon>()?.TraitsListForReading.Clear();
-            personaWeaponThing.TryGetComp<CompBladelinkWeapon>()?.TraitsListForReading.Add(weaponTraitDef);
+            personaWeaponThing.TryGetComp<CompBladelinkWeapon>().TraitsListForReading.Clear();
+            personaWeaponThing.TryGetComp<CompBladelinkWeapon>().TraitsListForReading.Add(weaponTraitDef);
 
             if (direct)
                 GenPlace.TryPlaceThing(personaWeaponThing, c, Find.CurrentMap, ThingPlaceMode.Direct);

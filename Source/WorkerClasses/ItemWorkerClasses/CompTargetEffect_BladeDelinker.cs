@@ -13,7 +13,7 @@ namespace MorePersonaTraits.WorkerClasses.ItemWorkerClasses
                 return;
             }
 
-            target.TryGetComp<CompBladelinkWeapon>().UnCode();
+            compBladelink.UnCode();
         }
     }
 }

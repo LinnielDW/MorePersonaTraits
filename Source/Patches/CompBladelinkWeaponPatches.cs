@@ -11,7 +11,7 @@ namespace MorePersonaTraits.Patches
     {
         static void Postfix(WeaponTraitDef trait, ref bool __result, CompBladelinkWeapon __instance)
         {
-            __result = __result && TraitUtils.CanAddBondTrait(trait, __instance.TraitsListForReading);
+            __result = __result && __instance.CanAddBondTrait(trait);
         }
     }
 
@@ -22,7 +22,7 @@ namespace MorePersonaTraits.Patches
         static void Postfix()
         {
             //TODO get this from a setting
-            Traverse.Create<CompBladelinkWeapon>().Field("TraitsRange").SetValue(new IntRange(1,4));
+            Traverse.Create<CompBladelinkWeapon>().Field("TraitsRange").SetValue(new IntRange(1,5));
         }
     }
 }

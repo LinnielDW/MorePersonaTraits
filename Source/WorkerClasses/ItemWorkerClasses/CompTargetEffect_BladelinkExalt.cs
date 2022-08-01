@@ -22,7 +22,7 @@ namespace MorePersonaTraits.WorkerClasses.ItemWorkerClasses
                 existingTraits = new List<WeaponTraitDef>();
             }
 
-            var availableTraits = TraitUtils.AvailableTraits(compBladelink);
+            var availableTraits = compBladelink.AvailableTraits();
 
             if (!availableTraits.NullOrEmpty())
                 existingTraits.Add(availableTraits.RandomElementByWeight(trait => trait.commonality));

@@ -16,7 +16,7 @@ namespace MorePersonaTraits.WorkerClasses.ItemWorkerClasses
                 canTargetItems = true,
                 mapObjectTargetsMustBeAutoAttackable = false,
                 validator = targetInfo =>
-                    targetInfo.Thing.TryGetComp<CompBladelinkWeapon>() != null && TargetUtils.ValidateRequiresBond(Props,targetInfo) && TraitUtils.HasAddableTrait(targetInfo.Thing.TryGetComp<CompBladelinkWeapon>()) &&
+                    targetInfo.Thing.TryGetComp<CompBladelinkWeapon>() != null && TargetUtils.ValidateRequiresBond(Props,targetInfo) && targetInfo.Thing.TryGetComp<CompBladelinkWeapon>().HasAddableTrait() &&
                     BaseTargetValidator(targetInfo.Thing)
             };
         }

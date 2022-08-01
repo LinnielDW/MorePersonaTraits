@@ -6,8 +6,7 @@ namespace MorePersonaTraits.Utils
 {
     public static class OnHitUtils
     {
-        public static void attemptApplyOnHitEffects(List<OnHitWorker> onHitWorkers, Thing targetThing,
-            Thing originThing)
+        public static void attemptApplyOnHitEffects(List<OnHitWorker> onHitWorkers, Thing targetThing, Thing originThing)
         {
             float rand = Rand.Value;
             foreach (var onHitWorker in onHitWorkers)
@@ -23,8 +22,7 @@ namespace MorePersonaTraits.Utils
                 }
             }
         }
-        
-        
+
         public static bool IsLivingPawn(Thing thing)
         {
             return thing != null && !thing.Destroyed && thing is Pawn && !(thing as Pawn).Dead;

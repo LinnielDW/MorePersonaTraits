@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-using HarmonyLib;
-using MorePersonaTraits.Utils;
+﻿using MorePersonaTraits.Utils;
 using RimWorld;
 using Verse;
 
@@ -11,9 +9,7 @@ namespace MorePersonaTraits.WorkerClasses.ItemWorkerClasses
         public override void DoEffectOn(Pawn user, Thing target)
         {
             var compBladelink = target.TryGetComp<CompBladelinkWeapon>();
-            List<WeaponTraitDef> existingTraits = AccessTools
-                .FieldRefAccess<List<WeaponTraitDef>>(typeof(CompBladelinkWeapon), "traits")
-                .Invoke(compBladelink);
+            var existingTraits = FieldRefUtils.TraitsFieldRef.Invoke(compBladelink);
 
 
             if (compBladelink == null)

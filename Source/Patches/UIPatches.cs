@@ -175,7 +175,7 @@ namespace MorePersonaTraits.Patches
     {
         static IEnumerable<StatDrawEntry> Postfix(IEnumerable<StatDrawEntry> values, Pawn __instance)
         {
-            if (__instance?.equipment?.bondedWeapon != null)
+            if (__instance.equipment?.bondedWeapon != null)
             {
                 yield return new StatDrawEntry(
                     StatCategoryDefOf.Weapon,

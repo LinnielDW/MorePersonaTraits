@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using MorePersonaTraits.WorkerClasses.OnHitWorkerClasses;
-using RimWorld;
 using Verse;
 
 namespace MorePersonaTraits.Extensions

@@ -7,11 +7,11 @@ using Verse;
 
 namespace MorePersonaTraits.Utils
 {
-    public class TraitUtils
+    public static class TraitUtils
     {
-        public static void InitializeTraits(CompBladelinkWeapon compBladelink)
+        public static void InitializeTraits(this CompBladelinkWeapon compBladelink)
         {
-            if (compBladelink.TraitsListForReading == null) compBladelink.TraitsListForReading?.Clear();
+            if (compBladelink.TraitsListForReading == null) FieldRefUtils.TraitsFieldRef.Invoke(compBladelink) = new List<WeaponTraitDef>();
 
             var range = AccessTools
                 .FieldRefAccess<IntRange>(typeof(CompBladelinkWeapon), "TraitsRange")
@@ -19,43 +19,43 @@ namespace MorePersonaTraits.Utils
 
             for (var index = 0; index < range.RandomInRange; ++index)
             {
-                var availableTraits = AvailableTraits(compBladelink);
+                var availableTraits = compBladelink.AvailableTraits();
 
                 if (!availableTraits.NullOrEmpty() && compBladelink.TraitsListForReading != null)
                     compBladelink.TraitsListForReading.Add(availableTraits.RandomElementByWeight(trait => trait.commonality));
             }
         }
 
-        public static List<WeaponTraitDef> AvailableTraits(CompBladelinkWeapon compBladelink)
+        public static List<WeaponTraitDef> AvailableTraits(this CompBladelinkWeapon compBladelink)
         {
             return DefDatabase<WeaponTraitDef>.AllDefs
-                .Where(possibleTrait => CanAddTrait(possibleTrait, compBladelink))
+                .Where(possibleTrait => compBladelink.CanAddTrait(possibleTrait))
                 .ToList();
         }
 
-        public static bool HasAddableTrait(CompBladelinkWeapon compBladelink)
+        public static bool HasAddableTrait(this CompBladelinkWeapon compBladelink)
         {
-            return DefDatabase<WeaponTraitDef>.AllDefs.ToList().Exists(possibleTrait => CanAddTrait(possibleTrait, compBladelink));
+            return DefDatabase<WeaponTraitDef>.AllDefs.ToList().Exists(possibleTrait => compBladelink.CanAddTrait(possibleTrait));
         }
 
-        private static bool CanAddTrait(WeaponTraitDef traitToAdd, CompBladelinkWeapon compBladelinkWeapon)
+        private static bool CanAddTrait(this CompBladelinkWeapon compBladelinkWeapon, WeaponTraitDef traitToAdd)
         {
             if (!compBladelinkWeapon.TraitsListForReading.NullOrEmpty())
             {
-                return !compBladelinkWeapon.TraitsListForReading.Exists(existingTrait => traitToAdd.Overlaps(existingTrait) || !CanAddBondTrait(traitToAdd, compBladelinkWeapon.TraitsListForReading));
+                return !compBladelinkWeapon.TraitsListForReading.Exists(existingTrait => traitToAdd.Overlaps(existingTrait) || !compBladelinkWeapon.CanAddBondTrait(traitToAdd));
             }
 
             return true;
         }
 
-        public static bool CanAddBondTrait(WeaponTraitDef other, List<WeaponTraitDef> traitsListForReading)
+        public static bool CanAddBondTrait(this CompBladelinkWeapon compBladelinkWeapon, WeaponTraitDef other)
         {
-            if (traitsListForReading.Exists(trait => trait.GetModExtension<WeaponTraitDefExtension>() != null && trait.GetModExtension<WeaponTraitDefExtension>().AllowNeverBond == false) && other.defName == "NeverBond")
+            if (compBladelinkWeapon.TraitsListForReading.Exists(trait => trait.GetModExtension<WeaponTraitDefExtension>() != null && trait.GetModExtension<WeaponTraitDefExtension>().AllowNeverBond == false) && other.defName == "NeverBond")
             {
                 return false;
             }
 
-            if (traitsListForReading.Exists(trait => trait.defName == "NeverBond") && other.GetModExtension<WeaponTraitDefExtension>() != null)
+            if (compBladelinkWeapon.TraitsListForReading.Exists(trait => trait.defName == "NeverBond") && other.GetModExtension<WeaponTraitDefExtension>() != null)
             {
                 return other.GetModExtension<WeaponTraitDefExtension>().AllowNeverBond;
             }

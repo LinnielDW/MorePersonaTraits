@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using HarmonyLib;
 using MorePersonaTraits.Utils;
 using RimWorld;
 using Verse;
@@ -27,12 +26,10 @@ namespace MorePersonaTraits.WorkerClasses.ItemWorkerClasses
 
         private void RerollTraits(CompBladelinkWeapon compBladelink)
         {
-            List<WeaponTraitDef> existingTraits = AccessTools
-                .FieldRefAccess<List<WeaponTraitDef>>(typeof(CompBladelinkWeapon), "traits")
-                .Invoke(compBladelink);
+            List<WeaponTraitDef> existingTraits = FieldRefUtils.TraitsFieldRef.Invoke(compBladelink);
 
             existingTraits.Clear();
-            TraitUtils.InitializeTraits(compBladelink);
+            compBladelink.InitializeTraits();
         }
     }
 }
