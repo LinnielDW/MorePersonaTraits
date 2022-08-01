@@ -28,8 +28,7 @@ namespace MorePersonaTraits.WorkerClasses.ItemWorkerClasses
                 existingTraits.Add(availableTraits.RandomElementByWeight(trait => trait.commonality));
             else
             {
-                Log.Warning("cannot add anymore traits to this weapon");
-                //TODO: give alert that no more traits can be added and don't consume the item
+                Log.Error("[MorePersonaTraits]: Cannot add anymore traits to this weapon. This should have been caught by the targeting class. Please let the mod author know.");
             }
         }
     }
