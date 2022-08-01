@@ -13,11 +13,9 @@ namespace MorePersonaTraits.Utils
         {
             if (compBladelink.TraitsListForReading == null) compBladelink.TraitsListForReading?.Clear();
 
-            //TODO: Get this from a setting
             var range = AccessTools
                 .FieldRefAccess<IntRange>(typeof(CompBladelinkWeapon), "TraitsRange")
                 .Invoke(compBladelink);
-            // var range = new IntRange(5, 7);
 
             for (var index = 0; index < range.RandomInRange; ++index)
             {
