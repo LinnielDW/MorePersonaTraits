@@ -24,7 +24,7 @@ namespace MorePersonaTraits.Utils
                 var availableTraits = AvailableTraits(compBladelink);
 
                 if (!availableTraits.NullOrEmpty() && compBladelink.TraitsListForReading != null)
-                    compBladelink.TraitsListForReading.Add(availableTraits.RandomElementByWeight(x => x.commonality));
+                    compBladelink.TraitsListForReading.Add(availableTraits.RandomElementByWeight(trait => trait.commonality));
             }
         }
 

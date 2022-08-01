@@ -57,7 +57,7 @@ namespace MorePersonaTraits.Patches
                         ? StatCategoryDefOf.Weapon_Melee
                         : StatCategoryDefOf.Weapon_Ranged,
                     "Stat_Thing_PersonaWeaponTrait_Label".Translate(),
-                    (from x in __instance.TraitsListForReading select x.label).ToCommaList(false, false)
+                    (from trait in __instance.TraitsListForReading select trait.label).ToCommaList(false, false)
                     .CapitalizeFirst(),
                     stringBuilder.ToString(),
                     1104,
