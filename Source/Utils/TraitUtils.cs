@@ -35,6 +35,11 @@ namespace MorePersonaTraits.Utils
                 .ToList();
         }
 
+        public static bool HasAddableTrait(CompBladelinkWeapon compBladelink)
+        {
+            return DefDatabase<WeaponTraitDef>.AllDefs.ToList().Exists(possibleTrait => CanAddTrait(possibleTrait, compBladelink));
+        }
+
         private static bool CanAddTrait(WeaponTraitDef traitToAdd, CompBladelinkWeapon compBladelinkWeapon)
         {
             if (!compBladelinkWeapon.TraitsListForReading.NullOrEmpty())

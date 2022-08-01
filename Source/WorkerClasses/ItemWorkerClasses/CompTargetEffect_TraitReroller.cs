@@ -27,11 +27,11 @@ namespace MorePersonaTraits.WorkerClasses.ItemWorkerClasses
 
         private void RerollTraits(CompBladelinkWeapon compBladelink)
         {
-            List<WeaponTraitDef> traits = AccessTools
+            List<WeaponTraitDef> existingTraits = AccessTools
                 .FieldRefAccess<List<WeaponTraitDef>>(typeof(CompBladelinkWeapon), "traits")
                 .Invoke(compBladelink);
 
-            traits.Clear();
+            existingTraits.Clear();
             TraitUtils.InitializeTraits(compBladelink);
         }
     }
