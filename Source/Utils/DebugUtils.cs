@@ -40,7 +40,7 @@ namespace MorePersonaTraits.Utils
                 select t).Cast<ThingWithComps>())
             {
                 weapon.TryGetComp<CompBladelinkWeapon>().TraitsListForReading.Clear();
-                TraitUtils.InitializeTraits(weapon.TryGetComp<CompBladelinkWeapon>().TraitsListForReading, weapon.TryGetComp<CompBladelinkWeapon>());
+                TraitUtils.InitializeTraits(weapon.TryGetComp<CompBladelinkWeapon>());
             }
         }
 
@@ -51,7 +51,7 @@ namespace MorePersonaTraits.Utils
                 where t is ThingWithComps && (t as ThingWithComps).TryGetComp<CompBladelinkWeapon>() != null
                 select t).Cast<ThingWithComps>())
             {
-                TraitUtils.InitializeTraits(weapon.TryGetComp<CompBladelinkWeapon>().TraitsListForReading, weapon.TryGetComp<CompBladelinkWeapon>());
+                TraitUtils.InitializeTraits(weapon.TryGetComp<CompBladelinkWeapon>());
             }
         }
 

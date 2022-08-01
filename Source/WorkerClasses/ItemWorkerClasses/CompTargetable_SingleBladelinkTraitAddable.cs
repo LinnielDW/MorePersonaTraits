@@ -5,7 +5,7 @@ using Verse;
 
 namespace MorePersonaTraits.WorkerClasses.ItemWorkerClasses
 {
-    public class CompTargetable_SingleBladelink : CompTargetable
+    public class CompTargetable_SingleBladelinkTraitAddable: CompTargetable
     {
         protected override TargetingParameters GetTargetingParameters()
         {
@@ -16,7 +16,7 @@ namespace MorePersonaTraits.WorkerClasses.ItemWorkerClasses
                 canTargetItems = true,
                 mapObjectTargetsMustBeAutoAttackable = false,
                 validator = targetInfo =>
-                    targetInfo.Thing.TryGetComp<CompBladelinkWeapon>() != null && TargetUtils.ValidateRequiresBond(Props,targetInfo) &&
+                    targetInfo.Thing.TryGetComp<CompBladelinkWeapon>() != null && TargetUtils.ValidateRequiresBond(Props,targetInfo) && TraitUtils.AvailableTraits(targetInfo.Thing.TryGetComp<CompBladelinkWeapon>()).Count > 0 &&
                     BaseTargetValidator(targetInfo.Thing)
             };
         }
@@ -27,5 +27,7 @@ namespace MorePersonaTraits.WorkerClasses.ItemWorkerClasses
         }
 
         protected override bool PlayerChoosesTarget => true;
+
+
     }
 }
