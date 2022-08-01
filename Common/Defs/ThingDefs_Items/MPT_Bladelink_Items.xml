@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
     <ThingDef ParentName="ArtifactBase">
         <defName>MPT_BladelinkUncoder</defName>
         <label>Persona Weapon Bond Breaker</label>
-        <description>A one-use psychic persona effector. The psychic surge destroys a weapon personas connections, removing all memories of friendship, loyalties and severing its psychic bond.</description>
+        <description>A one-use psychic persona effector. The psychic surge destroys a weapon personas connections, removing all memories of friendship, loyalties and severing its psychic bond. Can only be used on a bonded weapon.</description>
         <graphicData>
             <!--TODO: Make a different graphic-->
             <texPath>Things/Item/Equipment/WeaponSpecial/OrbitalTargeter</texPath>
@@ -37,7 +37,7 @@
     <ThingDef ParentName="ArtifactBase">
         <defName>MPT_BladelinkReroller</defName>
         <label>Persona Weapon Reformatter</label>
-        <description>A one-use psychic persona effector. The psychic surge completely overwhelms a weapon persona, destroying who they were and completely rerolling the traits of the weapon.</description>
+        <description>A one-use psychic persona effector. The psychic surge completely overwhelms a weapon persona, destroying who they were and completely rerolling the traits of the weapons persona.</description>
         <graphicData>
             <!--TODO: Make a different graphic-->
             <texPath>Things/Item/Equipment/WeaponSpecial/OrbitalTargeter</texPath>
@@ -70,7 +70,7 @@
     <ThingDef ParentName="ArtifactBase">
         <defName>MPT_BladelinkExalt</defName>
         <label>Persona Weapon Quirker</label>
-        <description>A one-use psychic persona effector. The psychic surge discovers a new trait of a targetted weapon persona.</description>
+        <description>A one-use psychic persona effector. The psychic surge discovers a new trait of a targetted weapon persona. Can only be used on persona weapons that can receive an additional trait.</description>
         <graphicData>
             <!--TODO: Make a different graphic-->
             <texPath>Things/Item/Equipment/WeaponSpecial/OrbitalTargeter</texPath>
