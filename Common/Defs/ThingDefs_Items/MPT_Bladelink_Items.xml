@@ -116,7 +116,7 @@
     <ThingDef ParentName="PersonaEffectorBase">
         <defName>MPT_BladelinkAnnul</defName>
         <label>Persona Reduction Effector</label>
-        <description>A one-use psychic persona effector. The psychic surge collapses a portion of the personas personality, removing a random trait from a targetted weapon persona. If this item were to be used on a persona with only one trait or none at all, the personas will be reformatted instead.</description>
+        <description>A one-use psychic persona effector. The psychic surge collapses a portion of the personas personality, removing a random trait from a targetted weapon persona. If this item were to be used on a persona with only one trait or none at all, the persona will be reformatted instead.</description>
         <graphicData>
             <!--TODO: Make a different graphic-->
             <texPath>Things/Item/Equipment/WeaponSpecial/OrbitalTargeter</texPath>
