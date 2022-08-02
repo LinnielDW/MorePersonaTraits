@@ -61,8 +61,7 @@ namespace MorePersonaTraits.Utils
         {
             List<DebugMenuOption> list = new List<DebugMenuOption>();
             foreach (ThingDef localDef in from def in DefDatabase<ThingDef>.AllDefs
-                where /*def.equipmentType == EquipmentType.Primary &&*/
-                      def.comps.Exists(p => p.compClass == typeof(CompBladelinkWeapon))
+                where def.comps.Exists(p => p.compClass == typeof(CompBladelinkWeapon))
                 select def
                 into d
                 orderby d.defName
