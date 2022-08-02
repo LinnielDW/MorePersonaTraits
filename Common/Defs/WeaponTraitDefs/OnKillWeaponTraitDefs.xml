@@ -3,8 +3,32 @@
     <WeaponTraitDef>
         <defName>MPT_OnKill_NeedFilledFood</defName>
         <label>communing</label>
-        <description>This weapon's persona says it is connected to something about someone's last meal and knows how to replicate it. Upon slaying a living thing with this weapon, it has a chance to fill the wielder's hunger.</description>
+        <description>This weapons persona says it is connected to something about someones last meal and knows how to replicate it.\nUpon slaying a living thing with this weapon, it has a chance to fill the wielders hunger.</description>
         <workerClass>MorePersonaTraits.WorkerClasses.WeaponTraitWorkerClasses.WeaponTraitWorker_FoodFilledOnKill</workerClass>
+        <commonality>0.2</commonality>
+        <marketValueOffset>1000</marketValueOffset>
+        <exclusionTags>
+            <li>KillNeeds</li>
+        </exclusionTags>
+    </WeaponTraitDef>
+    
+    <WeaponTraitDef>
+        <defName>MPT_OnKill_NeedFilledComfort</defName>
+        <label>cuddly</label>
+        <description>This weapons persona knows life is difficult and forces you to do difficult things. If it had arms, it would hug you when you have to be the mosnter that the world forces you to be.\nUpon slaying a living thing with this weapon, it has a chance to fill the wielders comfort.</description>
+        <workerClass>MorePersonaTraits.WorkerClasses.WeaponTraitWorkerClasses.WeaponTraitWorker_ComfortFilledOnKill</workerClass>
+        <commonality>0.5</commonality>
+        <marketValueOffset>500</marketValueOffset>
+        <exclusionTags>
+            <li>KillNeeds</li>
+        </exclusionTags>
+    </WeaponTraitDef>
+    
+    <WeaponTraitDef>
+        <defName>MPT_OnKill_NeedFilledJoy</defName>
+        <label>skybreaker</label>
+        <description>This weapons persona has taken an immortal vow to seek justice. They take great joys in handing out lethal justice.\nUpon slaying a living thing with this weapon, it has a chance to fill the wielders joy.</description>
+        <workerClass>MorePersonaTraits.WorkerClasses.WeaponTraitWorkerClasses.WeaponTraitWorker_JoyFilledOnKill</workerClass>
         <commonality>0.5</commonality>
         <marketValueOffset>500</marketValueOffset>
         <exclusionTags>
