@@ -11,7 +11,7 @@
             <DeteriorationRate>2.0</DeteriorationRate>
             <Flammability>0.2</Flammability>
         </statBases>
-        <tradeability>Sellable</tradeability>
+        <tradeability>All</tradeability>
         <techLevel>Ultra</techLevel>
         <thingCategories>
             <li>Items</li>
@@ -42,7 +42,6 @@
             <texPath>Things/Item/Equipment/WeaponSpecial/OrbitalTargeter</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
-        <tradeNeverStack>true</tradeNeverStack>
         <statBases>
             <MarketValue>1000</MarketValue>
         </statBases>
@@ -59,9 +58,6 @@
                 <compClass>MorePersonaTraits.WorkerClasses.ItemWorkerClasses.CompTargetEffect_BladeDelinker</compClass>
             </li>
         </comps>
-        <thingSetMakerTags>
-            <li>RewardStandardMidFreq</li>
-        </thingSetMakerTags>
     </ThingDef>
 
     <ThingDef ParentName="PersonaEffectorBase">
@@ -99,7 +95,6 @@
             <texPath>Things/Item/Equipment/WeaponSpecial/OrbitalTargeter</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
-        <tradeNeverStack>true</tradeNeverStack>
         <statBases>
             <MarketValue>1500</MarketValue>
         </statBases>
@@ -115,9 +110,6 @@
                 <compClass>MorePersonaTraits.WorkerClasses.ItemWorkerClasses.CompTargetEffect_BladelinkExalt</compClass>
             </li>
         </comps>
-        <thingSetMakerTags>
-            <li>RewardStandardMidFreq</li>
-        </thingSetMakerTags>
     </ThingDef>
 
 
