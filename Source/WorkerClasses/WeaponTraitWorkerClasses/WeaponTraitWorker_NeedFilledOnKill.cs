@@ -1,4 +1,5 @@
-﻿using MorePersonaTraits.Extensions;
+﻿using System.Linq;
+using MorePersonaTraits.Extensions;
 using MorePersonaTraits.Utils;
 using RimWorld;
 using Verse;
@@ -60,5 +61,14 @@ namespace MorePersonaTraits.WorkerClasses.WeaponTraitWorkerClasses
         }
     }
     
-    //TODO: add one which sates all addictions/drugdesire
+    //TODO: test this
+    public class WeaponTraitWorker_ChemicalNeedFilledOnKill : WeaponTraitWorker
+    {
+        public override void Notify_KilledPawn(Pawn pawn)
+        {
+            base.Notify_KilledPawn(pawn);
+            var chemNeed = pawn.needs.AllNeeds.Where(need => need as Need_Chemical != null).RandomElement();
+            pawn.AttemptToFillNeed(chemNeed.def);
+        }
+    }
 }
