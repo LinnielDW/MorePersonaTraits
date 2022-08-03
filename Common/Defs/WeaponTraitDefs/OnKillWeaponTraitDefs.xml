@@ -35,4 +35,40 @@
             <li>KillNeeds</li>
         </exclusionTags>
     </WeaponTraitDef>
+    
+    <WeaponTraitDef>
+        <defName>MPT_OnKill_NeedFilledBeauty</defName>
+        <label>macabre</label>
+        <description>This weapons persona views the loss of life as the most elegant of arts. When in battle, this beauty is also revealed to the wielder.\nUpon slaying a living thing with this weapon, it has a chance to fill the wielders need for beauty.</description>
+        <workerClass>MorePersonaTraits.WorkerClasses.WeaponTraitWorkerClasses.WeaponTraitWorker_BeautyFilledOnKill</workerClass>
+        <commonality>0.5</commonality>
+        <marketValueOffset>500</marketValueOffset>
+        <exclusionTags>
+            <li>KillNeeds</li>
+        </exclusionTags>
+    </WeaponTraitDef>
+    
+    <WeaponTraitDef>
+        <defName>MPT_OnKill_NeedFilledRest</defName>
+        <label>ceaseless</label>
+        <description>This weapons persona consumes the energy of their wielders victims, claiming for their own.\nUpon slaying a living thing with this weapon, it has a chance to fill the wielders rest.</description>
+        <workerClass>MorePersonaTraits.WorkerClasses.WeaponTraitWorkerClasses.WeaponTraitWorker_RestFilledOnKill</workerClass>
+        <commonality>0.5</commonality>
+        <marketValueOffset>100</marketValueOffset>
+        <exclusionTags>
+            <li>KillNeeds</li>
+        </exclusionTags>
+    </WeaponTraitDef>
+    
+    <WeaponTraitDef>
+        <defName>MPT_OnKill_NeedFilledInOutdoors</defName>
+        <label>revolving</label>
+        <description>This weapons persona knows that the things it will see and people that they meet will come and go like a revolving door and teaches their wielder, the side of the door you are on doesn't matter so much... As long as something is dying.\nUpon slaying a living thing with this weapon, it has a chance to fill the wielders indoor or outdoor need.</description>
+        <workerClass>MorePersonaTraits.WorkerClasses.WeaponTraitWorkerClasses.WeaponTraitWorker_InOutdoorsFilledOnKill</workerClass>
+        <commonality>0.5</commonality>
+        <marketValueOffset>100</marketValueOffset>
+        <exclusionTags>
+            <li>KillNeeds</li>
+        </exclusionTags>
+    </WeaponTraitDef>
 </Defs>

@@ -32,20 +32,12 @@ namespace MorePersonaTraits.WorkerClasses.WeaponTraitWorkerClasses
         }
     }
 
-    public class WeaponTraitWorker_IndoorsFilledOnKill : WeaponTraitWorker
+    public class WeaponTraitWorker_InOutdoorsFilledOnKill : WeaponTraitWorker
     {
         public override void Notify_KilledPawn(Pawn pawn)
         {
             base.Notify_KilledPawn(pawn);
             pawn.AttemptToFillNeed(NeedDefOf.Indoors);
-        }
-    }
-
-    public class WeaponTraitWorker_OutdoorsFilledOnKill : WeaponTraitWorker
-    {
-        public override void Notify_KilledPawn(Pawn pawn)
-        {
-            base.Notify_KilledPawn(pawn);
             pawn.AttemptToFillNeed(OtherNeedDefOf.Outdoors);
         }
     }
