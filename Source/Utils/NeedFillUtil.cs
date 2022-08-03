@@ -5,7 +5,7 @@ namespace MorePersonaTraits.Utils
 {
     public static class NeedFillUtil
     {
-        public static void AttemptToFillNeed(this Pawn pawn, NeedDef need)
+        public static void AttemptToFillNeed(this Pawn pawn, NeedDef need, float procChance = 0.2f)
         {
             var x = pawn.needs.TryGetNeed(need);
             if (x == null)
@@ -13,7 +13,7 @@ namespace MorePersonaTraits.Utils
                 return;
             }
 
-            if (Rand.Value <= 0.2f)
+            if (Rand.Value <= procChance)
             {
                 x.CurLevel = x.MaxLevel;
             }
