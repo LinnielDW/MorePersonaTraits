@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
     <ThingDef Abstract="True" ParentName="ResourceBase" Name="PersonaEffectorBase">
         <thingClass>ThingWithComps</thingClass>
@@ -81,7 +81,7 @@
                 <sound>PsychicInsanityLanceCast</sound>
             </li>
             <li>
-                <compClass>MorePersonaTraits.WorkerClasses.ItemWorkerClasses.CompTargetEffect_TraitReroller</compClass>
+                <compClass>MorePersonaTraits.WorkerClasses.ItemWorkerClasses.CompTargetEffect_BladelinkChaos</compClass>
             </li>
         </comps>
     </ThingDef>
