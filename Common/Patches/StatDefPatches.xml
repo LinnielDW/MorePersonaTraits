@@ -6,4 +6,12 @@
             <finalizeEquippedStatOffset>false</finalizeEquippedStatOffset>
         </value>
     </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/WeaponTraitDef[defName="NoPain"]</xpath>
+        <value>
+            <exclusionTags>
+                <li>NoPain</li>
+            </exclusionTags>
+        </value>
+    </Operation>
 </Patch>
