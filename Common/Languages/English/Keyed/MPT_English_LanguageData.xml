@@ -17,4 +17,6 @@
     
     <MPT_TargetSelf>the wielder</MPT_TargetSelf>
     <MPT_TargetTarget>the target</MPT_TargetTarget>
+    
+    <MPT_NeedSated>{0}'s persona weapon has filled their {1}</MPT_NeedSated>
 </LanguageData>
