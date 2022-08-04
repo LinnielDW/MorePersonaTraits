@@ -62,7 +62,7 @@ namespace MorePersonaTraits.WorkerClasses.WeaponTraitWorkerClasses
     }
     
     //TODO: test this
-    public class WeaponTraitWorker_ChemicalNeedFilledOnKill : WeaponTraitWorker
+    public class WeaponTraitWorker_ChemicalFilledOnKill : WeaponTraitWorker
     {
         public override void Notify_KilledPawn(Pawn pawn)
         {
