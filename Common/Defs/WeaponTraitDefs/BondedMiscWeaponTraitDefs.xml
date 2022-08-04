@@ -32,7 +32,7 @@
             </li>
         </stages>
     </HediffDef>
-    
+
     <!--<WeaponTraitDef ParentName="BondedWeaponTraitBase">
         <defName>MPT_BondedImmuneParasite</defName>
         <label>parasn't</label>
@@ -63,7 +63,7 @@
             </li>
         </stages>
     </HediffDef>-->
-    
+
     <WeaponTraitDef ParentName="BondedWeaponTraitBase">
         <defName>MPT_BondedImmuneMechanite</defName>
         <label>machan't</label>
@@ -90,6 +90,118 @@
                     <li>FibrousMechanites</li>
                     <li>SensoryMechanites</li>
                 </makeImmuneTo>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_BondedPainOffsetUpMinor</defName>
+        <label>inflaming</label>
+        <description>This weapons persona conveys a buried pain to its bond.\nThe bonded pawn constantly experiences slightly more pain.</description>
+        <marketValueOffset>-300</marketValueOffset>
+        <bondedHediffs>
+            <li>MPT_HediffBondedPainOffsetMinor</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_BondedPainOffset</li>
+            <li>NoPain</li>
+        </exclusionTags>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_HediffBondedPainOffsetMinor</defName>
+        <label>psychic minor pain</label>
+        <description>My bonded weapon is putting me in constant discomfort.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_BondedPainOffsetUpMinor</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <painOffset>0.2</painOffset>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_BondedPainOffsetUpMajor</defName>
+        <label>agonizing</label>
+        <description>This weapons persona an incident in this personas past has left it emotionally scarred. This scar is manifest as physical pain to its bond.\nThe bonded pawn constantly experiences more pain.</description>
+        <marketValueOffset>-500</marketValueOffset>
+        <bondedHediffs>
+            <li>MPT_HediffBondedPainOffsetUpMajor</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_BondedPainOffset</li>
+            <li>NoPain</li>
+        </exclusionTags>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_HediffBondedPainOffsetUpMajor</defName>
+        <label>psychic major pain</label>
+        <description>My bonded weapon is putting me in constant pain.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_BondedPainOffsetUpMajor</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <painOffset>0.3</painOffset>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_BondedPainOffsetDownMinor</defName>
+        <label>relieving</label>
+        <description>This weapons persona provides a constant minor analgesic that is relayed over a psychic bond.\nThe bonded pawn constantly experiences slightly less pain.</description>
+        <marketValueOffset>100</marketValueOffset>
+        <bondedHediffs>
+            <li>MPT_HediffBondedPainOffsetDownMinor</li>
+            <li>NoPain</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_BondedPainOffset</li>
+        </exclusionTags>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_HediffBondedPainOffsetDownMinor</defName>
+        <label>psychic minor pain relief</label>
+        <description>My bonded weapon is providing me with minor pain relief.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_BondedPainOffsetDownMinor</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <painOffset>-0.2</painOffset>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_BondedPainOffsetDownMajor</defName>
+        <label>mollifying</label>
+        <description>This weapons persona smothers their bonds pain, allowing only the greatest of pains to shine through, but only weakly.\nThe bonded pawn constantly experiences less pain.</description>
+        <marketValueOffset>300</marketValueOffset>
+        <bondedHediffs>
+            <li>MPT_HediffBondedPainOffsetDownMajor</li>
+            <li>NoPain</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_BondedPainOffset</li>
+        </exclusionTags>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_HediffBondedPainOffsetDownMajor</defName>
+        <label>psychic major pain relief</label>
+        <description>My bonded weapon is providing me with pain relief.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_BondedPainOffsetDownMajor</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <painOffset>-0.35</painOffset>
             </li>
         </stages>
     </HediffDef>
