@@ -5,7 +5,7 @@ namespace MorePersonaTraits.Utils
 {
     public static class NeedFillUtil
     {
-        [TweakValue("MPT_NeedFill", 0f, 1f)]
+        // [TweakValue("MPT_NeedFill", 0f, 1f)]
         private static float ProcChance = 0.2f;
         
         public static void AttemptToFillNeed(this Pawn pawn, NeedDef need, float procChance = 0.0f)
