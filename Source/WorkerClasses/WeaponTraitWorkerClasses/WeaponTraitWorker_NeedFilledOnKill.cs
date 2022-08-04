@@ -60,14 +60,13 @@ namespace MorePersonaTraits.WorkerClasses.WeaponTraitWorkerClasses
             pawn.AttemptToFillNeed(OtherNeedDefOf.Comfort);
         }
     }
-    
-    //TODO: test this
+
     public class WeaponTraitWorker_ChemicalFilledOnKill : WeaponTraitWorker
     {
         public override void Notify_KilledPawn(Pawn pawn)
         {
             base.Notify_KilledPawn(pawn);
-            var chemNeed = pawn.needs.AllNeeds.Where(need => need as Need_Chemical != null).RandomElement();
+            var chemNeed = pawn.needs.AllNeeds.Where(need => need is Need_Chemical).RandomElement();
             pawn.AttemptToFillNeed(chemNeed.def);
         }
     }
