@@ -18,5 +18,9 @@
     <MPT_TargetSelf>the wielder</MPT_TargetSelf>
     <MPT_TargetTarget>the target</MPT_TargetTarget>
     
-    <MPT_NeedSated>{0}'s persona weapon has filled their {1}</MPT_NeedSated>
+    <MPT_NeedSated>{0}'s persona weapon has filled their need for {1}</MPT_NeedSated>
+    <MPT_Blade_Delinked>{0}'s bond to the persona weapon {1} has been severed</MPT_Blade_Delinked>
+    <MPT_WeaponTraitLost>{0} has lost the trait {1}</MPT_WeaponTraitLost>
+    <MPT_WeaponTraitGained>{0} has gained the trait {1}</MPT_WeaponTraitGained>
+    <MPT_WeaponTraitsRerolled>{0}'s traits have been rerolled</MPT_WeaponTraitsRerolled>
 </LanguageData>

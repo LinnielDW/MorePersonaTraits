@@ -30,6 +30,7 @@ namespace MorePersonaTraits.WorkerClasses.ItemWorkerClasses
 
             existingTraits.Clear();
             compBladelink.InitializeTraits();
+            Messages.Message("MPT_WeaponTraitsRerolled".Translate(compBladelink.parent.LabelShort), compBladelink.parent, MessageTypeDefOf.NeutralEvent);
         }
     }
 }

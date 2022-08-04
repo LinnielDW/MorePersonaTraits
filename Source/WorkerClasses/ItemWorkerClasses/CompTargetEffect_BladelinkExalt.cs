@@ -9,7 +9,6 @@ namespace MorePersonaTraits.WorkerClasses.ItemWorkerClasses
     {
         public override void DoEffectOn(Pawn user, Thing target)
         {
-            
             var compBladelink = target.TryGetComp<CompBladelinkWeapon>();
             var existingTraits = target.TryGetComp<CompBladelinkWeapon>().TraitsListForReading;
             if (compBladelink == null)
@@ -25,7 +24,11 @@ namespace MorePersonaTraits.WorkerClasses.ItemWorkerClasses
             var availableTraits = compBladelink.AvailableTraits();
 
             if (!availableTraits.NullOrEmpty())
-                existingTraits.Add(availableTraits.RandomElementByWeight(trait => trait.commonality));
+            {
+                var traitToAdd = availableTraits.RandomElementByWeight(trait => trait.commonality);
+                existingTraits.Add(traitToAdd);
+                Messages.Message("MPT_WeaponTraitGained".Translate(target.LabelShort, traitToAdd.LabelCap), target, MessageTypeDefOf.NeutralEvent);
+            }
             else
             {
                 Log.Error("[MorePersonaTraits]: Cannot add anymore traits to this weapon. This should have been caught by the targeting class. Please let the mod author know.");

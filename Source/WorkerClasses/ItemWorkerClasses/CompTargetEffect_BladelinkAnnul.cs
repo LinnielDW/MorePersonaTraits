@@ -24,7 +24,10 @@ namespace MorePersonaTraits.WorkerClasses.ItemWorkerClasses
             }
             else
             {
-                existingTraits.RemoveAt(Rand.Range(0, existingTraits.Count - 1));
+                var indexToRemove = Rand.Range(0, existingTraits.Count - 1);
+
+                Messages.Message("MPT_WeaponTraitLost".Translate(target.LabelShort, existingTraits[indexToRemove].LabelCap), target, MessageTypeDefOf.NeutralEvent);
+                existingTraits.RemoveAt(indexToRemove);
                 if (existingTraits.NullOrEmpty()) TraitUtils.InitializeTraits(compBladelink);
             }
         }

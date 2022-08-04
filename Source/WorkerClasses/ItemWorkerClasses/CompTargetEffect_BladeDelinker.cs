@@ -14,6 +14,7 @@ namespace MorePersonaTraits.WorkerClasses.ItemWorkerClasses
             }
 
             compBladelink.UnCode();
+            Messages.Message("MPT_Blade_Delinked".Translate(user.LabelShort, target.LabelShort), target,MessageTypeDefOf.NeutralEvent);
         }
     }
 }
