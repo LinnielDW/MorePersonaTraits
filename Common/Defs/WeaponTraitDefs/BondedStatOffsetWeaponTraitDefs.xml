@@ -40,7 +40,7 @@
     <WeaponTraitDef ParentName="BondedWeaponTraitBase">
         <defName>MPT_BondedResearchDown</defName>
         <label>rambling</label>
-        <description>This weapon's persona constantly rambles useless distractions into their bonds mind.\nThe bonded pawn takes a hit to their research speed so long as the bond holds.</description>
+        <description>This weapon's persona constantly rambles useless distractions into their bond's mind.\nThe bonded pawn takes a hit to their research speed so long as the bond holds.</description>
         <marketValueOffset>-500</marketValueOffset>
         <bondedHediffs>
             <li>MPT_HediffResearchDown</li>
@@ -390,7 +390,7 @@
     <WeaponTraitDef ParentName="BondedWeaponTraitBase">
         <defName>MPT_BondedImmunityGainSpeedDown</defName>
         <label>amico-immunomasochist</label>
-        <description>This weapon's persona has the strangely specific hobby of watching the extended pain and suffering that comes from their bonds body attempts to fight off infectious agents, and will take steps to enjoy that hobby for as long as possible.\nThe bonded pawn loses some of their immunity gain speed.</description>
+        <description>This weapon's persona has the strangely specific hobby of watching the extended pain and suffering that comes from their bond's body attempts to fight off infectious agents, and will take steps to enjoy that hobby for as long as possible.\nThe bonded pawn loses some of their immunity gain speed.</description>
         <bondedHediffs>
             <li>MPT_HediffImmunityGainSpeedDown</li>
         </bondedHediffs>
@@ -918,7 +918,7 @@
     <WeaponTraitDef ParentName="BondedWeaponTraitBase">
         <defName>MPT_BondedAimingDelayFactorUp</defName>
         <label>reevesite</label>
-        <description>This weapon's persona idolises a supposedly breathtaking hacker named Bill and recounts how he hacked an Archotech Persona with timebending bullets. Resolving that it can't bend time, this persona pays tribute to their hacker idol by just slows down their bonds trigger finger instead.\nThe bonded pawn loses firing speed. This is NOT restricted to this weapon.</description>
+        <description>This weapon's persona idolises a supposedly breathtaking hacker named Bill and recounts how he hacked an Archotech Persona with timebending bullets. Resolving that it can't bend time, this persona pays tribute to their hacker idol by just slows down their bond's trigger finger instead.\nThe bonded pawn loses firing speed. This is NOT restricted to this weapon.</description>
         <bondedHediffs>
             <li>MPT_HediffAimingDelayFactorUp</li>
         </bondedHediffs>
@@ -976,7 +976,7 @@
     <WeaponTraitDef ParentName="BondedWeaponTraitBase">
         <defName>MPT_BondedGeneralLaborSpeedDown</defName>
         <label>slothful</label>
-        <description>This weapon's persona influences their bonds way of working, reducing their work done to a snails pace.\nThe bonded pawn has reduced general labor speed.</description>
+        <description>This weapon's persona influences their bond's way of working, reducing their work done to a snails pace.\nThe bonded pawn has reduced general labor speed.</description>
         <bondedHediffs>
             <li>MPT_HediffGeneralLaborSpeedDown</li>
         </bondedHediffs>

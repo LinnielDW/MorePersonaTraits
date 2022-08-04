@@ -181,7 +181,7 @@
     <WeaponTraitDef ParentName="BondedWeaponTraitBase">
         <defName>MPT_BondedPainOffsetDownMajor</defName>
         <label>mollifying</label>
-        <description>This weapon's persona smothers their bonds pain, allowing only the greatest of pains to shine through, but only weakly.\nThe bonded pawn constantly experiences less pain.</description>
+        <description>This weapon's persona smothers their bond's pain, allowing only the greatest of pains to shine through, but only weakly.\nThe bonded pawn constantly experiences less pain.</description>
         <marketValueOffset>300</marketValueOffset>
         <bondedHediffs>
             <li>MPT_HediffBondedPainOffsetDownMajor</li>
