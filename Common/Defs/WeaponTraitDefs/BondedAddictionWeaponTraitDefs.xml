@@ -3,7 +3,7 @@
     <WeaponTraitDef ParentName="BondedWeaponTraitBase">
         <defName>MPT_BondedNeedChemical_WakeUp</defName>
         <label>wake-up addicted</label>
-        <description>This weapons persona is suffering from a wake-up addiction. So long as the bond holds, their bonded pawn will have to regularly consume the drug to avaid withdrawal as if they were addicted themselves.\nThis form of the addiction will experience reduced withdrawal symptom effects and their bonded cannot gain the addicted to the drug themselves.</description>
+        <description>This weapon's persona is suffering from a wake-up addiction. So long as the bond holds, their bonded pawn will have to regularly consume the drug to avaid withdrawal as if they were addicted themselves.\nThis form of the addiction will experience reduced withdrawal symptom effects and their bonded cannot gain the addicted to the drug themselves.</description>
         <bondedHediffs>
             <li>MPT_HediffBondedNeedChemical_WakeUp</li>
         </bondedHediffs>
@@ -16,7 +16,7 @@
     <HediffDef>
         <defName>MPT_HediffBondedNeedChemical_WakeUp</defName>
         <label>psychic wakeup addiction</label>
-        <description>Because of their bonded weapons wake-up addiction, this person needs to regularly consume the drug to avoid withdrawal symptoms.</description>
+        <description>Because of their bonded weapon's wake-up addiction, this person needs to regularly consume the drug to avoid withdrawal symptoms.</description>
         <descriptionHyperlinks>
             <WeaponTraitDef>MPT_BondedNeedChemical_WakeUp</WeaponTraitDef>
         </descriptionHyperlinks>
@@ -67,7 +67,7 @@
             </li>
             <li>
                 <label>psychic wake-up withdrawal</label>
-                <description>My bonded weapons withdrawal is affecting me. I feel all fuzzy and unfocused. And I'm so tired.</description>
+                <description>My bonded weapon's withdrawal is affecting me. I feel all fuzzy and unfocused. And I'm so tired.</description>
                 <baseMoodEffect>-22</baseMoodEffect>
             </li>
         </stages>

@@ -4,7 +4,7 @@
     <WeaponTraitDef ParentName="BondedWeaponTraitBase">
         <defName>MPT_BondedTemplateStatUp</defName>
         <label>bonded_trait_template_up</label>
-        <description>This weapons persona shouldn't have this trait as this is a template.\nThe bonded pawn gains increased TemplateStat.</description>
+        <description>This weapon's persona shouldn't have this trait as this is a template.\nThe bonded pawn gains increased TemplateStat.</description>
         <bondedHediffs>
             <li>MPT_HediffTemplateStatUp</li>
         </bondedHediffs>
@@ -34,7 +34,7 @@
     <WeaponTraitDef ParentName="BondedWeaponTraitBase">
         <defName>MPT_BondedTemplateStatDown</defName>
         <label>bonded_trait_template_down</label>
-        <description>This weapons persona shouldn't have this trait as this is a template.\nThe bonded pawn loses TemplateStat.</description>
+        <description>This weapon's persona shouldn't have this trait as this is a template.\nThe bonded pawn loses TemplateStat.</description>
         <bondedHediffs>
             <li>MPT_HediffTemplateStatDown</li>
         </bondedHediffs>
