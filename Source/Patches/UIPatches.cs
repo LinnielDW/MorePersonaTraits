@@ -6,6 +6,7 @@ using MorePersonaTraits.Extensions;
 using MorePersonaTraits.WorkerClasses.OnHitWorkerClasses;
 using RimWorld;
 using Verse;
+
 // ReSharper disable UnusedMember.Local
 
 namespace MorePersonaTraits.Patches
@@ -106,6 +107,17 @@ namespace MorePersonaTraits.Patches
                         ));
                     }
                 }
+
+                // if (traitDef.exclusionTags != null)
+                // {
+                //     statEntries.Add(new StatDrawEntry(
+                //         StatCategoryDefOf.Weapon,
+                //         "ExclusionTags",
+                //         traitDef.exclusionTags.ToCommaList(),
+                //         "List of exclusion tags:\n" + traitDef.exclusionTags.ToCommaList(),
+                //         6010
+                //     ));
+                // }
 
                 if (traitDef.bondedHediffs != null)
                 {
