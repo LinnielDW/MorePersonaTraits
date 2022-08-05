@@ -16,7 +16,7 @@ namespace MorePersonaTraits.WorkerClasses.ItemWorkerClasses
                 return;
             }
 
-            compBladelink.TempLoseTraits();
+            compBladelink.TempUnbond();
 
             if (existingTraits.NullOrEmpty())
             {
@@ -31,7 +31,7 @@ namespace MorePersonaTraits.WorkerClasses.ItemWorkerClasses
                 if (existingTraits.NullOrEmpty()) TraitUtils.InitializeTraits(compBladelink);
             }
 
-            compBladelink.RegainTraits();
+            compBladelink.RegainBond();
         }
     }
 }

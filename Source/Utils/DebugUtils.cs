@@ -29,9 +29,9 @@ namespace MorePersonaTraits.Utils
                 where t is ThingWithComps && (t as ThingWithComps).TryGetComp<CompBladelinkWeapon>() != null
                 select t).Cast<ThingWithComps>())
             {
-                weapon.TryGetComp<CompBladelinkWeapon>().TempLoseTraits();
+                weapon.TryGetComp<CompBladelinkWeapon>().TempUnbond();
                 weapon.TryGetComp<CompBladelinkWeapon>().TraitsListForReading.Add(weaponTraitDef);
-                weapon.TryGetComp<CompBladelinkWeapon>().RegainTraits();
+                weapon.TryGetComp<CompBladelinkWeapon>().RegainBond();
             }
         }
 
@@ -42,10 +42,10 @@ namespace MorePersonaTraits.Utils
                 where t is ThingWithComps && (t as ThingWithComps).TryGetComp<CompBladelinkWeapon>() != null
                 select t).Cast<ThingWithComps>())
             {
-                weapon.TryGetComp<CompBladelinkWeapon>().TempLoseTraits();
+                weapon.TryGetComp<CompBladelinkWeapon>().TempUnbond();
                 weapon.TryGetComp<CompBladelinkWeapon>().TraitsListForReading.Clear();
                 weapon.TryGetComp<CompBladelinkWeapon>().InitializeTraits();
-                weapon.TryGetComp<CompBladelinkWeapon>().RegainTraits();
+                weapon.TryGetComp<CompBladelinkWeapon>().RegainBond();
             }
         }
 
@@ -56,9 +56,9 @@ namespace MorePersonaTraits.Utils
                 where t is ThingWithComps && (t as ThingWithComps).TryGetComp<CompBladelinkWeapon>() != null
                 select t).Cast<ThingWithComps>())
             {
-                weapon.TryGetComp<CompBladelinkWeapon>().TempLoseTraits();
+                weapon.TryGetComp<CompBladelinkWeapon>().TempUnbond();
                 weapon.TryGetComp<CompBladelinkWeapon>().InitializeTraits();
-                weapon.TryGetComp<CompBladelinkWeapon>().RegainTraits();
+                weapon.TryGetComp<CompBladelinkWeapon>().RegainBond();
             }
         }
 

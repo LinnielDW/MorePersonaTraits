@@ -63,7 +63,7 @@ namespace MorePersonaTraits.Utils
             return true;
         }
 
-        public static void TempLoseTraits(this CompBladelinkWeapon compBladelink)
+        public static void TempUnbond(this CompBladelinkWeapon compBladelink)
         {
             if (compBladelink.CodedPawn != null && !compBladelink.TraitsListForReading.NullOrEmpty())
             {
@@ -71,7 +71,7 @@ namespace MorePersonaTraits.Utils
             }
         }
 
-        public static void RegainTraits(this CompBladelinkWeapon compBladelink)
+        public static void RegainBond(this CompBladelinkWeapon compBladelink)
         {
             if (compBladelink.CodedPawn != null)
             {
