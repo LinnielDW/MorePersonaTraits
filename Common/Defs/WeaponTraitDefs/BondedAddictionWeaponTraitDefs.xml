@@ -1,13 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+    <WeaponTraitDef Abstract="True" Name="BondedWeaponTraitAddictionBase" ParentName="BondedWeaponTraitBase">
+        <exclusionTags>
+            <li>MPT_BondedAddiction</li>
+        </exclusionTags>
+        <marketValueOffset>-500</marketValueOffset>
+    </WeaponTraitDef>
+    
+    <WeaponTraitDef ParentName="BondedWeaponTraitAddictionBase">
         <defName>MPT_BondedNeedChemical_WakeUp</defName>
         <label>wake-up addicted</label>
         <description>This weapon's persona is suffering from a wake-up addiction. So long as the bond holds, their bonded pawn will have to regularly consume the drug to avaid withdrawal as if they were addicted themselves.\nThis form of the addiction will experience reduced withdrawal symptom effects and their bonded cannot gain the addicted to the drug themselves.</description>
         <bondedHediffs>
             <li>MPT_HediffBondedNeedChemical_WakeUp</li>
         </bondedHediffs>
-        <marketValueOffset>-500</marketValueOffset>
         <descriptionHyperlinks>
             <ThingDef>WakeUp</ThingDef>
         </descriptionHyperlinks>
@@ -69,6 +75,72 @@
                 <label>psychic wake-up withdrawal</label>
                 <description>My bonded weapon's withdrawal is affecting me. I feel all fuzzy and unfocused. And I'm so tired.</description>
                 <baseMoodEffect>-22</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+    
+    <WeaponTraitDef ParentName="BondedWeaponTraitAddictionBase">
+        <defName>MPT_BondedNeedChemical_Smokeleaf</defName>
+        <label>smokeleaf addicted</label>
+        <description>This weapon's persona is somehow suffering from a smokeleaf addiction. So long as the bond holds, their bonded pawn will have to regularly consume the drug to avaid withdrawal as if they were addicted themselves.\nThis form of the addiction will experience reduced withdrawal symptom effects and their bonded cannot gain the addicted to the drug themselves.</description>
+        <bondedHediffs>
+            <li>MPT_HediffBondedNeedChemical_Smokeleaf</li>
+        </bondedHediffs>
+        <descriptionHyperlinks>
+            <ThingDef>SmokeleafJoint</ThingDef>
+        </descriptionHyperlinks>
+    </WeaponTraitDef>
+    
+    <HediffDef>
+        <defName>MPT_HediffBondedNeedChemical_Smokeleaf</defName>
+        <label>psychic smokeleaf addiction</label>
+        <description>Because of their bonded weapon's smokeleaf addiction, this person needs to regularly consume the drug to avoid withdrawal symptoms.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_BondedNeedChemical_Smokeleaf</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <hediffClass>Hediff_Addiction</hediffClass>
+        <causesNeed>Chemical_Smokeleaf</causesNeed>
+        <stages>
+            <li></li>
+            <li>
+                <label>withdrawal</label>
+                <capMods>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <offset>-0.10</offset>
+                    </li>
+                    <li>
+                        <capacity>Moving</capacity>
+                        <offset>-0.07</offset>
+                    </li>
+                </capMods>
+                <mentalStateGivers>
+                    <li>
+                        <mentalState>Binging_Food</mentalState>
+                        <mtbDays>30</mtbDays>
+                    </li>
+                    <li>
+                        <mentalState>Binging_DrugMajor</mentalState>
+                        <mtbDays>50</mtbDays>
+                    </li>
+                </mentalStateGivers>
+            </li>
+        </stages>
+    </HediffDef>
+    <ThoughtDef>
+        <defName>PsychicSmokeleafWithdrawal</defName>
+        <workerClass>ThoughtWorker_Hediff</workerClass>
+        <hediff>MPT_HediffBondedNeedChemical_Smokeleaf</hediff>
+        <validWhileDespawned>true</validWhileDespawned>
+        <stages>
+            <li>
+                <visible>false</visible>
+            </li>
+            <li>
+                <label>psychic smokeleaf withdrawal</label>
+                <description>I really wish I could smoke. I feel jittery, and my weapon has that anxious sensation all the time.</description>
+                <baseMoodEffect>-20</baseMoodEffect>
             </li>
         </stages>
     </ThoughtDef>
