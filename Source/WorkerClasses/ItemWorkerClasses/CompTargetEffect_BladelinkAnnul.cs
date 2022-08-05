@@ -11,16 +11,16 @@ namespace MorePersonaTraits.WorkerClasses.ItemWorkerClasses
             var compBladelink = target.TryGetComp<CompBladelinkWeapon>();
             var existingTraits = FieldRefUtils.TraitsFieldRef.Invoke(compBladelink);
 
-
             if (compBladelink == null)
             {
                 return;
             }
 
+            compBladelink.TempLoseTraits();
+
             if (existingTraits.NullOrEmpty())
             {
                 TraitUtils.InitializeTraits(compBladelink);
-                // Log.Error("[MorePersonaTraits]: No traits to remove on this weapon. This should have been caught by the targeting class. Please let the mod author know.");
             }
             else
             {
@@ -30,6 +30,8 @@ namespace MorePersonaTraits.WorkerClasses.ItemWorkerClasses
                 existingTraits.RemoveAt(indexToRemove);
                 if (existingTraits.NullOrEmpty()) TraitUtils.InitializeTraits(compBladelink);
             }
+
+            compBladelink.RegainTraits();
         }
     }
 }

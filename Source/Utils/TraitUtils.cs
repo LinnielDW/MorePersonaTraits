@@ -62,5 +62,28 @@ namespace MorePersonaTraits.Utils
 
             return true;
         }
+
+        public static void TempLoseTraits(this CompBladelinkWeapon compBladelink)
+        {
+            if (compBladelink.CodedPawn != null && !compBladelink.TraitsListForReading.NullOrEmpty())
+            {
+                compBladelink.TraitsListForReading.ForEach(trait => trait.Worker.Notify_Unbonded(compBladelink.CodedPawn));
+            }
+        }
+
+        public static void RegainTraits(this CompBladelinkWeapon compBladelink)
+        {
+            if (compBladelink.CodedPawn != null)
+            {
+                if (compBladelink.TraitsListForReading.Contains(MPT_WeaponTraitDefOf.NeverBond))
+                {
+                    compBladelink.UnCode();
+                }
+                else
+                {
+                    compBladelink.TraitsListForReading.ForEach(trait => trait.Worker.Notify_Bonded(compBladelink.CodedPawn));
+                }
+            }
+        }
     }
 }

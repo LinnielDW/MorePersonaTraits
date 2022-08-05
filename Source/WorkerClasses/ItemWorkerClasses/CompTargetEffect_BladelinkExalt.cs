@@ -25,8 +25,13 @@ namespace MorePersonaTraits.WorkerClasses.ItemWorkerClasses
 
             if (!availableTraits.NullOrEmpty())
             {
+                compBladelink.TempLoseTraits();
+
                 var traitToAdd = availableTraits.RandomElementByWeight(trait => trait.commonality);
                 existingTraits.Add(traitToAdd);
+
+                compBladelink.RegainTraits();
+
                 Messages.Message("MPT_WeaponTraitGained".Translate(target.LabelShort, traitToAdd.LabelCap), target, MessageTypeDefOf.NeutralEvent);
             }
             else

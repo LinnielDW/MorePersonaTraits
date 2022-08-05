@@ -28,8 +28,13 @@ namespace MorePersonaTraits.WorkerClasses.ItemWorkerClasses
         {
             List<WeaponTraitDef> existingTraits = FieldRefUtils.TraitsFieldRef.Invoke(compBladelink);
 
+            compBladelink.TempLoseTraits();
+            
             existingTraits.Clear();
             compBladelink.InitializeTraits();
+            
+            compBladelink.RegainTraits();
+            
             Messages.Message("MPT_WeaponTraitsRerolled".Translate(compBladelink.parent.LabelShort), compBladelink.parent, MessageTypeDefOf.NeutralEvent);
         }
     }

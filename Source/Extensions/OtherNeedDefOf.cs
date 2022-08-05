@@ -15,4 +15,16 @@ namespace MorePersonaTraits.Extensions
             DefOfHelper.EnsureInitializedInCtor(typeof(OtherNeedDefOf));
         }
     }
+    
+    [DefOf]
+    public static class MPT_WeaponTraitDefOf
+    {
+        public static WeaponTraitDef NeverBond;
+
+        static MPT_WeaponTraitDefOf()
+        {
+            DefOfHelper.EnsureInitializedInCtor(typeof(MPT_WeaponTraitDefOf));
+        }
+    }
+    
 }
