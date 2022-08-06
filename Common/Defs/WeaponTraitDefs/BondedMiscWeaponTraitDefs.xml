@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
     <WeaponTraitDef ParentName="BondedWeaponTraitBase">
         <defName>MPT_BondedImmunePenoxycyline</defName>
@@ -157,10 +157,10 @@
         <marketValueOffset>100</marketValueOffset>
         <bondedHediffs>
             <li>MPT_HediffBondedPainOffsetDownMinor</li>
-            <li>NoPain</li>
         </bondedHediffs>
         <exclusionTags>
             <li>MPT_BondedPainOffset</li>
+            <li>NoPain</li>
         </exclusionTags>
     </WeaponTraitDef>
     <HediffDef>
@@ -185,10 +185,10 @@
         <marketValueOffset>300</marketValueOffset>
         <bondedHediffs>
             <li>MPT_HediffBondedPainOffsetDownMajor</li>
-            <li>NoPain</li>
         </bondedHediffs>
         <exclusionTags>
             <li>MPT_BondedPainOffset</li>
+            <li>NoPain</li>
         </exclusionTags>
     </WeaponTraitDef>
     <HediffDef>
