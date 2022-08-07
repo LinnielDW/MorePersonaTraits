@@ -28,7 +28,7 @@ namespace MorePersonaTraits.Utils
             try
             {
                 return equipment.GetComp<CompBladelinkWeapon>().TraitsListForReading
-                    .FindAll(trait => trait.GetModExtension<WeaponTraitOnHitExtension>().OnHitWorkers != null)
+                    .FindAll(trait => trait.GetModExtension<WeaponTraitOnHitExtension>()?.OnHitWorkers != null)
                     .SelectMany(trait => trait.GetModExtension<WeaponTraitOnHitExtension>().OnHitWorkers)
                     .ToList();
             }
