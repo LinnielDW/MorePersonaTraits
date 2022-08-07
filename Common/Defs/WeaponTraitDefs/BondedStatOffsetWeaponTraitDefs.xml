@@ -858,8 +858,8 @@
 
     <WeaponTraitDef ParentName="BondedWeaponTraitBase">
         <defName>MPT_BondedInjuryHealingFactorDown</defName>
-        <label>dehiscent</label>
-        <description>This weapon's persona believes in an open hearted stance on life. Unfortunately, it took that quite literally.\nThe bonded pawn loses injury healing speed.</description>
+        <label>festering</label>
+        <description>This weapon's persona leaves their bonded's wounds irritated and swollen.\nThe bonded pawn loses injury healing speed.</description>
         <bondedHediffs>
             <li>MPT_HediffInjuryHealingFactorDown</li>
         </bondedHediffs>

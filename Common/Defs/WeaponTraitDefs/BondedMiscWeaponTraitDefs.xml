@@ -232,4 +232,58 @@
             </li>
         </stages>
     </HediffDef>
+
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_BondedBleedFactorUp</defName>
+        <label>exanguinating</label>
+        <description>This weapon's persona This weapon's persona believes in an open hearted stance on life. Unfortunately, it took that quite literally.\nThe bonded pawn bleeds out faster.</description>
+        <marketValueOffset>-400</marketValueOffset>
+        <equippedHediffs>
+            <li>MPT_HediffHeldBleedFactorUp</li>
+        </equippedHediffs>
+        <exclusionTags>
+            <li>MPT_BondedBleedFactor</li>
+        </exclusionTags>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_HediffHeldBleedFactorUp</defName>
+        <label>psychic exanguination</label>
+        <description>My bonded weapon is causing me to bleed out faster.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_BondedBleedFactorUp</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <totalBleedFactor>1.25</totalBleedFactor>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_BondedBleedFactorDown</defName>
+        <label>congealing</label>
+        <description>This weapon's persona knows the improtance of the red liquid that comes out of most things and will try its best to make sure their bonded keeps all of theirs.\nThe bonded pawn bleeds out slower.</description>
+        <marketValueOffset>400</marketValueOffset>
+        <equippedHediffs>
+            <li>MPT_HediffHeldBleedFactorDown</li>
+        </equippedHediffs>
+        <exclusionTags>
+            <li>MPT_BondedBleedFactor</li>
+        </exclusionTags>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_HediffHeldBleedFactorDown</defName>
+        <label>psychic congealing</label>
+        <description>My bonded weapon is causing me to bleed out slower.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_BondedBleedFactorDown</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <totalBleedFactor>0.75</totalBleedFactor>
+            </li>
+        </stages>
+    </HediffDef>
 </Defs>
