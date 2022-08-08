@@ -39,7 +39,6 @@
         <label>Persona Bond Effector</label>
         <description>A one-use psychic persona effector. The psychic surge destroys a weapon persona's connections, removing all memories of friendship, loyalties and severing its psychic bond. Can only be used on a bonded weapon.</description>
         <graphicData>
-            <!--TODO: Make a different graphic-->
             <texPath>Things/Item/Equipment/bladelink_delink</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
@@ -66,7 +65,6 @@
         <label>Persona Reformat Effector</label>
         <description>A one-use psychic persona effector. The psychic surge completely overwhelms a weapon persona, destroying who they were and completely rerolling the traits of the weapon's persona, while preserving their bond.</description>
         <graphicData>
-            <!--TODO: Make a different graphic-->
             <texPath>Things/Item/Equipment/bladelink_reroll</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
@@ -92,7 +90,6 @@
         <label>Persona Extension Effector</label>
         <description>A one-use psychic persona effector. The psychic surge uncovers previously sealed neural-pathways, extending the targetted weapon persona with a new trait. Can only be used on persona weapons that can receive an additional trait.</description>
         <graphicData>
-            <!--TODO: Make a different graphic-->
             <texPath>Things/Item/Equipment/bladelink_exalt</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
@@ -119,7 +116,6 @@
         <label>Persona Reduction Effector</label>
         <description>A one-use psychic persona effector. The psychic surge collapses a portion of the persona's personality, removing a random trait from a targetted weapon persona. If this item were to be used on a persona with only one trait or none at all, the persona will be reformatted instead.</description>
         <graphicData>
-            <!--TODO: Make a different graphic-->
             <texPath>Things/Item/Equipment/bladelink_annul</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
