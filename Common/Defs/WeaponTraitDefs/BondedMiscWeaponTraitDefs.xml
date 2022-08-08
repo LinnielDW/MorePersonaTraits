@@ -286,4 +286,58 @@
             </li>
         </stages>
     </HediffDef>
+
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_BondedNaturalHealingFactorUp</defName>
+        <label>hermetic</label>
+        <description>This weapon's persona seems to transmit some sort of pancacea via a psychic connection.\nThe bonded pawn gains increased healing speed.</description>
+        <bondedHediffs>
+            <li>MPT_HediffNaturalHealingFactorUp</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_BondedNaturalHealingFactor</li>
+        </exclusionTags>
+        <marketValueOffset>500</marketValueOffset>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_HediffNaturalHealingFactorUp</defName>
+        <label>psychic stem cell multiplier</label>
+        <description>My healing speed is being increased by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_BondedNaturalHealingFactorUp</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <naturalHealingFactor>1.3</naturalHealingFactor>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_BondedNaturalHealingFactorDown</defName>
+        <label>festering</label>
+        <description>This weapon's persona leaves their bonded's wounds irritated and swollen.\nThe bonded pawn loses healing speed.</description>
+        <bondedHediffs>
+            <li>MPT_HediffNaturalHealingFactorDown</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_BondedNaturalHealingFactor</li>
+        </exclusionTags>
+        <marketValueOffset>-500</marketValueOffset>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_HediffNaturalHealingFactorDown</defName>
+        <label>psychically induced necrosis</label>
+        <description>My healing speed is being hampered by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_BondedNaturalHealingFactorDown</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <naturalHealingFactor>0.7</naturalHealingFactor>
+            </li>
+        </stages>
+    </HediffDef>
 </Defs>
