@@ -14,4 +14,75 @@
             </exclusionTags>
         </value>
     </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/RulePackDef[defName="NamerWeaponBladelink"]/rulePack/rulesStrings</xpath>
+        <value>
+            <li>r_weapon_name(p=3)->[noun][noun]</li>
+            <li>r_weapon_name(p=2)->[noun]'s [noun]</li>
+            <li>r_weapon_name(p=2)->[noun]'s [verber]</li>
+            <li>r_weapon_name(p=2)->[verber]'s [noun]</li>
+            <li>r_weapon_name(p=1)->[NamePerson]'s [noun]</li>
+            
+            <li>noun->night</li>
+            <li>noun->shadow</li>
+            <li>noun->soul</li>
+            <li>noun->heart</li>
+            <li>noun->fire</li>
+            <li>noun->spider</li>
+            <li>noun->storm</li>
+            <li>noun->wind</li>
+            <li>noun->stone</li>
+            <li>noun->dune</li>
+            <li>noun->phoenix</li>
+            <li>noun->tribe</li>
+            <li>noun->dream</li>
+            <li>noun->nightmare</li>
+            <li>noun->thunder</li>
+            <li>noun->lightning</li>
+            <li>noun->river</li>
+            <li>noun->flame</li>
+            <li>noun->fang</li>
+            <li>noun->island</li>
+            <li>noun->veil</li>
+            <li>noun->star</li>
+            <li>noun->fracture</li>
+            <li>noun->ocean</li>
+            <li>noun->diamond</li>
+            <li>noun->sand</li>
+            <li>noun->mud</li>
+            <li>noun->harmony</li>
+            <li>noun->divine</li>
+            <li>noun->will</li>
+            <li>noun->stink</li>
+            <li>noun->plague</li>
+
+            <li>verber->father</li>
+            <li>verber->eater</li>
+            <li>verber->render</li>
+            <li>verber->bane</li>
+            <li>verber->claw</li>
+            <li>verber->roar</li>
+            <li>verber->attacker</li>
+            <li>verber->speaker</li>
+            <li>verber->surger</li>
+            <li>verber->flicker</li>
+            <li>verber->spreader</li>
+            <li>verber->grasper</li>
+            <li>verber->defiance</li>
+            <li>verber->lure</li>
+            <li>verber->avenger</li>
+            <li>verber->fracturer</li>
+            <li>verber->finder</li>
+            <li>verber->devourer</li>
+            <li>verber->watcher</li>
+            <li>verber->splitter</li>
+            <li>verber->shaper</li>
+
+
+            <li>beginSyl->ex</li>
+            <li>middleSyl->ca</li>
+            <li>middleSyl->li</li>
+            <li>endSyl->bur</li>
+        </value>
+    </Operation>
 </Patch>
