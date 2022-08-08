@@ -15,6 +15,26 @@
         </value>
     </Operation>
     <Operation Class="PatchOperationAdd">
+        <xpath>*/TraderKindDef[defName = "Orbital_Empire"]/stockGenerators</xpath>
+        <value>
+            <li Class="StockGenerator_Tag">
+                <tradeTag>BladelinkEffector</tradeTag>
+                <countRange>1~4</countRange>
+                <thingDefCountRange>1~2</thingDefCountRange>
+            </li>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>*/TraderKindDef[defName = "Orbital_Exotic"]/stockGenerators</xpath>
+        <value>
+            <li Class="StockGenerator_Tag">
+                <tradeTag>BladelinkEffector</tradeTag>
+                <countRange>1~4</countRange>
+                <thingDefCountRange>0~2</thingDefCountRange>
+            </li>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
         <xpath>/Defs/RulePackDef[defName="NamerWeaponBladelink"]/rulePack/rulesStrings</xpath>
         <value>
             <li>r_weapon_name(p=3)->[noun][noun]</li>
