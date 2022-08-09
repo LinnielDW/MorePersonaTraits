@@ -34,6 +34,21 @@
             </li>
         </value>
     </Operation>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>*/FactionDef[defName="Empire"]/pawnGroupMakers/*/options</xpath>
+        <value>
+            <MPT_BladeMonk>4</MPT_BladeMonk>
+        </value>
+    </Operation>
+    
+    <Operation Class="PatchOperationAdd">
+        <xpath>*/FactionDef[defName="Empire"]/pawnGroupMakers/*/guards</xpath>
+        <value>
+            <MPT_BladeMonk>2</MPT_BladeMonk>
+        </value>
+    </Operation>
+
     <Operation Class="PatchOperationAdd">
         <xpath>/Defs/RulePackDef[defName="NamerWeaponBladelink"]/rulePack/rulesStrings</xpath>
         <value>
@@ -42,7 +57,7 @@
             <li>r_weapon_name(p=2)->[noun]'s [verber]</li>
             <li>r_weapon_name(p=2)->[verber]'s [noun]</li>
             <li>r_weapon_name(p=1)->[NamePerson]'s [noun]</li>
-            
+
             <li>noun->night</li>
             <li>noun->shadow</li>
             <li>noun->soul</li>
