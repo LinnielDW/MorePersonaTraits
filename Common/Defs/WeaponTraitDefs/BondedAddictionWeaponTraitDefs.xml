@@ -161,7 +161,7 @@
     
     <HediffDef>
         <defName>MPT_HediffBondedNeedChemical_Psychite</defName>
-        <label>psychic smokeleaf addiction</label>
+        <label>psychic psychite addiction</label>
         <description>Because of their bonded weapon's psychite addiction, this person needs to regularly consume the drug to avoid withdrawal symptoms.</description>
         <descriptionHyperlinks>
             <WeaponTraitDef>MPT_BondedNeedChemical_Psychite</WeaponTraitDef>
@@ -218,4 +218,86 @@
             </li>
         </stages>
     </ThoughtDef>
+
+    <WeaponTraitDef ParentName="BondedWeaponTraitAddictionBase">
+        <defName>MPT_BondedNeedChemical_GoJuice</defName>
+        <label>go-juice addicted</label>
+        <description>This weapon's persona is somehow suffering from a go-juice addiction. So long as the bond holds, their bonded pawn will have to regularly consume the drug to avaid withdrawal as if they were addicted themselves.\nThis form of the addiction will experience reduced withdrawal symptom effects and their bonded cannot gain the addicted to the drug themselves.</description>
+        <bondedHediffs>
+            <li>MPT_HediffBondedNeedChemical_GoJuice</li>
+        </bondedHediffs>
+        <descriptionHyperlinks>
+            <ThingDef>GoJuice</ThingDef>
+        </descriptionHyperlinks>
+    </WeaponTraitDef>
+
+    <HediffDef>
+        <defName>MPT_HediffBondedNeedChemical_GoJuice</defName>
+        <label>psychic go-juice addiction</label>
+        <description>Because of their bonded weapon's go-juice addiction, this person needs to regularly consume the drug to avoid withdrawal symptoms.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_BondedNeedChemical_GoJuice</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <hediffClass>Hediff_Addiction</hediffClass>
+        <causesNeed>Chemical_GoJuice</causesNeed>
+        <stages>
+            <li></li>
+            <li>
+                <label>withdrawal</label>
+                <painFactor>1.5</painFactor>
+                <restFallFactorOffset>0.15</restFallFactorOffset>
+                <hungerRateFactorOffset>0.25</hungerRateFactorOffset>
+                <capMods>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <offset>-0.10</offset>
+                    </li>
+                    <li>
+                        <capacity>Moving</capacity>
+                        <offset>-0.25</offset>
+                    </li>
+                    <li>
+                        <capacity>Sight</capacity>
+                        <offset>-0.10</offset>
+                    </li>
+                    <li>
+                        <capacity>BloodPumping</capacity>
+                        <offset>-0.10</offset>
+                    </li>
+                    <li>
+                        <capacity>Manipulation</capacity>
+                        <offset>-0.05</offset>
+                    </li>
+                </capMods>
+                <mentalStateGivers>
+                    <li>
+                        <mentalState>Binging_DrugExtreme</mentalState>
+                        <mtbDays>40</mtbDays>
+                    </li>
+                    <li>
+                        <mentalState>Wander_Psychotic</mentalState>
+                        <mtbDays>10</mtbDays>
+                    </li>
+                </mentalStateGivers>
+            </li>
+        </stages>
+    </HediffDef>
+    <ThoughtDef>
+        <defName>PsychicGoJuiceWithdrawal</defName>
+        <workerClass>ThoughtWorker_Hediff</workerClass>
+        <hediff>MPT_HediffBondedNeedChemical_GoJuice</hediff>
+        <validWhileDespawned>true</validWhileDespawned>
+        <stages>
+            <li>
+                <visible>false</visible>
+            </li>
+            <li>
+                <label>psychic go-juice withdrawal</label>
+                <description>God I'm tired. My weapon tells me that everything's so slow and boring. Especially me.</description>
+                <baseMoodEffect>-20</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+    
 </Defs>
