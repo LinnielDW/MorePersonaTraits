@@ -90,6 +90,24 @@
             <li>noun->will</li>
             <li>noun->stink</li>
             <li>noun->plague</li>
+            <li>noun->nemesis</li>
+            <li>noun->legion</li>
+            <li>noun->requim</li>
+            <li>noun->oblivion</li>
+            <li>noun->torment</li>
+            <li>noun->ritual</li>
+            <li>noun->prophecy</li>
+            <li>noun->eclipse</li>
+            <li>noun->maelstrom</li>
+            <li>noun->insanity</li>
+            <li>noun->legacy</li>
+            <li>noun->carnage</li>
+            <li>noun->tyrant</li>
+            <li>noun->warhead</li>
+            <li>noun->abyss</li>
+            <li>noun->entropy</li>
+            <li>noun->leviathan</li>
+            <li>noun->asylum</li>
 
             <li>verber->father</li>
             <li>verber->eater</li>
@@ -112,6 +130,8 @@
             <li>verber->watcher</li>
             <li>verber->splitter</li>
             <li>verber->shaper</li>
+            <li>verber->overloader</li>
+            <li>verber->betrayer</li>
 
 
             <li>beginSyl->ex</li>
