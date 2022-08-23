@@ -47,7 +47,7 @@
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <statBases>
-            <MarketValue>1000</MarketValue>
+            <MarketValue>1500</MarketValue>
         </statBases>
         <comps>
             <li Class="MorePersonaTraits.WorkerClasses.ItemWorkerClasses.CompProperties_TargetableSingleBladelink">
@@ -112,7 +112,7 @@
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <statBases>
-            <MarketValue>800</MarketValue>
+            <MarketValue>1000</MarketValue>
         </statBases>
         <comps>
             <li Class="MorePersonaTraits.WorkerClasses.ItemWorkerClasses.CompProperties_TargetableSingleBladelink">
