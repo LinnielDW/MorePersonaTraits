@@ -25,6 +25,10 @@
                 <useJob>UseArtifact</useJob>
                 <useLabel>Use effector</useLabel>
             </li>
+            <!--TODO: experiment with sound to find a good one.-->
+            <li Class="CompProperties_UseEffectArtifact">
+                <sound>PsychicInsanityLanceCast</sound>
+            </li>
             <li Class="CompProperties_UseEffect">
                 <compClass>CompUseEffect_DestroySelf</compClass>
             </li>
@@ -37,7 +41,7 @@
     <ThingDef ParentName="PersonaEffectorBase">
         <defName>MPT_BladelinkUncoder</defName>
         <label>Persona Bond Effector</label>
-        <description>A one-use psychic persona effector. The psychic surge destroys a weapon persona's connections, removing all memories of friendship, loyalties and severing its psychic bond. Can only be used on a bonded weapon.</description>
+        <description>A one-use psychic persona effector. The psychic surge destroys a weapon persona's connections; removing all memories of friendship, loyalties and severing their psychic bond. Can only be used on a bonded weapon.</description>
         <graphicData>
             <texPath>Things/Item/Equipment/bladelink_delink</texPath>
             <graphicClass>Graphic_Single</graphicClass>
@@ -49,10 +53,6 @@
             <li Class="MorePersonaTraits.WorkerClasses.ItemWorkerClasses.CompProperties_TargetableSingleBladelink">
                 <compClass>MorePersonaTraits.WorkerClasses.ItemWorkerClasses.CompTargetable_SingleBladelink</compClass>
                 <RequiresBond>true</RequiresBond>
-            </li>
-            <!--TODO: experiment with sound to find a good one.-->
-            <li Class="CompProperties_UseEffectArtifact">
-                <sound>PsychicInsanityLanceCast</sound>
             </li>
             <li>
                 <compClass>MorePersonaTraits.WorkerClasses.ItemWorkerClasses.CompTargetEffect_BladeDelinker</compClass>
@@ -75,10 +75,6 @@
             <li Class="MorePersonaTraits.WorkerClasses.ItemWorkerClasses.CompProperties_TargetableSingleBladelink">
                 <compClass>MorePersonaTraits.WorkerClasses.ItemWorkerClasses.CompTargetable_SingleBladelink</compClass>
             </li>
-            <!--TODO: experiment with sound to find a good one.-->
-            <li Class="CompProperties_UseEffectArtifact">
-                <sound>PsychicInsanityLanceCast</sound>
-            </li>
             <li>
                 <compClass>MorePersonaTraits.WorkerClasses.ItemWorkerClasses.CompTargetEffect_BladelinkChaos</compClass>
             </li>
@@ -100,10 +96,6 @@
             <li Class="MorePersonaTraits.WorkerClasses.ItemWorkerClasses.CompProperties_TargetableSingleBladelink">
                 <compClass>MorePersonaTraits.WorkerClasses.ItemWorkerClasses.CompTargetable_SingleBladelinkTraitAddable</compClass>
             </li>
-            <!--TODO: experiment with sound to find a good one.-->
-            <li Class="CompProperties_UseEffectArtifact">
-                <sound>PsychicInsanityLanceCast</sound>
-            </li>
             <li>
                 <compClass>MorePersonaTraits.WorkerClasses.ItemWorkerClasses.CompTargetEffect_BladelinkExalt</compClass>
             </li>
@@ -114,7 +106,7 @@
     <ThingDef ParentName="PersonaEffectorBase">
         <defName>MPT_BladelinkAnnul</defName>
         <label>Persona Reduction Effector</label>
-        <description>A one-use psychic persona effector. The psychic surge collapses a portion of the persona's personality, removing a random trait from a targetted weapon persona. If this item were to be used on a persona with only one trait or none at all, the persona will be reformatted instead.</description>
+        <description>A one-use psychic persona effector. The psychic surge collapses a portion of the persona's personality, removing a random trait from the targetted weapon. If this item were to be used on a persona with only one trait or none at all, the persona will be reformatted instead.</description>
         <graphicData>
             <texPath>Things/Item/Equipment/bladelink_annul</texPath>
             <graphicClass>Graphic_Single</graphicClass>
@@ -125,10 +117,6 @@
         <comps>
             <li Class="MorePersonaTraits.WorkerClasses.ItemWorkerClasses.CompProperties_TargetableSingleBladelink">
                 <compClass>MorePersonaTraits.WorkerClasses.ItemWorkerClasses.CompTargetable_SingleBladelink</compClass>
-            </li>
-            <!--TODO: experiment with sound to find a good one.-->
-            <li Class="CompProperties_UseEffectArtifact">
-                <sound>PsychicInsanityLanceCast</sound>
             </li>
             <li>
                 <compClass>MorePersonaTraits.WorkerClasses.ItemWorkerClasses.CompTargetEffect_BladelinkAnnul</compClass>
