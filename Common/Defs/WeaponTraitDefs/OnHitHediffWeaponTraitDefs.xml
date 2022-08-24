@@ -123,6 +123,7 @@
         <label>psychic pain</label>
         <description>An effect of coming under the personal wrath of a persona weapon. While ethereal, it feels very real in the moment.</description>
         <isBad>false</isBad>
+        <hediffClass>HediffWithComps</hediffClass>
         <comps>
             <li Class="HediffCompProperties_SeverityPerDay">
                 <severityPerDay>-0.33</severityPerDay>
