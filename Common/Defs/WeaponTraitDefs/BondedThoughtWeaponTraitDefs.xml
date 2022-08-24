@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_BondedThoughtWeatherDown</defName>
+        <label>stormdepressed</label>
+        <description>This weapon's persona weeps when the sky does.\nThe bonded pawn gains a mood penalty when the weather is not clear.</description>
+        <marketValueOffset>-300</marketValueOffset>
+        <bondedThought>MPT_BondedThoughtWeatherDown</bondedThought>
+    </WeaponTraitDef>
+    <ThoughtDef>
+        <defName>MPT_BondedThoughtWeatherDown</defName>
+        <thoughtClass>Thought_Situational</thoughtClass>
+        <workerClass>MorePersonaTraits.WorkerClasses.ThoughtWorkerClasses.ThoughtWorker_WeaponTraitWeather</workerClass>
+        <stages>
+            <li>
+                <label>{WEAPON}'s stormdepression</label>
+                <description>{WEAPON}, my bonded weapon, hates the rain and all weathers that block the beauty of space. It's hard to ignore.</description>
+                <baseMoodEffect>-12</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+    
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_BondedThoughtWeatherUp</defName>
+        <label>meteorological</label>
+        <description>This weapon's persona finds novelty in observing objects move from high to low gravitational energy states, and simplty cannot get enough of the rain.\nThe bonded pawn gains a mood boost when the weather is not clear.</description>
+        <marketValueOffset>300</marketValueOffset>
+        <bondedThought>MPT_BondedThoughtWeatherUp</bondedThought>
+    </WeaponTraitDef>
+    <ThoughtDef>
+        <defName>MPT_BondedThoughtWeatherUp</defName>
+        <thoughtClass>Thought_Situational</thoughtClass>
+        <workerClass>MorePersonaTraits.WorkerClasses.ThoughtWorkerClasses.ThoughtWorker_WeaponTraitWeather</workerClass>
+        <stages>
+            <li>
+                <label>{WEAPON}'s pluviophilism</label>
+                <description>{WEAPON}, my bonded weapon, loves the rain and other non-clear weathers. Their mood is delightfully infectious.</description>
+                <baseMoodEffect>12</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+</Defs>
