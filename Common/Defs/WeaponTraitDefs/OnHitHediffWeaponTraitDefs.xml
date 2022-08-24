@@ -95,5 +95,90 @@
             </li>
         </modExtensions>
     </WeaponTraitDef>
+    
+    <WeaponTraitDef>
+        <defName>MPT_OnHitPain</defName>
+        <label>pain-giving</label>
+        <description>This weapon's persona helps its wielder in combat by overstimulating their enemies brain; firing all their neurons in a flurry of painful pulses.\nUpon hitting a target, there is a chance that the target will experience mounting pain.</description>
+        <commonality>0.5</commonality>
+        <marketValueOffset>800</marketValueOffset>
+        <descriptionHyperlinks>
+            <HediffDef>MPT_PsychicPain</HediffDef>
+        </descriptionHyperlinks>
+        <modExtensions>
+            <li Class="MorePersonaTraits.Extensions.WeaponTraitOnHitExtension">
+                <OnHitWorkers>
+                    <li Class="MorePersonaTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_ApplyHediff">
+                        <HediffDef>MPT_PsychicPain</HediffDef>
+                        <ProcMagnitude>0.2</ProcMagnitude>
+                        <ProcChance>0.4</ProcChance>
+                        <RequiresBothLiving>true</RequiresBothLiving>
+                    </li>
+                </OnHitWorkers>
+            </li>
+        </modExtensions>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_PsychicPain</defName>
+        <label>psychic pain</label>
+        <description>An effect of coming under the personal wrath of a persona weapon. While ethereal, it feels very real in the moment.</description>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-0.33</severityPerDay>
+                <showHoursToRecover>true</showHoursToRecover>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <label>minor</label>
+                <painOffset>0.2</painOffset>
+            </li>
+            <li>
+                <minSeverity>0.2</minSeverity>
+                <label>slight</label>
+                <painOffset>0.25</painOffset>
+            </li>
+            <li>
+                <minSeverity>0.4</minSeverity>
+                <label>moderate</label>
+                <painOffset>0.3</painOffset>
+            </li>
+            <li>
+                <minSeverity>0.6</minSeverity>
+                <label>major</label>
+                <painOffset>0.35</painOffset>
+            </li>
+            <li>
+                <minSeverity>0.8</minSeverity>
+                <label>extreme</label>
+                <painOffset>0.4</painOffset>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <WeaponTraitDef>
+        <defName>MPT_OnHitPainSelf</defName>
+        <label>objector</label>
+        <description>This weapon's persona hates suffering, and will do their best to not be used for such acts, even if it means that their wielder might suffer instead.\nUpon hitting a target, there is a chance that the wielder will experience an increase in pain.</description>
+        <commonality>0.5</commonality>
+        <marketValueOffset>-800</marketValueOffset>
+        <descriptionHyperlinks>
+            <HediffDef>MPT_PsychicPain</HediffDef>
+        </descriptionHyperlinks>
+        <modExtensions>
+            <li Class="MorePersonaTraits.Extensions.WeaponTraitOnHitExtension">
+                <OnHitWorkers>
+                    <li Class="MorePersonaTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_ApplyHediff">
+                        <HediffDef>MPT_PsychicPain</HediffDef>
+                        <ProcMagnitude>0.05</ProcMagnitude>
+                        <ProcChance>0.2</ProcChance>
+                        <TargetSelf>true</TargetSelf>
+                    </li>
+                </OnHitWorkers>
+            </li>
+        </modExtensions>
+    </WeaponTraitDef>
+    
 
 </Defs>
