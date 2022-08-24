@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <BaseIntermediateOutputPath>..\obj\</BaseIntermediateOutputPath>
@@ -93,6 +93,7 @@
     <Compile Include="WorkerClasses\OnHitWorkerClasses\OnHitWorker_ApplyNeed.cs" />
     <Compile Include="WorkerClasses\OnHitWorkerClasses\OnHitWorker_ApplyThought.cs" />
     <Compile Include="WorkerClasses\OnHitWorkerClasses\OnHitWorker_Weather.cs" />
+    <Compile Include="WorkerClasses\ThoughtWorkerClasses\ThoughtWorker_WeaponTraitWeather.cs" />
     <Compile Include="WorkerClasses\WeaponTraitWorkerClasses\WeaponTraitWorker_NeedFilledOnKill.cs" />
     <Compile Include="Patches\PatchOnDamage.cs" />
     <Compile Include="MorePersonaTraits.cs" />
