@@ -39,4 +39,82 @@
             </li>
         </stages>
     </ThoughtDef>
+    
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_BondedThoughtFemaleHate</defName>
+        <label>misogynist</label>
+        <description>This weapon's persona has a seething hatred for women and never stops to let their bond know.\nThe bonded pawn gains a mood penality if they are female.</description>
+        <marketValueOffset>-300</marketValueOffset>
+        <bondedThought>MPT_BondedThoughtFemaleHate</bondedThought>
+    </WeaponTraitDef>
+    <ThoughtDef>
+        <defName>MPT_BondedThoughtFemaleHate</defName>
+        <thoughtClass>Thought_Situational</thoughtClass>
+        <workerClass>MorePersonaTraits.WorkerClasses.ThoughtWorkerClasses.ThoughtWorker_WeaponTraitGenderFemale</workerClass>
+        <stages>
+            <li>
+                <label>{WEAPON}'s bigotry</label>
+                <description>{WEAPON}, my bonded weapon, keeps reminding me how I was born the wrong gender. It's really degrading.</description>
+                <baseMoodEffect>-6</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_BondedThoughtFemaleLove</defName>
+        <label>enatic</label>
+        <description>This weapon's persona constantly praises the female gender, having a female bonded elates them.\nThe bonded pawn gains a mood boost if they are female.</description>
+        <marketValueOffset>300</marketValueOffset>
+        <bondedThought>MPT_BondedThoughtFemaleLove</bondedThought>
+    </WeaponTraitDef>
+    <ThoughtDef>
+        <defName>MPT_BondedThoughtFemaleLove</defName>
+        <thoughtClass>Thought_Situational</thoughtClass>
+        <workerClass>MorePersonaTraits.WorkerClasses.ThoughtWorkerClasses.ThoughtWorker_WeaponTraitGenderFemale</workerClass>
+        <stages>
+            <li>
+                <label>{WEAPON}'s bias</label>
+                <description>{WEAPON}, my bonded weapon, tells me how they always wanted a female bonded. It's kind of nice.</description>
+                <baseMoodEffect>6</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+    
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_BondedThoughtMaleHate</defName>
+        <label>misandrist</label>
+        <description>This weapon's persona possesses burning hatred for men. The thought of sharing a psychic connection with one disgusts them.\nThe bonded pawn gains a mood penalty if they are male.</description>
+        <marketValueOffset>-300</marketValueOffset>
+        <bondedThought>MPT_BondedThoughtMaleHate</bondedThought>
+    </WeaponTraitDef>
+    <ThoughtDef>
+        <defName>MPT_BondedThoughtMaleHate</defName>
+        <thoughtClass>Thought_Situational</thoughtClass>
+        <workerClass>MorePersonaTraits.WorkerClasses.ThoughtWorkerClasses.ThoughtWorker_WeaponTraitGenderMale</workerClass>
+        <stages>
+            <li>
+                <label>{WEAPON}'s bigotry</label>
+                <description>{WEAPON}, my bonded weapon, constantly tells me how inferior I am to the other gender. I hate this.</description>
+                <baseMoodEffect>-6</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_BondedThoughtMaleLove</defName>
+        <label>agnatic</label>
+        <description>This weapon's persona constantly praises the male gender, having a male bonded tickles them with glee.\nThe bonded pawn gains a mood boost if they are male.</description>
+        <marketValueOffset>300</marketValueOffset>
+        <bondedThought>MPT_BondedThoughtMaleLove</bondedThought>
+    </WeaponTraitDef>
+    <ThoughtDef>
+        <defName>MPT_BondedThoughtMaleLove</defName>
+        <thoughtClass>Thought_Situational</thoughtClass>
+        <workerClass>MorePersonaTraits.WorkerClasses.ThoughtWorkerClasses.ThoughtWorker_WeaponTraitGenderMale</workerClass>
+        <stages>
+            <li>
+                <label>{WEAPON}'s bias</label>
+                <description>{WEAPON}, my bonded weapon, seems to worship the very ground I walk. It's boosting my self esteem.</description>
+                <baseMoodEffect>6</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
 </Defs>
