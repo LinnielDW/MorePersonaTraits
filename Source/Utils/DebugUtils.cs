@@ -8,7 +8,7 @@ namespace MorePersonaTraits.Utils
 {
     public class DebugUtils
     {
-        [DebugAction("Spawning", "[MPT] Add Weapon Trait", true, allowedGameStates = AllowedGameStates.PlayingOnMap)]
+        [DebugAction("PersonaWeapons", "[MPT] Add Weapon Trait", true, allowedGameStates = AllowedGameStates.PlayingOnMap)]
         private static void AddWeaponTrait()
         {
             List<DebugMenuOption> list = new List<DebugMenuOption>();
@@ -35,7 +35,7 @@ namespace MorePersonaTraits.Utils
             }
         }
 
-        [DebugAction("Spawning", "[MPT] Reroll Weapon Traits", true, actionType = DebugActionType.ToolMap, allowedGameStates = AllowedGameStates.PlayingOnMap)]
+        [DebugAction("PersonaWeapons", "[MPT] Reroll Weapon Traits", true, actionType = DebugActionType.ToolMap, allowedGameStates = AllowedGameStates.PlayingOnMap)]
         private static void RerollTraits()
         {
             foreach (var weapon in (from t in Find.CurrentMap.thingGrid.ThingsAt(UI.MouseCell())
@@ -49,7 +49,7 @@ namespace MorePersonaTraits.Utils
             }
         }
 
-        [DebugAction("Spawning", "[MPT] Justaddmorelol", true, actionType = DebugActionType.ToolMap, allowedGameStates = AllowedGameStates.PlayingOnMap)]
+        [DebugAction("PersonaWeapons", "[MPT] Justaddmorelol", true, actionType = DebugActionType.ToolMap, allowedGameStates = AllowedGameStates.PlayingOnMap)]
         private static void JustAddMore()
         {
             foreach (var weapon in (from t in Find.CurrentMap.thingGrid.ThingsAt(UI.MouseCell())
@@ -62,7 +62,18 @@ namespace MorePersonaTraits.Utils
             }
         }
 
-        [DebugAction("Spawning", "[MPT] Spawn Persona Weapon", true, allowedGameStates = AllowedGameStates.PlayingOnMap)]
+        [DebugAction("PersonaWeapons", "[MPT] Regenerate Name", true, actionType = DebugActionType.ToolMap, allowedGameStates = AllowedGameStates.PlayingOnMap)]
+        private static void regenerateName()
+        {
+            foreach (var weapon in (from t in Find.CurrentMap.thingGrid.ThingsAt(UI.MouseCell())
+                where t is ThingWithComps && (t as ThingWithComps).TryGetComp<CompBladelinkWeapon>() != null
+                select t).Cast<ThingWithComps>())
+            {
+                weapon.TryGetComp<CompGeneratedNames>().Initialize(weapon.TryGetComp<CompGeneratedNames>().Props);
+            }
+        }
+
+        [DebugAction("PersonaWeapons", "[MPT] Spawn Persona Weapon", true, allowedGameStates = AllowedGameStates.PlayingOnMap)]
         private static void SpawnPersonaWeapon()
         {
             List<DebugMenuOption> list = new List<DebugMenuOption>();
