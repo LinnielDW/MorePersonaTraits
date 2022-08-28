@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using MorePersonaTraits.WorkerClasses.OnHitWorkerClasses;
+using RimWorld;
 using Verse;
 
 namespace MorePersonaTraits.Utils
@@ -26,6 +27,11 @@ namespace MorePersonaTraits.Utils
         public static bool IsLivingPawn(Thing thing)
         {
             return thing != null && !thing.Destroyed && thing is Pawn && !(thing as Pawn).Dead;
+        }
+
+        public static bool makeFilth(IntVec3 pos, Map map, ThingDef filth)
+        {
+            return FilthMaker.TryMakeFilth(pos, map, filth);
         }
     }
 }
