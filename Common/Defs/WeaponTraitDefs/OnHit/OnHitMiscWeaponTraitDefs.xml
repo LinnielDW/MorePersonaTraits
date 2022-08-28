@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <WeaponTraitDef>
+        <defName>MPT_OnHitSpawnAsh</defName>
+        <label>dustbringer</label>
+        <description>This weapon's persona has taken an immortal vow to understand one's own power. Its swings prew forth ash as a not-so-subtle metaphor for the destruction that its wielder exerts.\nUpon landing a hit with this weapon, it has a chance to spawn ash filth under its wielder.</description>
+        <commonality>0.5</commonality>
+        <marketValueOffset>-100</marketValueOffset>
+        <exclusionTags>
+            <li>Radiant</li>
+            <li>MPT_OnHitSpawnFilth</li>
+        </exclusionTags>
+        <modExtensions>
+            <li Class="MorePersonaTraits.Extensions.WeaponTraitOnHitExtension">
+                <OnHitWorkers>
+                    <li Class="MorePersonaTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_SpawnFilth">
+                        <Filth>Filth_Ash</Filth>
+                        <ProcChance>0.75</ProcChance>
+                        <TargetSelf>true</TargetSelf>
+                    </li>
+                </OnHitWorkers>
+            </li>
+        </modExtensions>
+    </WeaponTraitDef>
+</Defs>
