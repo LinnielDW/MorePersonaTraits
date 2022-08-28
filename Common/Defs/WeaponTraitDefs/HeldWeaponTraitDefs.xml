@@ -98,6 +98,7 @@
             <MeleeDodgeChance>15</MeleeDodgeChance>
         </equippedStatOffsets>
         <exclusionTags>
+            <li>Radiant</li>
             <li>MPT_HeldMeleeDodgeChance</li>
         </exclusionTags>
     </WeaponTraitDef>
