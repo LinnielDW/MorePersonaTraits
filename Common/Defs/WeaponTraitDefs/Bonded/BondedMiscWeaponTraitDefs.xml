@@ -235,7 +235,7 @@
 
     <WeaponTraitDef ParentName="BondedWeaponTraitBase">
         <defName>MPT_BondedBleedFactorUp</defName>
-        <label>exanguinating</label>
+        <label>hemophile</label>
         <description>This weapon's persona This weapon's persona believes in an open hearted stance on life. Unfortunately, it took that quite literally.\nThe bonded pawn bleeds out faster.</description>
         <marketValueOffset>-400</marketValueOffset>
         <equippedHediffs>
@@ -247,7 +247,7 @@
     </WeaponTraitDef>
     <HediffDef>
         <defName>MPT_HediffHeldBleedFactorUp</defName>
-        <label>psychic exanguination</label>
+        <label>psychic hemophilia</label>
         <description>My bonded weapon is causing me to bleed out faster.</description>
         <descriptionHyperlinks>
             <WeaponTraitDef>MPT_BondedBleedFactorUp</WeaponTraitDef>

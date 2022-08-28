@@ -46,7 +46,7 @@
 
     <WeaponTraitDef>
         <defName>MPT_HeldArmorRatingDown</defName>
-        <label>bond sundering</label>
+        <label>flaw-maker</label>
         <description>This weapon's persona weakens the natural forces binding molecular structures together around its weilder.\nWhile held, it provides its wielder with reduced armor rating.</description>
         <commonality>0.5</commonality>
         <marketValueOffset>-400</marketValueOffset>
@@ -105,7 +105,7 @@
 
     <WeaponTraitDef>
         <defName>MPT_HeldMeleeDodgeChanceDown</defName>
-        <label>bewitched</label>
+        <label>death-marked</label>
         <description>This weapon's persona seems to draw the ire of all its weapon cousins, scentient or otherwised.\nWhile held, it reduces its wielders melee dodge chance.</description>
         <commonality>0.5</commonality>
         <marketValueOffset>-400</marketValueOffset>

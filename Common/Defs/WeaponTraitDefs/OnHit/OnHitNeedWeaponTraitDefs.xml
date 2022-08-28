@@ -26,7 +26,7 @@
     
     <WeaponTraitDef>
         <defName>MPT_OnHitFoodSelfDown</defName>
-        <label>coneseur</label>
+        <label>neutrient-siphoning</label>
         <description>This weapon's persona requires a little extra to be convinced to do battle.\nUpon hitting a living thing, the wielder has a chance of losing a small amount of their food.</description>
         <commonality>0.5</commonality>
         <marketValueOffset>-400</marketValueOffset>
@@ -50,7 +50,7 @@
     
     <WeaponTraitDef>
         <defName>MPT_OnHitRestSelfUp</defName>
-        <label>energising</label>
+        <label>energizing</label>
         <description>This weapon's persona revels in the thrill of battle, jolting their user awake with every step and every blow.\nUpon hitting a living target, there is a chance that the wielders rest will be increased slightly.</description>
         <commonality>0.5</commonality>
         <marketValueOffset>400</marketValueOffset>

@@ -155,7 +155,7 @@
 
     <WeaponTraitDef ParentName="BondedWeaponTraitBase">
         <defName>MPT_BondedShootingAccuracyPawnDown</defName>
-        <label>protagonist-maker</label>
+        <label>trooper-aimed</label>
         <description>This weapon's persona has romatasised the idea of 'plot armour' and will take steps to make it with its bond.\nThe bonded pawn takes a penalty shooting accuracy.</description>
         <bondedHediffs>
             <li>MPT_HediffShootingAccuracyPawnDown</li>
@@ -214,7 +214,7 @@
 
     <WeaponTraitDef ParentName="BondedWeaponTraitBase">
         <defName>MPT_BondedTradePriceImprovementDown</defName>
-        <label>begrimed</label>
+        <label>histrionic</label>
         <description>This weapon's persona cracks the most inappropriate jokes when its bond is attempting to be composed around others.\nThe bonded pawn has a harder time trading and negotiating.</description>
         <bondedHediffs>
             <li>MPT_HediffTradePriceImprovementDown</li>
@@ -389,7 +389,7 @@
 
     <WeaponTraitDef ParentName="BondedWeaponTraitBase">
         <defName>MPT_BondedImmunityGainSpeedDown</defName>
-        <label>amico-immunomasochist</label>
+        <label>immunomasochist</label>
         <description>This weapon's persona has the strangely specific hobby of watching the extended pain and suffering that comes from their bond's body attempts to fight off infectious agents, and will take steps to enjoy that hobby for as long as possible.\nThe bonded pawn loses some of their immunity gain speed.</description>
         <bondedHediffs>
             <li>MPT_HediffImmunityGainSpeedDown</li>
@@ -535,7 +535,7 @@
 
     <WeaponTraitDef ParentName="BondedWeaponTraitBase">
         <defName>MPT_BondedMentalBreakThresholdDown</defName>
-        <label>annealed</label>
+        <label>hardened</label>
         <description>This weapon's persona has endured far worse than anything the rim could throw at it. This resolve seems to rub off on their bond.\nThe bonded pawn does not breakdown so easily.</description>
         <bondedHediffs>
             <li>MPT_HediffMentalBreakThresholdDown</li>
@@ -711,7 +711,7 @@
 
     <WeaponTraitDef ParentName="BondedWeaponTraitBase">
         <defName>MPT_BondedPlantSpeedUp</defName>
-        <label>green grater</label>
+        <label>flaura-hater</label>
         <description>This weapon's persona seems to have a personal vendeta against any and all that is green and is more than happy to assist in cutting it down.\nThe bonded pawn gains increased plat working and pruning speed.</description>
         <bondedHediffs>
             <li>MPT_HediffPlantSpeedUp</li>
@@ -741,7 +741,7 @@
 
     <WeaponTraitDef ParentName="BondedWeaponTraitBase">
         <defName>MPT_BondedPlantSpeedDown</defName>
-        <label>penzaister</label>
+        <label>bonzaister</label>
         <description>This weapon's persona takes more joy from the process of cutting plants into nice shapes, willing their bond to (impractically) cut plants in odd angles.\nThe bonded pawn loses plat working and pruning speed.</description>
         <bondedHediffs>
             <li>MPT_HediffPlantSpeedDown</li>
@@ -800,8 +800,8 @@
 
     <WeaponTraitDef ParentName="BondedWeaponTraitBase">
         <defName>MPT_BondedConstructionSpeedDown</defName>
-        <label>lightheaded</label>
-        <description>This weapon's persona claims it used to be a gardener of chairs. Their bond doesn't really know how one can garden chairs and is thoroughly confused when given assistance in chair related activities.\nThe bonded pawn loses construction speed.</description>
+        <label>architecturally challenged</label>
+        <description>This weapon's persona claims it used to be a gardener of chairs. Their bonded pawn is left thoroughly confused when given assistance in chair related activities.\nThe bonded pawn loses construction speed.</description>
         <bondedHediffs>
             <li>MPT_HediffConstructionSpeedDown</li>
         </bondedHediffs>
@@ -859,7 +859,7 @@
 
     <WeaponTraitDef ParentName="BondedWeaponTraitBase">
         <defName>MPT_BondedAimingDelayFactorUp</defName>
-        <label>reevesite</label>
+        <label>bullet-timed</label>
         <description>This weapon's persona idolises a supposedly breathtaking hacker named Bill and recounts how he hacked an Archotech Persona with timebending bullets. Resolving that it can't bend time, this persona pays tribute to their hacker idol by just slows down their bond's trigger finger instead.\nThe bonded pawn loses firing speed. This is NOT restricted to this weapon.</description>
         <bondedHediffs>
             <li>MPT_HediffAimingDelayFactorUp</li>
@@ -946,7 +946,7 @@
 
     <WeaponTraitDef ParentName="BondedWeaponTraitBase">
         <defName>MPT_BondedSocialFightChanceFactorDown</defName>
-        <label>standoff standoffer</label>
+        <label>de-escalator</label>
         <description>This weapon's persona only wishes to be drawn when truely required and otherwise be left to their own devices.\nThe bonded pawn is less likely to get into social fights.</description>
         <bondedHediffs>
             <li>MPT_HediffSocialFightChanceFactorDown</li>

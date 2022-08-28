@@ -98,7 +98,7 @@
     
     <WeaponTraitDef>
         <defName>MPT_OnHitPain</defName>
-        <label>pain-giving</label>
+        <label>pain-dealer</label>
         <description>This weapon's persona helps its wielder in combat by overstimulating their enemies brain; firing all their neurons in a flurry of painful pulses.\nUpon hitting a target, there is a chance that the target will experience mounting pain.</description>
         <commonality>0.5</commonality>
         <marketValueOffset>800</marketValueOffset>
@@ -160,7 +160,7 @@
 
     <WeaponTraitDef>
         <defName>MPT_OnHitPainSelf</defName>
-        <label>objector</label>
+        <label>pain-filling</label>
         <description>This weapon's persona hates suffering, and will do their best to not be used for such acts, even if it means that their wielder might suffer instead.\nUpon hitting a target, there is a chance that the wielder will experience an increase in pain.</description>
         <commonality>0.5</commonality>
         <marketValueOffset>-800</marketValueOffset>
@@ -180,6 +180,4 @@
             </li>
         </modExtensions>
     </WeaponTraitDef>
-    
-
 </Defs>
