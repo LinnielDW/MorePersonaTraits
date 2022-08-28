@@ -36,7 +36,6 @@
             <li>IndustrialBasic</li>
             <li>IndustrialAdvanced</li>
             <li>IndustrialMilitaryBasic</li>
-            <li>IndustrialMilitaryAdvanced</li>
         </apparelTags>
         <techHediffsChance>0.3</techHediffsChance>
         <techHediffsMoney>1000~1500</techHediffsMoney>
@@ -61,7 +60,7 @@
         <label>Bladelink Monk</label>
         <race>Human</race>
         <combatPower>70</combatPower>
-        <weaponMoney>1500~7000</weaponMoney>
+        <weaponMoney>3000~7000</weaponMoney>
         <weaponTags>
             <li>Bladelink</li>
         </weaponTags>
