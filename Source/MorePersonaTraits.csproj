@@ -39,37 +39,10 @@
       <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\UnityEngine.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <CommonFiles Update="..\Common\Defs\WeaponTraitDefs\OnHitHediffWeaponTraitDefs.xml">
-      <Link>WeaponTraitDefs\OnHitHediffWeaponTraitDefs</Link>
-    </CommonFiles>
-    <CommonFiles Update="..\Common\Defs\WeaponTraitDefs\HeldWeaponTraitDefs.xml">
-      <Link>WeaponTraitDefs\HeldWeaponTraitDefs.xml</Link>
-    </CommonFiles>
-    <CommonFiles Update="..\Common\Defs\WeaponTraitDefs\OnHitThoughtWeaponTraitDefs.xml">
-      <Link>WeaponTraitDefs\OnHitThoughtWeaponTraitDefs.xml</Link>
-    </CommonFiles>
-    <CommonFiles Update="..\Common\Defs\WeaponTraitDefs\OnHitNeedWeaponTraitDefs.xml">
-      <Link>WeaponTraitDefs\OnHitNeedWeaponTraitDefs.xml</Link>
-    </CommonFiles>
-    <CommonFiles Update="..\Common\Defs\WeaponTraitDefs\OnKillWeaponTraitDefs.xml">
-      <Link>WeaponTraitDefs\OnKillWeaponTraitDefs.xml</Link>
-    </CommonFiles>
-    <CommonFiles Update="..\Common\Defs\WeaponTraitDefs\BondedNeedWeaponTraitDefs.xml">
-      <Link>WeaponTraitDefs\BondedNeedWeaponTraitDefs.xml</Link>
-    </CommonFiles>
     <Reference Include="UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
       <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <CommonFiles Update="..\Common\Defs\WeaponTraitDefs\BondedAddictionWeaponTraitDefs.xml">
-      <Link>WeaponTraitDefs\BondedAddictionWeaponTraitDefs.xml</Link>
-    </CommonFiles>
-    <CommonFiles Update="..\Common\Defs\WeaponTraitDefs\BondedMiscWeaponTraitDefs.xml">
-      <Link>WeaponTraitDefs\BondedMiscWeaponTraitDefs.xml</Link>
-    </CommonFiles>
-    <CommonFiles Update="..\Common\Defs\WeaponTraitDefs\BondedThoughtWeaponTraitDefs.xml">
-      <Link>WeaponTraitDefs\BondedThoughtWeaponTraitDefs.xml</Link>
-    </CommonFiles>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Extensions\OtherNeedDefOf.cs" />
@@ -95,6 +68,7 @@
     <Compile Include="WorkerClasses\OnHitWorkerClasses\OnHitWorker_ApplyHediff.cs" />
     <Compile Include="WorkerClasses\OnHitWorkerClasses\OnHitWorker_ApplyNeed.cs" />
     <Compile Include="WorkerClasses\OnHitWorkerClasses\OnHitWorker_ApplyThought.cs" />
+    <Compile Include="WorkerClasses\OnHitWorkerClasses\OnHitWorker_SpawnFilth.cs" />
     <Compile Include="WorkerClasses\OnHitWorkerClasses\OnHitWorker_Weather.cs" />
     <Compile Include="WorkerClasses\ThoughtWorkerClasses\ThoughtWorker_WeaponTraitGenderFemale.cs" />
     <Compile Include="WorkerClasses\ThoughtWorkerClasses\ThoughtWorker_WeaponTraitGenderMale.cs" />
