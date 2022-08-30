@@ -1055,4 +1055,63 @@
             </li>
         </stages>
     </HediffDef>
+
+    <!--HuntingStealth-->
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_BondedHuntingStealthUp</defName>
+        <label>covert</label>
+        <description>This weapon's persona seems to wrap its bond in shadows, giving them an edge against unwitting game.\nThe bonded pawn gains increased hunting stealth.</description>
+        <bondedHediffs>
+            <li>MPT_HediffHuntingStealthUp</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_BondedHuntingStealth</li>
+        </exclusionTags>
+        <marketValueOffset>500</marketValueOffset>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_HediffHuntingStealthUp</defName>
+        <label>psychic concealment</label>
+        <description>My HuntingStealth is being increased by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_BondedHuntingStealthUp</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statOffsets>
+                    <HuntingStealth>0.2</HuntingStealth>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_BondedHuntingStealthDown</defName>
+        <label>unveiling</label>
+        <description>This weapon's persona refuses to hide its glory and will boldly announce itself to even the most unwitting beast.\nThe bonded pawn loses hunting stealth.</description>
+        <bondedHediffs>
+            <li>MPT_HediffHuntingStealthDown</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_BondedHuntingStealth</li>
+        </exclusionTags>
+        <marketValueOffset>-500</marketValueOffset>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_HediffHuntingStealthDown</defName>
+        <label>psychic forshadowing</label>
+        <description>My hunting stealth is being hampered by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_BondedHuntingStealthDown</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statOffsets>
+                    <HuntingStealth>-0.2</HuntingStealth>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
 </Defs>
