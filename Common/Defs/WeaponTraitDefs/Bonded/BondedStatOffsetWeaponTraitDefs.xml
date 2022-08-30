@@ -770,23 +770,23 @@
     </HediffDef>
 
     <WeaponTraitDef ParentName="BondedWeaponTraitBase">
-        <defName>MPT_BondedConstructionSpeedUp</defName>
+        <defName>MPT_BondedConstructionUp</defName>
         <label>mason</label>
         <description>This weapon's persona has a great knowledge of the local techtonics, ground stability and material load balancing, telling things that their bond would not otherwise immediately realise.\nThe bonded pawn gains increased construction speed, success chance and smoothing speed.</description>
         <bondedHediffs>
-            <li>MPT_HediffConstructionSpeedUp</li>
+            <li>MPT_HediffConstructionUp</li>
         </bondedHediffs>
         <exclusionTags>
-            <li>MPT_BondedConstructionSpeed</li>
+            <li>MPT_BondedConstruction</li>
         </exclusionTags>
         <marketValueOffset>500</marketValueOffset>
     </WeaponTraitDef>
     <HediffDef>
-        <defName>MPT_HediffConstructionSpeedUp</defName>
+        <defName>MPT_HediffConstructionUp</defName>
         <label>psychic bedrock identifier</label>
         <description>My construction speed, success chance and smoothing speed is being increased by my bonded weapon.</description>
         <descriptionHyperlinks>
-            <WeaponTraitDef>MPT_BondedConstructionSpeedUp</WeaponTraitDef>
+            <WeaponTraitDef>MPT_BondedConstructionUp</WeaponTraitDef>
         </descriptionHyperlinks>
         <isBad>false</isBad>
         <stages>
@@ -801,23 +801,23 @@
     </HediffDef>
 
     <WeaponTraitDef ParentName="BondedWeaponTraitBase">
-        <defName>MPT_BondedConstructionSpeedDown</defName>
+        <defName>MPT_BondedConstructionDown</defName>
         <label>architecturally challenged</label>
         <description>This weapon's persona claims it used to be a gardener of chairs. Their bonded pawn is left thoroughly confused when given assistance in chair related activities.\nThe bonded pawn loses construction speed, success chance and smoothing speed.</description>
         <bondedHediffs>
-            <li>MPT_HediffConstructionSpeedDown</li>
+            <li>MPT_HediffConstructionDown</li>
         </bondedHediffs>
         <exclusionTags>
-            <li>MPT_BondedConstructionSpeed</li>
+            <li>MPT_BondedConstruction</li>
         </exclusionTags>
         <marketValueOffset>-500</marketValueOffset>
     </WeaponTraitDef>
     <HediffDef>
-        <defName>MPT_HediffConstructionSpeedDown</defName>
+        <defName>MPT_HediffConstructionDown</defName>
         <label>psychic stall stalling</label>
         <description>My construction speed, success chance and smoothing speed is being hampered by my bonded weapon.</description>
         <descriptionHyperlinks>
-            <WeaponTraitDef>MPT_BondedConstructionSpeedDown</WeaponTraitDef>
+            <WeaponTraitDef>MPT_BondedConstructionDown</WeaponTraitDef>
         </descriptionHyperlinks>
         <isBad>false</isBad>
         <stages>
