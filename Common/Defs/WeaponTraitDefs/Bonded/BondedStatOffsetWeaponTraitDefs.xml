@@ -1041,8 +1041,8 @@
     </WeaponTraitDef>
     <HediffDef>
         <defName>MPT_HediffPainShockThresholdDown</defName>
-        <label>bonded_hediff_statoffset_template_down</label>
-        <description>My PainShockThreshold is being hampered by my bonded weapon.</description>
+        <label>psychically changed pain receptors</label>
+        <description>My pain threshold is being hampered by my bonded weapon.</description>
         <descriptionHyperlinks>
             <WeaponTraitDef>MPT_BondedPainShockThresholdDown</WeaponTraitDef>
         </descriptionHyperlinks>
