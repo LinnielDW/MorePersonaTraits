@@ -41,7 +41,6 @@
         <exclusionTags>
             <li>MPT_BondedTemplateStat</li>
         </exclusionTags>
-        <commonality>0.4</commonality>
         <marketValueOffset>-500</marketValueOffset>
     </WeaponTraitDef>
     <HediffDef>
