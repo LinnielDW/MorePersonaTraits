@@ -574,7 +574,7 @@
 
     <WeaponTraitDef ParentName="BondedWeaponTraitBase">
         <defName>MPT_BondedMentalBreakThresholdUp</defName>
-        <label>twitchy</label>
+        <label>uneasy</label>
         <description>This weapon's persona is easily distressed. Its uneasy energy rubs off on their bond.\nThe bonded pawn is more suseptible to mental breaks.</description>
         <bondedHediffs>
             <li>MPT_HediffMentalBreakThresholdUp</li>
