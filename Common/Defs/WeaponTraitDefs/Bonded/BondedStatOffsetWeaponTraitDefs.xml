@@ -1130,4 +1130,68 @@
             </li>
         </stages>
     </HediffDef>
+
+    <!--Ranching-->
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_BondedRanchingUp</defName>
+        <label>herding</label>
+        <description>This weapon's persona is something of a farm tool and whispers helpful tips to their bonded regarding all things animal.\nThe bonded pawn gains increased animal taming, training and gathering speed.</description>
+        <bondedHediffs>
+            <li>MPT_HediffRanchingUp</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_BondedRanching</li>
+        </exclusionTags>
+        <commonality>0.4</commonality>
+        <marketValueOffset>500</marketValueOffset>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_HediffRanchingUp</defName>
+        <label>psychic ranch hand</label>
+        <description>My ranching skills are being increased by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_BondedRanchingUp</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statOffsets>
+                    <AnimalGatherSpeed>0.25</AnimalGatherSpeed>
+                    <TameAnimalChance>0.25</TameAnimalChance>
+                    <TrainAnimalChance>0.25</TrainAnimalChance>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_BondedRanchingDown</defName>
+        <label>zoophobic</label>
+        <description>This weapon's persona is afraid of all things animal. They advise extreme caution to their bond when interacting with beasts.\nThe bonded pawn loses animal taming and training chance and also animal gathering speed.</description>
+        <bondedHediffs>
+            <li>MPT_HediffRanchingDown</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_BondedRanching</li>
+        </exclusionTags>
+        <marketValueOffset>-500</marketValueOffset>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_HediffRanchingDown</defName>
+        <label>psychic zoophobia</label>
+        <description>My ranching skills are being hampered by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_BondedRanchingDown</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statOffsets>
+                    <AnimalGatherSpeed>-0.25</AnimalGatherSpeed>
+                    <TameAnimalChance>-0.25</TameAnimalChance>
+                    <TrainAnimalChance>-0.25</TrainAnimalChance>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
 </Defs>
