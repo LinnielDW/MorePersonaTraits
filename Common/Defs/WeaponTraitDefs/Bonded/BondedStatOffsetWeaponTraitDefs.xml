@@ -643,7 +643,7 @@
         <stages>
             <li>
                 <statOffsets>
-                    <CookSpeed>4</CookSpeed>
+                    <CookSpeed>-4</CookSpeed>
                 </statOffsets>
             </li>
         </stages>
