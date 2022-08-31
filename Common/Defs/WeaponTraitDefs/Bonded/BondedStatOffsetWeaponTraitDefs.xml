@@ -1142,7 +1142,6 @@
         <exclusionTags>
             <li>MPT_BondedRanching</li>
         </exclusionTags>
-        <commonality>0.4</commonality>
         <marketValueOffset>500</marketValueOffset>
     </WeaponTraitDef>
     <HediffDef>
@@ -1190,6 +1189,71 @@
                     <AnimalGatherSpeed>-0.25</AnimalGatherSpeed>
                     <TameAnimalChance>-0.25</TameAnimalChance>
                     <TrainAnimalChance>-0.25</TrainAnimalChance>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <!--Warden-->
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_BondedWardenUp</defName>
+        <label>intimidating</label>
+        <description>This weapon's persona exudes a pressuring aura, disarming any and all who stand before their bond in antagonistic social interactions.\nThe bonded pawn gains increased arrest chance, recruit chance, conversion power and supression power.</description>
+        <bondedHediffs>
+            <li>MPT_HediffWardenUp</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_BondedWarden</li>
+        </exclusionTags>
+        <marketValueOffset>500</marketValueOffset>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_HediffWardenUp</defName>
+        <label>psychic bluster</label>
+        <description>My arrest chance, recruit chance, conversion power and supression power are being increased by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_BondedWardenUp</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statOffsets>
+                    <ArrestSuccessChance>0.5</ArrestSuccessChance>
+                    <ConversionPower>0.5</ConversionPower>
+                    <SuppressionPower>0.5</SuppressionPower>
+                    <NegotiationAbility>0.5</NegotiationAbility>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_BondedWardenDown</defName>
+        <label>standoffish</label>
+        <description>This weapon's persona seems to have an aloof effect on their bonded pawn's presence. Nobody seems to take them seriously.\nThe bonded pawn loses some arrest chance, recruit chance, conversion power and supression power.</description>
+        <bondedHediffs>
+            <li>MPT_HediffWardenDown</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_BondedWarden</li>
+        </exclusionTags>
+        <marketValueOffset>-500</marketValueOffset>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_HediffWardenDown</defName>
+        <label>psychically induced contrivedness</label>
+        <description>My arrest chance, recruit chance, conversion power and supression power are being hampered by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_BondedWardenDown</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statOffsets>
+                    <ArrestSuccessChance>-0.5</ArrestSuccessChance>
+                    <ConversionPower>-0.5</ConversionPower>
+                    <SuppressionPower>-0.5</SuppressionPower>
+                    <NegotiationAbility>-0.5</NegotiationAbility>
                 </statOffsets>
             </li>
         </stages>
