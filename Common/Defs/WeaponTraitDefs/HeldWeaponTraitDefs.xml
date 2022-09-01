@@ -106,7 +106,7 @@
     <WeaponTraitDef>
         <defName>MPT_HeldMeleeDodgeChanceDown</defName>
         <label>death-marked</label>
-        <description>This weapon's persona seems to draw the ire of all its weapon cousins, scentient or otherwised.\nWhile held, it reduces its wielders melee dodge chance.</description>
+        <description>This weapon's persona seems to draw the ire of all its weapon cousins, scentient or otherwise.\nWhile held, it reduces its wielders melee dodge chance.</description>
         <commonality>0.5</commonality>
         <marketValueOffset>-400</marketValueOffset>
         <equippedStatOffsets>
@@ -114,6 +114,36 @@
         </equippedStatOffsets>
         <exclusionTags>
             <li>MPT_HeldMeleeDodgeChance</li>
+        </exclusionTags>
+    </WeaponTraitDef>
+
+    <WeaponTraitDef>
+        <defName>MPT_HeldComfyTempUp</defName>
+        <label>thermoregulating</label>
+        <description>This weapon's persona posses an instinctual knowledge of how to balance ones internal tempurature and can help their wielder do it too!\nWhile held, it provides its wielder with an increased range of comfortable tempuratures.</description>
+        <commonality>0.5</commonality>
+        <marketValueOffset>400</marketValueOffset>
+        <equippedStatOffsets>
+            <ComfyTemperatureMin>-12</ComfyTemperatureMin>
+            <ComfyTemperatureMax>12</ComfyTemperatureMax>
+        </equippedStatOffsets>
+        <exclusionTags>
+            <li>MPT_HeldHeldComfyTemp</li>
+        </exclusionTags>
+    </WeaponTraitDef>
+
+    <WeaponTraitDef>
+        <defName>MPT_HeldComfyTempDown</defName>
+        <label>thermally diffusing</label>
+        <description>This weapon's persona struggles to keep a stable tempurature and is more influenced by its surroundings than its material might suggest.\nWhile held, it provides its wielder with an lower range of comfortable tempuratures.</description>
+        <commonality>0.5</commonality>
+        <marketValueOffset>-400</marketValueOffset>
+        <equippedStatOffsets>
+            <ComfyTemperatureMin>12</ComfyTemperatureMin>
+            <ComfyTemperatureMax>-12</ComfyTemperatureMax>
+        </equippedStatOffsets>
+        <exclusionTags>
+            <li>MPT_HeldHeldComfyTemp</li>
         </exclusionTags>
     </WeaponTraitDef>
 
