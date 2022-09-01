@@ -448,6 +448,7 @@
                     <MedicalTendQualityOffset>0.05</MedicalTendQualityOffset>
                     <MedicalTendSpeed>0.25</MedicalTendSpeed>
                     <MedicalSurgerySuccessChance>0.25</MedicalSurgerySuccessChance>
+                    <MedicalOperationSpeed>0.25</MedicalOperationSpeed>
                 </statOffsets>
             </li>
         </stages>
@@ -479,6 +480,7 @@
                     <MedicalTendQualityOffset>-0.05</MedicalTendQualityOffset>
                     <MedicalTendSpeed>-0.25</MedicalTendSpeed>
                     <MedicalSurgerySuccessChance>-0.25</MedicalSurgerySuccessChance>
+                    <MedicalOperationSpeed>-0.25</MedicalOperationSpeed>
                 </statOffsets>
             </li>
         </stages>
