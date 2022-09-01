@@ -628,6 +628,8 @@
                 <statOffsets>
                     <CookSpeed>4</CookSpeed>
                     <ButcheryFleshSpeed>0.3</ButcheryFleshSpeed>
+                    <DrugCookingSpeed>0.3</DrugCookingSpeed>
+                    <DrugSynthesisSpeed>0.3</DrugSynthesisSpeed>
                 </statOffsets>
             </li>
         </stages>
@@ -658,6 +660,8 @@
                 <statOffsets>
                     <CookSpeed>-4</CookSpeed>
                     <ButcheryFleshSpeed>-0.3</ButcheryFleshSpeed>
+                    <DrugCookingSpeed>-0.3</DrugCookingSpeed>
+                    <DrugSynthesisSpeed>-0.3</DrugSynthesisSpeed>
                 </statOffsets>
             </li>
         </stages>
