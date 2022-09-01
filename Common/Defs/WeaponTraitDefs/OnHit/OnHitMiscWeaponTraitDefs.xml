@@ -81,7 +81,7 @@
                 <OnHitWorkers>
                     <li Class="MorePersonaTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_SpawnFilth">
                         <Filth>Filth_FireFoam</Filth>
-                        <ProcChance>0.25</ProcChance>
+                        <ProcChance>0.5</ProcChance>
                         <TargetSelf>true</TargetSelf>
                     </li>
                 </OnHitWorkers>
@@ -111,7 +111,7 @@
     </WeaponTraitDef>
     
     <WeaponTraitDef>
-        <defName>MPT_OnHitSpawnFuel</defName>
+        <defName>MPT_OnHitSpawnFuelSelf</defName>
         <label>chemfuel-anointing</label>
         <description>This weapon's persona wishes to anoint its wielder for good luck in dangerous situations. It just so happens to be that the only substance the persona can summon is chemfuel.\nUpon landing a hit with this weapon, it has a chance to spawn flammable chemfuel puddles under its wielder.</description>
         <commonality>0.5</commonality>
@@ -124,7 +124,7 @@
                 <OnHitWorkers>
                     <li Class="MorePersonaTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_SpawnFilth">
                         <Filth>Filth_Fuel</Filth>
-                        <ProcChance>0.25</ProcChance>
+                        <ProcChance>0.33</ProcChance>
                         <TargetSelf>true</TargetSelf>
                     </li>
                 </OnHitWorkers>
