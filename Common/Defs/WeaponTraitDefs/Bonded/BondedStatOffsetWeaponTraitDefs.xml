@@ -759,7 +759,7 @@
 
     <WeaponTraitDef ParentName="BondedWeaponTraitBase">
         <defName>MPT_BondedPlantSpeedDown</defName>
-        <label>bonzaister</label>
+        <label>bonsai-ster</label>
         <description>This weapon's persona takes more joy from the process of cutting plants into nice shapes, willing their bond to (impractically) cut plants in odd angles.\nThe bonded pawn loses plat working and pruning speed.</description>
         <bondedHediffs>
             <li>MPT_HediffPlantSpeedDown</li>
