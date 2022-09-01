@@ -146,6 +146,34 @@
             <li>MPT_HeldHeldComfyTemp</li>
         </exclusionTags>
     </WeaponTraitDef>
+    
+    <WeaponTraitDef>
+        <defName>MPT_HeldToxicSensitivityUp</defName>
+        <label>baneful</label>
+        <description>This weapon's persona must turn their wielder into a grass type because they be taking toxic fumes very well.\nWhile held, it provides its wielder with increased toxic sensitivity.</description>
+        <commonality>0.5</commonality>
+        <marketValueOffset>-400</marketValueOffset>
+        <equippedStatOffsets>
+            <ToxicSensitivity>0.5</ToxicSensitivity>
+        </equippedStatOffsets>
+        <exclusionTags>
+            <li>MPT_HeldHeldToxicSensitivity</li>
+        </exclusionTags>
+    </WeaponTraitDef>
+
+    <WeaponTraitDef>
+        <defName>MPT_HeldToxicSensitivityDown</defName>
+        <label>non-reactive</label>
+        <description>This weapon's persona imparts an inertness to their wielder making them impervious to even the most toxic of environments.\nWhile held, it provides its wielder with lower toxic sensitivity.</description>
+        <commonality>0.5</commonality>
+        <marketValueOffset>400</marketValueOffset>
+        <equippedStatOffsets>
+            <ToxicSensitivity>-0.5</ToxicSensitivity>
+        </equippedStatOffsets>
+        <exclusionTags>
+            <li>MPT_HeldHeldToxicSensitivity</li>
+        </exclusionTags>
+    </WeaponTraitDef>
 
     <WeaponTraitDef>
         <defName>MPT_HeldVomit</defName>
