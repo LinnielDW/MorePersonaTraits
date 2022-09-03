@@ -3,7 +3,7 @@ using Verse;
 
 namespace MorePersonaTraits.Utils
 {
-    public static class NeedFillUtil
+    public static class NeedFillUtils
     {
         // [TweakValue("MPT_NeedFill", 0f, 1f)]
         private static float ProcChance = 0.2f;
