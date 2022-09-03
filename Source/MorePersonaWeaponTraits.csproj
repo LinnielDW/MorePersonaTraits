@@ -68,6 +68,7 @@
     <Compile Include="WorkerClasses\OnHitWorkerClasses\OnHitWorker_AddedDamage.cs" />
     <Compile Include="WorkerClasses\OnHitWorkerClasses\OnHitWorker_ApplyHediff.cs" />
     <Compile Include="WorkerClasses\OnHitWorkerClasses\OnHitWorker_ApplyNeed.cs" />
+    <Compile Include="WorkerClasses\OnHitWorkerClasses\OnHitWorker_ApplyStun.cs" />
     <Compile Include="WorkerClasses\OnHitWorkerClasses\OnHitWorker_ApplyThought.cs" />
     <Compile Include="WorkerClasses\OnHitWorkerClasses\OnHitWorker_SpawnFilth.cs" />
     <Compile Include="WorkerClasses\OnHitWorkerClasses\OnHitWorker_Weather.cs" />
