@@ -1,8 +1,8 @@
-﻿using MorePersonaTraits.Utils;
+﻿using MorePersonaWeaponTraits.Utils;
 using RimWorld;
 using Verse;
 
-namespace MorePersonaTraits.WorkerClasses.OnHitWorkerClasses
+namespace MorePersonaWeaponTraits.WorkerClasses.OnHitWorkerClasses
 {
     public class OnHitWorker_SpawnFilth : OnHitWorker
     {

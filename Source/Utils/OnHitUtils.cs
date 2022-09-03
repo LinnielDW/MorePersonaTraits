@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
-using MorePersonaTraits.WorkerClasses.OnHitWorkerClasses;
+using MorePersonaWeaponTraits.WorkerClasses.OnHitWorkerClasses;
 using RimWorld;
 using Verse;
 
-namespace MorePersonaTraits.Utils
+namespace MorePersonaWeaponTraits.Utils
 {
     public static class OnHitUtils
     {

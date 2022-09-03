@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using HarmonyLib;
-using MorePersonaTraits.Extensions;
+using MorePersonaWeaponTraits.Extensions;
 using RimWorld;
 using Verse;
 
-namespace MorePersonaTraits.Utils
+namespace MorePersonaWeaponTraits.Utils
 {
     public static class WeaponTraitUtils
     {

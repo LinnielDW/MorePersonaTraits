@@ -3,7 +3,7 @@
     <WeaponTraitDef Name="BondedWeaponTraitBase" Abstract="True">
         <commonality>0.4</commonality>
         <modExtensions>
-            <li Class="MorePersonaTraits.Extensions.WeaponTraitDefExtension">
+            <li Class="MorePersonaWeaponTraits.Extensions.WeaponTraitDefExtension">
                 <AllowNeverBond>false</AllowNeverBond>
             </li>
         </modExtensions>

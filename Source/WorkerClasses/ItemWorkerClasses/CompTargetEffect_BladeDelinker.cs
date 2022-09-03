@@ -1,7 +1,7 @@
 ﻿using RimWorld;
 using Verse;
 
-namespace MorePersonaTraits.WorkerClasses.ItemWorkerClasses
+namespace MorePersonaWeaponTraits.WorkerClasses.ItemWorkerClasses
 {
     public class CompTargetEffect_BladeDelinker : CompTargetEffect
     {

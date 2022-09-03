@@ -11,9 +11,9 @@
             <li>MPT_OnHit_ThoughtSelf</li>
         </exclusionTags>
         <modExtensions>
-            <li Class="MorePersonaTraits.Extensions.WeaponTraitOnHitExtension">
+            <li Class="MorePersonaWeaponTraits.Extensions.WeaponTraitOnHitExtension">
                 <OnHitWorkers>
-                    <li Class="MorePersonaTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_ApplyThought">
+                    <li Class="MorePersonaWeaponTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_ApplyThought">
                         <ThoughtDef>MPT_Thought_HitGood</ThoughtDef>
                         <ProcChance>0.8</ProcChance>
                         <TargetSelf>true</TargetSelf>
@@ -51,9 +51,9 @@
             <li>MPT_OnHit_ThoughtSelf</li>
         </exclusionTags>
         <modExtensions>
-            <li Class="MorePersonaTraits.Extensions.WeaponTraitOnHitExtension">
+            <li Class="MorePersonaWeaponTraits.Extensions.WeaponTraitOnHitExtension">
                 <OnHitWorkers>
-                    <li Class="MorePersonaTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_ApplyThought">
+                    <li Class="MorePersonaWeaponTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_ApplyThought">
                         <ThoughtDef>MPT_Thought_HitBad</ThoughtDef>
                         <ProcChance>0.8</ProcChance>
                         <TargetSelf>true</TargetSelf>

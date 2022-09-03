@@ -1,8 +1,8 @@
 ﻿using System;
-using MorePersonaTraits.Utils;
+using MorePersonaWeaponTraits.Utils;
 using Verse;
 
-namespace MorePersonaTraits.WorkerClasses.OnHitWorkerClasses
+namespace MorePersonaWeaponTraits.WorkerClasses.OnHitWorkerClasses
 {
     public class OnHitWorker
     {

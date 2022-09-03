@@ -1,7 +1,7 @@
 ﻿using RimWorld;
 using Verse;
 
-namespace MorePersonaTraits.WorkerClasses.ThoughtWorkerClasses
+namespace MorePersonaWeaponTraits.WorkerClasses.ThoughtWorkerClasses
 {
     public class ThoughtWorker_WeaponTraitGenderFemale : ThoughtWorker_WeaponTrait
     {

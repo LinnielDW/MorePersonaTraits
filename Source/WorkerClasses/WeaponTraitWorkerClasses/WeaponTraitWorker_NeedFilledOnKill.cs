@@ -1,10 +1,10 @@
 ﻿using System.Linq;
-using MorePersonaTraits.Extensions;
-using MorePersonaTraits.Utils;
+using MorePersonaWeaponTraits.Utils;
+using MorePersonaWeaponTraits.Extensions;
 using RimWorld;
 using Verse;
 
-namespace MorePersonaTraits.WorkerClasses.WeaponTraitWorkerClasses
+namespace MorePersonaWeaponTraits.WorkerClasses.WeaponTraitWorkerClasses
 {
     public class WeaponTraitWorker_FoodFilledOnKill : WeaponTraitWorker
     {

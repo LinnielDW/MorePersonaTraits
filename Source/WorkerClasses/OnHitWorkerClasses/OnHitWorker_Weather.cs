@@ -1,4 +1,4 @@
-﻿namespace MorePersonaTraits.WorkerClasses.OnHitWorkerClasses
+﻿namespace MorePersonaWeaponTraits.WorkerClasses.OnHitWorkerClasses
 {
     public class OnHitWorker_Weather : OnHitWorker
     {

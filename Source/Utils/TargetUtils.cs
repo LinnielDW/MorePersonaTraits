@@ -1,8 +1,8 @@
-﻿using MorePersonaTraits.WorkerClasses.ItemWorkerClasses;
+﻿using MorePersonaWeaponTraits.WorkerClasses.ItemWorkerClasses;
 using RimWorld;
 using Verse;
 
-namespace MorePersonaTraits.Utils
+namespace MorePersonaWeaponTraits.Utils
 {
     public class TargetUtils
     {

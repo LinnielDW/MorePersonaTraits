@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
-using MorePersonaTraits.WorkerClasses.OnHitWorkerClasses;
+using MorePersonaWeaponTraits.WorkerClasses.OnHitWorkerClasses;
 using Verse;
 
-namespace MorePersonaTraits.Extensions
+namespace MorePersonaWeaponTraits.Extensions
 {
     public class WeaponTraitOnHitExtension : DefModExtension
     {

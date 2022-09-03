@@ -1,7 +1,7 @@
-﻿using MorePersonaTraits.WorkerClasses.OnHitWorkerClasses;
+﻿using MorePersonaWeaponTraits.WorkerClasses.OnHitWorkerClasses;
 using Verse;
 
-namespace MorePersonaTraits.Templates
+namespace MorePersonaWeaponTraits.Templates
 {
     public class OnHitWorker_Template : OnHitWorker
     {

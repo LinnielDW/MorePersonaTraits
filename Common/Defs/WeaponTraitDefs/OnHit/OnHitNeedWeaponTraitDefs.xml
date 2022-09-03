@@ -10,9 +10,9 @@
             <li>MPT_OnHit_Food</li>
         </exclusionTags>
         <modExtensions>
-            <li Class="MorePersonaTraits.Extensions.WeaponTraitOnHitExtension">
+            <li Class="MorePersonaWeaponTraits.Extensions.WeaponTraitOnHitExtension">
                 <OnHitWorkers>
-                    <li Class="MorePersonaTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_ApplyNeed">
+                    <li Class="MorePersonaWeaponTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_ApplyNeed">
                         <NeedDef>Food</NeedDef>
                         <ProcChance>0.4</ProcChance>
                         <ProcMagnitude>0.1</ProcMagnitude>
@@ -34,9 +34,9 @@
             <li>MPT_OnHit_Food</li>
         </exclusionTags>
         <modExtensions>
-            <li Class="MorePersonaTraits.Extensions.WeaponTraitOnHitExtension">
+            <li Class="MorePersonaWeaponTraits.Extensions.WeaponTraitOnHitExtension">
                 <OnHitWorkers>
-                    <li Class="MorePersonaTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_ApplyNeed">
+                    <li Class="MorePersonaWeaponTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_ApplyNeed">
                         <NeedDef>Food</NeedDef>
                         <ProcChance>0.4</ProcChance>
                         <ProcMagnitude>-0.05</ProcMagnitude>
@@ -58,9 +58,9 @@
             <li>MPT_OnHit_Rest</li>
         </exclusionTags>
         <modExtensions>
-            <li Class="MorePersonaTraits.Extensions.WeaponTraitOnHitExtension">
+            <li Class="MorePersonaWeaponTraits.Extensions.WeaponTraitOnHitExtension">
                 <OnHitWorkers>
-                    <li Class="MorePersonaTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_ApplyNeed">
+                    <li Class="MorePersonaWeaponTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_ApplyNeed">
                         <NeedDef>Rest</NeedDef>
                         <ProcChance>0.4</ProcChance>
                         <ProcMagnitude>0.05</ProcMagnitude>
@@ -82,9 +82,9 @@
             <li>MPT_OnHit_Rest</li>
         </exclusionTags>
         <modExtensions>
-            <li Class="MorePersonaTraits.Extensions.WeaponTraitOnHitExtension">
+            <li Class="MorePersonaWeaponTraits.Extensions.WeaponTraitOnHitExtension">
                 <OnHitWorkers>
-                    <li Class="MorePersonaTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_ApplyNeed">
+                    <li Class="MorePersonaWeaponTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_ApplyNeed">
                         <NeedDef>Rest</NeedDef>
                         <ProcChance>0.4</ProcChance>
                         <ProcMagnitude>-0.05</ProcMagnitude>

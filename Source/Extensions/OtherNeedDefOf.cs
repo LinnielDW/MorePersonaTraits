@@ -1,6 +1,6 @@
 ﻿using RimWorld;
 
-namespace MorePersonaTraits.Extensions
+namespace MorePersonaWeaponTraits.Extensions
 {
     [DefOf]
     public static class OtherNeedDefOf

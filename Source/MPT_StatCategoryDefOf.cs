@@ -1,6 +1,6 @@
 ﻿using RimWorld;
 
-namespace MorePersonaTraits
+namespace MorePersonaWeaponTraits
 {
     [DefOf]
     public static class MPT_StatCategoryDefOf

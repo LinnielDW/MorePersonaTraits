@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
-using MorePersonaTraits.Utils;
+using MorePersonaWeaponTraits.Utils;
 using RimWorld;
 using Verse;
 
-namespace MorePersonaTraits.WorkerClasses.ItemWorkerClasses
+namespace MorePersonaWeaponTraits.WorkerClasses.ItemWorkerClasses
 {
     public class CompTargetEffect_BladelinkExalt : CompTargetEffect
     {
@@ -36,7 +36,7 @@ namespace MorePersonaTraits.WorkerClasses.ItemWorkerClasses
             }
             else
             {
-                Log.Error("[MorePersonaTraits]: Cannot add anymore traits to this weapon. This should have been caught by the targeting class. Please let the mod author know.");
+                Log.Error("[MorePersonaWeaponTraits]: Cannot add anymore traits to this weapon. This should have been caught by the targeting class. Please let the mod author know.");
             }
         }
     }

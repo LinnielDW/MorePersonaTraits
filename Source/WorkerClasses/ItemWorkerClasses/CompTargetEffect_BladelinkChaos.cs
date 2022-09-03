@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using MorePersonaTraits.Utils;
+using MorePersonaWeaponTraits.Utils;
 using RimWorld;
 using Verse;
 
-namespace MorePersonaTraits.WorkerClasses.ItemWorkerClasses
+namespace MorePersonaWeaponTraits.WorkerClasses.ItemWorkerClasses
 {
     public class CompTargetEffect_BladelinkChaos : CompTargetEffect
     {
