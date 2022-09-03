@@ -8,14 +8,14 @@ namespace MorePersonaWeaponTraits.WorkerClasses.OnHitWorkerClasses
 
         public override void OnHitEffect(Thing hitThing, Thing originThing)
         {
-            ApplyOnHitEffect(hitThing, originThing, ApplyHediffToPawn);
+            ApplyOnHitEffect(hitThing, originThing, ApplyHediff);
         }
 
-        private void ApplyHediffToPawn(Pawn pawn)
+        private void ApplyHediff(Thing thing)
         {
-            var hediff = HediffMaker.MakeHediff(HediffDef, pawn);
+            var hediff = HediffMaker.MakeHediff(HediffDef, thing as Pawn);
             hediff.Severity = ProcMagnitude;
-            pawn.health.AddHediff(hediff);
+            (thing as Pawn)?.health.AddHediff(hediff);
         }
     }
 }

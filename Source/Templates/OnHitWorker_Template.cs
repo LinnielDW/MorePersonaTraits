@@ -10,9 +10,9 @@ namespace MorePersonaWeaponTraits.Templates
             ApplyOnHitEffect(hitThing, originThing, DebugApply);
         }
 
-        private void DebugApply(Pawn thing)
+        private void DebugApply(Thing thing)
         {
-            Log.Warning("OnHitWorker_Template on-hit effect has been activated on target: " + thing.Name);
+            Log.Warning("OnHitWorker_Template on-hit effect has been activated on target: " + thing.Label);
         }
     }
 }

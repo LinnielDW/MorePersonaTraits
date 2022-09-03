@@ -12,9 +12,9 @@ namespace MorePersonaWeaponTraits.WorkerClasses.OnHitWorkerClasses
             ApplyOnHitEffect(hitThing, originThing, ApplyThoughtToPawn);
         }
 
-        private void ApplyThoughtToPawn(Pawn pawn)
+        private void ApplyThoughtToPawn(Thing thing)
         {
-            pawn.needs?.mood?.thoughts.memories.TryGainMemory(ThoughtDef);
+            (thing as Pawn)?.needs?.mood?.thoughts.memories.TryGainMemory(ThoughtDef);
         }
     }
 }

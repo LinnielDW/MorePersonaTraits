@@ -26,7 +26,12 @@ namespace MorePersonaWeaponTraits.Utils
 
         public static bool IsLivingPawn(Thing thing)
         {
-            return thing != null && !thing.Destroyed && thing is Pawn && !(thing as Pawn).Dead;
+            return ThingExists(thing) && thing is Pawn && !(thing as Pawn).Dead;
+        }
+
+        public static bool ThingExists(Thing thing)
+        {
+            return thing != null && !thing.Destroyed;
         }
 
         public static bool makeFilth(IntVec3 pos, Map map, ThingDef filth)

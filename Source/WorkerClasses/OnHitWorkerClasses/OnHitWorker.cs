@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using MorePersonaWeaponTraits.Utils;
 using Verse;
 
@@ -10,14 +10,14 @@ namespace MorePersonaWeaponTraits.WorkerClasses.OnHitWorkerClasses
         public float ProcMagnitude = 0f;
         public bool TargetSelf = false;
         public bool RequiresBothLiving = false;
-        
+
         //todo add basedamage to arguements so severity can be scaled by damage x magnitude
         public virtual void OnHitEffect(Thing hitThing, Thing originThing)
         {
-            // OnHitEffect(hitThing, originThing, delegate {  });
+            throw new NotImplementedException();
         }
 
-        public void ApplyOnHitEffect(Thing hitThing, Thing originThing, Action<Pawn> apply)
+        public void ApplyOnHitEffect(Thing hitThing, Thing originThing, Action<Thing> apply)
         {
             if (RequiresBothLiving && !(OnHitUtils.IsLivingPawn(hitThing) && OnHitUtils.IsLivingPawn(originThing)))
             {
@@ -26,16 +26,16 @@ namespace MorePersonaWeaponTraits.WorkerClasses.OnHitWorkerClasses
 
             if (TargetSelf)
             {
-                if (OnHitUtils.IsLivingPawn(originThing))
+                if (OnHitUtils.ThingExists(originThing))
                 {
-                    apply(originThing as Pawn);
+                    apply(originThing);
                 }
             }
             else
             {
-                if (OnHitUtils.IsLivingPawn(hitThing))
+                if (OnHitUtils.ThingExists(hitThing))
                 {
-                    apply(hitThing as Pawn);
+                    apply(hitThing);
                 }
             }
         }

@@ -10,12 +10,12 @@ namespace MorePersonaWeaponTraits.WorkerClasses.OnHitWorkerClasses
 
         public override void OnHitEffect(Thing hitThing, Thing originThing)
         {
-            ApplyOnHitEffect(hitThing, originThing, ApplyFilthToPawn);
+            ApplyOnHitEffect(hitThing, originThing, ApplyFilth);
         }
 
-        private void ApplyFilthToPawn(Pawn pawn)
+        private void ApplyFilth(Thing thing)
         {
-            OnHitUtils.makeFilth(pawn.Position, pawn.Map, Filth);
+            OnHitUtils.makeFilth(thing.Position, thing.Map, Filth);
         }
     }
 }

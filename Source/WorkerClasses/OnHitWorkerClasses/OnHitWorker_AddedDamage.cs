@@ -7,12 +7,12 @@ namespace MorePersonaWeaponTraits.WorkerClasses.OnHitWorkerClasses
     {
         public override void OnHitEffect(Thing hitThing, Thing originThing)
         {
-            ApplyOnHitEffect(hitThing, originThing, ApplyExtraDamage(originThing));
+            ApplyOnHitEffect(hitThing, originThing, ApplyExtraDamage);
         }
 
-        private Func<Thing, Action<Thing>> ApplyExtraDamage = (bla) => (pawn) =>
+        private void ApplyExtraDamage(Thing targetThing)
         {
-            //TODO: implement this
-        };
+            throw new NotImplementedException();
+        } 
     }
 }

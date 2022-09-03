@@ -10,16 +10,16 @@ namespace MorePersonaWeaponTraits.WorkerClasses.OnHitWorkerClasses
 
         public override void OnHitEffect(Thing hitThing, Thing originThing)
         {
-            ApplyOnHitEffect(hitThing, originThing, ApplyNeedToPawn(NeedDef, ProcMagnitude));
+            ApplyOnHitEffect(hitThing, originThing, ApplyNeedToPawn);
         }
 
-        private Func<NeedDef, float, Action<Pawn>> ApplyNeedToPawn = (needDef, magnitude) => (pawn) =>
+        private void ApplyNeedToPawn(Thing pawn)
         {
-            var need = pawn.needs.TryGetNeed(needDef);
+            var need = (pawn as Pawn)?.needs?.TryGetNeed(NeedDef);
             if (need != null)
             {
-                need.CurLevel += need.MaxLevel * magnitude;
+                need.CurLevel += need.MaxLevel * ProcMagnitude;
             }
-        };
+        } 
     }
 }
