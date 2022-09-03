@@ -6,7 +6,13 @@ namespace MorePersonaWeaponTraits.WorkerClasses.OnHitWorkerClasses
     {
         public override void OnHitEffect(Thing hitThing, Thing originThing)
         {
-            throw new System.NotImplementedException();
+            ApplyOnHitEffect(hitThing, originThing, MakeWeather);
+        }
+
+        //TODO: move this to a util
+        private void MakeWeather(Thing thing)
+        {
+            thing.Map.weatherDecider.StartNextWeather();
         }
     }
 }
