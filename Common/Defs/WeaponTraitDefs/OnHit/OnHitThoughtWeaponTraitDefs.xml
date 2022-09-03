@@ -17,6 +17,7 @@
                         <ThoughtDef>MPT_Thought_HitGood</ThoughtDef>
                         <ProcChance>0.8</ProcChance>
                         <TargetSelf>true</TargetSelf>
+                        <RequiresBothLiving>true</RequiresBothLiving>
                     </li>
                 </OnHitWorkers>
             </li>
@@ -57,6 +58,7 @@
                         <ThoughtDef>MPT_Thought_HitBad</ThoughtDef>
                         <ProcChance>0.8</ProcChance>
                         <TargetSelf>true</TargetSelf>
+                        <RequiresBothLiving>true</RequiresBothLiving>
                     </li>
                 </OnHitWorkers>
             </li>

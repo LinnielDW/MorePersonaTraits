@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
     <WeaponTraitDef>
         <defName>MPT_OnHit_SpawnAsh</defName>
@@ -83,6 +83,7 @@
                         <Filth>Filth_FireFoam</Filth>
                         <ProcChance>0.5</ProcChance>
                         <TargetSelf>true</TargetSelf>
+                        <RequiresBothLiving>true</RequiresBothLiving>
                     </li>
                 </OnHitWorkers>
             </li>

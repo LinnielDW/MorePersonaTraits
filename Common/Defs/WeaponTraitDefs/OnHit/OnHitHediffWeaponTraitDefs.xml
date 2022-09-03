@@ -16,6 +16,7 @@
                         <HediffDef>Plague</HediffDef>
                         <ProcMagnitude>0.15</ProcMagnitude>
                         <ProcChance>0.35</ProcChance>
+                        <RequiresBothLiving>true</RequiresBothLiving>
                     </li>
                 </OnHitWorkers>
             </li>
@@ -64,6 +65,7 @@
                         <HediffDef>Flu</HediffDef>
                         <ProcMagnitude>0.35</ProcMagnitude>
                         <ProcChance>0.5</ProcChance>
+                        <RequiresBothLiving>true</RequiresBothLiving>
                     </li>
                 </OnHitWorkers>
             </li>
