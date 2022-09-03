@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
     <WeaponTraitDef ParentName="BondedWeaponTraitBase">
         <defName>MPT_Bonded_ThoughtWeatherDown</defName>
@@ -132,6 +132,52 @@
                 <label>{WEAPON}'s bias</label>
                 <description>{WEAPON}, my bonded weapon, seems to worship the very ground I walk. It's boosting my self esteem.</description>
                 <baseMoodEffect>6</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_Bonded_ThoughtNoAnimalHate</defName>
+        <label>zoophile</label>
+        <description>This weapon's persona just loves animals. They want a puppy and tells their bonded how it's unfair that they don't have one.\nThe bonded pawn gains a mood penalty if they are not accompanied by at least one of their pets.</description>
+        <marketValueOffset>-150</marketValueOffset>
+        <exclusionTags>
+            <li>MPT_Thought_Animal</li>
+        </exclusionTags>
+        <bondedThought>MPT_Thought_NoAnimalHate</bondedThought>
+    </WeaponTraitDef>
+    <ThoughtDef>
+        <defName>MPT_Thought_NoAnimalHate</defName>
+        <thoughtClass>Thought_Situational</thoughtClass>
+        <workerClass>MorePersonaTraits.WorkerClasses.ThoughtWorkerClasses.ThoughtWorker_WeaponTraitNoBondedAnimal</workerClass>
+        <stages>
+            <li>
+                <label>{WEAPON}'s fawning</label>
+                <description>{WEAPON}, my bonded weapon, won't stop bothering me about getting a pet. It's really annoying.</description>
+                <baseMoodEffect>-3</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_Bonded_ThoughtAnimalHate</defName>
+        <label>zoophobia</label>
+        <description>This weapon's persona hates animals. They want nothing to do with them and makes sure that .\nThe bonded pawn gains a mood penalty if they are accompanied by at least one of their pets.</description>
+        <marketValueOffset>-250</marketValueOffset>
+        <exclusionTags>
+            <li>MPT_Thought_Animal</li>
+        </exclusionTags>
+        <bondedThought>MPT_Thought_AnimalHate</bondedThought>
+    </WeaponTraitDef>
+    <ThoughtDef>
+        <defName>MPT_Thought_AnimalHate</defName>
+        <thoughtClass>Thought_Situational</thoughtClass>
+        <workerClass>MorePersonaTraits.WorkerClasses.ThoughtWorkerClasses.ThoughtWorker_WeaponTraitBondedAnimal</workerClass>
+        <stages>
+            <li>
+                <label>{WEAPON}'s zoophobia</label>
+                <description>{WEAPON}, my bonded weapon, hates being around my pets and is pressuring me into getting rid of them. I hate it.</description>
+                <baseMoodEffect>-6</baseMoodEffect>
             </li>
         </stages>
     </ThoughtDef>
