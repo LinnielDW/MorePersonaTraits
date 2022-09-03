@@ -2,11 +2,11 @@
 <Defs>
     <!--TemplateStat-->
     <WeaponTraitDef ParentName="BondedWeaponTraitBase">
-        <defName>MPT_BondedTemplateStatUp</defName>
+        <defName>MPT_Bonded_TemplateStatUp</defName>
         <label>bonded_trait_template_up</label>
         <description>This weapon's persona shouldn't have this trait as this is a template.\nThe bonded pawn gains increased TemplateStat.</description>
         <bondedHediffs>
-            <li>MPT_HediffTemplateStatUp</li>
+            <li>MPT_Hediff_TemplateStatUp</li>
         </bondedHediffs>
         <exclusionTags>
             <li>MPT_BondedTemplateStat</li>
@@ -14,7 +14,7 @@
         <marketValueOffset>500</marketValueOffset>
     </WeaponTraitDef>
     <HediffDef>
-        <defName>MPT_HediffTemplateStatUp</defName>
+        <defName>MPT_Hediff_TemplateStatUp</defName>
         <label>bonded_hediff_statoffset_template_up</label>
         <description>My TemplateStat is being increased by my bonded weapon.</description>
         <descriptionHyperlinks>
@@ -31,11 +31,11 @@
     </HediffDef>
 
     <WeaponTraitDef ParentName="BondedWeaponTraitBase">
-        <defName>MPT_BondedTemplateStatDown</defName>
+        <defName>MPT_Bonded_TemplateStatDown</defName>
         <label>bonded_trait_template_down</label>
         <description>This weapon's persona shouldn't have this trait as this is a template.\nThe bonded pawn loses TemplateStat.</description>
         <bondedHediffs>
-            <li>MPT_HediffTemplateStatDown</li>
+            <li>MPT_Hediff_TemplateStatDown</li>
         </bondedHediffs>
         <exclusionTags>
             <li>MPT_BondedTemplateStat</li>
@@ -43,7 +43,7 @@
         <marketValueOffset>-500</marketValueOffset>
     </WeaponTraitDef>
     <HediffDef>
-        <defName>MPT_HediffTemplateStatDown</defName>
+        <defName>MPT_Hediff_TemplateStatDown</defName>
         <label>bonded_hediff_statoffset_template_down</label>
         <description>My TemplateStat is being hampered by my bonded weapon.</description>
         <descriptionHyperlinks>

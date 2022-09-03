@@ -2,17 +2,17 @@
 <Defs>
     <WeaponTraitDef Abstract="True" Name="BondedWeaponTraitAddictionBase" ParentName="BondedWeaponTraitBase">
         <exclusionTags>
-            <li>MPT_BondedAddiction</li>
+            <li>MPT_Bonded_Addiction</li>
         </exclusionTags>
         <marketValueOffset>-500</marketValueOffset>
     </WeaponTraitDef>
     
     <WeaponTraitDef ParentName="BondedWeaponTraitAddictionBase">
-        <defName>MPT_BondedNeedChemical_WakeUp</defName>
+        <defName>MPT_Bonded_NeedChemicalWakeUp</defName>
         <label>wake-up addicted</label>
         <description>This weapon's persona is suffering from a wake-up addiction. So long as the bond holds, their bonded pawn will have to regularly consume the drug to avaid withdrawal as if they were addicted themselves.\nThis form of the addiction will experience reduced withdrawal symptom effects and their bonded cannot gain the addicted to the drug themselves.</description>
         <bondedHediffs>
-            <li>MPT_HediffBondedNeedChemical_WakeUp</li>
+            <li>MPT_Hediff_BondedNeedChemicalWakeUp</li>
         </bondedHediffs>
         <descriptionHyperlinks>
             <ThingDef>WakeUp</ThingDef>
@@ -20,11 +20,11 @@
     </WeaponTraitDef>
     
     <HediffDef>
-        <defName>MPT_HediffBondedNeedChemical_WakeUp</defName>
+        <defName>MPT_Hediff_BondedNeedChemicalWakeUp</defName>
         <label>psychic wakeup addiction</label>
         <description>Because of their bonded weapon's wake-up addiction, this person needs to regularly consume the drug to avoid withdrawal symptoms.</description>
         <descriptionHyperlinks>
-            <WeaponTraitDef>MPT_BondedNeedChemical_WakeUp</WeaponTraitDef>
+            <WeaponTraitDef>MPT_Bonded_NeedChemicalWakeUp</WeaponTraitDef>
         </descriptionHyperlinks>
         <isBad>false</isBad>
         <hediffClass>Hediff_Addiction</hediffClass>
@@ -63,9 +63,9 @@
         </stages>
     </HediffDef>
     <ThoughtDef>
-        <defName>PsychicWakeUpWithdrawal</defName>
+        <defName>MPT_Thought_PsychicWakeUpWithdrawal</defName>
         <workerClass>ThoughtWorker_Hediff</workerClass>
-        <hediff>MPT_HediffBondedNeedChemical_WakeUp</hediff>
+        <hediff>MPT_Hediff_BondedNeedChemicalWakeUp</hediff>
         <validWhileDespawned>true</validWhileDespawned>
         <stages>
             <li>
@@ -80,11 +80,11 @@
     </ThoughtDef>
     
     <WeaponTraitDef ParentName="BondedWeaponTraitAddictionBase">
-        <defName>MPT_BondedNeedChemical_Smokeleaf</defName>
+        <defName>MPT_Bonded_NeedChemicalSmokeleaf</defName>
         <label>smokeleaf addicted</label>
         <description>This weapon's persona is somehow suffering from a smokeleaf addiction. So long as the bond holds, their bonded pawn will have to regularly consume the drug to avaid withdrawal as if they were addicted themselves.\nThis form of the addiction will experience reduced withdrawal symptom effects and their bonded cannot gain the addicted to the drug themselves.</description>
         <bondedHediffs>
-            <li>MPT_HediffBondedNeedChemical_Smokeleaf</li>
+            <li>MPT_Hediff_BondedNeedChemicalSmokeleaf</li>
         </bondedHediffs>
         <descriptionHyperlinks>
             <ThingDef>SmokeleafJoint</ThingDef>
@@ -92,11 +92,11 @@
     </WeaponTraitDef>
     
     <HediffDef>
-        <defName>MPT_HediffBondedNeedChemical_Smokeleaf</defName>
+        <defName>MPT_Hediff_BondedNeedChemicalSmokeleaf</defName>
         <label>psychic smokeleaf addiction</label>
         <description>Because of their bonded weapon's smokeleaf addiction, this person needs to regularly consume the drug to avoid withdrawal symptoms.</description>
         <descriptionHyperlinks>
-            <WeaponTraitDef>MPT_BondedNeedChemical_Smokeleaf</WeaponTraitDef>
+            <WeaponTraitDef>MPT_Bonded_NeedChemicalSmokeleaf</WeaponTraitDef>
         </descriptionHyperlinks>
         <isBad>false</isBad>
         <hediffClass>Hediff_Addiction</hediffClass>
@@ -129,9 +129,9 @@
         </stages>
     </HediffDef>
     <ThoughtDef>
-        <defName>PsychicSmokeleafWithdrawal</defName>
+        <defName>MPT_Thought_PsychicSmokeleafWithdrawal</defName>
         <workerClass>ThoughtWorker_Hediff</workerClass>
-        <hediff>MPT_HediffBondedNeedChemical_Smokeleaf</hediff>
+        <hediff>MPT_Hediff_BondedNeedChemicalSmokeleaf</hediff>
         <validWhileDespawned>true</validWhileDespawned>
         <stages>
             <li>
@@ -146,11 +146,11 @@
     </ThoughtDef>
     
     <WeaponTraitDef ParentName="BondedWeaponTraitAddictionBase">
-        <defName>MPT_BondedNeedChemical_Psychite</defName>
+        <defName>MPT_Bonded_NeedChemicalPsychite</defName>
         <label>psychite addicted</label>
         <description>This weapon's persona is somehow suffering from a psychite addiction. So long as the bond holds, their bonded pawn will have to regularly consume the drug to avaid withdrawal as if they were addicted themselves.\nThis form of the addiction will experience reduced withdrawal symptom effects and their bonded cannot gain the addicted to the drug themselves.</description>
         <bondedHediffs>
-            <li>MPT_HediffBondedNeedChemical_Psychite</li>
+            <li>MPT_Hediff_BondedNeedChemicalPsychite</li>
         </bondedHediffs>
         <descriptionHyperlinks>
             <ThingDef>Yayo</ThingDef>
@@ -160,11 +160,11 @@
     </WeaponTraitDef>
     
     <HediffDef>
-        <defName>MPT_HediffBondedNeedChemical_Psychite</defName>
+        <defName>MPT_Hediff_BondedNeedChemicalPsychite</defName>
         <label>psychic psychite addiction</label>
         <description>Because of their bonded weapon's psychite addiction, this person needs to regularly consume the drug to avoid withdrawal symptoms.</description>
         <descriptionHyperlinks>
-            <WeaponTraitDef>MPT_BondedNeedChemical_Psychite</WeaponTraitDef>
+            <WeaponTraitDef>MPT_Bonded_NeedChemicalPsychite</WeaponTraitDef>
         </descriptionHyperlinks>
         <isBad>false</isBad>
         <hediffClass>Hediff_Addiction</hediffClass>
@@ -203,9 +203,9 @@
         </stages>
     </HediffDef>
     <ThoughtDef>
-        <defName>PsychicPsychiteWithdrawal</defName>
+        <defName>MPT_Thought_PsychicPsychiteWithdrawal</defName>
         <workerClass>ThoughtWorker_Hediff</workerClass>
-        <hediff>MPT_HediffBondedNeedChemical_Psychite</hediff>
+        <hediff>MPT_Hediff_BondedNeedChemicalPsychite</hediff>
         <validWhileDespawned>true</validWhileDespawned>
         <stages>
             <li>
@@ -220,11 +220,11 @@
     </ThoughtDef>
 
     <WeaponTraitDef ParentName="BondedWeaponTraitAddictionBase">
-        <defName>MPT_BondedNeedChemical_GoJuice</defName>
+        <defName>MPT_Bonded_NeedChemicalGoJuice</defName>
         <label>go-juice addicted</label>
         <description>This weapon's persona is somehow suffering from a go-juice addiction. So long as the bond holds, their bonded pawn will have to regularly consume the drug to avaid withdrawal as if they were addicted themselves.\nThis form of the addiction will experience reduced withdrawal symptom effects and their bonded cannot gain the addicted to the drug themselves.</description>
         <bondedHediffs>
-            <li>MPT_HediffBondedNeedChemical_GoJuice</li>
+            <li>MPT_Hediff_BondedNeedChemicalGoJuice</li>
         </bondedHediffs>
         <descriptionHyperlinks>
             <ThingDef>GoJuice</ThingDef>
@@ -232,11 +232,11 @@
     </WeaponTraitDef>
 
     <HediffDef>
-        <defName>MPT_HediffBondedNeedChemical_GoJuice</defName>
+        <defName>MPT_Hediff_BondedNeedChemicalGoJuice</defName>
         <label>psychic go-juice addiction</label>
         <description>Because of their bonded weapon's go-juice addiction, this person needs to regularly consume the drug to avoid withdrawal symptoms.</description>
         <descriptionHyperlinks>
-            <WeaponTraitDef>MPT_BondedNeedChemical_GoJuice</WeaponTraitDef>
+            <WeaponTraitDef>MPT_Bonded_NeedChemicalGoJuice</WeaponTraitDef>
         </descriptionHyperlinks>
         <isBad>false</isBad>
         <hediffClass>Hediff_Addiction</hediffClass>
@@ -284,9 +284,9 @@
         </stages>
     </HediffDef>
     <ThoughtDef>
-        <defName>PsychicGoJuiceWithdrawal</defName>
+        <defName>MPT_Thought_PsychicGoJuiceWithdrawal</defName>
         <workerClass>ThoughtWorker_Hediff</workerClass>
-        <hediff>MPT_HediffBondedNeedChemical_GoJuice</hediff>
+        <hediff>MPT_Hediff_BondedNeedChemicalGoJuice</hediff>
         <validWhileDespawned>true</validWhileDespawned>
         <stages>
             <li>
