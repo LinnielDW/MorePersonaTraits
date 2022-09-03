@@ -128,7 +128,7 @@
             <ComfyTemperatureMax>12</ComfyTemperatureMax>
         </equippedStatOffsets>
         <exclusionTags>
-            <li>MPT_Held_HeldComfyTemp</li>
+            <li>MPT_Held_ComfyTemp</li>
         </exclusionTags>
     </WeaponTraitDef>
 
@@ -143,7 +143,7 @@
             <ComfyTemperatureMax>-12</ComfyTemperatureMax>
         </equippedStatOffsets>
         <exclusionTags>
-            <li>MPT_Held_HeldComfyTemp</li>
+            <li>MPT_Held_ComfyTemp</li>
         </exclusionTags>
     </WeaponTraitDef>
     
@@ -157,7 +157,7 @@
             <ToxicSensitivity>0.5</ToxicSensitivity>
         </equippedStatOffsets>
         <exclusionTags>
-            <li>MPT_Held_HeldToxicSensitivity</li>
+            <li>MPT_Held_ToxicSensitivity</li>
         </exclusionTags>
     </WeaponTraitDef>
 
@@ -171,7 +171,7 @@
             <ToxicSensitivity>-0.5</ToxicSensitivity>
         </equippedStatOffsets>
         <exclusionTags>
-            <li>MPT_Held_HeldToxicSensitivity</li>
+            <li>MPT_Held_ToxicSensitivity</li>
         </exclusionTags>
     </WeaponTraitDef>
 
@@ -193,7 +193,7 @@
         <label>psychic nausia</label>
         <description>Just holding this weapon makes me want to retch.</description>
         <descriptionHyperlinks>
-            <WeaponTraitDef>MPT_BondedVomit</WeaponTraitDef>
+            <WeaponTraitDef>MPT_Held_Vomit</WeaponTraitDef>
         </descriptionHyperlinks>
         <isBad>false</isBad>
         <stages>
