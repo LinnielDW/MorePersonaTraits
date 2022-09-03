@@ -1,12 +1,13 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using MorePersonaTraits.Utils;
 using RimWorld;
 using Verse;
 // ReSharper disable UnusedMember.Local
 
-namespace MorePersonaTraits.Utils
+namespace MorePersonaTraits.DebugActions
 {
-    public class DebugUtils
+    public class DebugActions
     {
         [DebugAction("PersonaWeapons", "[MPT] Add Weapon Trait", true, allowedGameStates = AllowedGameStates.PlayingOnMap)]
         private static void AddWeaponTrait()

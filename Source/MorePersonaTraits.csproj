@@ -45,6 +45,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DebugActions\DebugActions.cs" />
     <Compile Include="Extensions\OtherNeedDefOf.cs" />
     <Compile Include="Extensions\WeaponTraitDefExtension.cs" />
     <Compile Include="Extensions\WeaponTraitOnHitExtension.cs" />
@@ -80,7 +81,6 @@
     <Compile Include="MorePersonaTraits.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Templates\OnHitWorker_Template.cs" />
-    <Compile Include="Utils\DebugUtils.cs" />
     <Compile Include="Utils\PatcherCheckUtils.cs" />
     <Compile Include="Utils\OnHitUtils.cs" />
   </ItemGroup>
