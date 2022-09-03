@@ -20,7 +20,7 @@ namespace MorePersonaTraits.WorkerClasses.ItemWorkerClasses
 
             if (existingTraits.NullOrEmpty())
             {
-                TraitUtils.InitializeTraits(compBladelink);
+                WeaponTraitUtils.InitializeTraits(compBladelink);
             }
             else
             {
@@ -28,7 +28,7 @@ namespace MorePersonaTraits.WorkerClasses.ItemWorkerClasses
 
                 Messages.Message("MPT_WeaponTraitLost".Translate(target.LabelShort, existingTraits[indexToRemove].LabelCap), target, MessageTypeDefOf.NeutralEvent);
                 existingTraits.RemoveAt(indexToRemove);
-                if (existingTraits.NullOrEmpty()) TraitUtils.InitializeTraits(compBladelink);
+                if (existingTraits.NullOrEmpty()) WeaponTraitUtils.InitializeTraits(compBladelink);
             }
 
             compBladelink.RegainBond();

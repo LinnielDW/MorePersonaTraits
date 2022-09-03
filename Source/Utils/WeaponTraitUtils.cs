@@ -7,7 +7,7 @@ using Verse;
 
 namespace MorePersonaTraits.Utils
 {
-    public static class TraitUtils
+    public static class WeaponTraitUtils
     {
         public static void InitializeTraits(this CompBladelinkWeapon compBladelink)
         {

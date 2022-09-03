@@ -7,7 +7,7 @@ using Verse;
 
 namespace MorePersonaTraits.Utils
 {
-    public static class PatcherCheckUtils
+    public static class OnHitWorkerUtils
     {
         public static bool hasOnHitWorker(ThingWithComps equipment)
         {

@@ -55,7 +55,7 @@
     <Compile Include="Utils\FieldRefUtils.cs" />
     <Compile Include="Utils\NeedFillUtil.cs" />
     <Compile Include="Utils\TargetUtils.cs" />
-    <Compile Include="Utils\TraitUtils.cs" />
+    <Compile Include="Utils\WeaponTraitUtils.cs" />
     <Compile Include="WorkerClasses\ItemWorkerClasses\CompProperties_TargetableSingleBladelink.cs" />
     <Compile Include="WorkerClasses\ItemWorkerClasses\CompTargetable_SingleBladelink.cs" />
     <Compile Include="WorkerClasses\ItemWorkerClasses\CompTargetable_SingleBladelinkTraitAddable.cs" />
@@ -81,7 +81,7 @@
     <Compile Include="MorePersonaTraits.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Templates\OnHitWorker_Template.cs" />
-    <Compile Include="Utils\PatcherCheckUtils.cs" />
+    <Compile Include="Utils\OnHitWorkerUtils.cs" />
     <Compile Include="Utils\OnHitUtils.cs" />
   </ItemGroup>
   <ItemGroup>

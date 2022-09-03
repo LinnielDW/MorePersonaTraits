@@ -12,10 +12,10 @@ namespace MorePersonaTraits.Patches
     {
         static void Postfix(LocalTargetInfo target, Verb_MeleeAttackDamage __instance)
         {
-            if (PatcherCheckUtils.hasOnHitWorker(__instance.EquipmentSource))
+            if (OnHitWorkerUtils.hasOnHitWorker(__instance.EquipmentSource))
             {
                 OnHitUtils.attemptApplyOnHitEffects(
-                    PatcherCheckUtils.getOnHitWorkers(__instance.EquipmentSource),
+                    OnHitWorkerUtils.getOnHitWorkers(__instance.EquipmentSource),
                     target.Thing,
                     __instance.CasterPawn
                 );
@@ -30,11 +30,11 @@ namespace MorePersonaTraits.Patches
     {
         static void Postfix(ref IEnumerable<DamageInfo> __result, Verb __instance, LocalTargetInfo target)
         {
-            if (PatcherCheckUtils.hasOnHitWorker(__instance.EquipmentSource))
+            if (OnHitWorkerUtils.hasOnHitWorker(__instance.EquipmentSource))
                 foreach (var x in __result)
                 {
                     OnHitUtils.attemptApplyOnHitEffects(
-                        PatcherCheckUtils.getOnHitWorkers(__instance.EquipmentSource),
+                        OnHitWorkerUtils.getOnHitWorkers(__instance.EquipmentSource),
                         target.Thing,
                         __instance.CasterPawn
                     );
