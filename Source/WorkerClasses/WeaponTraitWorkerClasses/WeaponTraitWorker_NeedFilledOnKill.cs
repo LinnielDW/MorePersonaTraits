@@ -39,7 +39,7 @@ namespace MorePersonaWeaponTraits.WorkerClasses.WeaponTraitWorkerClasses
         {
             base.Notify_KilledPawn(pawn);
             pawn.AttemptToFillNeed(NeedDefOf.Indoors);
-            pawn.AttemptToFillNeed(OtherNeedDefOf.Outdoors);
+            pawn.AttemptToFillNeed(MPT_NeedDefOf.Outdoors);
         }
     }
 
@@ -48,7 +48,7 @@ namespace MorePersonaWeaponTraits.WorkerClasses.WeaponTraitWorkerClasses
         public override void Notify_KilledPawn(Pawn pawn)
         {
             base.Notify_KilledPawn(pawn);
-            pawn.AttemptToFillNeed(OtherNeedDefOf.Beauty);
+            pawn.AttemptToFillNeed(MPT_NeedDefOf.Beauty);
         }
     }
 
@@ -57,7 +57,7 @@ namespace MorePersonaWeaponTraits.WorkerClasses.WeaponTraitWorkerClasses
         public override void Notify_KilledPawn(Pawn pawn)
         {
             base.Notify_KilledPawn(pawn);
-            pawn.AttemptToFillNeed(OtherNeedDefOf.Comfort);
+            pawn.AttemptToFillNeed(MPT_NeedDefOf.Comfort);
         }
     }
 

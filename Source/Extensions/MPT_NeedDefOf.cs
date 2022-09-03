@@ -3,16 +3,16 @@
 namespace MorePersonaWeaponTraits.Extensions
 {
     [DefOf]
-    public static class OtherNeedDefOf
+    public static class MPT_NeedDefOf
     {
         public static NeedDef Beauty;
         public static NeedDef Comfort;
         public static NeedDef Outdoors;
         // public static NeedDef DrugsDesire;
 
-        static OtherNeedDefOf()
+        static MPT_NeedDefOf()
         {
-            DefOfHelper.EnsureInitializedInCtor(typeof(OtherNeedDefOf));
+            DefOfHelper.EnsureInitializedInCtor(typeof(MPT_NeedDefOf));
         }
     }
     
