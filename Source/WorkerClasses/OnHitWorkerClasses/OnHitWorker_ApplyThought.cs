@@ -9,7 +9,7 @@ namespace MorePersonaWeaponTraits.WorkerClasses.OnHitWorkerClasses
 
         public override void OnHitEffect(Thing hitThing, Thing originThing)
         {
-            OnHitEffect(hitThing, originThing, ApplyThoughtToPawn);
+            ApplyOnHitEffect(hitThing, originThing, ApplyThoughtToPawn);
         }
 
         private void ApplyThoughtToPawn(Pawn pawn)

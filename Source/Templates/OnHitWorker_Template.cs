@@ -7,7 +7,7 @@ namespace MorePersonaWeaponTraits.Templates
     {
         public override void OnHitEffect(Thing hitThing, Thing originThing)
         {
-            OnHitEffect(hitThing, originThing, DebugApply);
+            ApplyOnHitEffect(hitThing, originThing, DebugApply);
         }
 
         private void DebugApply(Pawn thing)

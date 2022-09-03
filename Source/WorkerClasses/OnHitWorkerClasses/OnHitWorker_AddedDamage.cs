@@ -7,7 +7,7 @@ namespace MorePersonaWeaponTraits.WorkerClasses.OnHitWorkerClasses
     {
         public override void OnHitEffect(Thing hitThing, Thing originThing)
         {
-            OnHitEffect(hitThing, originThing, ApplyExtraDamage(originThing));
+            ApplyOnHitEffect(hitThing, originThing, ApplyExtraDamage(originThing));
         }
 
         private Func<Thing, Action<Thing>> ApplyExtraDamage = (bla) => (pawn) =>

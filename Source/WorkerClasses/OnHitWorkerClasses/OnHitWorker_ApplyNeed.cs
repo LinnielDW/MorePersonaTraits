@@ -10,7 +10,7 @@ namespace MorePersonaWeaponTraits.WorkerClasses.OnHitWorkerClasses
 
         public override void OnHitEffect(Thing hitThing, Thing originThing)
         {
-            OnHitEffect(hitThing, originThing, ApplyNeedToPawn(NeedDef, ProcMagnitude));
+            ApplyOnHitEffect(hitThing, originThing, ApplyNeedToPawn(NeedDef, ProcMagnitude));
         }
 
         private Func<NeedDef, float, Action<Pawn>> ApplyNeedToPawn = (needDef, magnitude) => (pawn) =>

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using MorePersonaWeaponTraits.Utils;
 using Verse;
 
@@ -17,7 +17,7 @@ namespace MorePersonaWeaponTraits.WorkerClasses.OnHitWorkerClasses
             // OnHitEffect(hitThing, originThing, delegate {  });
         }
 
-        public virtual void OnHitEffect(Thing hitThing, Thing originThing, Action<Pawn> apply)
+        public void ApplyOnHitEffect(Thing hitThing, Thing originThing, Action<Pawn> apply)
         {
             if (RequiresBothLiving && !(OnHitUtils.IsLivingPawn(hitThing) && OnHitUtils.IsLivingPawn(originThing)))
             {

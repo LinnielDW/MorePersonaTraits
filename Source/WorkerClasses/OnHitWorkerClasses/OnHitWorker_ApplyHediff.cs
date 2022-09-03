@@ -8,7 +8,7 @@ namespace MorePersonaWeaponTraits.WorkerClasses.OnHitWorkerClasses
 
         public override void OnHitEffect(Thing hitThing, Thing originThing)
         {
-            OnHitEffect(hitThing, originThing, ApplyHediffToPawn);
+            ApplyOnHitEffect(hitThing, originThing, ApplyHediffToPawn);
         }
 
         private void ApplyHediffToPawn(Pawn pawn)
