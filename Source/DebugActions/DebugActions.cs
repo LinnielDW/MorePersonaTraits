@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Linq;
 using MorePersonaWeaponTraits.Utils;
 using RimWorld;
@@ -9,6 +9,27 @@ namespace MorePersonaWeaponTraits.DebugActions
 {
     public class DebugActions
     {
+        [DebugAction("PersonaWeapons", "[MPT] Spawn Persona Weapon", true, allowedGameStates = AllowedGameStates.PlayingOnMap)]
+        private static void SpawnPersonaWeapon()
+        {
+            List<DebugMenuOption> list = new List<DebugMenuOption>();
+            foreach (ThingDef localDef in from def in DefDatabase<ThingDef>.AllDefs
+                where def.comps.Exists(p => p.compClass == typeof(CompBladelinkWeapon))
+                select def
+                into d
+                orderby d.defName
+                select d)
+            {
+                list.Add(new DebugMenuOption(localDef.defName, DebugMenuOptionMode.Action,
+                    delegate
+                    {
+                        Find.WindowStack.Add(new Dialog_DebugOptionListLister(ChooseWeaponTraits(localDef)));
+                    }));
+            }
+
+            Find.WindowStack.Add(new Dialog_DebugOptionListLister(list));
+        }
+        
         [DebugAction("PersonaWeapons", "[MPT] Add Weapon Trait", true, allowedGameStates = AllowedGameStates.PlayingOnMap)]
         private static void AddWeaponTrait()
         {
@@ -72,27 +93,6 @@ namespace MorePersonaWeaponTraits.DebugActions
             {
                 weapon.TryGetComp<CompGeneratedNames>().Initialize(weapon.TryGetComp<CompGeneratedNames>().Props);
             }
-        }
-
-        [DebugAction("PersonaWeapons", "[MPT] Spawn Persona Weapon", true, allowedGameStates = AllowedGameStates.PlayingOnMap)]
-        private static void SpawnPersonaWeapon()
-        {
-            List<DebugMenuOption> list = new List<DebugMenuOption>();
-            foreach (ThingDef localDef in from def in DefDatabase<ThingDef>.AllDefs
-                where def.comps.Exists(p => p.compClass == typeof(CompBladelinkWeapon))
-                select def
-                into d
-                orderby d.defName
-                select d)
-            {
-                list.Add(new DebugMenuOption(localDef.defName, DebugMenuOptionMode.Action,
-                    delegate
-                    {
-                        Find.WindowStack.Add(new Dialog_DebugOptionListLister(ChooseWeaponTraits(localDef)));
-                    }));
-            }
-
-            Find.WindowStack.Add(new Dialog_DebugOptionListLister(list));
         }
 
         private static List<DebugMenuOption> ChooseWeaponTraits(ThingDef localDef)
