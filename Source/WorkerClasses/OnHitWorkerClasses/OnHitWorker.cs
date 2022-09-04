@@ -4,18 +4,16 @@ using Verse;
 
 namespace MorePersonaWeaponTraits.WorkerClasses.OnHitWorkerClasses
 {
-    public class OnHitWorker
+    public abstract class OnHitWorker
     {
         public float ProcChance = 0f;
         public float ProcMagnitude = 0f;
         public bool TargetSelf = false;
         public bool RequiresBothLiving = false;
+        public bool RequiresBio = false;
 
         //todo add basedamage to arguements so severity can be scaled by damage x magnitude
-        public virtual void OnHitEffect(Thing hitThing, Thing originThing)
-        {
-            throw new NotImplementedException();
-        }
+        public abstract void OnHitEffect(Thing hitThing, Thing originThing);
 
         public void ApplyOnHitEffect(Thing hitThing, Thing originThing, Action<Thing> apply)
         {
@@ -24,19 +22,15 @@ namespace MorePersonaWeaponTraits.WorkerClasses.OnHitWorkerClasses
                 return;
             }
 
-            if (TargetSelf)
+            Thing target = TargetSelf ? originThing : hitThing;
+            if (RequiresBio && !OnHitUtils.IsBiological(target))
             {
-                if (OnHitUtils.ThingExists(originThing))
-                {
-                    apply(originThing);
-                }
+                return;
             }
-            else
+
+            if (OnHitUtils.ThingExists(target))
             {
-                if (OnHitUtils.ThingExists(hitThing))
-                {
-                    apply(hitThing);
-                }
+                apply(target);
             }
         }
     }

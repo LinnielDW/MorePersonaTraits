@@ -24,6 +24,11 @@ namespace MorePersonaWeaponTraits.Utils
             }
         }
 
+        public static bool IsBiological(Thing thing)
+        {
+            return (thing as Pawn)?.RaceProps.IsFlesh ?? false;
+        }
+
         public static bool IsLivingPawn(Thing thing)
         {
             return ThingExists(thing) && thing is Pawn && !(thing as Pawn).Dead;

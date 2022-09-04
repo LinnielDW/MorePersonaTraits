@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using HarmonyLib;
@@ -138,7 +139,7 @@ namespace MorePersonaWeaponTraits.Patches
                 worker.ProcChance.ToStringPercent(),
                 workerEffect(worker),
                 worker.TargetSelf ? "MPT_TargetSelf".Translate() : "MPT_TargetTarget".Translate(),
-                worker.ProcMagnitude > 0f ? "MPT_MagnitudeDesc".Translate(worker.ProcMagnitude.ToStringPercent()) : TaggedString.Empty
+                Math.Abs(worker.ProcMagnitude) > 0f ? "MPT_MagnitudeDesc".Translate(worker.ProcMagnitude.ToStringPercent()) : TaggedString.Empty
             );
         }
 
