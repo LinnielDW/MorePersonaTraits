@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using MorePersonaWeaponTraits.Utils;
 using RimWorld;
@@ -71,6 +71,7 @@ namespace MorePersonaWeaponTraits.DebugActions
             }
         }
 
+        //TODO: change this to just add 1 trait and make a new debug that simulates an annul
         [DebugAction("PersonaWeapons", "[MPT] Justaddmorelol", true, actionType = DebugActionType.ToolMap, allowedGameStates = AllowedGameStates.PlayingOnMap)]
         private static void JustAddMore()
         {
