@@ -6,12 +6,13 @@ namespace MorePersonaWeaponTraits.WorkerClasses.OnHitWorkerClasses
     {
         public override void OnHitEffect(Thing hitThing, Thing originThing)
         {
-            ApplyOnHitEffect(hitThing, originThing, MakeWeather);
+            ApplyOnHitEffect(hitThing, originThing, TryMakeWeather);
         }
 
         //TODO: move this to a util
-        private void MakeWeather(Thing thing)
+        private void TryMakeWeather(Thing thing)
         {
+            if (thing.Map.weatherManager.curWeatherAge < 1600) return;
             thing.Map.weatherDecider.StartNextWeather();
         }
     }
