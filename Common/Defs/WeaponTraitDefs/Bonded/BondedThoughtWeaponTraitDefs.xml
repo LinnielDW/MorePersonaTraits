@@ -84,7 +84,7 @@
         <workerClass>MorePersonaWeaponTraits.WorkerClasses.ThoughtWorkerClasses.ThoughtWorker_WeaponTraitGenderFemale</workerClass>
         <stages>
             <li>
-                <label>{WEAPON}'s bias</label>
+                <label>{WEAPON}'s simpering</label>
                 <description>{WEAPON}, my bonded weapon, tells me how they always wanted a female bonded. It's kind of nice.</description>
                 <baseMoodEffect>6</baseMoodEffect>
             </li>
@@ -129,7 +129,7 @@
         <workerClass>MorePersonaWeaponTraits.WorkerClasses.ThoughtWorkerClasses.ThoughtWorker_WeaponTraitGenderMale</workerClass>
         <stages>
             <li>
-                <label>{WEAPON}'s bias</label>
+                <label>{WEAPON}'s simpering</label>
                 <description>{WEAPON}, my bonded weapon, seems to worship the very ground I walk. It's boosting my self esteem.</description>
                 <baseMoodEffect>6</baseMoodEffect>
             </li>
