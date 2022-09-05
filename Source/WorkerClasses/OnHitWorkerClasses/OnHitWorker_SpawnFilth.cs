@@ -1,5 +1,4 @@
 ﻿using MorePersonaWeaponTraits.Utils;
-using RimWorld;
 using Verse;
 
 namespace MorePersonaWeaponTraits.WorkerClasses.OnHitWorkerClasses
