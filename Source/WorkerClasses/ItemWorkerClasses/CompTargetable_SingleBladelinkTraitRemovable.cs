@@ -5,7 +5,7 @@ using Verse;
 
 namespace MorePersonaWeaponTraits.WorkerClasses.ItemWorkerClasses
 {
-    //TODO: remove
+    //Unused
     public class CompTargetable_SingleBladelinkTraitRemovable : CompTargetable
     {
         protected override TargetingParameters GetTargetingParameters()
