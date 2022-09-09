@@ -300,4 +300,118 @@
         </stages>
     </ThoughtDef>
     
+    <WeaponTraitDef ParentName="BondedWeaponTraitAddictionBase">
+        <defName>MPT_Bonded_NeedChemicalAmbrosia</defName>
+        <label>ambrosia addicted</label>
+        <description>This weapon's persona is somehow suffering from a ambrosia addiction. So long as the bond holds, their bonded pawn will have to regularly consume the drug to avaid withdrawal as if they were addicted themselves.\nThis form of the addiction will experience reduced withdrawal symptom effects and their bonded cannot gain the addicted to the drug themselves.</description>
+        <bondedHediffs>
+            <li>MPT_Hediff_BondedNeedChemicalAmbrosia</li>
+        </bondedHediffs>
+        <descriptionHyperlinks>
+            <ThingDef>Ambrosia</ThingDef>
+        </descriptionHyperlinks>
+    </WeaponTraitDef>
+
+    <HediffDef>
+        <defName>MPT_Hediff_BondedNeedChemicalAmbrosia</defName>
+        <label>psychic ambrosia addiction</label>
+        <description>Because of their bonded weapon's ambrosia addiction, this person needs to regularly consume the drug to avoid withdrawal symptoms.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_Bonded_NeedChemicalAmbrosia</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <hediffClass>Hediff_Addiction</hediffClass>
+        <causesNeed>Chemical_Ambrosia</causesNeed>
+        <stages>
+            <li></li>
+            <li>
+                <label>withdrawal</label>
+            </li>
+        </stages>
+    </HediffDef>
+    <ThoughtDef>
+        <defName>MPT_Thought_PsychicAmbrosiaWithdrawal</defName>
+        <workerClass>ThoughtWorker_Hediff</workerClass>
+        <hediff>MPT_Hediff_BondedNeedChemicalAmbrosia</hediff>
+        <validWhileDespawned>true</validWhileDespawned>
+        <stages>
+            <li>
+                <visible>false</visible>
+            </li>
+            <li>
+                <label>psychic ambrosia withdrawal</label>
+                <description>My weapon is heavy and cold. I never thought I'd want a piece of fruit so much.</description>
+                <baseMoodEffect>-10</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+
+
+    <WeaponTraitDef ParentName="BondedWeaponTraitAddictionBase">
+        <defName>MPT_Bonded_NeedChemicalAlcohol</defName>
+        <label>alcohol addicted</label>
+        <description>This weapon's persona is somehow suffering from a alcohol addiction. So long as the bond holds, their bonded pawn will have to regularly consume the drug to avaid withdrawal as if they were addicted themselves.\nThis form of the addiction will experience reduced withdrawal symptom effects and their bonded cannot gain the addicted to the drug themselves.</description>
+        <bondedHediffs>
+            <li>MPT_Hediff_BondedNeedChemicalAlcohol</li>
+        </bondedHediffs>
+        <descriptionHyperlinks>
+            <ThingDef>Beer</ThingDef>
+        </descriptionHyperlinks>
+    </WeaponTraitDef>
+
+    <HediffDef>
+        <defName>MPT_Hediff_BondedNeedChemicalAlcohol</defName>
+        <label>psychic alcohol addiction</label>
+        <description>Because of their bonded weapon's alcohol addiction, this person needs to regularly consume the drug to avoid withdrawal symptoms.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_Bonded_NeedChemicalAlcohol</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <hediffClass>Hediff_Addiction</hediffClass>
+        <causesNeed>Chemical_Alcohol</causesNeed>
+        <stages>
+            <li></li>
+            <li>
+                <label>withdrawal</label>
+                <socialFightChanceFactor>1.5</socialFightChanceFactor>
+                <capMods>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <offset>-0.10</offset>
+                    </li>
+                    <li>
+                        <capacity>Moving</capacity>
+                        <offset>-0.15</offset>
+                    </li>
+                    <li>
+                        <capacity>Manipulation</capacity>
+                        <postFactor>0.75</postFactor>
+                    </li>
+                </capMods>
+                <mentalStateGivers>
+                    <li>
+                        <mentalState>Binging_DrugMajor</mentalState>
+                        <mtbDays>40</mtbDays>
+                    </li>
+                </mentalStateGivers>
+            </li>
+        </stages>
+    </HediffDef>
+    <ThoughtDef>
+        <defName>MPT_Thought_PsychicAlcoholWithdrawal</defName>
+        <workerClass>ThoughtWorker_Hediff</workerClass>
+        <hediff>MPT_Hediff_BondedNeedChemicalAlcohol</hediff>
+        <validWhileDespawned>true</validWhileDespawned>
+        <stages>
+            <li>
+                <visible>false</visible>
+            </li>
+            <li>
+                <label>psychic alcohol withdrawal</label>
+                <description>My weapon feels shaky in my grip. Everything pisses me off. I don't know how it would but my weapon keeps talking of drinking.</description>
+                <baseMoodEffect>-35</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
 </Defs>
