@@ -26,4 +26,6 @@ namespace MorePersonaWeaponTraits.Patches
             Traverse.Create<CompBladelinkWeapon>().Field("TraitsRange").SetValue(new IntRange(1,5));
         }
     }
+    
+    //TODO: make defs disableable
 }
