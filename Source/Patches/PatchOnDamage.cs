@@ -1,9 +1,10 @@
 ﻿using HarmonyLib;
-using MorePersonaTraits.Utils;
+using MorePersonaWeaponTraits.Utils;
 using RimWorld;
 using Verse;
+// ReSharper disable UnusedMember.Local
 
-namespace MorePersonaTraits.Patches
+namespace MorePersonaWeaponTraits.Patches
 {
     //Implementation directly inspired by alattalatta's bullet patch implementation in Infusion 2. 
     //Not sure if will use it, but will keep it around for now.
@@ -32,14 +33,33 @@ namespace MorePersonaTraits.Patches
     {
         static void Postfix(LocalTargetInfo target, Verb_MeleeAttackDamage __instance)
         {
-            if (PatcherCheckUtils.hasOnHitWorker(__instance.EquipmentSource))
+            if (OnHitWorkerUtils.hasOnHitWorker(__instance.EquipmentSource))
             {
                 OnHitUtils.attemptApplyOnHitEffects(
-                    PatcherCheckUtils.getOnHitWorkers(__instance.EquipmentSource),
+                    OnHitWorkerUtils.getOnHitWorkers(__instance.EquipmentSource),
                     target.Thing,
                     __instance.CasterPawn
                 );
             }
         }
     }
+
+    //TODO: While DamageInfosToApply is probably more accurate, I'm concerned that fast hitting weapons will be able to abuse this. This relates to OnHitEffect
+    /*[HarmonyPatch(typeof(Verb_MeleeAttackDamage))]
+    [HarmonyPatch("DamageInfosToApply")]
+    public static class PatchOnDamageMelee
+    {
+        static void Postfix(ref IEnumerable<DamageInfo> __result, Verb __instance, LocalTargetInfo target)
+        {
+            if (OnHitWorkerUtils.hasOnHitWorker(__instance.EquipmentSource))
+                foreach (var x in __result)
+                {
+                    OnHitUtils.attemptApplyOnHitEffects(
+                        OnHitWorkerUtils.getOnHitWorkers(__instance.EquipmentSource),
+                        target.Thing,
+                        __instance.CasterPawn
+                    );
+                }
+        }
+    }*/
 }

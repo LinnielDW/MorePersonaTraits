@@ -10,8 +10,8 @@
             <li>MPT_Template</li>
         </exclusionTags>
         <modExtensions>
-            <li Class="MorePersonaTraits.WeaponTraitOnHitExtension">
-                <OnHitWorkerClass>MorePersonaTraits.Templates.OnHitWorker_Template</OnHitWorkerClass>
+            <li Class="MorePersonaWeaponTraits.WeaponTraitOnHitExtension">
+                <OnHitWorkerClass>MorePersonaWeaponTraits.Templates.OnHitWorker_Template</OnHitWorkerClass>
                 <ProcChance>0.0</ProcChance>
                 <ProcMagnitude>0.0</ProcMagnitude>
             </li>

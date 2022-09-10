@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using MorePersonaTraits.WorkerClasses.OnHitWorkerClasses;
-using RimWorld;
+﻿using System.Collections.Generic;
+using MorePersonaWeaponTraits.WorkerClasses.OnHitWorkerClasses;
 using Verse;
 
-namespace MorePersonaTraits.Extensions
+namespace MorePersonaWeaponTraits.Extensions
 {
     public class WeaponTraitOnHitExtension : DefModExtension
     {

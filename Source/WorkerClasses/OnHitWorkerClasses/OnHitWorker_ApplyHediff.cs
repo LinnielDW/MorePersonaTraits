@@ -1,6 +1,7 @@
-﻿using Verse;
+﻿using System;
+using Verse;
 
-namespace MorePersonaTraits.WorkerClasses.OnHitWorkerClasses
+namespace MorePersonaWeaponTraits.WorkerClasses.OnHitWorkerClasses
 {
     public class OnHitWorker_ApplyHediff : OnHitWorker
     {
@@ -8,14 +9,23 @@ namespace MorePersonaTraits.WorkerClasses.OnHitWorkerClasses
 
         public override void OnHitEffect(Thing hitThing, Thing originThing)
         {
-            OnHitEffect(hitThing, originThing, ApplyHediffToPawn);
+            ApplyOnHitEffect(hitThing, originThing, ApplyHediff);
         }
 
-        private void ApplyHediffToPawn(Pawn pawn)
+        private void ApplyHediff(Thing thing)
         {
-            var hediff = HediffMaker.MakeHediff(HediffDef, pawn);
-            hediff.Severity = ProcMagnitude;
-            pawn.health.AddHediff(hediff);
+            //Workaround needed due to severity being clamped by minSeverity 
+            if (ProcMagnitude < 0)
+            {
+                (thing as Pawn)?.health.hediffSet.GetFirstHediffOfDef(HediffDef)?.Heal(Math.Abs(ProcMagnitude));
+            }
+            else
+            {
+                var hediff = HediffMaker.MakeHediff(HediffDef, thing as Pawn);
+                hediff.Severity = ProcMagnitude;
+                (thing as Pawn)?.health.AddHediff(hediff);
+            }
+
         }
     }
 }

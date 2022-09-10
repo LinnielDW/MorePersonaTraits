@@ -1,42 +1,36 @@
 ﻿using System;
-using MorePersonaTraits.Utils;
+using MorePersonaWeaponTraits.Utils;
 using Verse;
 
-namespace MorePersonaTraits.WorkerClasses.OnHitWorkerClasses
+namespace MorePersonaWeaponTraits.WorkerClasses.OnHitWorkerClasses
 {
-    public class OnHitWorker
+    public abstract class OnHitWorker
     {
         public float ProcChance = 0f;
         public float ProcMagnitude = 0f;
         public bool TargetSelf = false;
         public bool RequiresBothLiving = false;
-        
-        //todo add basedamage to arguements so severity can be scaled by damage x magnitude
-        public virtual void OnHitEffect(Thing hitThing, Thing originThing)
-        {
-            // OnHitEffect(hitThing, originThing, delegate {  });
-        }
+        public bool RequiresBio = false;
 
-        public virtual void OnHitEffect(Thing hitThing, Thing originThing, Action<Pawn> apply)
+        //todo add basedamage to arguements so severity can be scaled by damage x magnitude
+        public abstract void OnHitEffect(Thing hitThing, Thing originThing);
+
+        public void ApplyOnHitEffect(Thing hitThing, Thing originThing, Action<Thing> apply)
         {
             if (RequiresBothLiving && !(OnHitUtils.IsLivingPawn(hitThing) && OnHitUtils.IsLivingPawn(originThing)))
             {
                 return;
             }
 
-            if (TargetSelf)
+            Thing target = TargetSelf ? originThing : hitThing;
+            if (RequiresBio && !OnHitUtils.IsBiological(target))
             {
-                if (OnHitUtils.IsLivingPawn(originThing))
-                {
-                    apply(originThing as Pawn);
-                }
+                return;
             }
-            else
+
+            if (OnHitUtils.ThingExists(target))
             {
-                if (OnHitUtils.IsLivingPawn(hitThing))
-                {
-                    apply(hitThing as Pawn);
-                }
+                apply(target);
             }
         }
     }

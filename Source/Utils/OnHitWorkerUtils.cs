@@ -1,13 +1,13 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using MorePersonaTraits.Extensions;
-using MorePersonaTraits.WorkerClasses.OnHitWorkerClasses;
+using MorePersonaWeaponTraits.Extensions;
+using MorePersonaWeaponTraits.WorkerClasses.OnHitWorkerClasses;
 using RimWorld;
 using Verse;
 
-namespace MorePersonaTraits.Utils
+namespace MorePersonaWeaponTraits.Utils
 {
-    public static class PatcherCheckUtils
+    public static class OnHitWorkerUtils
     {
         public static bool hasOnHitWorker(ThingWithComps equipment)
         {
@@ -28,13 +28,13 @@ namespace MorePersonaTraits.Utils
             try
             {
                 return equipment.GetComp<CompBladelinkWeapon>().TraitsListForReading
-                    .FindAll(trait => trait.GetModExtension<WeaponTraitOnHitExtension>().OnHitWorkers != null)
+                    .FindAll(trait => trait.GetModExtension<WeaponTraitOnHitExtension>()?.OnHitWorkers != null)
                     .SelectMany(trait => trait.GetModExtension<WeaponTraitOnHitExtension>().OnHitWorkers)
                     .ToList();
             }
             catch
             {
-                Log.Error("[MorePersonaTraits]: Error while getting on-hit worker list.");
+                Log.Error("[MorePersonaWeaponTraits]: Error while getting on-hit worker list.");
                 return null;
             }
         }

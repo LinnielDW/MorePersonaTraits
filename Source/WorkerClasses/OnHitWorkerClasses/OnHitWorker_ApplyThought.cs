@@ -1,7 +1,7 @@
 ﻿using RimWorld;
 using Verse;
 
-namespace MorePersonaTraits.WorkerClasses.OnHitWorkerClasses
+namespace MorePersonaWeaponTraits.WorkerClasses.OnHitWorkerClasses
 {
     public class OnHitWorker_ApplyThought : OnHitWorker
     {
@@ -9,12 +9,12 @@ namespace MorePersonaTraits.WorkerClasses.OnHitWorkerClasses
 
         public override void OnHitEffect(Thing hitThing, Thing originThing)
         {
-            OnHitEffect(hitThing, originThing, ApplyThoughtToPawn);
+            ApplyOnHitEffect(hitThing, originThing, ApplyThoughtToPawn);
         }
 
-        private void ApplyThoughtToPawn(Pawn pawn)
+        private void ApplyThoughtToPawn(Thing thing)
         {
-            pawn.needs?.mood?.thoughts.memories.TryGainMemory(ThoughtDef);
+            (thing as Pawn)?.needs?.mood?.thoughts.memories.TryGainMemory(ThoughtDef);
         }
     }
 }

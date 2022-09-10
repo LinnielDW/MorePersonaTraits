@@ -1,8 +1,9 @@
 ﻿using System.Collections.Generic;
+using MorePersonaWeaponTraits.Utils;
 using RimWorld;
 using Verse;
 
-namespace MorePersonaTraits.WorkerClasses.ItemWorkerClasses
+namespace MorePersonaWeaponTraits.WorkerClasses.ItemWorkerClasses
 {
     public class CompTargetable_SingleBladelink : CompTargetable
     {
@@ -15,7 +16,7 @@ namespace MorePersonaTraits.WorkerClasses.ItemWorkerClasses
                 canTargetItems = true,
                 mapObjectTargetsMustBeAutoAttackable = false,
                 validator = targetInfo =>
-                    targetInfo.Thing.TryGetComp<CompBladelinkWeapon>() != null && ValidateBondRequires(targetInfo) &&
+                    targetInfo.Thing.TryGetComp<CompBladelinkWeapon>() != null && TargetUtils.ValidateRequiresBond(Props,targetInfo) &&
                     BaseTargetValidator(targetInfo.Thing)
             };
         }
@@ -26,12 +27,5 @@ namespace MorePersonaTraits.WorkerClasses.ItemWorkerClasses
         }
 
         protected override bool PlayerChoosesTarget => true;
-
-        private bool ValidateBondRequires(TargetInfo targetInfo)
-        {
-            if (((CompProperties_TargetableSingleBladelink) Props).RequiresBond)
-                return targetInfo.Thing.TryGetComp<CompBladelinkWeapon>().CodedPawn != null;
-            return true;
-        }
     }
 }

@@ -1,20 +1,73 @@
-﻿using RimWorld;
+﻿using System.Linq;
+using MorePersonaWeaponTraits.Utils;
+using MorePersonaWeaponTraits.Extensions;
+using RimWorld;
 using Verse;
 
-namespace MorePersonaTraits.WeaponTraitWorkerClasses
+namespace MorePersonaWeaponTraits.WorkerClasses.WeaponTraitWorkerClasses
 {
-    public class WeaponTraitWorker_NeedFilledOnKill : WeaponTraitWorker
+    public class WeaponTraitWorker_FoodFilledOnKill : WeaponTraitWorker
     {
-        //TODO: implement
         public override void Notify_KilledPawn(Pawn pawn)
         {
             base.Notify_KilledPawn(pawn);
-            // pawn.needs.TryGetNeed()
-            // if (psychicEntropy == null)
-            // {
-            //     return;
-            // }
-            // psychicEntropy.OffsetPsyfocusDirectly(0.2f);
+            pawn.AttemptToFillNeed(NeedDefOf.Food);
+        }
+    }
+
+    public class WeaponTraitWorker_RestFilledOnKill : WeaponTraitWorker
+    {
+        public override void Notify_KilledPawn(Pawn pawn)
+        {
+            base.Notify_KilledPawn(pawn);
+            pawn.AttemptToFillNeed(NeedDefOf.Rest);
+        }
+    }
+
+    public class WeaponTraitWorker_JoyFilledOnKill : WeaponTraitWorker
+    {
+        public override void Notify_KilledPawn(Pawn pawn)
+        {
+            base.Notify_KilledPawn(pawn);
+            pawn.AttemptToFillNeed(NeedDefOf.Joy);
+        }
+    }
+
+    public class WeaponTraitWorker_InOutdoorsFilledOnKill : WeaponTraitWorker
+    {
+        public override void Notify_KilledPawn(Pawn pawn)
+        {
+            base.Notify_KilledPawn(pawn);
+            pawn.AttemptToFillNeed(NeedDefOf.Indoors);
+            pawn.AttemptToFillNeed(MPT_NeedDefOf.Outdoors);
+        }
+    }
+
+    public class WeaponTraitWorker_BeautyFilledOnKill : WeaponTraitWorker
+    {
+        public override void Notify_KilledPawn(Pawn pawn)
+        {
+            base.Notify_KilledPawn(pawn);
+            pawn.AttemptToFillNeed(MPT_NeedDefOf.Beauty);
+        }
+    }
+
+    public class WeaponTraitWorker_ComfortFilledOnKill : WeaponTraitWorker
+    {
+        public override void Notify_KilledPawn(Pawn pawn)
+        {
+            base.Notify_KilledPawn(pawn);
+            pawn.AttemptToFillNeed(MPT_NeedDefOf.Comfort);
+        }
+    }
+
+    public class WeaponTraitWorker_ChemicalFilledOnKill : WeaponTraitWorker
+    {
+        public override void Notify_KilledPawn(Pawn pawn)
+        {
+            base.Notify_KilledPawn(pawn);
+            var chemNeed = pawn.needs.AllNeeds.Where(need => need is Need_Chemical).RandomElement();
+            pawn.AttemptToFillNeed(chemNeed.def);
         }
     }
 }

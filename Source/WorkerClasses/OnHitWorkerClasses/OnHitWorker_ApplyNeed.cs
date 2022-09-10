@@ -1,8 +1,7 @@
-﻿using System;
-using RimWorld;
+﻿using RimWorld;
 using Verse;
 
-namespace MorePersonaTraits.WorkerClasses.OnHitWorkerClasses
+namespace MorePersonaWeaponTraits.WorkerClasses.OnHitWorkerClasses
 {
     public class OnHitWorker_ApplyNeed : OnHitWorker
     {
@@ -10,16 +9,16 @@ namespace MorePersonaTraits.WorkerClasses.OnHitWorkerClasses
 
         public override void OnHitEffect(Thing hitThing, Thing originThing)
         {
-            OnHitEffect(hitThing, originThing, ApplyNeedToPawn(NeedDef, ProcMagnitude));
+            ApplyOnHitEffect(hitThing, originThing, ApplyNeedToPawn);
         }
 
-        private Func<NeedDef, float, Action<Pawn>> ApplyNeedToPawn = (needDef, magnitude) => (pawn) =>
+        private void ApplyNeedToPawn(Thing pawn)
         {
-            var need = pawn.needs.TryGetNeed(needDef);
+            var need = (pawn as Pawn)?.needs?.TryGetNeed(NeedDef);
             if (need != null)
             {
-                need.CurLevel += need.MaxLevel * magnitude;
+                need.CurLevel += need.MaxLevel * ProcMagnitude;
             }
-        };
+        } 
     }
 }

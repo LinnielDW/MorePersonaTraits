@@ -1,13 +1,36 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using MorePersonaWeaponTraits.Utils;
 using RimWorld;
 using Verse;
+// ReSharper disable UnusedMember.Local
 
-namespace MorePersonaTraits.Utils
+namespace MorePersonaWeaponTraits.DebugActions
 {
-    public class DebugUtils
+    public class DebugActions
     {
-        [DebugAction("Spawning", "[MPT] Add Weapon Trait", true, allowedGameStates = AllowedGameStates.PlayingOnMap)]
+        [DebugAction("PersonaWeapons", "[MPT] Spawn Persona Weapon", true, allowedGameStates = AllowedGameStates.PlayingOnMap)]
+        private static void SpawnPersonaWeapon()
+        {
+            List<DebugMenuOption> list = new List<DebugMenuOption>();
+            foreach (ThingDef localDef in from def in DefDatabase<ThingDef>.AllDefs
+                where def.comps.Exists(p => p.compClass == typeof(CompBladelinkWeapon))
+                select def
+                into d
+                orderby d.defName
+                select d)
+            {
+                list.Add(new DebugMenuOption(localDef.defName, DebugMenuOptionMode.Action,
+                    delegate
+                    {
+                        Find.WindowStack.Add(new Dialog_DebugOptionListLister(ChooseWeaponTraits(localDef)));
+                    }));
+            }
+
+            Find.WindowStack.Add(new Dialog_DebugOptionListLister(list));
+        }
+        
+        [DebugAction("PersonaWeapons", "[MPT] Add Weapon Trait", true, allowedGameStates = AllowedGameStates.PlayingOnMap)]
         private static void AddWeaponTrait()
         {
             List<DebugMenuOption> list = new List<DebugMenuOption>();
@@ -28,53 +51,49 @@ namespace MorePersonaTraits.Utils
                 where t is ThingWithComps && (t as ThingWithComps).TryGetComp<CompBladelinkWeapon>() != null
                 select t).Cast<ThingWithComps>())
             {
+                weapon.TryGetComp<CompBladelinkWeapon>().TempUnbond();
                 weapon.TryGetComp<CompBladelinkWeapon>().TraitsListForReading.Add(weaponTraitDef);
+                weapon.TryGetComp<CompBladelinkWeapon>().RegainBond();
             }
         }
 
-        [DebugAction("Spawning", "[MPT] Reroll Weapon Traits", true, false, actionType = DebugActionType.ToolMap, allowedGameStates = AllowedGameStates.PlayingOnMap)]
+        [DebugAction("PersonaWeapons", "[MPT] Reroll Weapon Traits", true, actionType = DebugActionType.ToolMap, allowedGameStates = AllowedGameStates.PlayingOnMap)]
         private static void RerollTraits()
         {
             foreach (var weapon in (from t in Find.CurrentMap.thingGrid.ThingsAt(UI.MouseCell())
                 where t is ThingWithComps && (t as ThingWithComps).TryGetComp<CompBladelinkWeapon>() != null
                 select t).Cast<ThingWithComps>())
             {
+                weapon.TryGetComp<CompBladelinkWeapon>().TempUnbond();
                 weapon.TryGetComp<CompBladelinkWeapon>().TraitsListForReading.Clear();
-                TraitUtils.InitializeTraits(weapon.TryGetComp<CompBladelinkWeapon>().TraitsListForReading, weapon.TryGetComp<CompBladelinkWeapon>());
+                weapon.TryGetComp<CompBladelinkWeapon>().InitializeTraits();
+                weapon.TryGetComp<CompBladelinkWeapon>().RegainBond();
             }
         }
 
-        [DebugAction("Spawning", "[MPT] Justaddmorelol", true, false, actionType = DebugActionType.ToolMap, allowedGameStates = AllowedGameStates.PlayingOnMap)]
+        //TODO: change this to just add 1 trait and make a new debug that simulates an annul
+        [DebugAction("PersonaWeapons", "[MPT] Justaddmorelol", true, actionType = DebugActionType.ToolMap, allowedGameStates = AllowedGameStates.PlayingOnMap)]
         private static void JustAddMore()
         {
             foreach (var weapon in (from t in Find.CurrentMap.thingGrid.ThingsAt(UI.MouseCell())
                 where t is ThingWithComps && (t as ThingWithComps).TryGetComp<CompBladelinkWeapon>() != null
                 select t).Cast<ThingWithComps>())
             {
-                TraitUtils.InitializeTraits(weapon.TryGetComp<CompBladelinkWeapon>().TraitsListForReading, weapon.TryGetComp<CompBladelinkWeapon>());
+                weapon.TryGetComp<CompBladelinkWeapon>().TempUnbond();
+                weapon.TryGetComp<CompBladelinkWeapon>().InitializeTraits();
+                weapon.TryGetComp<CompBladelinkWeapon>().RegainBond();
             }
         }
 
-        [DebugAction("Spawning", "[MPT] Spawn Persona Weapon", true, allowedGameStates = AllowedGameStates.PlayingOnMap)]
-        private static void SpawnPersonaWeapon()
+        [DebugAction("PersonaWeapons", "[MPT] Regenerate Name", true, actionType = DebugActionType.ToolMap, allowedGameStates = AllowedGameStates.PlayingOnMap)]
+        private static void regenerateName()
         {
-            List<DebugMenuOption> list = new List<DebugMenuOption>();
-            foreach (ThingDef localDef in from def in DefDatabase<ThingDef>.AllDefs
-                where def.equipmentType == EquipmentType.Primary &&
-                      def.comps.Exists(p => p.compClass == typeof(CompBladelinkWeapon))
-                select def
-                into d
-                orderby d.defName
-                select d)
+            foreach (var weapon in (from t in Find.CurrentMap.thingGrid.ThingsAt(UI.MouseCell())
+                where t is ThingWithComps && (t as ThingWithComps).TryGetComp<CompBladelinkWeapon>() != null
+                select t).Cast<ThingWithComps>())
             {
-                list.Add(new DebugMenuOption(localDef.defName, DebugMenuOptionMode.Action,
-                    delegate
-                    {
-                        Find.WindowStack.Add(new Dialog_DebugOptionListLister(ChooseWeaponTraits(localDef)));
-                    }));
+                weapon.TryGetComp<CompGeneratedNames>().Initialize(weapon.TryGetComp<CompGeneratedNames>().Props);
             }
-
-            Find.WindowStack.Add(new Dialog_DebugOptionListLister(list));
         }
 
         private static List<DebugMenuOption> ChooseWeaponTraits(ThingDef localDef)
@@ -111,8 +130,8 @@ namespace MorePersonaTraits.Utils
                 personaWeaponThing = personaWeaponThing.MakeMinified();
             personaWeaponThing.stackCount = stackCount;
 
-            personaWeaponThing.TryGetComp<CompBladelinkWeapon>()?.TraitsListForReading.Clear();
-            personaWeaponThing.TryGetComp<CompBladelinkWeapon>()?.TraitsListForReading.Add(weaponTraitDef);
+            personaWeaponThing.TryGetComp<CompBladelinkWeapon>().TraitsListForReading.Clear();
+            personaWeaponThing.TryGetComp<CompBladelinkWeapon>().TraitsListForReading.Add(weaponTraitDef);
 
             if (direct)
                 GenPlace.TryPlaceThing(personaWeaponThing, c, Find.CurrentMap, ThingPlaceMode.Direct);

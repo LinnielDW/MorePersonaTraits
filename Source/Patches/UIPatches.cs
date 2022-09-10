@@ -1,13 +1,16 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using HarmonyLib;
-using MorePersonaTraits.Extensions;
-using MorePersonaTraits.WorkerClasses.OnHitWorkerClasses;
+using MorePersonaWeaponTraits.Extensions;
+using MorePersonaWeaponTraits.WorkerClasses.OnHitWorkerClasses;
 using RimWorld;
 using Verse;
 
-namespace MorePersonaTraits.Patches
+// ReSharper disable UnusedMember.Local
+
+namespace MorePersonaWeaponTraits.Patches
 {
     [HarmonyPatch(typeof(CompBladelinkWeapon))]
     [HarmonyPatch("SpecialDisplayStats")]
@@ -22,8 +25,7 @@ namespace MorePersonaTraits.Patches
                 "MPT_BondedPawnDesc".Translate(),
                 6010,
                 null,
-                Gen.YieldSingle(new Dialog_InfoCard.Hyperlink(__instance.CodedPawn, -1)),
-                false
+                Gen.YieldSingle(new Dialog_InfoCard.Hyperlink(__instance.CodedPawn))
             );
 
             foreach (var statDrawEntry in HyperlinkedTraitStatDrawEntries(__instance)) yield return statDrawEntry;
@@ -57,13 +59,12 @@ namespace MorePersonaTraits.Patches
                         ? StatCategoryDefOf.Weapon_Melee
                         : StatCategoryDefOf.Weapon_Ranged,
                     "Stat_Thing_PersonaWeaponTrait_Label".Translate(),
-                    (from x in __instance.TraitsListForReading select x.label).ToCommaList(false, false)
+                    (from trait in __instance.TraitsListForReading select trait.label).ToCommaList()
                     .CapitalizeFirst(),
                     stringBuilder.ToString(),
                     1104,
                     null,
-                    from traitDef in __instance.TraitsListForReading select new Dialog_InfoCard.Hyperlink(traitDef),
-                    false
+                    from traitDef in __instance.TraitsListForReading select new Dialog_InfoCard.Hyperlink(traitDef)
                 );
             }
         }
@@ -88,10 +89,7 @@ namespace MorePersonaTraits.Patches
                                 equippedOffset.stat.label,
                                 equippedOffset.ValueToStringAsOffset,
                                 equippedOffset.stat.description,
-                                6010,
-                                null,
-                                null,
-                                false
+                                6010
                             )
                         );
                     }
@@ -106,13 +104,21 @@ namespace MorePersonaTraits.Patches
                             workerLabel(worker),
                             ReportText(worker),
                             ReportText(worker),
-                            6010,
-                            null,
-                            null,
-                            false
+                            6010
                         ));
                     }
                 }
+
+                // if (traitDef.exclusionTags != null)
+                // {
+                //     statEntries.Add(new StatDrawEntry(
+                //         StatCategoryDefOf.Weapon,
+                //         "ExclusionTags",
+                //         traitDef.exclusionTags.ToCommaList(),
+                //         "List of exclusion tags:\n" + traitDef.exclusionTags.ToCommaList(),
+                //         6010
+                //     ));
+                // }
 
                 if (traitDef.bondedHediffs != null)
                 {
@@ -133,7 +139,7 @@ namespace MorePersonaTraits.Patches
                 worker.ProcChance.ToStringPercent(),
                 workerEffect(worker),
                 worker.TargetSelf ? "MPT_TargetSelf".Translate() : "MPT_TargetTarget".Translate(),
-                worker.ProcMagnitude > 0f ? "MPT_MagnitudeDesc".Translate(worker.ProcMagnitude.ToStringPercent()) : TaggedString.Empty
+                Math.Abs(worker.ProcMagnitude) > 0f ? "MPT_MagnitudeDesc".Translate(worker.ProcMagnitude.ToStringPercent()) : TaggedString.Empty
             );
         }
 
@@ -175,7 +181,7 @@ namespace MorePersonaTraits.Patches
     {
         static IEnumerable<StatDrawEntry> Postfix(IEnumerable<StatDrawEntry> values, Pawn __instance)
         {
-            if (__instance?.equipment?.bondedWeapon != null)
+            if (__instance.equipment?.bondedWeapon != null)
             {
                 yield return new StatDrawEntry(
                     StatCategoryDefOf.Weapon,
@@ -184,8 +190,7 @@ namespace MorePersonaTraits.Patches
                     "MPT_BondedPawnDesc".Translate(),
                     6010,
                     null,
-                    Gen.YieldSingle(new Dialog_InfoCard.Hyperlink(__instance.equipment.bondedWeapon, -1)),
-                    false
+                    Gen.YieldSingle(new Dialog_InfoCard.Hyperlink(__instance.equipment.bondedWeapon))
                 );
             }
 

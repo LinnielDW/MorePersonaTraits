@@ -1,7 +1,7 @@
 ﻿using RimWorld;
 using Verse;
 
-namespace MorePersonaTraits.WorkerClasses.ItemWorkerClasses
+namespace MorePersonaWeaponTraits.WorkerClasses.ItemWorkerClasses
 {
     public class CompTargetEffect_BladeDelinker : CompTargetEffect
     {
@@ -13,7 +13,8 @@ namespace MorePersonaTraits.WorkerClasses.ItemWorkerClasses
                 return;
             }
 
-            target.TryGetComp<CompBladelinkWeapon>().UnCode();
+            compBladelink.UnCode();
+            Messages.Message("MPT_Blade_Delinked".Translate(user.LabelShort, target.LabelShort), target,MessageTypeDefOf.NeutralEvent);
         }
     }
 }
