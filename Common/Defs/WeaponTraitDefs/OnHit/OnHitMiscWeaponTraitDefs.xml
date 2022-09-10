@@ -69,7 +69,7 @@
     
     <WeaponTraitDef>
         <defName>MPT_OnHit_SpawnFoam</defName>
-        <label>frothing</label>
+        <label>foamy</label>
         <description>This weapon's persona knows the propensity for explosively volitile scenarios on the Rim. During a fight, they will attempt to inhibit such scenarios.\nUpon landing a hit with this weapon, it has a chance to spawn firefoam under its wielder.</description>
         <commonality>0.5</commonality>
         <marketValueOffset>250</marketValueOffset>
