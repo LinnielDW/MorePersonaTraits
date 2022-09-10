@@ -6,22 +6,22 @@ using Verse;
 
 namespace MorePersonaWeaponTraits.Patches
 {
-    //Implementation directly inspired by alattalatta's bullet patch implementation in Infusion 2. 
-    //Not sure if will use it, but will keep it around for now.
+    // Implementation directly inspired by alattalatta's bullet patch implementation from Infusion 2. 
+    // I found adding a comp to every bullet to be a little overkill and didn't want to put that kind of strain on people's games.
     [HarmonyPatch(typeof(Bullet))]
     [HarmonyPatch("Impact")]
     public static class PatchOnDamageBullet
     {
         static void Postfix(Thing hitThing, Bullet __instance)
         {
-            //TODO: check if this works on proj weapons
             var primary = ((Pawn) __instance.Launcher).equipment.Primary;
-            if (PatcherCheckUtils.hasOnHitWorker(primary))
+            if (OnHitWorkerUtils.hasOnHitWorker(primary))
             {
                 OnHitUtils.attemptApplyOnHitEffects(
-                    PatcherCheckUtils.getOnHitWorkers(__instance),
+                    OnHitWorkerUtils.getOnHitWorkers(primary),
                     hitThing,
-                    __instance.Launcher
+                    __instance.Launcher,
+                    true
                 );
             }
         }

@@ -33,4 +33,7 @@
     
     <MPT_absoluteMaxTraits>Absolute Max Traits</MPT_absoluteMaxTraits>
     <MPT_absoluteMaxTraitsTooltip>The absolute maximum amount of weapon traits that can be given to a weapon.</MPT_absoluteMaxTraitsTooltip>
+    
+    <MPT_rangedProcChanceFactor>On-Hit Ranged Proc Factor</MPT_rangedProcChanceFactor>
+    <MPT_rangedProcChanceFactorTooltip>The proc chance multiplier for on-hit effects.</MPT_rangedProcChanceFactorTooltip>
 </LanguageData>
