@@ -7,12 +7,12 @@ namespace MorePersonaWeaponTraits.Utils
 {
     public static class OnHitUtils
     {
-        public static void attemptApplyOnHitEffects(List<OnHitWorker> onHitWorkers, Thing targetThing, Thing originThing)
+        public static void attemptApplyOnHitEffects(List<OnHitWorker> onHitWorkers, Thing targetThing, Thing originThing, bool isRanged = false)
         {
             float rand = Rand.Value;
             foreach (var onHitWorker in onHitWorkers)
             {
-                if (rand <= onHitWorker.ProcChance)
+                if (rand <= onHitWorker.ProcChanceAdjusted(isRanged))
                 {
                     // Log.Warning("Onhit has proc'ed. Executing OnHit effect");
                     onHitWorker.OnHitEffect(targetThing, originThing);
@@ -22,6 +22,11 @@ namespace MorePersonaWeaponTraits.Utils
                     // Log.Warning("Onhit proc missed. Skipping onhit effect.");
                 }
             }
+        }
+
+        private static float ProcChanceAdjusted(this OnHitWorker onHitWorker, bool isRanged)
+        {
+            return isRanged ? onHitWorker.ProcChance / 2 : onHitWorker.ProcChance;
         }
 
         public static bool IsBiological(Thing thing)

@@ -6,6 +6,27 @@ using Verse;
 
 namespace MorePersonaWeaponTraits.Patches
 {
+    // Implementation directly inspired by alattalatta's bullet patch implementation from Infusion 2. 
+    // I found adding a comp to every bullet to be a little overkill and didn't want to put that kind of strain on people's games.
+    [HarmonyPatch(typeof(Bullet))]
+    [HarmonyPatch("Impact")]
+    public static class PatchOnDamageBullet
+    {
+        static void Postfix(Thing hitThing, Bullet __instance)
+        {
+            var primary = ((Pawn) __instance.Launcher).equipment.Primary;
+            if (OnHitWorkerUtils.hasOnHitWorker(primary))
+            {
+                OnHitUtils.attemptApplyOnHitEffects(
+                    OnHitWorkerUtils.getOnHitWorkers(primary),
+                    hitThing,
+                    __instance.Launcher,
+                    true
+                );
+            }
+        }
+    }
+
     [HarmonyPatch(typeof(Verb_MeleeAttackDamage))]
     [HarmonyPatch("ApplyMeleeDamageToTarget")]
     public static class PatchOnDamageMelee
