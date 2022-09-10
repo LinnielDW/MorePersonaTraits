@@ -65,6 +65,8 @@
             <li>noun->fire</li>
             <li>noun->spider</li>
             <li>noun->storm</li>
+            <li>noun->tower</li>
+            <li>noun->war</li>
             <li>noun->wind</li>
             <li>noun->stone</li>
             <li>noun->dune</li>
@@ -134,6 +136,7 @@
             <li>verber->betrayer</li>
 
 
+            <li>beginSyl->syl</li>
             <li>beginSyl->ex</li>
             <li>middleSyl->ca</li>
             <li>middleSyl->li</li>
