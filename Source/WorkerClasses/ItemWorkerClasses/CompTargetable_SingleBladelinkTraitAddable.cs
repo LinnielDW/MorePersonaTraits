@@ -2,6 +2,7 @@
 using MorePersonaWeaponTraits.Utils;
 using RimWorld;
 using Verse;
+using static MorePersonaWeaponTraits.Settings.MorePersonaWeaponTraitsSettings;
 
 namespace MorePersonaWeaponTraits.WorkerClasses.ItemWorkerClasses
 {
@@ -16,7 +17,10 @@ namespace MorePersonaWeaponTraits.WorkerClasses.ItemWorkerClasses
                 canTargetItems = true,
                 mapObjectTargetsMustBeAutoAttackable = false,
                 validator = targetInfo =>
-                    targetInfo.Thing.TryGetComp<CompBladelinkWeapon>() != null && TargetUtils.ValidateRequiresBond(Props,targetInfo) && targetInfo.Thing.TryGetComp<CompBladelinkWeapon>().HasAddableTrait() &&
+                    targetInfo.Thing.TryGetComp<CompBladelinkWeapon>() != null && 
+                    TargetUtils.ValidateRequiresBond(Props,targetInfo) && 
+                    targetInfo.Thing.TryGetComp<CompBladelinkWeapon>().HasAddableTrait() &&
+                    targetInfo.Thing.TryGetComp<CompBladelinkWeapon>().TraitsListForReading.Count < absoluteMaxTraits && 
                     BaseTargetValidator(targetInfo.Thing)
             };
         }

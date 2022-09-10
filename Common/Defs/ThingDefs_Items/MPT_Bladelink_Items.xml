@@ -84,7 +84,7 @@
     <ThingDef ParentName="PersonaEffectorBase">
         <defName>MPT_BladelinkExalt</defName>
         <label>Persona Extension Effector</label>
-        <description>A one-use psychic persona effector. The psychic surge uncovers previously sealed neural-pathways, extending the targetted weapon persona with a new trait. Can only be used on persona weapons that can receive an additional trait.</description>
+        <description>A one-use psychic persona effector. The psychic surge uncovers previously sealed neural-pathways, extending the targetted weapon persona with a new trait. Can only be used on persona weapons that has a valid trait to add and that is under the absolute maximum number of traits (defined in the settings).</description>
         <graphicData>
             <texPath>Things/Item/Equipment/bladelink_exalt</texPath>
             <graphicClass>Graphic_Single</graphicClass>

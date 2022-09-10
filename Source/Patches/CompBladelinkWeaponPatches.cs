@@ -2,6 +2,8 @@
 using MorePersonaWeaponTraits.Utils;
 using RimWorld;
 using Verse;
+using static MorePersonaWeaponTraits.Settings.MorePersonaWeaponTraitsSettings;
+
 // ReSharper disable UnusedMember.Local
 
 namespace MorePersonaWeaponTraits.Patches
@@ -22,8 +24,7 @@ namespace MorePersonaWeaponTraits.Patches
     {
         static void Postfix()
         {
-            //TODO get this from a setting
-            Traverse.Create<CompBladelinkWeapon>().Field("TraitsRange").SetValue(new IntRange(1,5));
+            Traverse.Create<CompBladelinkWeapon>().Field("TraitsRange").SetValue(new IntRange(minTraits, maxTraits));
         }
     }
     

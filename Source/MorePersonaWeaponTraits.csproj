@@ -47,6 +47,10 @@
       <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="UnityEngine.IMGUIModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DebugActions\DebugActions.cs" />
@@ -56,8 +60,10 @@
     <Compile Include="Extensions\WeaponTraitOnHitExtension.cs" />
     <Compile Include="Patches\CompBladelinkWeaponPatches.cs" />
     <Compile Include="Patches\UIPatches.cs" />
+    <Compile Include="Settings\MorePersonaWeaponTraitsSettings.cs" />
     <Compile Include="Utils\FieldRefUtils.cs" />
     <Compile Include="Utils\NeedFillUtils.cs" />
+    <Compile Include="Utils\SettingsUtils.cs" />
     <Compile Include="Utils\TargetUtils.cs" />
     <Compile Include="Utils\WeaponTraitUtils.cs" />
     <Compile Include="WorkerClasses\ItemWorkerClasses\CompProperties_TargetableSingleBladelink.cs" />
