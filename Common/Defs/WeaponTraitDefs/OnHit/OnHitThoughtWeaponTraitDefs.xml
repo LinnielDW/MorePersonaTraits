@@ -18,6 +18,7 @@
                         <ProcChance>0.8</ProcChance>
                         <TargetSelf>true</TargetSelf>
                         <RequiresBothLiving>true</RequiresBothLiving>
+                        <RequiresBio>true</RequiresBio>
                     </li>
                 </OnHitWorkers>
             </li>
@@ -59,6 +60,7 @@
                         <ProcChance>0.8</ProcChance>
                         <TargetSelf>true</TargetSelf>
                         <RequiresBothLiving>true</RequiresBothLiving>
+                        <RequiresBio>true</RequiresBio>
                     </li>
                 </OnHitWorkers>
             </li>

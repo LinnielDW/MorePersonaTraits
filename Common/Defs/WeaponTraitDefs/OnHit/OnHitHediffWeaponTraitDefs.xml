@@ -17,6 +17,7 @@
                         <ProcMagnitude>0.15</ProcMagnitude>
                         <ProcChance>0.35</ProcChance>
                         <RequiresBothLiving>true</RequiresBothLiving>
+                        <RequiresBio>true</RequiresBio>
                     </li>
                 </OnHitWorkers>
             </li>
@@ -43,6 +44,7 @@
                         <ProcMagnitude>0.02</ProcMagnitude>
                         <ProcChance>0.02</ProcChance>
                         <TargetSelf>true</TargetSelf>
+                        <RequiresBio>true</RequiresBio>
                     </li>
                 </OnHitWorkers>
             </li>
@@ -66,6 +68,7 @@
                         <ProcMagnitude>0.35</ProcMagnitude>
                         <ProcChance>0.5</ProcChance>
                         <RequiresBothLiving>true</RequiresBothLiving>
+                        <RequiresBio>true</RequiresBio>
                     </li>
                 </OnHitWorkers>
             </li>
@@ -92,6 +95,7 @@
                         <ProcMagnitude>0.02</ProcMagnitude>
                         <ProcChance>0.02</ProcChance>
                         <TargetSelf>true</TargetSelf>
+                        <RequiresBio>true</RequiresBio>
                     </li>
                 </OnHitWorkers>
             </li>
@@ -115,6 +119,7 @@
                         <ProcMagnitude>0.2</ProcMagnitude>
                         <ProcChance>0.4</ProcChance>
                         <RequiresBothLiving>true</RequiresBothLiving>
+                        <RequiresBio>true</RequiresBio>
                     </li>
                 </OnHitWorkers>
             </li>
@@ -177,6 +182,7 @@
                         <ProcMagnitude>0.05</ProcMagnitude>
                         <ProcChance>0.2</ProcChance>
                         <TargetSelf>true</TargetSelf>
+                        <RequiresBio>true</RequiresBio>
                     </li>
                 </OnHitWorkers>
             </li>
