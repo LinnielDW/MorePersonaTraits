@@ -1,7 +1,7 @@
 ﻿using RimWorld;
 using Verse;
 
-namespace MorePersonaWeaponTraits.WorkerClasses.OnHitWorkerClasses
+namespace MorePersonaTraits.WorkerClasses.OnHitWorkerClasses
 {
     public class OnHitWorker_ApplyNeed : OnHitWorker
     {

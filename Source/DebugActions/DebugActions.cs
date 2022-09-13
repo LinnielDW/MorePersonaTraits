@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using MorePersonaWeaponTraits.Utils;
+using MorePersonaTraits.Utils;
 using RimWorld;
 using Verse;
 // ReSharper disable UnusedMember.Local
 
-namespace MorePersonaWeaponTraits.DebugActions
+namespace MorePersonaTraits.DebugActions
 {
     public class DebugActions
     {

@@ -24,7 +24,7 @@
     <MPT_WeaponTraitGained>{0} has gained the trait {1}</MPT_WeaponTraitGained>
     <MPT_WeaponTraitsRerolled>{0}'s traits have been rerolled</MPT_WeaponTraitsRerolled>
     
-    <MPT_SettingsTitle>More Persona Weapon Traits</MPT_SettingsTitle>
+    <MPT_SettingsTitle>More Persona Traits</MPT_SettingsTitle>
     <MPT_minTraits>Min Traits</MPT_minTraits>
     <MPT_minTraitsTooltip>The minimum amount of weapon traits generated when a weapon is spawned.\nIf this is defined as more than the max, it will take the max as its value.</MPT_minTraitsTooltip>
     

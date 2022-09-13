@@ -50,12 +50,12 @@
             <MarketValue>1500</MarketValue>
         </statBases>
         <comps>
-            <li Class="MorePersonaWeaponTraits.WorkerClasses.ItemWorkerClasses.CompProperties_TargetableSingleBladelink">
-                <compClass>MorePersonaWeaponTraits.WorkerClasses.ItemWorkerClasses.CompTargetable_SingleBladelink</compClass>
+            <li Class="MorePersonaTraits.WorkerClasses.ItemWorkerClasses.CompProperties_TargetableSingleBladelink">
+                <compClass>MorePersonaTraits.WorkerClasses.ItemWorkerClasses.CompTargetable_SingleBladelink</compClass>
                 <RequiresBond>true</RequiresBond>
             </li>
             <li>
-                <compClass>MorePersonaWeaponTraits.WorkerClasses.ItemWorkerClasses.CompTargetEffect_BladeDelinker</compClass>
+                <compClass>MorePersonaTraits.WorkerClasses.ItemWorkerClasses.CompTargetEffect_BladeDelinker</compClass>
             </li>
         </comps>
     </ThingDef>
@@ -72,11 +72,11 @@
             <MarketValue>500</MarketValue>
         </statBases>
         <comps>
-            <li Class="MorePersonaWeaponTraits.WorkerClasses.ItemWorkerClasses.CompProperties_TargetableSingleBladelink">
-                <compClass>MorePersonaWeaponTraits.WorkerClasses.ItemWorkerClasses.CompTargetable_SingleBladelink</compClass>
+            <li Class="MorePersonaTraits.WorkerClasses.ItemWorkerClasses.CompProperties_TargetableSingleBladelink">
+                <compClass>MorePersonaTraits.WorkerClasses.ItemWorkerClasses.CompTargetable_SingleBladelink</compClass>
             </li>
             <li>
-                <compClass>MorePersonaWeaponTraits.WorkerClasses.ItemWorkerClasses.CompTargetEffect_BladelinkChaos</compClass>
+                <compClass>MorePersonaTraits.WorkerClasses.ItemWorkerClasses.CompTargetEffect_BladelinkChaos</compClass>
             </li>
         </comps>
     </ThingDef>
@@ -93,11 +93,11 @@
             <MarketValue>1500</MarketValue>
         </statBases>
         <comps>
-            <li Class="MorePersonaWeaponTraits.WorkerClasses.ItemWorkerClasses.CompProperties_TargetableSingleBladelink">
-                <compClass>MorePersonaWeaponTraits.WorkerClasses.ItemWorkerClasses.CompTargetable_SingleBladelinkTraitAddable</compClass>
+            <li Class="MorePersonaTraits.WorkerClasses.ItemWorkerClasses.CompProperties_TargetableSingleBladelink">
+                <compClass>MorePersonaTraits.WorkerClasses.ItemWorkerClasses.CompTargetable_SingleBladelinkTraitAddable</compClass>
             </li>
             <li>
-                <compClass>MorePersonaWeaponTraits.WorkerClasses.ItemWorkerClasses.CompTargetEffect_BladelinkExalt</compClass>
+                <compClass>MorePersonaTraits.WorkerClasses.ItemWorkerClasses.CompTargetEffect_BladelinkExalt</compClass>
             </li>
         </comps>
     </ThingDef>
@@ -115,11 +115,11 @@
             <MarketValue>1000</MarketValue>
         </statBases>
         <comps>
-            <li Class="MorePersonaWeaponTraits.WorkerClasses.ItemWorkerClasses.CompProperties_TargetableSingleBladelink">
-                <compClass>MorePersonaWeaponTraits.WorkerClasses.ItemWorkerClasses.CompTargetable_SingleBladelink</compClass>
+            <li Class="MorePersonaTraits.WorkerClasses.ItemWorkerClasses.CompProperties_TargetableSingleBladelink">
+                <compClass>MorePersonaTraits.WorkerClasses.ItemWorkerClasses.CompTargetable_SingleBladelink</compClass>
             </li>
             <li>
-                <compClass>MorePersonaWeaponTraits.WorkerClasses.ItemWorkerClasses.CompTargetEffect_BladelinkAnnul</compClass>
+                <compClass>MorePersonaTraits.WorkerClasses.ItemWorkerClasses.CompTargetEffect_BladelinkAnnul</compClass>
             </li>
         </comps>
     </ThingDef>

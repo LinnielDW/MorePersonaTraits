@@ -1,7 +1,7 @@
 ﻿using RimWorld;
 using Verse;
 
-namespace MorePersonaWeaponTraits.WorkerClasses.ThoughtWorkerClasses
+namespace MorePersonaTraits.WorkerClasses.ThoughtWorkerClasses
 {
     public class ThoughtWorker_WeaponTraitNoBondedAnimal : ThoughtWorker_WeaponTrait
     {

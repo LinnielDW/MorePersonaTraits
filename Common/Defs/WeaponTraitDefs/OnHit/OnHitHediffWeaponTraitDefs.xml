@@ -10,9 +10,9 @@
             <HediffDef>Plague</HediffDef>
         </descriptionHyperlinks>
         <modExtensions>
-            <li Class="MorePersonaWeaponTraits.Extensions.WeaponTraitOnHitExtension">
+            <li Class="MorePersonaTraits.Extensions.WeaponTraitOnHitExtension">
                 <OnHitWorkers>
-                    <li Class="MorePersonaWeaponTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_ApplyHediff">
+                    <li Class="MorePersonaTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_ApplyHediff">
                         <HediffDef>Plague</HediffDef>
                         <ProcMagnitude>0.15</ProcMagnitude>
                         <ProcChance>0.35</ProcChance>
@@ -37,9 +37,9 @@
             <HediffDef>Plague</HediffDef>
         </descriptionHyperlinks>
         <modExtensions>
-            <li Class="MorePersonaWeaponTraits.Extensions.WeaponTraitOnHitExtension">
+            <li Class="MorePersonaTraits.Extensions.WeaponTraitOnHitExtension">
                 <OnHitWorkers>
-                    <li Class="MorePersonaWeaponTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_ApplyHediff">
+                    <li Class="MorePersonaTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_ApplyHediff">
                         <HediffDef>Plague</HediffDef>
                         <ProcMagnitude>0.02</ProcMagnitude>
                         <ProcChance>0.02</ProcChance>
@@ -61,9 +61,9 @@
             <HediffDef>Flu</HediffDef>
         </descriptionHyperlinks>
         <modExtensions>
-            <li Class="MorePersonaWeaponTraits.Extensions.WeaponTraitOnHitExtension">
+            <li Class="MorePersonaTraits.Extensions.WeaponTraitOnHitExtension">
                 <OnHitWorkers>
-                    <li Class="MorePersonaWeaponTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_ApplyHediff">
+                    <li Class="MorePersonaTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_ApplyHediff">
                         <HediffDef>Flu</HediffDef>
                         <ProcMagnitude>0.35</ProcMagnitude>
                         <ProcChance>0.5</ProcChance>
@@ -88,9 +88,9 @@
             <HediffDef>Flu</HediffDef>
         </descriptionHyperlinks>
         <modExtensions>
-            <li Class="MorePersonaWeaponTraits.Extensions.WeaponTraitOnHitExtension">
+            <li Class="MorePersonaTraits.Extensions.WeaponTraitOnHitExtension">
                 <OnHitWorkers>
-                    <li Class="MorePersonaWeaponTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_ApplyHediff">
+                    <li Class="MorePersonaTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_ApplyHediff">
                         <HediffDef>Flu</HediffDef>
                         <ProcMagnitude>0.02</ProcMagnitude>
                         <ProcChance>0.02</ProcChance>
@@ -112,9 +112,9 @@
             <HediffDef>MPT_Hediff_PsychicPain</HediffDef>
         </descriptionHyperlinks>
         <modExtensions>
-            <li Class="MorePersonaWeaponTraits.Extensions.WeaponTraitOnHitExtension">
+            <li Class="MorePersonaTraits.Extensions.WeaponTraitOnHitExtension">
                 <OnHitWorkers>
-                    <li Class="MorePersonaWeaponTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_ApplyHediff">
+                    <li Class="MorePersonaTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_ApplyHediff">
                         <HediffDef>MPT_Hediff_PsychicPain</HediffDef>
                         <ProcMagnitude>0.2</ProcMagnitude>
                         <ProcChance>0.4</ProcChance>
@@ -175,9 +175,9 @@
             <HediffDef>MPT_Hediff_PsychicPain</HediffDef>
         </descriptionHyperlinks>
         <modExtensions>
-            <li Class="MorePersonaWeaponTraits.Extensions.WeaponTraitOnHitExtension">
+            <li Class="MorePersonaTraits.Extensions.WeaponTraitOnHitExtension">
                 <OnHitWorkers>
-                    <li Class="MorePersonaWeaponTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_ApplyHediff">
+                    <li Class="MorePersonaTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_ApplyHediff">
                         <HediffDef>MPT_Hediff_PsychicPain</HediffDef>
                         <ProcMagnitude>0.05</ProcMagnitude>
                         <ProcChance>0.2</ProcChance>
@@ -199,16 +199,16 @@
             <HediffDef>BloodLoss</HediffDef>
         </descriptionHyperlinks>
         <modExtensions>
-            <li Class="MorePersonaWeaponTraits.Extensions.WeaponTraitOnHitExtension">
+            <li Class="MorePersonaTraits.Extensions.WeaponTraitOnHitExtension">
                 <OnHitWorkers>
-                    <li Class="MorePersonaWeaponTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_ApplyHediff">
+                    <li Class="MorePersonaTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_ApplyHediff">
                         <HediffDef>BloodLoss</HediffDef>
                         <ProcMagnitude>0.1</ProcMagnitude>
                         <ProcChance>0.8</ProcChance>
                         <RequiresBothLiving>true</RequiresBothLiving>
                         <RequiresBio>true</RequiresBio>
                     </li>
-                    <li Class="MorePersonaWeaponTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_ApplyHediff">
+                    <li Class="MorePersonaTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_ApplyHediff">
                         <HediffDef>BloodLoss</HediffDef>
                         <ProcMagnitude>-0.075</ProcMagnitude>
                         <ProcChance>0.8</ProcChance>
@@ -231,9 +231,9 @@
             <HediffDef>BloodLoss</HediffDef>
         </descriptionHyperlinks>
         <modExtensions>
-            <li Class="MorePersonaWeaponTraits.Extensions.WeaponTraitOnHitExtension">
+            <li Class="MorePersonaTraits.Extensions.WeaponTraitOnHitExtension">
                 <OnHitWorkers>
-                    <li Class="MorePersonaWeaponTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_ApplyHediff">
+                    <li Class="MorePersonaTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_ApplyHediff">
                         <HediffDef>BloodLoss</HediffDef>
                         <ProcMagnitude>0.05</ProcMagnitude>
                         <ProcChance>0.35</ProcChance>
@@ -255,9 +255,9 @@
             <HediffDef>BloodLoss</HediffDef>
         </descriptionHyperlinks>
         <modExtensions>
-            <li Class="MorePersonaWeaponTraits.Extensions.WeaponTraitOnHitExtension">
+            <li Class="MorePersonaTraits.Extensions.WeaponTraitOnHitExtension">
                 <OnHitWorkers>
-                    <li Class="MorePersonaWeaponTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_ApplyHediff">
+                    <li Class="MorePersonaTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_ApplyHediff">
                         <HediffDef>BloodLoss</HediffDef>
                         <ProcMagnitude>0.1</ProcMagnitude>
                         <ProcChance>0.8</ProcChance>

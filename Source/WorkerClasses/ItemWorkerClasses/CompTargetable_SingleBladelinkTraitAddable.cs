@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
-using MorePersonaWeaponTraits.Utils;
+using MorePersonaTraits.Utils;
 using RimWorld;
 using Verse;
-using static MorePersonaWeaponTraits.Settings.MorePersonaWeaponTraitsSettings;
+using static MorePersonaTraits.Settings.MorePersonaTraitsSettings;
 
-namespace MorePersonaWeaponTraits.WorkerClasses.ItemWorkerClasses
+namespace MorePersonaTraits.WorkerClasses.ItemWorkerClasses
 {
     public class CompTargetable_SingleBladelinkTraitAddable: CompTargetable
     {

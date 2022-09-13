@@ -1,11 +1,11 @@
-﻿using MorePersonaWeaponTraits.Utils;
+﻿using MorePersonaTraits.Utils;
 using UnityEngine;
 using Verse;
 
-namespace MorePersonaWeaponTraits.Settings
+namespace MorePersonaTraits.Settings
 {
     
-    public class MorePersonaWeaponTraitsSettings : ModSettings
+    public class MorePersonaTraitsSettings : ModSettings
     {
 
         public static int minTraits = 1;

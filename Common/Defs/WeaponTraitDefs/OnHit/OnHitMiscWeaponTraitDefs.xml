@@ -11,9 +11,9 @@
             <li>MPT_OnHit_SpawnFilth</li>
         </exclusionTags>
         <modExtensions>
-            <li Class="MorePersonaWeaponTraits.Extensions.WeaponTraitOnHitExtension">
+            <li Class="MorePersonaTraits.Extensions.WeaponTraitOnHitExtension">
                 <OnHitWorkers>
-                    <li Class="MorePersonaWeaponTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_SpawnFilth">
+                    <li Class="MorePersonaTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_SpawnFilth">
                         <Filth>Filth_Ash</Filth>
                         <ProcChance>0.66</ProcChance>
                         <TargetSelf>true</TargetSelf>
@@ -33,9 +33,9 @@
             <li>MPT_OnHit_SpawnFilth</li>
         </exclusionTags>
         <modExtensions>
-            <li Class="MorePersonaWeaponTraits.Extensions.WeaponTraitOnHitExtension">
+            <li Class="MorePersonaTraits.Extensions.WeaponTraitOnHitExtension">
                 <OnHitWorkers>
-                    <li Class="MorePersonaWeaponTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_SpawnFilth">
+                    <li Class="MorePersonaTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_SpawnFilth">
                         <Filth>Filth_Slime</Filth>
                         <ProcChance>0.66</ProcChance>
                         <TargetSelf>true</TargetSelf>
@@ -55,9 +55,9 @@
             <li>MPT_OnHit_SpawnFilth</li>
         </exclusionTags>
         <modExtensions>
-            <li Class="MorePersonaWeaponTraits.Extensions.WeaponTraitOnHitExtension">
+            <li Class="MorePersonaTraits.Extensions.WeaponTraitOnHitExtension">
                 <OnHitWorkers>
-                    <li Class="MorePersonaWeaponTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_SpawnFilth">
+                    <li Class="MorePersonaTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_SpawnFilth">
                         <Filth>Filth_Blood</Filth>
                         <ProcChance>0.66</ProcChance>
                         <TargetSelf>true</TargetSelf>
@@ -77,9 +77,9 @@
             <li>MPT_OnHit_SpawnFilth</li>
         </exclusionTags>
         <modExtensions>
-            <li Class="MorePersonaWeaponTraits.Extensions.WeaponTraitOnHitExtension">
+            <li Class="MorePersonaTraits.Extensions.WeaponTraitOnHitExtension">
                 <OnHitWorkers>
-                    <li Class="MorePersonaWeaponTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_SpawnFilth">
+                    <li Class="MorePersonaTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_SpawnFilth">
                         <Filth>Filth_FireFoam</Filth>
                         <ProcChance>0.5</ProcChance>
                         <TargetSelf>true</TargetSelf>
@@ -100,9 +100,9 @@
             <li>MPT_OnHit_SpawnFilth</li>
         </exclusionTags>
         <modExtensions>
-            <li Class="MorePersonaWeaponTraits.Extensions.WeaponTraitOnHitExtension">
+            <li Class="MorePersonaTraits.Extensions.WeaponTraitOnHitExtension">
                 <OnHitWorkers>
-                    <li Class="MorePersonaWeaponTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_SpawnFilth">
+                    <li Class="MorePersonaTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_SpawnFilth">
                         <Filth>Filth_Fuel</Filth>
                         <ProcChance>0.5</ProcChance>
                     </li>
@@ -121,9 +121,9 @@
             <li>MPT_OnHit_SpawnFilth</li>
         </exclusionTags>
         <modExtensions>
-            <li Class="MorePersonaWeaponTraits.Extensions.WeaponTraitOnHitExtension">
+            <li Class="MorePersonaTraits.Extensions.WeaponTraitOnHitExtension">
                 <OnHitWorkers>
-                    <li Class="MorePersonaWeaponTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_SpawnFilth">
+                    <li Class="MorePersonaTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_SpawnFilth">
                         <Filth>Filth_Fuel</Filth>
                         <ProcChance>0.33</ProcChance>
                         <TargetSelf>true</TargetSelf>
@@ -143,9 +143,9 @@
             <li>MPT_OnHit_Stun</li>
         </exclusionTags>
         <modExtensions>
-            <li Class="MorePersonaWeaponTraits.Extensions.WeaponTraitOnHitExtension">
+            <li Class="MorePersonaTraits.Extensions.WeaponTraitOnHitExtension">
                 <OnHitWorkers>
-                    <li Class="MorePersonaWeaponTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_ApplyStun">
+                    <li Class="MorePersonaTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_ApplyStun">
                         <ProcChance>0.25</ProcChance>
                         <StunDuration>2</StunDuration>
                         <RequiresBothLiving>true</RequiresBothLiving>

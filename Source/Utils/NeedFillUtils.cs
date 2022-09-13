@@ -1,7 +1,7 @@
 ﻿using RimWorld;
 using Verse;
 
-namespace MorePersonaWeaponTraits.Utils
+namespace MorePersonaTraits.Utils
 {
     public static class NeedFillUtils
     {

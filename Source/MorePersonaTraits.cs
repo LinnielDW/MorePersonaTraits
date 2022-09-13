@@ -1,20 +1,20 @@
 ﻿using System.Reflection;
 using HarmonyLib;
-using MorePersonaWeaponTraits.Settings;
+using MorePersonaTraits.Settings;
 using UnityEngine;
 using Verse;
 
-namespace MorePersonaWeaponTraits
+namespace MorePersonaTraits
 {
-    public class MorePersonaWeaponTraits : Mod
+    public class MorePersonaTraits : Mod
     {
-        readonly MorePersonaWeaponTraitsSettings settings;
+        readonly MorePersonaTraitsSettings settings;
 
-        public MorePersonaWeaponTraits(ModContentPack content) : base(content)
+        public MorePersonaTraits(ModContentPack content) : base(content)
         {
-            settings = GetSettings<MorePersonaWeaponTraitsSettings>();
+            settings = GetSettings<MorePersonaTraitsSettings>();
 
-            var harmony = new Harmony("com.arquebus.rimworld.mod.morepersonaweapontraits");
+            var harmony = new Harmony("com.arquebus.rimworld.mod.morepersonatraits");
             harmony.PatchAll(Assembly.GetExecutingAssembly());
         }
 

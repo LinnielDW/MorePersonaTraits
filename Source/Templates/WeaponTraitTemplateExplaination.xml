@@ -37,9 +37,9 @@
         <modExtensions>
             <!-- A container for the data for On-Hit functionality uses. -->
             <!-- Note: If you wish to use this functionality, you must keep this class name the same. -->
-            <li Class="MorePersonaWeaponTraits.Templates.WeaponTraitOnHitExtension">
+            <li Class="MorePersonaTraits.Templates.WeaponTraitOnHitExtension">
                 <!-- The .cs file used to store the logic of the OnHit effect. Note the use of namespace prefix. For an example of the worker, see OnHitWorker_Template.cs -->
-                <OnHitWorkerClass>MorePersonaWeaponTraits.OnHitWorker_Template</OnHitWorkerClass>
+                <OnHitWorkerClass>MorePersonaTraits.OnHitWorker_Template</OnHitWorkerClass>
                 <!-- Chance the effect will happen. 0 for never, 1 for always. Default is 0 -->
                 <ProcChance>0.0</ProcChance>
                 <!-- The strength of the effect. Default is 0 -->

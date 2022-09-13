@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using HarmonyLib;
-using MorePersonaWeaponTraits.Extensions;
-using MorePersonaWeaponTraits.WorkerClasses.OnHitWorkerClasses;
+using MorePersonaTraits.Extensions;
+using MorePersonaTraits.WorkerClasses.OnHitWorkerClasses;
 using RimWorld;
 using Verse;
 
 // ReSharper disable UnusedMember.Local
 
-namespace MorePersonaWeaponTraits.Patches
+namespace MorePersonaTraits.Patches
 {
     [HarmonyPatch(typeof(CompBladelinkWeapon))]
     [HarmonyPatch("SpecialDisplayStats")]

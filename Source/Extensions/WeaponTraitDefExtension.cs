@@ -1,6 +1,6 @@
 ﻿using Verse;
 
-namespace MorePersonaWeaponTraits.Extensions
+namespace MorePersonaTraits.Extensions
 {
     public class WeaponTraitDefExtension : DefModExtension
     {

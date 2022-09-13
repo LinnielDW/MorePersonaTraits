@@ -1,10 +1,10 @@
 ﻿using HarmonyLib;
-using MorePersonaWeaponTraits.Utils;
+using MorePersonaTraits.Utils;
 using RimWorld;
 using Verse;
 // ReSharper disable UnusedMember.Local
 
-namespace MorePersonaWeaponTraits.Patches
+namespace MorePersonaTraits.Patches
 {
     // Implementation directly inspired by alattalatta's bullet patch implementation from Infusion 2. 
     // I found adding a comp to every bullet to be a little overkill and didn't want to put that kind of strain on people's games.

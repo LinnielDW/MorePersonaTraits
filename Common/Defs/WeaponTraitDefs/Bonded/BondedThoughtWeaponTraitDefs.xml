@@ -13,7 +13,7 @@
     <ThoughtDef>
         <defName>MPT_Thought_WeatherDown</defName>
         <thoughtClass>Thought_Situational</thoughtClass>
-        <workerClass>MorePersonaWeaponTraits.WorkerClasses.ThoughtWorkerClasses.ThoughtWorker_WeaponTraitWeather</workerClass>
+        <workerClass>MorePersonaTraits.WorkerClasses.ThoughtWorkerClasses.ThoughtWorker_WeaponTraitWeather</workerClass>
         <stages>
             <li>
                 <label>{WEAPON}'s stormdepression</label>
@@ -36,7 +36,7 @@
     <ThoughtDef>
         <defName>MPT_Thought_WeatherUp</defName>
         <thoughtClass>Thought_Situational</thoughtClass>
-        <workerClass>MorePersonaWeaponTraits.WorkerClasses.ThoughtWorkerClasses.ThoughtWorker_WeaponTraitWeather</workerClass>
+        <workerClass>MorePersonaTraits.WorkerClasses.ThoughtWorkerClasses.ThoughtWorker_WeaponTraitWeather</workerClass>
         <stages>
             <li>
                 <label>{WEAPON}'s pluviophilism</label>
@@ -59,7 +59,7 @@
     <ThoughtDef>
         <defName>MPT_Thought_FemaleHate</defName>
         <thoughtClass>Thought_Situational</thoughtClass>
-        <workerClass>MorePersonaWeaponTraits.WorkerClasses.ThoughtWorkerClasses.ThoughtWorker_WeaponTraitGenderFemale</workerClass>
+        <workerClass>MorePersonaTraits.WorkerClasses.ThoughtWorkerClasses.ThoughtWorker_WeaponTraitGenderFemale</workerClass>
         <stages>
             <li>
                 <label>{WEAPON}'s bigotry</label>
@@ -81,7 +81,7 @@
     <ThoughtDef>
         <defName>MPT_Thought_FemaleLove</defName>
         <thoughtClass>Thought_Situational</thoughtClass>
-        <workerClass>MorePersonaWeaponTraits.WorkerClasses.ThoughtWorkerClasses.ThoughtWorker_WeaponTraitGenderFemale</workerClass>
+        <workerClass>MorePersonaTraits.WorkerClasses.ThoughtWorkerClasses.ThoughtWorker_WeaponTraitGenderFemale</workerClass>
         <stages>
             <li>
                 <label>{WEAPON}'s simpering</label>
@@ -104,7 +104,7 @@
     <ThoughtDef>
         <defName>MPT_Thought_MaleHate</defName>
         <thoughtClass>Thought_Situational</thoughtClass>
-        <workerClass>MorePersonaWeaponTraits.WorkerClasses.ThoughtWorkerClasses.ThoughtWorker_WeaponTraitGenderMale</workerClass>
+        <workerClass>MorePersonaTraits.WorkerClasses.ThoughtWorkerClasses.ThoughtWorker_WeaponTraitGenderMale</workerClass>
         <stages>
             <li>
                 <label>{WEAPON}'s bigotry</label>
@@ -126,7 +126,7 @@
     <ThoughtDef>
         <defName>MPT_Thought_MaleLove</defName>
         <thoughtClass>Thought_Situational</thoughtClass>
-        <workerClass>MorePersonaWeaponTraits.WorkerClasses.ThoughtWorkerClasses.ThoughtWorker_WeaponTraitGenderMale</workerClass>
+        <workerClass>MorePersonaTraits.WorkerClasses.ThoughtWorkerClasses.ThoughtWorker_WeaponTraitGenderMale</workerClass>
         <stages>
             <li>
                 <label>{WEAPON}'s simpering</label>
@@ -149,7 +149,7 @@
     <ThoughtDef>
         <defName>MPT_Thought_NoAnimalHate</defName>
         <thoughtClass>Thought_Situational</thoughtClass>
-        <workerClass>MorePersonaWeaponTraits.WorkerClasses.ThoughtWorkerClasses.ThoughtWorker_WeaponTraitNoBondedAnimal</workerClass>
+        <workerClass>MorePersonaTraits.WorkerClasses.ThoughtWorkerClasses.ThoughtWorker_WeaponTraitNoBondedAnimal</workerClass>
         <stages>
             <li>
                 <label>{WEAPON}'s fawning</label>
@@ -172,7 +172,7 @@
     <ThoughtDef>
         <defName>MPT_Thought_AnimalHate</defName>
         <thoughtClass>Thought_Situational</thoughtClass>
-        <workerClass>MorePersonaWeaponTraits.WorkerClasses.ThoughtWorkerClasses.ThoughtWorker_WeaponTraitBondedAnimal</workerClass>
+        <workerClass>MorePersonaTraits.WorkerClasses.ThoughtWorkerClasses.ThoughtWorker_WeaponTraitBondedAnimal</workerClass>
         <stages>
             <li>
                 <label>{WEAPON}'s zoophobia</label>

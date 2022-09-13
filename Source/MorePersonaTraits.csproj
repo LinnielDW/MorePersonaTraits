@@ -11,8 +11,8 @@
     <ProjectGuid>{D7D21B4A-1DA7-41D8-B202-C58CA8FA62AA}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MorePersonaWeaponTraits</RootNamespace>
-    <AssemblyName>MorePersonaWeaponTraits</AssemblyName>
+    <RootNamespace>MorePersonaTraits</RootNamespace>
+    <AssemblyName>MorePersonaTraits</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <LangVersion>latest</LangVersion>
@@ -24,7 +24,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
-    <ModLocation>D:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\MorePersonaWeaponTraits</ModLocation>
+    <ModLocation>D:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\MorePersonaTraits</ModLocation>
   </PropertyGroup>
   <ItemGroup>
     <CommonFiles Include="..\Common\**">
@@ -60,7 +60,7 @@
     <Compile Include="Extensions\WeaponTraitOnHitExtension.cs" />
     <Compile Include="Patches\CompBladelinkWeaponPatches.cs" />
     <Compile Include="Patches\UIPatches.cs" />
-    <Compile Include="Settings\MorePersonaWeaponTraitsSettings.cs" />
+    <Compile Include="Settings\MorePersonaTraitsSettings.cs" />
     <Compile Include="Utils\FieldRefUtils.cs" />
     <Compile Include="Utils\NeedFillUtils.cs" />
     <Compile Include="Utils\SettingsUtils.cs" />
@@ -89,7 +89,7 @@
     <Compile Include="WorkerClasses\ThoughtWorkerClasses\ThoughtWorker_WeaponTraitWeather.cs" />
     <Compile Include="WorkerClasses\WeaponTraitWorkerClasses\WeaponTraitWorker_NeedFilledOnKill.cs" />
     <Compile Include="Patches\PatchOnDamage.cs" />
-    <Compile Include="MorePersonaWeaponTraits.cs" />
+    <Compile Include="MorePersonaTraits.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Templates\OnHitWorker_Template.cs" />
     <Compile Include="Utils\OnHitWorkerUtils.cs" />

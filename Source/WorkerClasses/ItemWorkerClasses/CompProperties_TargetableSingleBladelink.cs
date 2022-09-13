@@ -1,6 +1,6 @@
 ﻿using RimWorld;
 
-namespace MorePersonaWeaponTraits.WorkerClasses.ItemWorkerClasses
+namespace MorePersonaTraits.WorkerClasses.ItemWorkerClasses
 {
     public class CompProperties_TargetableSingleBladelink : CompProperties_Targetable
     {

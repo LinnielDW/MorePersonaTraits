@@ -1,12 +1,12 @@
 ﻿using HarmonyLib;
-using MorePersonaWeaponTraits.Utils;
+using MorePersonaTraits.Utils;
 using RimWorld;
 using Verse;
-using static MorePersonaWeaponTraits.Settings.MorePersonaWeaponTraitsSettings;
+using static MorePersonaTraits.Settings.MorePersonaTraitsSettings;
 
 // ReSharper disable UnusedMember.Local
 
-namespace MorePersonaWeaponTraits.Patches
+namespace MorePersonaTraits.Patches
 {
     [HarmonyPatch(typeof(CompBladelinkWeapon))]
     [HarmonyPatch("CanAddTrait")]

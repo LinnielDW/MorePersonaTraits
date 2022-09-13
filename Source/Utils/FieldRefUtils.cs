@@ -2,7 +2,7 @@
 using HarmonyLib;
 using RimWorld;
 
-namespace MorePersonaWeaponTraits.Utils
+namespace MorePersonaTraits.Utils
 {
     public static class FieldRefUtils
     {

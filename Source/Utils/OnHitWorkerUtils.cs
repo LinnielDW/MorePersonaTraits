@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using MorePersonaWeaponTraits.Extensions;
-using MorePersonaWeaponTraits.WorkerClasses.OnHitWorkerClasses;
+using MorePersonaTraits.Extensions;
+using MorePersonaTraits.WorkerClasses.OnHitWorkerClasses;
 using RimWorld;
 using Verse;
 
-namespace MorePersonaWeaponTraits.Utils
+namespace MorePersonaTraits.Utils
 {
     public static class OnHitWorkerUtils
     {
@@ -34,7 +34,7 @@ namespace MorePersonaWeaponTraits.Utils
             }
             catch
             {
-                Log.Error("[MorePersonaWeaponTraits]: Error while getting on-hit worker list.");
+                Log.Error("[MorePersonaTraits]: Error while getting on-hit worker list.");
                 return null;
             }
         }
