@@ -35,8 +35,8 @@ A new profession has been added to the Empire's elite ranks. The blademonk is li
 This mod also adds multiple QoL features:
 [list]
     [*]autolinks: links to traits from a persona weapon's description and also adding an item link from a pawn to the weapon for easy referencing.
-	[*]trait limit settings: adds a setting to increase the min and max number of traits a given weapon can have.
-	[*]more names: extended the name list of persona weapons.
+    [*]trait limit settings: adds a setting to increase the min and max number of traits a given weapon can have.
+    [*]more names: extended the name list of persona weapons.
 [/list] 
 
 [h3]For Modders[/h3]
