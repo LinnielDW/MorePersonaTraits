@@ -1,9 +1,9 @@
-[img]<description img link here>[/img]
+[img]https://i.imgur.com/SEUgiYL.png[/img]
 A mod that adds more than 100 new persona weapon traits for persona weapons with custom code effects, adds a handful of other additions & QoL features relating to persona weapons and provides documentation for modders to create their own traits.
 
 Persona (formally bladelink) weapons and their traits were only added in a major free update some time after Royalty's release, but was eclipsed by other changes in the same patch. As such, the feature flew under many people's radar, mine included. After learning about them and reading the book Warbreaker, I was inspired by a certain sword in the book to use these weapons more often in my own playthoughs, only to find them rather lacking in personality and a little repetitive. Fast forward 5 months and constant scope creep, I present to you this mod. See below for content details.
 
-[img]<details img link here>[/img]
+[img]https://i.imgur.com/HMMEzpy.png[/img]
 [h2]Traits[/h2]
 This mod adds many, many new traits roughly broken down by archetype as seen below.
 I will make a full list of traits soon-ish.
@@ -42,7 +42,7 @@ This mod also adds multiple QoL features:
 [h3]For Modders[/h3]
 Within the git repo, I've included templates and some documentation for other modders to create their own weapon trait mods or to extend this mod with addons using the extra functionality I added here as a base.
 
-[img]<FAQ img link here>[/img]
+[img]https://i.imgur.com/goORJ6c.png[/img]
 Q: Can it be added mid-save?
 A: Yes.
 
@@ -50,7 +50,7 @@ Q: Can it be removed mid-save?
 A: I'd never recommend removing a mod mid-save unless you know what you're doing. But yes, on the condition that you remove any items related to this mod and any weapons with this mod's traits on your maps first.
 
 Q: Is this mod compatible with Vanilla Persona Weapons Expanded?
-A: Yes. It was an inspiration for me to complete this mod. I have personally completed a ship victory run with both it and this mod installed (among others).
+A: Yes.
 
 Q: Is this mod compatible with Persona Bond Forge?
 A: Yes. The ranged persona weapons added by that mod can also still trigger on-hit effects.
@@ -59,10 +59,10 @@ Q: Does this mod add any new weapons?
 A: Currently not.
 
 Q: CE compatible?
-A: No idea. Never played with it. If someone in the could try this for me, that'd be great.
+A: No idea. Never played with it. If someone could try this for me, that'd be great.
 
 Q: Full traits list?
-A: WIP, soon(tm). If you are extra curious and don't mind XML, I've arranged the files for the traits into achtype for easier cognitive parsing.
+A: WIP, soon(tm). If you are extra curious and don't mind XML, I've arranged the files for the traits into archetype for easier cognitive parsing.
 
 Q: Updates?
 A: I put a lot of work into this mod and plan on supporting it thoroughly.
@@ -79,16 +79,17 @@ A: I mentioned Warbreaker, but I have also read the SA books 1-4 and some of his
 For any other and all things, please leave a comment, I read every single comment and try to get back to all of them.
 
 
-[img]<misc img link here>[/img]
+[img]https://i.imgur.com/VkOnIDn.png[/img]
 [h2]Links[/h2]
-Project board
-Github
+[url=https://github.com/users/LinnielDW/projects/1]Project Board[/url]
+[url=https://github.com/LinnielDW/MorePersonaTraits]Github[/url]
 
 [h2]Legal[/h2]
 C#, XML, trait descriptions and item sprites by me, Arquebus
 Thumbnail and banners by my good friend woffleman
 
 Thanks to Brrainz for Harmony which made this mod possible and to the VE team for releasing VPWE which gave me the motivation to finish this mod.
-Special thanks to my friends and to the Rimworld discord for being my rubber ducks when I was stuck and giving feedback.
+
+And special thanks to my friends for being my rubber ducks when I was stuck and to the Rimworld discord for giving me feedback.
 
 Licensed under MIT License
