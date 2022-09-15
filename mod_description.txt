@@ -1,4 +1,5 @@
 [img]https://i.imgur.com/SEUgiYL.png[/img]
+
 A mod that adds more than 100 new persona weapon traits for persona weapons with custom code effects, adds a handful of other additions & QoL features relating to persona weapons and provides documentation for modders to create their own traits.
 
 Persona (formally bladelink) weapons and their traits were only added in a major free update some time after Royalty's release, but was eclipsed by other changes in the same patch. As such, the feature flew under many people's radar, mine included. After learning about them and reading the book Warbreaker, I was inspired by a certain sword in the book to use these weapons more often in my own playthoughs, only to find them rather lacking in personality and a little repetitive. Fast forward 5 months and constant scope creep, I present to you this mod. See below for content details.
@@ -18,8 +19,8 @@ I will make a full list of traits soon-ish.
 [/list]
 
 [h2]Non-Trait related additions[/h2]
-[h3]Items[h3]
-No more useless masterwork persona monoswords! This mod adds non-crafable items which can be used manipulate the effects of your persona weapons in some way:
+[h3]Items[/h3]
+No more useless masterwork persona monoswords! This mod adds non-craftable items which can be used manipulate the traits of your persona weapons in some way:
 [list]
     [*]Persona Bond Effector: Breaks the bond of a weapon and pawn without killing or destroying either.
     [*]Persona Reformat Effector: Completely re-writes the weapon's traits
@@ -36,13 +37,14 @@ This mod also adds multiple QoL features:
 [list]
     [*]autolinks: links to traits from a persona weapon's description and also adding an item link from a pawn to the weapon for easy referencing.
     [*]trait limit settings: adds a setting to increase the min and max number of traits a given weapon can have.
-    [*]more names: extended the name list of persona weapons.
+    [*]more names: extended the name generation list for persona weapons.
 [/list] 
 
 [h3]For Modders[/h3]
 Within the git repo, I've included templates and some documentation for other modders to create their own weapon trait mods or to extend this mod with addons using the extra functionality I added here as a base.
 
 [img]https://i.imgur.com/goORJ6c.png[/img]
+
 Q: Can it be added mid-save?
 A: Yes.
 
@@ -80,6 +82,7 @@ For any other and all things, please leave a comment, I read every single commen
 
 
 [img]https://i.imgur.com/VkOnIDn.png[/img]
+
 [h2]Links[/h2]
 [url=https://github.com/users/LinnielDW/projects/1]Project Board[/url]
 [url=https://github.com/LinnielDW/MorePersonaTraits]Github[/url]
