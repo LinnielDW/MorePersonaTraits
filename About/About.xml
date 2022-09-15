@@ -5,7 +5,7 @@
     <supportedVersions>
         <li>1.3</li>
     </supportedVersions>
-    <description>A mod that adds more than 100 new persona weapon traits for persona weapons with custom code effects, adds a handful of other additions &amp; QoL features relating to persona weapons and provides documentation for modders to create their own traits.\n\nPersona (formally bladelink) weapons and their traits were only added in a major free update some time after Royalty's release, but was eclipsed by other changes in the same patch. As such, the feature flew under many people's radar, mine included. After learning about them and reading the book Warbreaker, I was inspired by a certain sword in the book to use these weapons more often in my own playthoughs, only to find them rather lacking in personality and a little repetitive. Fast forward 5 months and constant scope creep, I present to you this mod.</description>
+    <description>A mod that adds more than 100 new persona weapon traits for persona weapons with custom code effects, adds a handful of other additions &amp; QoL features relating to persona weapons and provides documentation for modders to create their own traits.</description>
     <url>https://steamcommunity.com/id/Arquebus/myworkshopfiles/?appid=294100</url>
     <modDependencies>
         <li>
