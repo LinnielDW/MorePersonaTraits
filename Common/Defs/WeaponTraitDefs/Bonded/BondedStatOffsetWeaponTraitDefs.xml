@@ -32,7 +32,6 @@
             <li>
                 <statOffsets>
                     <ResearchSpeed>0.15</ResearchSpeed>
-                    <HackingSpeed>0.25</HackingSpeed>
                     <ButcheryMechanoidSpeed>0.5</ButcheryMechanoidSpeed>
                 </statOffsets>
             </li>
@@ -63,7 +62,6 @@
             <li>
                 <statOffsets>
                     <ResearchSpeed>-0.15</ResearchSpeed>
-                    <HackingSpeed>-0.25</HackingSpeed>
                     <ButcheryMechanoidSpeed>-0.5</ButcheryMechanoidSpeed>
                 </statOffsets>
             </li>
@@ -751,7 +749,6 @@
             <li>
                 <statOffsets>
                     <PlantWorkSpeed>0.5</PlantWorkSpeed>
-                    <PruningSpeed>0.15</PruningSpeed>
                 </statOffsets>
             </li>
         </stages>
@@ -781,7 +778,6 @@
             <li>
                 <statOffsets>
                     <PlantWorkSpeed>-0.5</PlantWorkSpeed>
-                    <PruningSpeed>-0.15</PruningSpeed>
                 </statOffsets>
             </li>
         </stages>
@@ -1225,8 +1221,6 @@
             <li>
                 <statOffsets>
                     <ArrestSuccessChance>0.5</ArrestSuccessChance>
-                    <ConversionPower>0.5</ConversionPower>
-                    <SuppressionPower>0.5</SuppressionPower>
                     <NegotiationAbility>0.5</NegotiationAbility>
                 </statOffsets>
             </li>
@@ -1257,8 +1251,6 @@
             <li>
                 <statOffsets>
                     <ArrestSuccessChance>-0.5</ArrestSuccessChance>
-                    <ConversionPower>-0.5</ConversionPower>
-                    <SuppressionPower>-0.5</SuppressionPower>
                     <NegotiationAbility>-0.5</NegotiationAbility>
                 </statOffsets>
             </li>
