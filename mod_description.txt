@@ -1,0 +1,94 @@
+[img]<description img link here>[/img]
+A mod that adds more than 100 new persona weapon traits for persona weapons with custom code effects, adds a handful of other additions & QoL features relating to persona weapons and provides documentation for modders to create their own traits.
+
+Persona (formally bladelink) weapons and their traits were only added in a major free update some time after Royalty's release, but was eclipsed by other changes in the same patch. As such, the feature flew under many people's radar, mine included. After learning about them and reading the book Warbreaker, I was inspired by a certain sword in the book to use these weapons more often in my own playthoughs, only to find them rather lacking in personality and a little repetitive. Fast forward 5 months and constant scope creep, I present to you this mod. See below for content details.
+
+[img]<details img link here>[/img]
+[h2]Traits[/h2]
+This mod adds many, many new traits roughly broken down by archetype as seen below.
+I will make a full list of traits soon-ish.
+[list]
+    [*]On-Kill effects: Adds traits which have a chance of activating when a wielder kills with this weapon.
+    [*]Equipped stat effects: Adds passive effects (can be both positive and negative) to the wielder when they have the weapon equipped. These are mainly combat related stats.
+    [*]Bonded stat effects: Similarly to equipped stat effects, these traits offer passive effects but are active even when the bonded pawn does not have the weapon equipped. These are mainly non-combat related stats.
+    [*]Bonded addictions: Adds a semi-permanent addiction to a pawn when they are bonded to a weapon with such a trait, though with lower withdrawal side-effects. Breaking the bond between the pawn and weapon will remove the addiction.
+    [*]Bonded thoughts: Adds situational thought effects to the bonded pawn. For example receiving a mood boost if it's raining.
+    [*]On-Hit Effects: Adds special effects that can trigger when the wielder of the weapon lands a hit with the weapon. These include but not limited to: applying plague to the receiver, applying plague to the attacker, spawning ash, filling needs and making the attacker feel bad for hitting things.
+	These on-hit effects also work with ranged persona weapons (if you have a mod that adds them) but at a reduced proc chance.
+[/list]
+
+[h2]Non-Trait related additions[/h2]
+[h3]Items[h3]
+No more useless masterwork persona monoswords! This mod adds non-crafable items which can be used manipulate the effects of your persona weapons in some way:
+[list]
+    [*]Persona Bond Effector: Breaks the bond of a weapon and pawn without killing or destroying either.
+    [*]Persona Reformat Effector: Completely re-writes the weapon's traits
+    [*]Persona Extension Effector: Randomly adds a compatible trait to the weapon
+    [*]Persona Reduction Effector: Randomly removes a trait from the weapon
+[/list]
+These weapons can be found as quest rewards or bought from exotic goods traders.
+
+[h3]Pawns[/h3]
+A new profession has been added to the Empire's elite ranks. The blademonk is lightly armoured but is guaranteed to wield a persona weapon and have high melee proficiency.
+
+[h3]QoL Features[/h3]
+This mod also adds multiple QoL features:
+[list]
+    [*]autolinks: links to traits from a persona weapon's description and also adding an item link from a pawn to the weapon for easy referencing.
+	[*]trait limit settings: adds a setting to increase the min and max number of traits a given weapon can have.
+	[*]more names: extended the name list of persona weapons.
+[/list] 
+
+[h3]For Modders[/h3]
+Within the git repo, I've included templates and some documentation for other modders to create their own weapon trait mods or to extend this mod with addons using the extra functionality I added here as a base.
+
+[img]<FAQ img link here>[/img]
+Q: Can it be added mid-save?
+A: Yes.
+
+Q: Can it be removed mid-save?
+A: I'd never recommend removing a mod mid-save unless you know what you're doing. But yes, on the condition that you remove any items related to this mod and any weapons with this mod's traits on your maps first.
+
+Q: Is this mod compatible with Vanilla Persona Weapons Expanded?
+A: Yes. It was an inspiration for me to complete this mod. I have personally completed a ship victory run with both it and this mod installed (among others).
+
+Q: Is this mod compatible with Persona Bond Forge?
+A: Yes. The ranged persona weapons added by that mod can also still trigger on-hit effects.
+
+Q: Does this mod add any new weapons?
+A: Currently not.
+
+Q: CE compatible?
+A: No idea. Never played with it. If someone in the could try this for me, that'd be great.
+
+Q: Full traits list?
+A: WIP, soon(tm). If you are extra curious and don't mind XML, I've arranged the files for the traits into achtype for easier cognitive parsing.
+
+Q: Updates?
+A: I put a lot of work into this mod and plan on supporting it thoroughly.
+
+Q: I have an idea/I found a bug, can you add/fix it?
+A: Awesome! Maybe, hopefully. Please leave a comment and let me know.
+
+Q: I heard documentation?
+A: See the github. Message me if you have extra questions.
+
+Q: Anything Cosmere or Brandon Sanderson related
+A: I mentioned Warbreaker, but I have also read the SA books 1-4 and some of his other works but I'm not completely caught up, so please no spoilers for me or anyone else.
+
+For any other and all things, please leave a comment, I read every single comment and try to get back to all of them.
+
+
+[img]<misc img link here>[/img]
+[h2]Links[/h2]
+Project board
+Github
+
+[h2]Legal[/h2]
+C#, XML, trait descriptions and item sprites by me, Arquebus
+Thumbnail and banners by my good friend woffleman
+
+Thanks to Brrainz for Harmony which made this mod possible and to the VE team for releasing VPWE which gave me the motivation to finish this mod.
+Special thanks to my friends and to the Rimworld discord for being my rubber ducks when I was stuck and giving feedback.
+
+Licensed under MIT License
