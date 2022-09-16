@@ -26,7 +26,7 @@
     
     <WeaponTraitDef>
         <defName>MPT_OnHit_FoodSelfDown</defName>
-        <label>neutrient-siphoning</label>
+        <label>nutrient-siphoning</label>
         <description>This weapon's persona requires a little extra to be convinced to do battle.\nUpon hitting a living thing, the wielder has a chance of losing a small amount of their food.</description>
         <commonality>0.5</commonality>
         <marketValueOffset>-400</marketValueOffset>

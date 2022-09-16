@@ -15,7 +15,7 @@
     <WeaponTraitDef>
         <defName>MPT_OnKill_NeedFilledComfort</defName>
         <label>kill-comforting</label>
-        <description>This weapon's persona knows life is difficult and forces you to do difficult things. If it had arms, it would hug you when you have to be the mosnter that the world forces you to be.\nUpon slaying a living thing with this weapon, it has a chance to fill the wielders comfort.</description>
+        <description>This weapon's persona knows life is difficult and forces you to do difficult things. If it had arms, it would hug you when you have to be the monster that the world forces you to be.\nUpon slaying a living thing with this weapon, it has a chance to fill the wielders comfort.</description>
         <workerClass>MorePersonaTraits.WorkerClasses.WeaponTraitWorkerClasses.WeaponTraitWorker_ComfortFilledOnKill</workerClass>
         <commonality>0.5</commonality>
         <marketValueOffset>300</marketValueOffset>

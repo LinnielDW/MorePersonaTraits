@@ -27,7 +27,7 @@
     <WeaponTraitDef>
         <defName>MPT_OnHit_PlagueSelf</defName>
         <label>plague magnet</label>
-        <description>This weapon's persona seems to attract the most exotic of baterium at the most inopportune times.\nUpon hitting a target, there is a small chance that the user will contract the plague.</description>
+        <description>This weapon's persona seems to attract the most exotic of bacterium at the most inopportune times.\nUpon hitting a target, there is a small chance that the user will contract the plague.</description>
         <commonality>0.5</commonality>
         <marketValueOffset>-800</marketValueOffset>
         <exclusionTags>

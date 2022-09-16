@@ -3,7 +3,7 @@
     <WeaponTraitDef ParentName="BondedWeaponTraitBase">
         <defName>MPT_Bonded_ImmunePenoxycyline</defName>
         <label>penoxycylined</label>
-        <description>This weapon's persona gives its bond permenant Penoxycyline effects so long as the bond holds. That being immunity to malaria, sleeping sickness, and the plague.</description>
+        <description>This weapon's persona gives its bond permanent Penoxycyline effects so long as the bond holds. That being immunity to malaria, sleeping sickness, and the plague.</description>
         <marketValueOffset>300</marketValueOffset>
         <bondedHediffs>
             <li>MPT_Hediff_ImmunePenoxycyline</li>
@@ -209,7 +209,7 @@
     <WeaponTraitDef ParentName="BondedWeaponTraitBase">
         <defName>MPT_Bonded_Vomit</defName>
         <label>disgorging</label>
-        <description>This weapon's persona sends their bonded pawn into a constant state of nausia.\nThe bonded pawn periodically throws up.</description>
+        <description>This weapon's persona sends their bonded pawn into a constant state of nausea.\nThe bonded pawn periodically throws up.</description>
         <marketValueOffset>-500</marketValueOffset>
         <bondedHediffs>
             <li>MPT_Hediff_BondedVomit</li>
@@ -220,8 +220,8 @@
     </WeaponTraitDef>
     <HediffDef>
         <defName>MPT_Hediff_BondedVomit</defName>
-        <label>psychic nausia</label>
-        <description>My bonded weapon is giving me nausia.</description>
+        <label>psychic nausea</label>
+        <description>My bonded weapon is giving me nausea.</description>
         <descriptionHyperlinks>
             <WeaponTraitDef>MPT_Bonded_Vomit</WeaponTraitDef>
         </descriptionHyperlinks>
@@ -263,7 +263,7 @@
     <WeaponTraitDef ParentName="BondedWeaponTraitBase">
         <defName>MPT_Bonded_BleedFactorDown</defName>
         <label>congealing</label>
-        <description>This weapon's persona knows the improtance of the red liquid that comes out of most things and will try its best to make sure their bonded keeps all of theirs.\nThe bonded pawn bleeds out slower.</description>
+        <description>This weapon's persona knows the importance of the red liquid that comes out of most things and will try its best to make sure their bonded keeps all of theirs.\nThe bonded pawn bleeds out slower.</description>
         <marketValueOffset>400</marketValueOffset>
         <equippedHediffs>
             <li>MPT_Hediff_HeldBleedFactorDown</li>

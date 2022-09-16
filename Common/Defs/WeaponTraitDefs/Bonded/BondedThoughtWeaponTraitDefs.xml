@@ -26,7 +26,7 @@
     <WeaponTraitDef ParentName="BondedWeaponTraitBase">
         <defName>MPT_Bonded_ThoughtWeatherUp</defName>
         <label>meteorological</label>
-        <description>This weapon's persona finds novelty in observing objects move from high to low gravitational energy states, and simplty cannot get enough of the rain.\nThe bonded pawn gains a mood boost when the weather is not clear.</description>
+        <description>This weapon's persona finds novelty in observing objects move from high to low gravitational energy states, and simply cannot get enough of the rain.\nThe bonded pawn gains a mood boost when the weather is not clear.</description>
         <marketValueOffset>300</marketValueOffset>
         <exclusionTags>
             <li>MPT_Thought_Weather</li>
@@ -49,7 +49,7 @@
     <WeaponTraitDef ParentName="BondedWeaponTraitBase">
         <defName>MPT_Bonded_ThoughtFemaleHate</defName>
         <label>misogynist</label>
-        <description>This weapon's persona has a seething hatred for women and never stops to let their bond know.\nThe bonded pawn gains a mood penality if they are female.</description>
+        <description>This weapon's persona has a seething hatred for women and never stops to let their bond know.\nThe bonded pawn gains a mood penalty if they are female.</description>
         <marketValueOffset>-300</marketValueOffset>
         <exclusionTags>
             <li>MPT_Thought_Gender</li>
