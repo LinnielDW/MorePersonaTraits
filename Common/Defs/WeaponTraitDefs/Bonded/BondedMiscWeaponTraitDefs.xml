@@ -290,7 +290,7 @@
     <WeaponTraitDef ParentName="BondedWeaponTraitBase">
         <defName>MPT_Bonded_NaturalHealingFactorUp</defName>
         <label>hermetic</label>
-        <description>This weapon's persona seems to transmit some sort of pancacea via a psychic connection.\nThe bonded pawn gains increased healing speed.</description>
+        <description>This weapon's persona seems to transmit some sort of panacea via a psychic connection.\nThe bonded pawn gains increased healing speed.</description>
         <bondedHediffs>
             <li>MPT_Hediff_NaturalHealingFactorUp</li>
         </bondedHediffs>
