@@ -14,7 +14,7 @@ namespace MorePersonaTraits.Patches
     {
         static void Postfix(Thing hitThing, Bullet __instance)
         {
-            var primary = (__instance.Launcher as Pawn)?.equipment.Primary;
+            var primary = (__instance.Launcher as Pawn)?.equipment?.Primary;
             if (OnHitWorkerUtils.hasOnHitWorker(primary))
             {
                 OnHitUtils.attemptApplyOnHitEffects(
