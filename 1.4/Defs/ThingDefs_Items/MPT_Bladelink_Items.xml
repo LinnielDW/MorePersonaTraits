@@ -34,7 +34,7 @@
             </li>
         </comps>
         <thingSetMakerTags>
-            <li>RewardStandardHighFreq</li>
+            <li>RewardStandardMidFreq</li>
         </thingSetMakerTags>
     </ThingDef>
 
