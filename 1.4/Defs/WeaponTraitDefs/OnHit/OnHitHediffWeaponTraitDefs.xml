@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <WeaponTraitDef>
+        <defName>MPT_OnHit_Plague</defName>
+        <label>plague bringer</label>
+        <description>This weapon's persona revels in the art of slow and agonizing death.\nUpon hitting a target, this weapon has a chance to apply/increase the targets plague.</description>
+        <commonality>0.5</commonality>
+        <marketValueOffset>400</marketValueOffset>
+        <descriptionHyperlinks>
+            <HediffDef>Plague</HediffDef>
+        </descriptionHyperlinks>
+        <modExtensions>
+            <li Class="MorePersonaTraits.Extensions.WeaponTraitOnHitExtension">
+                <OnHitWorkers>
+                    <li Class="MorePersonaTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_ApplyHediff">
+                        <HediffDef>Plague</HediffDef>
+                        <ProcMagnitude>0.15</ProcMagnitude>
+                        <ProcChance>0.35</ProcChance>
+                        <RequiresBothLiving>true</RequiresBothLiving>
+                        <RequiresBio>true</RequiresBio>
+                    </li>
+                </OnHitWorkers>
+            </li>
+        </modExtensions>
+    </WeaponTraitDef>
+    
+    <WeaponTraitDef>
+        <defName>MPT_OnHit_PlagueSelf</defName>
+        <label>plague magnet</label>
+        <description>This weapon's persona seems to attract the most exotic of bacterium at the most inopportune times.\nUpon hitting a target, there is a small chance that the user will contract the plague.</description>
+        <commonality>0.5</commonality>
+        <marketValueOffset>-800</marketValueOffset>
+        <exclusionTags>
+            <li>MPT_PlagueImmune</li>
+        </exclusionTags>
+        <descriptionHyperlinks>
+            <HediffDef>Plague</HediffDef>
+        </descriptionHyperlinks>
+        <modExtensions>
+            <li Class="MorePersonaTraits.Extensions.WeaponTraitOnHitExtension">
+                <OnHitWorkers>
+                    <li Class="MorePersonaTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_ApplyHediff">
+                        <HediffDef>Plague</HediffDef>
+                        <ProcMagnitude>0.02</ProcMagnitude>
+                        <ProcChance>0.02</ProcChance>
+                        <TargetSelf>true</TargetSelf>
+                        <RequiresBio>true</RequiresBio>
+                    </li>
+                </OnHitWorkers>
+            </li>
+        </modExtensions>
+    </WeaponTraitDef>
+    
+    <WeaponTraitDef>
+        <defName>MPT_OnHit_Flu</defName>
+        <label>flu carrier</label>
+        <description>This weapon's persona once experienced flight and now wishes that any and all that it comes into contact with 'flu'.\nUpon hitting a target, this weapon has a chance to apply/increase the targets flu.</description>
+        <commonality>0.5</commonality>
+        <marketValueOffset>400</marketValueOffset>
+        <descriptionHyperlinks>
+            <HediffDef>Flu</HediffDef>
+        </descriptionHyperlinks>
+        <modExtensions>
+            <li Class="MorePersonaTraits.Extensions.WeaponTraitOnHitExtension">
+                <OnHitWorkers>
+                    <li Class="MorePersonaTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_ApplyHediff">
+                        <HediffDef>Flu</HediffDef>
+                        <ProcMagnitude>0.35</ProcMagnitude>
+                        <ProcChance>0.5</ProcChance>
+                        <RequiresBothLiving>true</RequiresBothLiving>
+                        <RequiresBio>true</RequiresBio>
+                    </li>
+                </OnHitWorkers>
+            </li>
+        </modExtensions>
+    </WeaponTraitDef>
+    
+    <WeaponTraitDef>
+        <defName>MPT_OnHit_FluSelf</defName>
+        <label>flu-prone</label>
+        <description>This weapon's persona attracts maladies anywhere it goes. Their bond will always be suffering from a runny nose or shortness of breath.\nUpon hitting a target, there is a small chance that the user will contract the flu.</description>
+        <commonality>0.5</commonality>
+        <marketValueOffset>-800</marketValueOffset>
+        <exclusionTags>
+            <li>MPT_FluImmune</li>
+        </exclusionTags>
+        <descriptionHyperlinks>
+            <HediffDef>Flu</HediffDef>
+        </descriptionHyperlinks>
+        <modExtensions>
+            <li Class="MorePersonaTraits.Extensions.WeaponTraitOnHitExtension">
+                <OnHitWorkers>
+                    <li Class="MorePersonaTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_ApplyHediff">
+                        <HediffDef>Flu</HediffDef>
+                        <ProcMagnitude>0.02</ProcMagnitude>
+                        <ProcChance>0.02</ProcChance>
+                        <TargetSelf>true</TargetSelf>
+                        <RequiresBio>true</RequiresBio>
+                    </li>
+                </OnHitWorkers>
+            </li>
+        </modExtensions>
+    </WeaponTraitDef>
+    
+    <WeaponTraitDef>
+        <defName>MPT_OnHit_Pain</defName>
+        <label>pain-dealer</label>
+        <description>This weapon's persona helps its wielder in combat by overstimulating their enemies brain; firing all their neurons in a flurry of painful pulses.\nUpon hitting a target, there is a chance that the target will experience mounting pain.</description>
+        <commonality>0.5</commonality>
+        <marketValueOffset>800</marketValueOffset>
+        <descriptionHyperlinks>
+            <HediffDef>MPT_Hediff_PsychicPain</HediffDef>
+        </descriptionHyperlinks>
+        <modExtensions>
+            <li Class="MorePersonaTraits.Extensions.WeaponTraitOnHitExtension">
+                <OnHitWorkers>
+                    <li Class="MorePersonaTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_ApplyHediff">
+                        <HediffDef>MPT_Hediff_PsychicPain</HediffDef>
+                        <ProcMagnitude>0.2</ProcMagnitude>
+                        <ProcChance>0.4</ProcChance>
+                        <RequiresBothLiving>true</RequiresBothLiving>
+                        <RequiresBio>true</RequiresBio>
+                    </li>
+                </OnHitWorkers>
+            </li>
+        </modExtensions>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_Hediff_PsychicPain</defName>
+        <label>psychic pain</label>
+        <description>An effect of coming under the personal wrath of a persona weapon. While ethereal, it feels very real in the moment.</description>
+        <isBad>false</isBad>
+        <hediffClass>HediffWithComps</hediffClass>
+        <comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-0.33</severityPerDay>
+                <showHoursToRecover>true</showHoursToRecover>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <label>minor</label>
+                <painOffset>0.2</painOffset>
+            </li>
+            <li>
+                <minSeverity>0.2</minSeverity>
+                <label>slight</label>
+                <painOffset>0.25</painOffset>
+            </li>
+            <li>
+                <minSeverity>0.4</minSeverity>
+                <label>moderate</label>
+                <painOffset>0.3</painOffset>
+            </li>
+            <li>
+                <minSeverity>0.6</minSeverity>
+                <label>major</label>
+                <painOffset>0.35</painOffset>
+            </li>
+            <li>
+                <minSeverity>0.8</minSeverity>
+                <label>extreme</label>
+                <painOffset>0.4</painOffset>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <WeaponTraitDef>
+        <defName>MPT_OnHit_PainSelf</defName>
+        <label>pain-filling</label>
+        <description>This weapon's persona hates suffering, and will do their best to not be used for such acts, even if it means that their wielder might suffer instead.\nUpon hitting a target, there is a chance that the wielder will experience an increase in pain.</description>
+        <commonality>0.5</commonality>
+        <marketValueOffset>-800</marketValueOffset>
+        <descriptionHyperlinks>
+            <HediffDef>MPT_Hediff_PsychicPain</HediffDef>
+        </descriptionHyperlinks>
+        <modExtensions>
+            <li Class="MorePersonaTraits.Extensions.WeaponTraitOnHitExtension">
+                <OnHitWorkers>
+                    <li Class="MorePersonaTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_ApplyHediff">
+                        <HediffDef>MPT_Hediff_PsychicPain</HediffDef>
+                        <ProcMagnitude>0.05</ProcMagnitude>
+                        <ProcChance>0.2</ProcChance>
+                        <TargetSelf>true</TargetSelf>
+                        <RequiresBio>true</RequiresBio>
+                    </li>
+                </OnHitWorkers>
+            </li>
+        </modExtensions>
+    </WeaponTraitDef>
+    
+    <WeaponTraitDef>
+        <defName>MPT_OnHit_DrainBlood</defName>
+        <label>vampiric</label>
+        <description>This weapon's persona is able to absorb the blood of the wielder's target with every hit.\nUpon hitting a target, there is a chance that the target incurs blood loss and that the wielder recovers a portion of theirs.</description>
+        <commonality>0.5</commonality>
+        <marketValueOffset>1000</marketValueOffset>
+        <descriptionHyperlinks>
+            <HediffDef>BloodLoss</HediffDef>
+        </descriptionHyperlinks>
+        <modExtensions>
+            <li Class="MorePersonaTraits.Extensions.WeaponTraitOnHitExtension">
+                <OnHitWorkers>
+                    <li Class="MorePersonaTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_ApplyHediff">
+                        <HediffDef>BloodLoss</HediffDef>
+                        <ProcMagnitude>0.1</ProcMagnitude>
+                        <ProcChance>0.8</ProcChance>
+                        <RequiresBothLiving>true</RequiresBothLiving>
+                        <RequiresBio>true</RequiresBio>
+                    </li>
+                    <li Class="MorePersonaTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_ApplyHediff">
+                        <HediffDef>BloodLoss</HediffDef>
+                        <ProcMagnitude>-0.075</ProcMagnitude>
+                        <ProcChance>0.8</ProcChance>
+                        <RequiresBothLiving>true</RequiresBothLiving>
+                        <TargetSelf>true</TargetSelf>
+                        <RequiresBio>true</RequiresBio>
+                    </li>
+                </OnHitWorkers>
+            </li>
+        </modExtensions>
+    </WeaponTraitDef>
+    
+    <WeaponTraitDef>
+        <defName>MPT_OnHit_BloodLossSelf</defName>
+        <label>bloodtaker</label>
+        <description>This weapon's persona insists that the story of the Rim is written in blood and requires blood to write the wielder's story.\nUpon hitting a target, there is a chance that the wielder incurs blood loss.</description>
+        <commonality>0.5</commonality>
+        <marketValueOffset>-500</marketValueOffset>
+        <descriptionHyperlinks>
+            <HediffDef>BloodLoss</HediffDef>
+        </descriptionHyperlinks>
+        <modExtensions>
+            <li Class="MorePersonaTraits.Extensions.WeaponTraitOnHitExtension">
+                <OnHitWorkers>
+                    <li Class="MorePersonaTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_ApplyHediff">
+                        <HediffDef>BloodLoss</HediffDef>
+                        <ProcMagnitude>0.05</ProcMagnitude>
+                        <ProcChance>0.35</ProcChance>
+                        <TargetSelf>true</TargetSelf>
+                        <RequiresBio>true</RequiresBio>
+                    </li>
+                </OnHitWorkers>
+            </li>
+        </modExtensions>
+    </WeaponTraitDef>
+    
+    <WeaponTraitDef>
+        <defName>MPT_OnHit_BloodLoss</defName>
+        <label>blood-letting</label>
+        <description>This weapon's persona pulls extra blood out of its victims.\nUpon hitting a target, there is a chance that the wielder's target incurs blood loss.</description>
+        <commonality>0.5</commonality>
+        <marketValueOffset>500</marketValueOffset>
+        <descriptionHyperlinks>
+            <HediffDef>BloodLoss</HediffDef>
+        </descriptionHyperlinks>
+        <modExtensions>
+            <li Class="MorePersonaTraits.Extensions.WeaponTraitOnHitExtension">
+                <OnHitWorkers>
+                    <li Class="MorePersonaTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_ApplyHediff">
+                        <HediffDef>BloodLoss</HediffDef>
+                        <ProcMagnitude>0.1</ProcMagnitude>
+                        <ProcChance>0.8</ProcChance>
+                        <RequiresBio>true</RequiresBio>
+                    </li>
+                </OnHitWorkers>
+            </li>
+        </modExtensions>
+    </WeaponTraitDef>
+</Defs>

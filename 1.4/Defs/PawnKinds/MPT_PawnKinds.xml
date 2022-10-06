@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <PawnKindDef Name="MPT_PawnKindBase" Abstract="True">
+        <maxGenerationAge>55</maxGenerationAge>
+        <backstoryFiltersOverride>
+            <li>
+                <categories>
+                    <li>ImperialCommon</li>
+                    <li>ImperialFighter</li>
+                </categories>
+            </li>
+        </backstoryFiltersOverride>
+        <specificApparelRequirements>
+            <li>
+                <bodyPartGroup>UpperHead</bodyPartGroup>
+                <stuff>Cloth</stuff>
+            </li>
+            <li>
+                <bodyPartGroup>Torso</bodyPartGroup>
+                <apparelLayer>OnSkin</apparelLayer>
+                <stuff>Cloth</stuff>
+            </li>
+            <li>
+                <bodyPartGroup>Legs</bodyPartGroup>
+                <apparelLayer>OnSkin</apparelLayer>
+                <stuff>Cloth</stuff>
+            </li>
+        </specificApparelRequirements>
+        <backstoryCryptosleepCommonality>0.02</backstoryCryptosleepCommonality>
+        <chemicalAddictionChance>0.1</chemicalAddictionChance>
+        <combatEnhancingDrugsChance>0.15</combatEnhancingDrugsChance>
+        <combatEnhancingDrugsCount>0~2</combatEnhancingDrugsCount>
+        <invNutrition>2.55</invNutrition>
+        <apparelMoney>1000~2500</apparelMoney>
+        <apparelTags>
+            <li>IndustrialBasic</li>
+            <li>IndustrialAdvanced</li>
+            <li>IndustrialMilitaryBasic</li>
+        </apparelTags>
+        <techHediffsChance>0.3</techHediffsChance>
+        <techHediffsMoney>1000~1500</techHediffsMoney>
+        <techHediffsTags>
+            <li>Advanced</li>
+            <li>ImplantEmpireCommon</li>
+        </techHediffsTags>
+        <techHediffsDisallowTags>
+            <li>PainCauser</li>
+        </techHediffsDisallowTags>
+        <disallowedTraits>
+            <li>BodyPurist</li>
+        </disallowedTraits>
+
+        <requiredWorkTags>
+            <li>Violent</li>
+        </requiredWorkTags>
+    </PawnKindDef>
+
+    <PawnKindDef ParentName="MPT_PawnKindBase">
+        <defName>MPT_BladeMonk</defName>
+        <label>Bladelink Monk</label>
+        <race>Human</race>
+        <combatPower>70</combatPower>
+        <weaponMoney>3000~7000</weaponMoney>
+        <weaponTags>
+            <li>Bladelink</li>
+        </weaponTags>
+        <apparelRequired>
+            <li>Apparel_ShieldBelt</li>
+        </apparelRequired>
+        <skills>
+            <li>
+                <skill>Melee</skill>
+                <range>14~18</range>
+            </li>
+        </skills>
+        <initialWillRange>3~8</initialWillRange>
+        <initialResistanceRange>15~35</initialResistanceRange>
+        <disallowedTraits>
+            <li>Wimp</li>
+        </disallowedTraits>
+    </PawnKindDef>
+</Defs>
