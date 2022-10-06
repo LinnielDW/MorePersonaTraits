@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <WeaponTraitDef>
+        <defName>MPT_OnKill_NeedFilledFood</defName>
+        <label>kill-satiating</label>
+        <description>This weapon's persona says it is connected to something about someones last meal and knows how to replicate it.\nUpon slaying a living thing with this weapon, it has a chance to fill the wielders hunger.</description>
+        <workerClass>MorePersonaTraits.WorkerClasses.WeaponTraitWorkerClasses.WeaponTraitWorker_FoodFilledOnKill</workerClass>
+        <commonality>0.2</commonality>
+        <marketValueOffset>1000</marketValueOffset>
+        <exclusionTags>
+            <li>KillNeeds</li>
+        </exclusionTags>
+    </WeaponTraitDef>
+    
+    <WeaponTraitDef>
+        <defName>MPT_OnKill_NeedFilledComfort</defName>
+        <label>kill-comforting</label>
+        <description>This weapon's persona knows life is difficult and forces you to do difficult things. If it had arms, it would hug you when you have to be the monster that the world forces you to be.\nUpon slaying a living thing with this weapon, it has a chance to fill the wielders comfort.</description>
+        <workerClass>MorePersonaTraits.WorkerClasses.WeaponTraitWorkerClasses.WeaponTraitWorker_ComfortFilledOnKill</workerClass>
+        <commonality>0.5</commonality>
+        <marketValueOffset>300</marketValueOffset>
+        <exclusionTags>
+            <li>KillNeeds</li>
+        </exclusionTags>
+    </WeaponTraitDef>
+    
+    <WeaponTraitDef>
+        <defName>MPT_OnKill_NeedFilledJoy</defName>
+        <label>kill-joyful</label>
+        <description>This weapon's persona has taken an immortal vow to seek justice. They take great joys in handing out lethal justice.\nUpon slaying a living thing with this weapon, it has a chance to fill the wielders joy.</description>
+        <workerClass>MorePersonaTraits.WorkerClasses.WeaponTraitWorkerClasses.WeaponTraitWorker_JoyFilledOnKill</workerClass>
+        <commonality>0.5</commonality>
+        <marketValueOffset>300</marketValueOffset>
+        <exclusionTags>
+            <li>KillNeeds</li>
+        </exclusionTags>
+    </WeaponTraitDef>
+    
+    <WeaponTraitDef>
+        <defName>MPT_OnKill_NeedFilledBeauty</defName>
+        <label>beauty-in-death</label>
+        <description>This weapon's persona views the loss of life as the most elegant of arts. When in battle, this beauty is also revealed to the wielder.\nUpon slaying a living thing with this weapon, it has a chance to fill the wielders need for beauty.</description>
+        <workerClass>MorePersonaTraits.WorkerClasses.WeaponTraitWorkerClasses.WeaponTraitWorker_BeautyFilledOnKill</workerClass>
+        <commonality>0.5</commonality>
+        <marketValueOffset>300</marketValueOffset>
+        <exclusionTags>
+            <li>KillNeeds</li>
+        </exclusionTags>
+    </WeaponTraitDef>
+    
+    <WeaponTraitDef>
+        <defName>MPT_OnKill_NeedFilledRest</defName>
+        <label>kill-relaxation</label>
+        <description>This weapon's persona consumes the energy of their wielders victims, claiming for their own.\nUpon slaying a living thing with this weapon, it has a chance to fill the wielders rest.</description>
+        <workerClass>MorePersonaTraits.WorkerClasses.WeaponTraitWorkerClasses.WeaponTraitWorker_RestFilledOnKill</workerClass>
+        <commonality>0.2</commonality>
+        <marketValueOffset>1000</marketValueOffset>
+        <exclusionTags>
+            <li>KillNeeds</li>
+        </exclusionTags>
+    </WeaponTraitDef>
+    
+    <WeaponTraitDef>
+        <defName>MPT_OnKill_NeedFilledInOutdoors</defName>
+        <label>kill-niche</label>
+        <description>This weapon's persona knows that the things it will see and people that they meet will come and go like a revolving door and teaches their wielder, the side of the door you are on doesn't matter so much... As long as something is dying.\nUpon slaying a living thing with this weapon, it has a chance to fill the wielders indoor or outdoor need.</description>
+        <workerClass>MorePersonaTraits.WorkerClasses.WeaponTraitWorkerClasses.WeaponTraitWorker_InOutdoorsFilledOnKill</workerClass>
+        <commonality>0.5</commonality>
+        <marketValueOffset>300</marketValueOffset>
+        <exclusionTags>
+            <li>KillNeeds</li>
+        </exclusionTags>
+    </WeaponTraitDef>
+    
+    <WeaponTraitDef>
+        <defName>MPT_OnKill_NeedFilledChemical</defName>
+        <label>kill-euphoric</label>
+        <description>This weapon's persona experiences a devilish release with every kill, potent enough to sate the most strongest cravings.\nUpon slaying a living thing with this weapon, it has a chance to fill one of the wielders chemical addiction needs.</description>
+        <workerClass>MorePersonaTraits.WorkerClasses.WeaponTraitWorkerClasses.WeaponTraitWorker_ChemicalFilledOnKill</workerClass>
+        <commonality>0.5</commonality>
+        <marketValueOffset>800</marketValueOffset>
+        <exclusionTags>
+            <li>KillNeeds</li>
+        </exclusionTags>
+    </WeaponTraitDef>
+</Defs>

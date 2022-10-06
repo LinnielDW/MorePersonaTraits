@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <WeaponTraitDef>
+        <defName>MPT_OnHit_SpawnAsh</defName>
+        <label>dustbringer</label>
+        <description>This weapon's persona has taken an immortal vow to understand one's own power. Its swings spew forth ash as a not-so-subtle metaphor for the destruction that its wielder exerts.\nUpon landing a hit with this weapon, it has a chance to spawn ash filth under its wielder.</description>
+        <commonality>0.5</commonality>
+        <marketValueOffset>-100</marketValueOffset>
+        <exclusionTags>
+            <li>Radiant</li>
+            <li>MPT_OnHit_SpawnFilth</li>
+        </exclusionTags>
+        <modExtensions>
+            <li Class="MorePersonaTraits.Extensions.WeaponTraitOnHitExtension">
+                <OnHitWorkers>
+                    <li Class="MorePersonaTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_SpawnFilth">
+                        <Filth>Filth_Ash</Filth>
+                        <ProcChance>0.66</ProcChance>
+                        <TargetSelf>true</TargetSelf>
+                    </li>
+                </OnHitWorkers>
+            </li>
+        </modExtensions>
+    </WeaponTraitDef>
+
+    <WeaponTraitDef>
+        <defName>MPT_OnHit_SpawnSlime</defName>
+        <label>slimy</label>
+        <description>This weapon's persona perpetually splashes insectoid fluids secreted by an unknown mechanism.\nUpon landing a hit with this weapon, it has a chance to spawn slime filth under its wielder.</description>
+        <commonality>0.5</commonality>
+        <marketValueOffset>-100</marketValueOffset>
+        <exclusionTags>
+            <li>MPT_OnHit_SpawnFilth</li>
+        </exclusionTags>
+        <modExtensions>
+            <li Class="MorePersonaTraits.Extensions.WeaponTraitOnHitExtension">
+                <OnHitWorkers>
+                    <li Class="MorePersonaTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_SpawnFilth">
+                        <Filth>Filth_Slime</Filth>
+                        <ProcChance>0.66</ProcChance>
+                        <TargetSelf>true</TargetSelf>
+                    </li>
+                </OnHitWorkers>
+            </li>
+        </modExtensions>
+    </WeaponTraitDef>
+    
+    <WeaponTraitDef>
+        <defName>MPT_OnHit_SpawnBlood</defName>
+        <label>bloodsoaked</label>
+        <description>This weapon's persona has seen so much bloodshed that the universe seems to preemptively yield blood in its wake.\nUpon landing a hit with this weapon, it has a chance to spawn a pool of blood under its wielder.</description>
+        <commonality>0.5</commonality>
+        <marketValueOffset>-100</marketValueOffset>
+        <exclusionTags>
+            <li>MPT_OnHit_SpawnFilth</li>
+        </exclusionTags>
+        <modExtensions>
+            <li Class="MorePersonaTraits.Extensions.WeaponTraitOnHitExtension">
+                <OnHitWorkers>
+                    <li Class="MorePersonaTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_SpawnFilth">
+                        <Filth>Filth_Blood</Filth>
+                        <ProcChance>0.66</ProcChance>
+                        <TargetSelf>true</TargetSelf>
+                    </li>
+                </OnHitWorkers>
+            </li>
+        </modExtensions>
+    </WeaponTraitDef>
+    
+    <WeaponTraitDef>
+        <defName>MPT_OnHit_SpawnFoam</defName>
+        <label>foamy</label>
+        <description>This weapon's persona knows the propensity for explosively volatile scenarios on the Rim. During a fight, they will attempt to inhibit such scenarios.\nUpon landing a hit with this weapon, it has a chance to spawn firefoam under its wielder.</description>
+        <commonality>0.5</commonality>
+        <marketValueOffset>250</marketValueOffset>
+        <exclusionTags>
+            <li>MPT_OnHit_SpawnFilth</li>
+        </exclusionTags>
+        <modExtensions>
+            <li Class="MorePersonaTraits.Extensions.WeaponTraitOnHitExtension">
+                <OnHitWorkers>
+                    <li Class="MorePersonaTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_SpawnFilth">
+                        <Filth>Filth_FireFoam</Filth>
+                        <ProcChance>0.5</ProcChance>
+                        <TargetSelf>true</TargetSelf>
+                        <RequiresBothLiving>true</RequiresBothLiving>
+                    </li>
+                </OnHitWorkers>
+            </li>
+        </modExtensions>
+    </WeaponTraitDef>
+    
+    <WeaponTraitDef>
+        <defName>MPT_OnHit_SpawnFuel</defName>
+        <label>combustible</label>
+        <description>This weapon's persona insists that their essential oils are sure to make a bang at any party, providing free samples during the most wildest of gatherings.\nUpon landing a hit with this weapon, it has a chance to spawn flammable chemfuel puddles under its target.</description>
+        <commonality>0.5</commonality>
+        <marketValueOffset>500</marketValueOffset>
+        <exclusionTags>
+            <li>MPT_OnHit_SpawnFilth</li>
+        </exclusionTags>
+        <modExtensions>
+            <li Class="MorePersonaTraits.Extensions.WeaponTraitOnHitExtension">
+                <OnHitWorkers>
+                    <li Class="MorePersonaTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_SpawnFilth">
+                        <Filth>Filth_Fuel</Filth>
+                        <ProcChance>0.5</ProcChance>
+                    </li>
+                </OnHitWorkers>
+            </li>
+        </modExtensions>
+    </WeaponTraitDef>
+    
+    <WeaponTraitDef>
+        <defName>MPT_OnHit_SpawnFuelSelf</defName>
+        <label>chemfuel-anointing</label>
+        <description>This weapon's persona wishes to anoint its wielder for good luck in dangerous situations. It just so happens to be that the only substance the persona can summon is chemfuel.\nUpon landing a hit with this weapon, it has a chance to spawn flammable chemfuel puddles under its wielder.</description>
+        <commonality>0.5</commonality>
+        <marketValueOffset>-500</marketValueOffset>
+        <exclusionTags>
+            <li>MPT_OnHit_SpawnFilth</li>
+        </exclusionTags>
+        <modExtensions>
+            <li Class="MorePersonaTraits.Extensions.WeaponTraitOnHitExtension">
+                <OnHitWorkers>
+                    <li Class="MorePersonaTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_SpawnFilth">
+                        <Filth>Filth_Fuel</Filth>
+                        <ProcChance>0.33</ProcChance>
+                        <TargetSelf>true</TargetSelf>
+                    </li>
+                </OnHitWorkers>
+            </li>
+        </modExtensions>
+    </WeaponTraitDef>
+    
+    <WeaponTraitDef>
+        <defName>MPT_OnHit_Stun</defName>
+        <label>stunning</label>
+        <description>This weapon's persona makes every swing strike with flourish. Enemies tend to be stunned by its sheer panache.\nUpon landing a hit with this weapon, it has a chance to stun the target.</description>
+        <commonality>0.5</commonality>
+        <marketValueOffset>500</marketValueOffset>
+        <exclusionTags>
+            <li>MPT_OnHit_Stun</li>
+        </exclusionTags>
+        <modExtensions>
+            <li Class="MorePersonaTraits.Extensions.WeaponTraitOnHitExtension">
+                <OnHitWorkers>
+                    <li Class="MorePersonaTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_ApplyStun">
+                        <ProcChance>0.25</ProcChance>
+                        <StunDuration>2</StunDuration>
+                        <RequiresBothLiving>true</RequiresBothLiving>
+                    </li>
+                </OnHitWorkers>
+            </li>
+        </modExtensions>
+    </WeaponTraitDef>
+</Defs>

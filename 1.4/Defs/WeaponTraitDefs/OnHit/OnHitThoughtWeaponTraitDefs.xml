@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <WeaponTraitDef>
+        <defName>MPT_OnHit_ThoughtSelfUp</defName>
+        <label>stalwart</label>
+        <description>This weapon's persona has taken an immortal vow to be there when they are needed most. They will try to guide their wielder to also uphold this vow, especially when life is at its hardest.\nUpon hitting a target, there is a chance that the wielder will gain a small mood increase, stacking multiple times.</description>
+        <commonality>0.5</commonality>
+        <marketValueOffset>400</marketValueOffset>
+        <exclusionTags>
+            <li>Radiant</li>
+            <li>MPT_OnHit_ThoughtSelf</li>
+        </exclusionTags>
+        <modExtensions>
+            <li Class="MorePersonaTraits.Extensions.WeaponTraitOnHitExtension">
+                <OnHitWorkers>
+                    <li Class="MorePersonaTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_ApplyThought">
+                        <ThoughtDef>MPT_Thought_HitGood</ThoughtDef>
+                        <ProcChance>0.8</ProcChance>
+                        <TargetSelf>true</TargetSelf>
+                        <RequiresBothLiving>true</RequiresBothLiving>
+                        <RequiresBio>true</RequiresBio>
+                    </li>
+                </OnHitWorkers>
+            </li>
+        </modExtensions>
+    </WeaponTraitDef>
+
+    <ThoughtDef>
+        <defName>MPT_Thought_HitGood</defName>
+        <showBubble>true</showBubble>
+        <durationDays>1</durationDays>
+        <stackLimit>8</stackLimit>
+        <stackedEffectMultiplier>0.5</stackedEffectMultiplier>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_OnHit_ThoughtSelfUp</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <stages>
+            <li>
+                <label>psychic stoneward</label>
+                <description>My bonded weapon's words echo inside my head, pushing me forward, despite my own interests.</description>
+                <baseMoodEffect>5</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <WeaponTraitDef>
+        <defName>MPT_OnHit_ThoughtSelfDown</defName>
+        <label>remorseful</label>
+        <description>This weapon's persona seeks to resolve conflict before it comes to violence. Every swing reminds their bond that they have failed.\nUpon hitting a target, there is a chance that the wielder will gain a small mood debuff, stacking multiple times.</description>
+        <commonality>0.5</commonality>
+        <marketValueOffset>-400</marketValueOffset>
+        <exclusionTags>
+            <li>MPT_OnHit_ThoughtSelf</li>
+        </exclusionTags>
+        <modExtensions>
+            <li Class="MorePersonaTraits.Extensions.WeaponTraitOnHitExtension">
+                <OnHitWorkers>
+                    <li Class="MorePersonaTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_ApplyThought">
+                        <ThoughtDef>MPT_Thought_HitBad</ThoughtDef>
+                        <ProcChance>0.8</ProcChance>
+                        <TargetSelf>true</TargetSelf>
+                        <RequiresBothLiving>true</RequiresBothLiving>
+                        <RequiresBio>true</RequiresBio>
+                    </li>
+                </OnHitWorkers>
+            </li>
+        </modExtensions>
+    </WeaponTraitDef>
+
+    <ThoughtDef>
+        <defName>MPT_Thought_HitBad</defName>
+        <showBubble>true</showBubble>
+        <durationDays>1</durationDays>
+        <stackLimit>8</stackLimit>
+        <stackedEffectMultiplier>0.5</stackedEffectMultiplier>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_OnHit_ThoughtSelfDown</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <stages>
+            <li>
+                <label>psychic remorse</label>
+                <description>My bonded weapon insists there was another way to handle this. With every connected swing, we feel a mounting regret for we have failed to stop this confrontation.</description>
+                <baseMoodEffect>-5</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+</Defs>

@@ -1,0 +1,1259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <WeaponTraitDef Name="BondedWeaponTraitBase" Abstract="True">
+        <commonality>0.4</commonality>
+        <modExtensions>
+            <li Class="MorePersonaTraits.Extensions.WeaponTraitDefExtension">
+                <AllowNeverBond>false</AllowNeverBond>
+            </li>
+        </modExtensions>
+    </WeaponTraitDef>
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_Bonded_ResearchUp</defName>
+        <label>insightful</label>
+        <description>This weapon's persona speaks long forgotten truths to its bond.\nThe person bonded to it gains extra research speed so long as they are bonded.</description>
+        <marketValueOffset>500</marketValueOffset>
+        <bondedHediffs>
+            <li>MPT_Hediff_ResearchUp</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_Bonded_Research</li>
+        </exclusionTags>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_Hediff_ResearchUp</defName>
+        <label>psychic truth</label>
+        <description>Research speed is increased by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_Bonded_ResearchUp</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statOffsets>
+                    <ResearchSpeed>0.15</ResearchSpeed>
+                    <ButcheryMechanoidSpeed>0.5</ButcheryMechanoidSpeed>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_Bonded_ResearchDown</defName>
+        <label>rambling</label>
+        <description>This weapon's persona constantly rambles useless distractions into their bond's mind.\nThe bonded pawn takes a hit to their research speed so long as the bond holds.</description>
+        <marketValueOffset>-500</marketValueOffset>
+        <bondedHediffs>
+            <li>MPT_Hediff_ResearchDown</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_Bonded_Research</li>
+        </exclusionTags>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_Hediff_ResearchDown</defName>
+        <label>psychic mental derailment</label>
+        <description>Research speed is decreased by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_Bonded_ResearchDown</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statOffsets>
+                    <ResearchSpeed>-0.15</ResearchSpeed>
+                    <ButcheryMechanoidSpeed>-0.5</ButcheryMechanoidSpeed>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_Bonded_GlobalWorkspeedUp</defName>
+        <label>driven</label>
+        <description>This weapon's persona fills its bond with energy, driving it forward.\nThe bonded pawn gains increased to global work speed.</description>
+        <bondedHediffs>
+            <li>MPT_Hediff_GlobalWorkspeedUp</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_Bonded_GlobalWorkspeed</li>
+        </exclusionTags>
+        <marketValueOffset>1000</marketValueOffset>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_Hediff_GlobalWorkspeedUp</defName>
+        <label>psychic work drive</label>
+        <description>My global work speed is increased by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_Bonded_GlobalWorkspeedUp</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statOffsets>
+                    <WorkSpeedGlobal>0.2</WorkSpeedGlobal>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_Bonded_GlobalWorkspeedDown</defName>
+        <label>slacking</label>
+        <description>This weapon's persona seeks to 'conserve the high energy state of the universe' by resisting energy state changes made willingly by its bonded.\nThe bonded pawn loses some global work speed.</description>
+        <bondedHediffs>
+            <li>MPT_Hediff_GlobalWorkspeedDown</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_Bonded_GlobalWorkspeed</li>
+        </exclusionTags>
+        <marketValueOffset>-1000</marketValueOffset>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_Hediff_GlobalWorkspeedDown</defName>
+        <label>psychic energy state change inhibitor</label>
+        <description>My global work speed is decreased by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_Bonded_GlobalWorkspeedDown</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statOffsets>
+                    <WorkSpeedGlobal>-0.2</WorkSpeedGlobal>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_Bonded_ShootingAccuracyPawnUp</defName>
+        <label>spotter</label>
+        <description>This weapon's persona excels at giving marksman advice to its bond.\nThe bonded pawn gains shooting accuracy.</description>
+        <bondedHediffs>
+            <li>MPT_Hediff_ShootingAccuracyPawnUp</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_Bonded_ShootingAccuracyPawn</li>
+        </exclusionTags>
+        <marketValueOffset>500</marketValueOffset>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_Hediff_ShootingAccuracyPawnUp</defName>
+        <label>psychic spotter</label>
+        <description>My shooting accuracy is increased by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_Bonded_ShootingAccuracyPawnUp</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statOffsets>
+                    <ShootingAccuracyPawn>3</ShootingAccuracyPawn>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_Bonded_ShootingAccuracyPawnDown</defName>
+        <label>trooper-aimed</label>
+        <description>This weapon's persona has romanticised the idea of 'plot armour' and will take steps to make it with its bond.\nThe bonded pawn takes a penalty shooting accuracy.</description>
+        <bondedHediffs>
+            <li>MPT_Hediff_ShootingAccuracyPawnDown</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_Bonded_ShootingAccuracyPawn</li>
+        </exclusionTags>
+        <marketValueOffset>-500</marketValueOffset>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_Hediff_ShootingAccuracyPawnDown</defName>
+        <label>psychic oversightedness</label>
+        <description>My shooting accuracy is decreased by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_Bonded_ShootingAccuracyPawnDown</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statOffsets>
+                    <ShootingAccuracyPawn>-3</ShootingAccuracyPawn>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_Bonded_TradePriceImprovementUp</defName>
+        <label>poker faced</label>
+        <description>This weapon's persona is great at reading a negotiation and whispers tips to its bond to help close a deal.\nThe bonded pawn gains an edge in negotiations and trades.</description>
+        <bondedHediffs>
+            <li>MPT_Hediff_TradePriceImprovementUp</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_Bonded_TradePriceImprovement</li>
+        </exclusionTags>
+        <marketValueOffset>500</marketValueOffset>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_Hediff_TradePriceImprovementUp</defName>
+        <label>psychic negotiation assistance</label>
+        <description>My trade prices and negotiation abilities are increased by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_Bonded_TradePriceImprovementUp</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statOffsets>
+                    <TradePriceImprovement>0.1</TradePriceImprovement>
+                    <NegotiationAbility>0.5</NegotiationAbility>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_Bonded_TradePriceImprovementDown</defName>
+        <label>histrionic</label>
+        <description>This weapon's persona cracks the most inappropriate jokes when its bond is attempting to be composed around others.\nThe bonded pawn has a harder time trading and negotiating.</description>
+        <bondedHediffs>
+            <li>MPT_Hediff_TradePriceImprovementDown</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_Bonded_TradePriceImprovement</li>
+        </exclusionTags>
+        <marketValueOffset>-500</marketValueOffset>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_Hediff_TradePriceImprovementDown</defName>
+        <label>psychically induced spontaneous laughter</label>
+        <description>My trade prices and negotiation abilities are being hampered by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_Bonded_TradePriceImprovementDown</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statOffsets>
+                    <TradePriceImprovement>-0.1</TradePriceImprovement>
+                    <NegotiationAbility>-0.5</NegotiationAbility>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_Bonded_SurgerySuccessChanceFactorUp</defName>
+        <label>exact</label>
+        <description>This weapon's persona helps guide the hand of the surgeon it is bonded to.\nThe bonded pawn gains increased surgery success chance.</description>
+        <bondedHediffs>
+            <li>MPT_Hediff_SurgerySuccessChanceFactorUp</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_Bonded_SurgerySuccessChanceFactor</li>
+        </exclusionTags>
+        <marketValueOffset>500</marketValueOffset>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_Hediff_SurgerySuccessChanceFactorUp</defName>
+        <label>psychic surgery guidance</label>
+        <description>My surgery success chance is increased by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_Bonded_SurgerySuccessChanceFactorUp</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statOffsets>
+                    <SurgerySuccessChanceFactor>0.1</SurgerySuccessChanceFactor>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_Bonded_SurgerySuccessChanceFactorDown</defName>
+        <label>careless</label>
+        <description>This weapon's persona tends to make their bond miss critical details.\nThe bonded pawn loses some of their surgery success chance.</description>
+        <bondedHediffs>
+            <li>MPT_Hediff_SurgerySuccessChanceFactorDown</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_Bonded_SurgerySuccessChanceFactor</li>
+        </exclusionTags>
+        <marketValueOffset>-500</marketValueOffset>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_Hediff_SurgerySuccessChanceFactorDown</defName>
+        <label>psychic carelessness</label>
+        <description>My surgery success chance is being hampered by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_Bonded_SurgerySuccessChanceFactorDown</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statOffsets>
+                    <SurgerySuccessChanceFactor>-0.1</SurgerySuccessChanceFactor>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_Bonded_RestRateMultiplierUp</defName>
+        <label>cosy</label>
+        <description>This weapon's persona sooothes their bonded helping them get a good nights sleep.\nThe bonded pawn has increased rest rate.</description>
+        <bondedHediffs>
+            <li>MPT_Hediff_RestRateMultiplierUp</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_Bonded_RestRateMultiplier</li>
+        </exclusionTags>
+        <marketValueOffset>500</marketValueOffset>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_Hediff_RestRateMultiplierUp</defName>
+        <label>psychic sweet dreams</label>
+        <description>My rest rate is increased by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_Bonded_RestRateMultiplierUp</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statOffsets>
+                    <RestRateMultiplier>0.25</RestRateMultiplier>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_Bonded_RestRateMultiplierDown</defName>
+        <label>doomsaying</label>
+        <description>This weapon's persona can't help but provide dreams of the horrors that might lay ahead.\nThe bonded pawn has reduced rest rate.</description>
+        <bondedHediffs>
+            <li>MPT_Hediff_RestRateMultiplierDown</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_Bonded_RestRateMultiplier</li>
+        </exclusionTags>
+        <marketValueOffset>-500</marketValueOffset>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_Hediff_RestRateMultiplierDown</defName>
+        <label>psychic restlessness</label>
+        <description>My rest rate is being hampered by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_Bonded_RestRateMultiplierDown</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statOffsets>
+                    <RestRateMultiplier>-0.25</RestRateMultiplier>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_Bonded_ImmunityGainSpeedUp</defName>
+        <label>vital</label>
+        <description>This weapon's persona has extensive knowledge on protein folding and is able to provide this knowledge to the immune system of their bond.\nThe bonded pawn gains increased immunity gain speed.</description>
+        <bondedHediffs>
+            <li>MPT_Hediff_ImmunityGainSpeedUp</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_Bonded_ImmunityGainSpeed</li>
+        </exclusionTags>
+        <marketValueOffset>500</marketValueOffset>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_Hediff_ImmunityGainSpeedUp</defName>
+        <label>psychically charged antibodies</label>
+        <description>My immunity gain speed is enhanced by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_Bonded_ImmunityGainSpeedUp</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statOffsets>
+                    <ImmunityGainSpeed>0.05</ImmunityGainSpeed>
+                    <FoodPoisonChance>-0.15</FoodPoisonChance>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_Bonded_ImmunityGainSpeedDown</defName>
+        <label>immunomasochist</label>
+        <description>This weapon's persona has the strangely specific hobby of watching the extended pain and suffering that comes from their bond's body attempts to fight off infectious agents, and will take steps to enjoy that hobby for as long as possible.\nThe bonded pawn loses some of their immunity gain speed.</description>
+        <bondedHediffs>
+            <li>MPT_Hediff_ImmunityGainSpeedDown</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_Bonded_ImmunityGainSpeed</li>
+        </exclusionTags>
+        <marketValueOffset>-500</marketValueOffset>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_Hediff_ImmunityGainSpeedDown</defName>
+        <label>psychically hampered immune response</label>
+        <description>My immunity gain speed being hampered by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_Bonded_ImmunityGainSpeedDown</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statOffsets>
+                    <ImmunityGainSpeed>-0.05</ImmunityGainSpeed>
+                    <FoodPoisonChance>0.15</FoodPoisonChance>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_Bonded_MedicalTendQualityOffsetUp</defName>
+        <label>tender</label>
+        <description>This weapon's persona is both tender in heart and a tender at heart.\nProviding its bonded pawn gains increased tend quality.</description>
+        <bondedHediffs>
+            <li>MPT_Hediff_MedicalTendQualityOffsetUp</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_Bonded_MedicalTendQualityOffset</li>
+        </exclusionTags>
+        <marketValueOffset>500</marketValueOffset>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_Hediff_MedicalTendQualityOffsetUp</defName>
+        <label>psychic bandage application guidelines</label>
+        <description>My tend quality is enhanced by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_Bonded_MedicalTendQualityOffsetUp</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statOffsets>
+                    <MedicalTendQualityOffset>0.05</MedicalTendQualityOffset>
+                    <MedicalTendSpeed>0.25</MedicalTendSpeed>
+                    <MedicalSurgerySuccessChance>0.25</MedicalSurgerySuccessChance>
+                    <MedicalOperationSpeed>0.25</MedicalOperationSpeed>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_Bonded_MedicalTendQualityOffsetDown</defName>
+        <label>embalmer</label>
+        <description>This weapon's persona is more concerned in the process of preserving biological remains than the preservation of life and 'helpfully' encourages its bond to do the same.\nThe bonded pawn loses some tend quality.</description>
+        <bondedHediffs>
+            <li>MPT_Hediff_MedicalTendQualityOffsetDown</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_Bonded_MedicalTendQualityOffset</li>
+        </exclusionTags>
+        <marketValueOffset>-500</marketValueOffset>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_Hediff_MedicalTendQualityOffsetDown</defName>
+        <label>psychic questionable first aid guidance</label>
+        <description>My tend quality is being hampered by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_Bonded_MedicalTendQualityOffsetDown</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statOffsets>
+                    <MedicalTendQualityOffset>-0.05</MedicalTendQualityOffset>
+                    <MedicalTendSpeed>-0.25</MedicalTendSpeed>
+                    <MedicalSurgerySuccessChance>-0.25</MedicalSurgerySuccessChance>
+                    <MedicalOperationSpeed>-0.25</MedicalOperationSpeed>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_Bonded_GlobalLearningFactorUp</defName>
+        <label>tutoring</label>
+        <description>This weapon's persona has taken an immortal vow to reach their full potential and will help their bonded in any and all cases of self improvement.\nThe bonded pawn gains increased learning speed.</description>
+        <bondedHediffs>
+            <li>MPT_Hediff_GlobalLearningFactorUp</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_Bonded_GlobalLearningFactor</li>
+            <li>Radiant</li>
+        </exclusionTags>
+        <marketValueOffset>500</marketValueOffset>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_Hediff_GlobalLearningFactorUp</defName>
+        <label>psychic elsecaller</label>
+        <description>My learning rate is enhanced by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_Bonded_GlobalLearningFactorUp</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statOffsets>
+                    <GlobalLearningFactor>0.2</GlobalLearningFactor>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_Bonded_GlobalLearningFactorDown</defName>
+        <label>asinine</label>
+        <description>This weapon's persona seems to contain vast knowledge of a universe with fundamentally different laws of nature, insisting that the way we see the universe is wrong.\nWhile interesting, it is mostly useless; causing the bonded pawn to learn slower.</description>
+        <bondedHediffs>
+            <li>MPT_Hediff_GlobalLearningFactorDown</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_Bonded_GlobalLearningFactor</li>
+        </exclusionTags>
+        <marketValueOffset>-500</marketValueOffset>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_Hediff_GlobalLearningFactorDown</defName>
+        <label>psychic ignorance</label>
+        <description>My learning rate is being hampered by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_Bonded_GlobalLearningFactorDown</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statOffsets>
+                    <GlobalLearningFactor>-0.2</GlobalLearningFactor>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_Bonded_MentalBreakThresholdDown</defName>
+        <label>hardened</label>
+        <description>This weapon's persona has endured far worse than anything the rim could throw at it. This resolve seems to rub off on their bond.\nThe bonded pawn does not breakdown so easily.</description>
+        <bondedHediffs>
+            <li>MPT_Hediff_MentalBreakThresholdDown</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_Bonded_MentalBreakThreshold</li>
+        </exclusionTags>
+        <marketValueOffset>500</marketValueOffset>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_Hediff_MentalBreakThresholdDown</defName>
+        <label>psychic steadiness</label>
+        <description>My mental break threshold is strengthened by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_Bonded_MentalBreakThresholdDown</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statOffsets>
+                    <MentalBreakThreshold>-0.08</MentalBreakThreshold>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_Bonded_MentalBreakThresholdUp</defName>
+        <label>uneasy</label>
+        <description>This weapon's persona is easily distressed. Its uneasy energy rubs off on their bond.\nThe bonded pawn is more susceptible to mental breaks.</description>
+        <bondedHediffs>
+            <li>MPT_Hediff_MentalBreakThresholdUp</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_Bonded_MentalBreakThreshold</li>
+        </exclusionTags>
+        <marketValueOffset>-500</marketValueOffset>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_Hediff_MentalBreakThresholdUp</defName>
+        <label>psychic uneasiness</label>
+        <description>My mental break threshold is hampered by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_Bonded_MentalBreakThresholdUp</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statOffsets>
+                    <MentalBreakThreshold>0.08</MentalBreakThreshold>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_Bonded_CookSpeedUp</defName>
+        <label>food-faster</label>
+        <description>This weapon's persona confused what fasting really meant and proclaims that all should observe this 'fasting'.\nThe bonded pawn gains cooking speed.</description>
+        <bondedHediffs>
+            <li>MPT_Hediff_CookSpeedUp</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_Bonded_CookSpeed</li>
+        </exclusionTags>
+        <marketValueOffset>500</marketValueOffset>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_Hediff_CookSpeedUp</defName>
+        <label>psychic burger-flipping assistance</label>
+        <description>My cooking speed is increased by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_Bonded_CookSpeedUp</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statOffsets>
+                    <CookSpeed>4</CookSpeed>
+                    <ButcheryFleshSpeed>0.3</ButcheryFleshSpeed>
+                    <DrugCookingSpeed>0.3</DrugCookingSpeed>
+                    <DrugSynthesisSpeed>0.3</DrugSynthesisSpeed>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_Bonded_CookSpeedDown</defName>
+        <label>slow-cooker</label>
+        <description>This weapon's persona claims that it was a slow-cooker in a previous life and that all food should be cooked that way.\nThe bonded pawn loses cooking speed.</description>
+        <bondedHediffs>
+            <li>MPT_Hediff_CookSpeedDown</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_Bonded_CookSpeed</li>
+        </exclusionTags>
+        <marketValueOffset>-500</marketValueOffset>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_Hediff_CookSpeedDown</defName>
+        <label>psychic Maillard reaction inhibition</label>
+        <description>My cooking speed is hampered by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_Bonded_CookSpeedDown</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statOffsets>
+                    <CookSpeed>-4</CookSpeed>
+                    <ButcheryFleshSpeed>-0.3</ButcheryFleshSpeed>
+                    <DrugCookingSpeed>-0.3</DrugCookingSpeed>
+                    <DrugSynthesisSpeed>-0.3</DrugSynthesisSpeed>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_Bonded_MiningSpeedUp</defName>
+        <label>ground pounding</label>
+        <description>This weapon's persona likes to mention that in addition to a tool of war, they are also a great tool of mining.\nThe bonded pawn has increased mining and drilling speed.</description>
+        <bondedHediffs>
+            <li>MPT_Hediff_MiningSpeedUp</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_Bonded_MiningSpeed</li>
+        </exclusionTags>
+        <marketValueOffset>500</marketValueOffset>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_Hediff_MiningSpeedUp</defName>
+        <label>psychic imperfection identifier</label>
+        <description>My mining and drilling speed is increased by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_Bonded_MiningSpeedUp</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statOffsets>
+                    <MiningSpeed>0.5</MiningSpeed>
+                    <DeepDrillingSpeed>0.5</DeepDrillingSpeed>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_Bonded_MiningSpeedDown</defName>
+        <label>speluncaphobic</label>
+        <description>This weapon's persona has had a bad experience regarding caves and will attempt to inhibit its pawn from digging too deeply or too greedily.\nThe bonded pawn loses mining and drilling speed.</description>
+        <bondedHediffs>
+            <li>MPT_Hediff_MiningSpeedDown</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_Bonded_MiningSpeed</li>
+        </exclusionTags>
+        <marketValueOffset>-500</marketValueOffset>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_Hediff_MiningSpeedDown</defName>
+        <label>psychic lithoid deflection</label>
+        <description>My mining and drilling speed is hampered by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_Bonded_MiningSpeedDown</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statOffsets>
+                    <MiningSpeed>-0.5</MiningSpeed>
+                    <DeepDrillingSpeed>-0.5</DeepDrillingSpeed>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_Bonded_PlantSpeedUp</defName>
+        <label>flora-hater</label>
+        <description>This weapon's persona seems to have a personal vendetta against any and all that is green and is more than happy to assist in cutting it down.\nThe bonded pawn gains increased plat working and pruning speed.</description>
+        <bondedHediffs>
+            <li>MPT_Hediff_PlantSpeedUp</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_Bonded_PlantSpeed</li>
+        </exclusionTags>
+        <marketValueOffset>500</marketValueOffset>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_Hediff_PlantSpeedUp</defName>
+        <label>psychic flora cleave instruction</label>
+        <description>My plant working and pruning speed is increased by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_Bonded_PlantSpeedUp</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statOffsets>
+                    <PlantWorkSpeed>0.5</PlantWorkSpeed>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_Bonded_PlantSpeedDown</defName>
+        <label>bonsai-ster</label>
+        <description>This weapon's persona takes more joy from the process of cutting plants into nice shapes, willing their bond to (impractically) cut plants in odd angles.\nThe bonded pawn loses plat working and pruning speed.</description>
+        <bondedHediffs>
+            <li>MPT_Hediff_PlantSpeedDown</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_Bonded_PlantSpeed</li>
+        </exclusionTags>
+        <marketValueOffset>-500</marketValueOffset>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_Hediff_PlantSpeedDown</defName>
+        <label>psychic pruning inhibitor</label>
+        <description>My plant working and pruning speed is being hampered by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_Bonded_PlantSpeedDown</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statOffsets>
+                    <PlantWorkSpeed>-0.5</PlantWorkSpeed>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_Bonded_ConstructionUp</defName>
+        <label>mason</label>
+        <description>This weapon's persona has a great knowledge of the local techtonics, ground stability and material load balancing, telling things that their bond would not otherwise immediately realise.\nThe bonded pawn gains increased construction speed, success chance and smoothing speed.</description>
+        <bondedHediffs>
+            <li>MPT_Hediff_ConstructionUp</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_Bonded_Construction</li>
+        </exclusionTags>
+        <marketValueOffset>500</marketValueOffset>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_Hediff_ConstructionUp</defName>
+        <label>psychic bedrock identifier</label>
+        <description>My construction speed, success chance and smoothing speed is being increased by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_Bonded_ConstructionUp</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statOffsets>
+                    <ConstructionSpeed>0.5</ConstructionSpeed>
+                    <SmoothingSpeed>0.5</SmoothingSpeed>
+                    <ConstructSuccessChance>0.25</ConstructSuccessChance>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_Bonded_ConstructionDown</defName>
+        <label>architecturally challenged</label>
+        <description>This weapon's persona claims it used to be a gardener of chairs. Their bonded pawn is left thoroughly confused when given assistance in chair related activities.\nThe bonded pawn loses construction speed, success chance and smoothing speed.</description>
+        <bondedHediffs>
+            <li>MPT_Hediff_ConstructionDown</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_Bonded_Construction</li>
+        </exclusionTags>
+        <marketValueOffset>-500</marketValueOffset>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_Hediff_ConstructionDown</defName>
+        <label>psychic stall stalling</label>
+        <description>My construction speed, success chance and smoothing speed is being hampered by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_Bonded_ConstructionDown</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statOffsets>
+                    <ConstructionSpeed>-0.5</ConstructionSpeed>
+                    <SmoothingSpeed>-0.5</SmoothingSpeed>
+                    <ConstructSuccessChance>-0.25</ConstructSuccessChance>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <!--AimingDelayFactor-->
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_Bonded_AimingDelayFactorDown</defName>
+        <label>trigger-triggered</label>
+        <description>This weapon's persona is easily triggered, specifically by bullets. Or was it that bullets were easily triggered by it? Perhaps both.\nThe bonded pawn gains increased firing speed. This is NOT restricted to this weapon.</description>
+        <bondedHediffs>
+            <li>MPT_Hediff_AimingDelayFactorDown</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_Bonded_AimingDelayFactor</li>
+        </exclusionTags>
+        <marketValueOffset>500</marketValueOffset>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_Hediff_AimingDelayFactorDown</defName>
+        <label>psychic bullet burster</label>
+        <description>My firing speed is being increased by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_Bonded_AimingDelayFactorDown</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statOffsets>
+                    <AimingDelayFactor>-0.25</AimingDelayFactor>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_Bonded_AimingDelayFactorUp</defName>
+        <label>bullet-timed</label>
+        <description>This weapon's persona idolises a supposedly breathtaking hacker named Bill and recounts how he hacked an Archotech Persona with timebending bullets. Resolving that it can't bend time, this persona pays tribute to their hacker idol by just slows down their bond's trigger finger instead.\nThe bonded pawn loses firing speed. This is NOT restricted to this weapon.</description>
+        <bondedHediffs>
+            <li>MPT_Hediff_AimingDelayFactorUp</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_Bonded_AimingDelayFactor</li>
+        </exclusionTags>
+        <marketValueOffset>-500</marketValueOffset>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_Hediff_AimingDelayFactorUp</defName>
+        <label>psychically induced personal bullet-time</label>
+        <description>My firing speed is being hampered by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_Bonded_AimingDelayFactorUp</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statOffsets>
+                    <AimingDelayFactor>0.25</AimingDelayFactor>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_Bonded_GeneralLaborSpeedUp</defName>
+        <label>generalist</label>
+        <description>This weapon's persona conveys a sense of urgency in all things, rubbing off onto their bond.\nThe bonded pawn gains increased general labor speed.</description>
+        <bondedHediffs>
+            <li>MPT_Hediff_GeneralLaborSpeedUp</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_Bonded_GeneralLaborSpeed</li>
+        </exclusionTags>
+        <marketValueOffset>500</marketValueOffset>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_Hediff_GeneralLaborSpeedUp</defName>
+        <label>psychic alacrity</label>
+        <description>My general labor speed is being increased by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_Bonded_GeneralLaborSpeedUp</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statOffsets>
+                    <GeneralLaborSpeed>0.15</GeneralLaborSpeed>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_Bonded_GeneralLaborSpeedDown</defName>
+        <label>slothful</label>
+        <description>This weapon's persona influences their bond's way of working, reducing their work done to a snails pace.\nThe bonded pawn has reduced general labor speed.</description>
+        <bondedHediffs>
+            <li>MPT_Hediff_GeneralLaborSpeedDown</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_Bonded_GeneralLaborSpeed</li>
+        </exclusionTags>
+        <marketValueOffset>-500</marketValueOffset>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_Hediff_GeneralLaborSpeedDown</defName>
+        <label>psychic meanderings</label>
+        <description>My general labor speed is being hampered by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_Bonded_GeneralLaborSpeedDown</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statOffsets>
+                    <GeneralLaborSpeed>-0.15</GeneralLaborSpeed>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_Bonded_SocialFightChanceFactorDown</defName>
+        <label>de-escalator</label>
+        <description>This weapon's persona only wishes to be drawn when truly required and otherwise be left to their own devices.\nThe bonded pawn is less likely to get into social fights.</description>
+        <bondedHediffs>
+            <li>MPT_Hediff_SocialFightChanceFactorDown</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_Bonded_SocialFightChanceFactor</li>
+        </exclusionTags>
+        <marketValueOffset>500</marketValueOffset>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_Hediff_SocialFightChanceFactorDown</defName>
+        <label>psychic aggression disperser</label>
+        <description>My chance to get into social fights is being reduced by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_Bonded_SocialFightChanceFactorDown</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <socialFightChanceFactor>0.25</socialFightChanceFactor>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_Bonded_SocialFightChanceFactorUp</defName>
+        <label>upstarter</label>
+        <description>This weapon's persona wishes its wielder to be prepared for when tragedy strikes and encourages their bond to seek out any opportunity to hone their fighting skills.\nThe bonded pawn is more likely to get into social fights.</description>
+        <bondedHediffs>
+            <li>MPT_Hediff_SocialFightChanceFactorUp</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_Bonded_SocialFightChanceFactor</li>
+        </exclusionTags>
+        <marketValueOffset>-500</marketValueOffset>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_Hediff_SocialFightChanceFactorUp</defName>
+        <label>psychically provoked</label>
+        <description>My chance to get into social fights is being increased by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_Bonded_SocialFightChanceFactorUp</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <socialFightChanceFactor>4</socialFightChanceFactor>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_Bonded_PainShockThresholdUp</defName>
+        <label>sturdy</label>
+        <description>This weapon's persona won't allow their bond to kowtow so easily. They will march on, even if its the last thing they'll do.\nThe bonded pawn has an increased pain threshold.</description>
+        <bondedHediffs>
+            <li>MPT_Hediff_PainShockThresholdUp</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_Bonded_PainShockThreshold</li>
+        </exclusionTags>
+        <marketValueOffset>500</marketValueOffset>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_Hediff_PainShockThresholdUp</defName>
+        <label>psychic adrenaline</label>
+        <description>My pain threshold is being increased by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_Bonded_PainShockThresholdUp</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statOffsets>
+                    <PainShockThreshold>0.35</PainShockThreshold>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_Bonded_PainShockThresholdDown</defName>
+        <label>shaken</label>
+        <description>This weapon's persona has a will which is easily distressed. Even the slightest pain is enough to send this persona and their wielder to the floor.\nThe bonded pawn has a decreased pain threshold.</description>
+        <bondedHediffs>
+            <li>MPT_Hediff_PainShockThresholdDown</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_Bonded_PainShockThreshold</li>
+        </exclusionTags>
+        <marketValueOffset>-500</marketValueOffset>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_Hediff_PainShockThresholdDown</defName>
+        <label>psychically changed pain receptors</label>
+        <description>My pain threshold is being hampered by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_Bonded_PainShockThresholdDown</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statOffsets>
+                    <PainShockThreshold>-0.35</PainShockThreshold>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <!--HuntingStealth-->
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_Bonded_HuntingStealthUp</defName>
+        <label>covert</label>
+        <description>This weapon's persona seems to wrap its bond in shadows, giving them an edge against unwitting game.\nThe bonded pawn gains increased hunting stealth.</description>
+        <bondedHediffs>
+            <li>MPT_Hediff_HuntingStealthUp</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_Bonded_HuntingStealth</li>
+        </exclusionTags>
+        <marketValueOffset>500</marketValueOffset>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_Hediff_HuntingStealthUp</defName>
+        <label>psychic concealment</label>
+        <description>My HuntingStealth is being increased by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_Bonded_HuntingStealthUp</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statOffsets>
+                    <HuntingStealth>0.2</HuntingStealth>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_Bonded_HuntingStealthDown</defName>
+        <label>unveiling</label>
+        <description>This weapon's persona refuses to hide its glory and will boldly announce itself to even the most unwitting beast.\nThe bonded pawn loses hunting stealth.</description>
+        <bondedHediffs>
+            <li>MPT_Hediff_HuntingStealthDown</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_Bonded_HuntingStealth</li>
+        </exclusionTags>
+        <marketValueOffset>-500</marketValueOffset>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_Hediff_HuntingStealthDown</defName>
+        <label>psychic foreshadowing</label>
+        <description>My hunting stealth is being hampered by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_Bonded_HuntingStealthDown</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statOffsets>
+                    <HuntingStealth>-0.2</HuntingStealth>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <!--Ranching-->
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_Bonded_RanchingUp</defName>
+        <label>herding</label>
+        <description>This weapon's persona is something of a farm tool and whispers helpful tips to their bonded regarding all things animal.\nThe bonded pawn gains increased animal taming, training and gathering speed.</description>
+        <bondedHediffs>
+            <li>MPT_Hediff_RanchingUp</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_Bonded_Ranching</li>
+        </exclusionTags>
+        <marketValueOffset>500</marketValueOffset>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_Hediff_RanchingUp</defName>
+        <label>psychic ranch hand</label>
+        <description>My ranching skills are being increased by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_Bonded_RanchingUp</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statOffsets>
+                    <AnimalGatherSpeed>0.25</AnimalGatherSpeed>
+                    <TameAnimalChance>0.25</TameAnimalChance>
+                    <TrainAnimalChance>0.25</TrainAnimalChance>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_Bonded_RanchingDown</defName>
+        <label>animal-malevolent</label>
+        <description>This weapon's persona just hates all things animal. They advise extreme caution to their bond when interacting with beasts.\nThe bonded pawn loses animal taming and training chance and also animal gathering speed.</description>
+        <bondedHediffs>
+            <li>MPT_Hediff_RanchingDown</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_Bonded_Ranching</li>
+        </exclusionTags>
+        <marketValueOffset>-500</marketValueOffset>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_Hediff_RanchingDown</defName>
+        <label>psychic zoophobia</label>
+        <description>My ranching skills are being hampered by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_Bonded_RanchingDown</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statOffsets>
+                    <AnimalGatherSpeed>-0.25</AnimalGatherSpeed>
+                    <TameAnimalChance>-0.25</TameAnimalChance>
+                    <TrainAnimalChance>-0.25</TrainAnimalChance>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <!--Warden-->
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_Bonded_WardenUp</defName>
+        <label>intimidating</label>
+        <description>This weapon's persona exudes a pressuring aura, disarming any and all who stand before their bond in antagonistic social interactions.\nThe bonded pawn gains increased arrest chance, recruit chance, conversion power and suppression power.</description>
+        <bondedHediffs>
+            <li>MPT_Hediff_WardenUp</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_Bonded_Warden</li>
+        </exclusionTags>
+        <marketValueOffset>500</marketValueOffset>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_Hediff_WardenUp</defName>
+        <label>psychic bluster</label>
+        <description>My arrest chance, recruit chance, conversion power and suppression power are being increased by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_Bonded_WardenUp</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statOffsets>
+                    <ArrestSuccessChance>0.5</ArrestSuccessChance>
+                    <NegotiationAbility>0.5</NegotiationAbility>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_Bonded_WardenDown</defName>
+        <label>standoffish</label>
+        <description>This weapon's persona seems to have an aloof effect on their bonded pawn's presence. Nobody seems to take them seriously.\nThe bonded pawn loses some arrest chance, recruit chance, conversion power and suppression power.</description>
+        <bondedHediffs>
+            <li>MPT_Hediff_WardenDown</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_Bonded_Warden</li>
+        </exclusionTags>
+        <marketValueOffset>-500</marketValueOffset>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_Hediff_WardenDown</defName>
+        <label>psychically induced contrivance</label>
+        <description>My arrest chance, recruit chance, conversion power and suppression power are being hampered by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_Bonded_WardenDown</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statOffsets>
+                    <ArrestSuccessChance>-0.5</ArrestSuccessChance>
+                    <NegotiationAbility>-0.5</NegotiationAbility>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+</Defs>

@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <WeaponTraitDef>
+        <defName>MPT_Held_MeleeHitChanceUp</defName>
+        <label>conclusive</label>
+        <description>This weapon's persona has better things to be doing than being used to wave at things and thus seeks to end fights quickly. While held, it provides its wielder with an increased chance to hit their target.</description>
+        <commonality>0.5</commonality>
+        <marketValueOffset>400</marketValueOffset>
+        <equippedStatOffsets>
+            <MeleeHitChance>3</MeleeHitChance>
+        </equippedStatOffsets>
+        <exclusionTags>
+            <li>MPT_Held_MeleeHitChance</li>
+        </exclusionTags>
+    </WeaponTraitDef>
+
+    <WeaponTraitDef>
+        <defName>MPT_Held_MeleeHitChanceDown</defName>
+        <label>squeamish</label>
+        <description>This weapon's persona really doesn't like touching the soft warm insides of things.\nWhile held, it provides its wielder with a decreased chance to hit their target.</description>
+        <commonality>0.5</commonality>
+        <marketValueOffset>-400</marketValueOffset>
+        <equippedStatOffsets>
+            <MeleeHitChance>-3</MeleeHitChance>
+        </equippedStatOffsets>
+        <exclusionTags>
+            <li>MPT_Held_MeleeHitChance</li>
+        </exclusionTags>
+    </WeaponTraitDef>
+
+    <WeaponTraitDef>
+        <defName>MPT_Held_ArmorRatingUp</defName>
+        <label>non-newtonian</label>
+        <description>This weapon's persona subtly modifies the atoms near the wielders skin increasing their attenuation to kinetic energy before impact.\nWhile held, it provides its wielder with increased armor rating.</description>
+        <commonality>0.5</commonality>
+        <marketValueOffset>400</marketValueOffset>
+        <equippedStatOffsets>
+            <ArmorRating_Sharp>0.17</ArmorRating_Sharp>
+            <ArmorRating_Blunt>0.05</ArmorRating_Blunt>
+            <ArmorRating_Heat>0.15</ArmorRating_Heat>
+        </equippedStatOffsets>
+        <exclusionTags>
+            <li>MPT_Held_ArmorRating</li>
+        </exclusionTags>
+    </WeaponTraitDef>
+
+    <WeaponTraitDef>
+        <defName>MPT_Held_ArmorRatingDown</defName>
+        <label>flaw-maker</label>
+        <description>This weapon's persona weakens the natural forces binding molecular structures together around its wielder.\nWhile held, it provides its wielder with reduced armor rating.</description>
+        <commonality>0.5</commonality>
+        <marketValueOffset>-400</marketValueOffset>
+        <equippedStatOffsets>
+            <ArmorRating_Sharp>-0.17</ArmorRating_Sharp>
+            <ArmorRating_Blunt>-0.05</ArmorRating_Blunt>
+            <ArmorRating_Heat>-0.15</ArmorRating_Heat>
+        </equippedStatOffsets>
+        <exclusionTags>
+            <li>MPT_Held_ArmorRating</li>
+        </exclusionTags>
+    </WeaponTraitDef>
+
+    <WeaponTraitDef>
+        <defName>MPT_Held_PawnBeautyUp</defName>
+        <label>enchanting</label>
+        <description>This weapon's persona exudes an alluring psychic aura, leaving any who gaze upon their wielder nonplussed.\nWhile held, it provides its wielder with an increase to their beauty.</description>
+        <commonality>0.5</commonality>
+        <marketValueOffset>400</marketValueOffset>
+        <equippedStatOffsets>
+            <PawnBeauty>1.5</PawnBeauty>
+        </equippedStatOffsets>
+        <exclusionTags>
+            <li>MPT_Held_PawnBeauty</li>
+        </exclusionTags>
+    </WeaponTraitDef>
+
+    <WeaponTraitDef>
+        <defName>MPT_Held_PawnBeautyDown</defName>
+        <label>repellent</label>
+        <description>This weapon's persona emits an unnerving psychic aura, anyone gazing upon the wielder will immediately find themselves wishing to excuse themselves.\nWhile held, it conveys its wielder with a hit to their beauty.</description>
+        <commonality>0.5</commonality>
+        <marketValueOffset>-400</marketValueOffset>
+        <equippedStatOffsets>
+            <PawnBeauty>-1.5</PawnBeauty>
+        </equippedStatOffsets>
+        <exclusionTags>
+            <li>MPT_Held_PawnBeauty</li>
+        </exclusionTags>
+    </WeaponTraitDef>
+
+    <WeaponTraitDef>
+        <defName>MPT_Held_MeleeDodgeChanceUp</defName>
+        <label>edgedancer</label>
+        <description>This weapon's persona provides their wielder with astounding poise and grace. Even the most fumbling wielder will move through a battlefield like a ribbon on the wind.\nWhile held, it provides its wielder with increased melee dodge chance.</description>
+        <commonality>0.5</commonality>
+        <marketValueOffset>400</marketValueOffset>
+        <equippedStatOffsets>
+            <MeleeDodgeChance>15</MeleeDodgeChance>
+        </equippedStatOffsets>
+        <exclusionTags>
+            <li>Radiant</li>
+            <li>MPT_Held_MeleeDodgeChance</li>
+        </exclusionTags>
+    </WeaponTraitDef>
+
+    <WeaponTraitDef>
+        <defName>MPT_Held_MeleeDodgeChanceDown</defName>
+        <label>death-marked</label>
+        <description>This weapon's persona seems to draw the ire of all its weapon cousins, sentient or otherwise.\nWhile held, it reduces its wielders melee dodge chance.</description>
+        <commonality>0.5</commonality>
+        <marketValueOffset>-400</marketValueOffset>
+        <equippedStatOffsets>
+            <MeleeDodgeChance>-10</MeleeDodgeChance>
+        </equippedStatOffsets>
+        <exclusionTags>
+            <li>MPT_Held_MeleeDodgeChance</li>
+        </exclusionTags>
+    </WeaponTraitDef>
+
+    <WeaponTraitDef>
+        <defName>MPT_Held_ComfyTempUp</defName>
+        <label>thermoregulating</label>
+        <description>This weapon's persona posses an instinctual knowledge of how to balance ones internal temperature and can help their wielder do it too!\nWhile held, it provides its wielder with an increased range of comfortable temperatures.</description>
+        <commonality>0.5</commonality>
+        <marketValueOffset>400</marketValueOffset>
+        <equippedStatOffsets>
+            <ComfyTemperatureMin>-12</ComfyTemperatureMin>
+            <ComfyTemperatureMax>12</ComfyTemperatureMax>
+        </equippedStatOffsets>
+        <exclusionTags>
+            <li>MPT_Held_ComfyTemp</li>
+        </exclusionTags>
+    </WeaponTraitDef>
+
+    <WeaponTraitDef>
+        <defName>MPT_Held_ComfyTempDown</defName>
+        <label>thermally diffusing</label>
+        <description>This weapon's persona struggles to keep a stable temperature and is more influenced by its surroundings than its material might suggest.\nWhile held, it provides its wielder with an lower range of comfortable temperatures.</description>
+        <commonality>0.5</commonality>
+        <marketValueOffset>-400</marketValueOffset>
+        <equippedStatOffsets>
+            <ComfyTemperatureMin>12</ComfyTemperatureMin>
+            <ComfyTemperatureMax>-12</ComfyTemperatureMax>
+        </equippedStatOffsets>
+        <exclusionTags>
+            <li>MPT_Held_ComfyTemp</li>
+        </exclusionTags>
+    </WeaponTraitDef>
+    
+    <WeaponTraitDef>
+        <defName>MPT_Held_ToxicSensitivityUp</defName>
+        <label>baneful</label>
+        <description>This weapon's persona must turn their wielder into a grass type because they be taking toxic fumes very well.\nWhile held, it provides its wielder with increased toxic sensitivity.</description>
+        <commonality>0.5</commonality>
+        <marketValueOffset>-400</marketValueOffset>
+        <equippedStatOffsets>
+            <ToxicResistance>0.5</ToxicResistance>
+        </equippedStatOffsets>
+        <exclusionTags>
+            <li>MPT_Held_ToxicSensitivity</li>
+        </exclusionTags>
+    </WeaponTraitDef>
+
+    <WeaponTraitDef>
+        <defName>MPT_Held_ToxicSensitivityDown</defName>
+        <label>non-reactive</label>
+        <description>This weapon's persona imparts an inertness to their wielder making them impervious to even the most toxic of environments.\nWhile held, it provides its wielder with lower toxic sensitivity.</description>
+        <commonality>0.5</commonality>
+        <marketValueOffset>400</marketValueOffset>
+        <equippedStatOffsets>
+            <ToxicResistance>-0.5</ToxicResistance>
+        </equippedStatOffsets>
+        <exclusionTags>
+            <li>MPT_Held_ToxicSensitivity</li>
+        </exclusionTags>
+    </WeaponTraitDef>
+
+    <WeaponTraitDef>
+        <defName>MPT_Held_Vomit</defName>
+        <label>nauseating</label>
+        <description>This weapon's persona is disgusted at being held anything and anyone. Anyone holding this will feel the same way about it too.\nHaving this weapon equipped will make the wielder throws up regularly.</description>
+        <commonality>0.4</commonality>
+        <marketValueOffset>-800</marketValueOffset>
+        <equippedHediffs>
+            <li>MPT_Hediff_HeldVomit</li>
+        </equippedHediffs>
+        <exclusionTags>
+            <li>MPT_Vomit</li>
+        </exclusionTags>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_Hediff_HeldVomit</defName>
+        <label>psychic nausea</label>
+        <description>Just holding this weapon makes me want to retch.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_Held_Vomit</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <vomitMtbDays>0.75</vomitMtbDays>
+            </li>
+        </stages>
+    </HediffDef>
+</Defs>

@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_Bonded_ThoughtWeatherDown</defName>
+        <label>stormdepressed</label>
+        <description>This weapon's persona weeps when the sky does.\nThe bonded pawn gains a mood penalty when the weather is not clear.</description>
+        <marketValueOffset>-300</marketValueOffset>
+        <exclusionTags>
+            <li>MPT_Thought_Weather</li>
+        </exclusionTags>
+        <bondedThought>MPT_Thought_WeatherDown</bondedThought>
+    </WeaponTraitDef>
+    <ThoughtDef>
+        <defName>MPT_Thought_WeatherDown</defName>
+        <thoughtClass>Thought_Situational</thoughtClass>
+        <workerClass>MorePersonaTraits.WorkerClasses.ThoughtWorkerClasses.ThoughtWorker_WeaponTraitWeather</workerClass>
+        <stages>
+            <li>
+                <label>{WEAPON}'s stormdepression</label>
+                <description>{WEAPON}, my bonded weapon, hates the rain and all weathers that block the beauty of space. It's hard to ignore.</description>
+                <baseMoodEffect>-12</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+    
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_Bonded_ThoughtWeatherUp</defName>
+        <label>meteorological</label>
+        <description>This weapon's persona finds novelty in observing objects move from high to low gravitational energy states, and simply cannot get enough of the rain.\nThe bonded pawn gains a mood boost when the weather is not clear.</description>
+        <marketValueOffset>300</marketValueOffset>
+        <exclusionTags>
+            <li>MPT_Thought_Weather</li>
+        </exclusionTags>
+        <bondedThought>MPT_Thought_WeatherUp</bondedThought>
+    </WeaponTraitDef>
+    <ThoughtDef>
+        <defName>MPT_Thought_WeatherUp</defName>
+        <thoughtClass>Thought_Situational</thoughtClass>
+        <workerClass>MorePersonaTraits.WorkerClasses.ThoughtWorkerClasses.ThoughtWorker_WeaponTraitWeather</workerClass>
+        <stages>
+            <li>
+                <label>{WEAPON}'s pluviophilism</label>
+                <description>{WEAPON}, my bonded weapon, loves the rain and other non-clear weathers. Their mood is delightfully infectious.</description>
+                <baseMoodEffect>12</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+    
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_Bonded_ThoughtFemaleHate</defName>
+        <label>misogynist</label>
+        <description>This weapon's persona has a seething hatred for women and never stops to let their bond know.\nThe bonded pawn gains a mood penalty if they are female.</description>
+        <marketValueOffset>-300</marketValueOffset>
+        <exclusionTags>
+            <li>MPT_Thought_Gender</li>
+        </exclusionTags>
+        <bondedThought>MPT_Thought_FemaleHate</bondedThought>
+    </WeaponTraitDef>
+    <ThoughtDef>
+        <defName>MPT_Thought_FemaleHate</defName>
+        <thoughtClass>Thought_Situational</thoughtClass>
+        <workerClass>MorePersonaTraits.WorkerClasses.ThoughtWorkerClasses.ThoughtWorker_WeaponTraitGenderFemale</workerClass>
+        <stages>
+            <li>
+                <label>{WEAPON}'s bigotry</label>
+                <description>{WEAPON}, my bonded weapon, keeps reminding me how I was born the wrong gender. It's really degrading.</description>
+                <baseMoodEffect>-6</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_Bonded_ThoughtFemaleLove</defName>
+        <label>enatic</label>
+        <description>This weapon's persona constantly praises the female gender, having a female bonded elates them.\nThe bonded pawn gains a mood boost if they are female.</description>
+        <marketValueOffset>300</marketValueOffset>
+        <exclusionTags>
+            <li>MPT_Thought_Gender</li>
+        </exclusionTags>
+        <bondedThought>MPT_Thought_FemaleLove</bondedThought>
+    </WeaponTraitDef>
+    <ThoughtDef>
+        <defName>MPT_Thought_FemaleLove</defName>
+        <thoughtClass>Thought_Situational</thoughtClass>
+        <workerClass>MorePersonaTraits.WorkerClasses.ThoughtWorkerClasses.ThoughtWorker_WeaponTraitGenderFemale</workerClass>
+        <stages>
+            <li>
+                <label>{WEAPON}'s simpering</label>
+                <description>{WEAPON}, my bonded weapon, tells me how they always wanted a female bonded. It's kind of nice.</description>
+                <baseMoodEffect>6</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+    
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_Bonded_ThoughtMaleHate</defName>
+        <label>misandrist</label>
+        <description>This weapon's persona possesses burning hatred for men. The thought of sharing a psychic connection with one disgusts them.\nThe bonded pawn gains a mood penalty if they are male.</description>
+        <marketValueOffset>-300</marketValueOffset>
+        <exclusionTags>
+            <li>MPT_Thought_Gender</li>
+        </exclusionTags>
+        <bondedThought>MPT_Thought_MaleHate</bondedThought>
+    </WeaponTraitDef>
+    <ThoughtDef>
+        <defName>MPT_Thought_MaleHate</defName>
+        <thoughtClass>Thought_Situational</thoughtClass>
+        <workerClass>MorePersonaTraits.WorkerClasses.ThoughtWorkerClasses.ThoughtWorker_WeaponTraitGenderMale</workerClass>
+        <stages>
+            <li>
+                <label>{WEAPON}'s bigotry</label>
+                <description>{WEAPON}, my bonded weapon, constantly tells me how inferior I am to the other gender. I hate this.</description>
+                <baseMoodEffect>-6</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_Bonded_ThoughtMaleLove</defName>
+        <label>agnatic</label>
+        <description>This weapon's persona constantly praises the male gender, having a male bonded tickles them with glee.\nThe bonded pawn gains a mood boost if they are male.</description>
+        <marketValueOffset>300</marketValueOffset>
+        <exclusionTags>
+            <li>MPT_Thought_Gender</li>
+        </exclusionTags>
+        <bondedThought>MPT_Thought_MaleLove</bondedThought>
+    </WeaponTraitDef>
+    <ThoughtDef>
+        <defName>MPT_Thought_MaleLove</defName>
+        <thoughtClass>Thought_Situational</thoughtClass>
+        <workerClass>MorePersonaTraits.WorkerClasses.ThoughtWorkerClasses.ThoughtWorker_WeaponTraitGenderMale</workerClass>
+        <stages>
+            <li>
+                <label>{WEAPON}'s simpering</label>
+                <description>{WEAPON}, my bonded weapon, seems to worship the very ground I walk. It's boosting my self esteem.</description>
+                <baseMoodEffect>6</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_Bonded_ThoughtNoAnimalHate</defName>
+        <label>zoophile</label>
+        <description>This weapon's persona just loves animals. They want a puppy and tells their bonded how it's unfair that they don't have one.\nThe bonded pawn gains a mood penalty if they are not accompanied by at least one of their pets.</description>
+        <marketValueOffset>-150</marketValueOffset>
+        <exclusionTags>
+            <li>MPT_Thought_Animal</li>
+        </exclusionTags>
+        <bondedThought>MPT_Thought_NoAnimalHate</bondedThought>
+    </WeaponTraitDef>
+    <ThoughtDef>
+        <defName>MPT_Thought_NoAnimalHate</defName>
+        <thoughtClass>Thought_Situational</thoughtClass>
+        <workerClass>MorePersonaTraits.WorkerClasses.ThoughtWorkerClasses.ThoughtWorker_WeaponTraitNoBondedAnimal</workerClass>
+        <stages>
+            <li>
+                <label>{WEAPON}'s fawning</label>
+                <description>{WEAPON}, my bonded weapon, won't stop bothering me about getting a pet. It's really annoying.</description>
+                <baseMoodEffect>-3</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_Bonded_ThoughtAnimalHate</defName>
+        <label>zoophobia</label>
+        <description>This weapon's persona hates animals. They want nothing to do with them and makes sure that .\nThe bonded pawn gains a mood penalty if they are accompanied by at least one of their pets.</description>
+        <marketValueOffset>-250</marketValueOffset>
+        <exclusionTags>
+            <li>MPT_Thought_Animal</li>
+        </exclusionTags>
+        <bondedThought>MPT_Thought_AnimalHate</bondedThought>
+    </WeaponTraitDef>
+    <ThoughtDef>
+        <defName>MPT_Thought_AnimalHate</defName>
+        <thoughtClass>Thought_Situational</thoughtClass>
+        <workerClass>MorePersonaTraits.WorkerClasses.ThoughtWorkerClasses.ThoughtWorker_WeaponTraitBondedAnimal</workerClass>
+        <stages>
+            <li>
+                <label>{WEAPON}'s zoophobia</label>
+                <description>{WEAPON}, my bonded weapon, hates being around my pets and is pressuring me into getting rid of them. I hate it.</description>
+                <baseMoodEffect>-6</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+</Defs>

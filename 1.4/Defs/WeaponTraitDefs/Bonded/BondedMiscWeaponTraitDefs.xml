@@ -1,0 +1,343 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_Bonded_ImmunePenoxycyline</defName>
+        <label>penoxycylined</label>
+        <description>This weapon's persona gives its bond permanent Penoxycyline effects so long as the bond holds. That being immunity to malaria, sleeping sickness, and the plague.</description>
+        <marketValueOffset>300</marketValueOffset>
+        <bondedHediffs>
+            <li>MPT_Hediff_ImmunePenoxycyline</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_Immune_Malaria</li>
+            <li>MPT_Immune_SleepingSickness</li>
+            <li>MPT_Immune_Plague</li>
+        </exclusionTags>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_Hediff_ImmunePenoxycyline</defName>
+        <label>psychic penoxycyline</label>
+        <description>My bonded weapon is providing me with immunity to new infections of malaria, plague and sleeping-sickness.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_Bonded_ImmunePenoxycyline</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <makeImmuneTo>
+                    <li>Malaria</li>
+                    <li>SleepingSickness</li>
+                    <li>Plague</li>
+                </makeImmuneTo>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <!--<WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_Bonded_ImmuneParasite</defName>
+        <label>parasn't</label>
+        <description>This weapon's persona is totally disgusted that its wielder would be host to little worms and hooks and ejects them from their bonds body before they can take hold.\nThe bonded pawn is immune to new infections of gut worms and muscle parasites.</description>
+        <commonality>0.5</commonality>
+        <marketValueOffset>300</marketValueOffset>
+        <bondedHediffs>
+            <li>MPT_Hediff_ImmuneParasite</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_Immune_NonFatal</li>
+        </exclusionTags>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_Hediff_ImmuneParasite</defName>
+        <label>psychic parasite ejector</label>
+        <description>My bonded weapon is providing me with immunity to parasitic invasions of gut worms and muscle parasites.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_Bonded_ImmuneParasite</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <makeImmuneTo>
+                    <li>GutWorms</li>
+                    <li>MuscleParasites</li>
+                </makeImmuneTo>
+            </li>
+        </stages>
+    </HediffDef>-->
+
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_Bonded_ImmuneMechanite</defName>
+        <label>machan't</label>
+        <description>This weapon's persona once got into a heated debate with a mechanite swarm and has never trusted them since. It will do its best to protect its host from any non-consensual mechanites.\nThe bonded pawn is immune to sensory or fibrous mechanites so long as the bond remains.</description>
+        <marketValueOffset>300</marketValueOffset>
+        <bondedHediffs>
+            <li>MPT_Hediff_ImmuneMechanite</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_Immune_NonFatal</li>
+        </exclusionTags>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_Hediff_ImmuneMechanite</defName>
+        <label>psychic mechanite disruptor</label>
+        <description>My bonded weapon is providing me with immunity to unsolicited fibrous or sensory mechanites.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_Bonded_ImmuneMechanite</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <makeImmuneTo>
+                    <li>FibrousMechanites</li>
+                    <li>SensoryMechanites</li>
+                </makeImmuneTo>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_Bonded_PainOffsetUpMinor</defName>
+        <label>inflaming</label>
+        <description>This weapon's persona conveys a buried pain to its bond.\nThe bonded pawn constantly experiences slightly more pain.</description>
+        <marketValueOffset>-300</marketValueOffset>
+        <bondedHediffs>
+            <li>MPT_Hediff_BondedPainOffsetMinor</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_Bonded_PainOffset</li>
+            <li>NoPain</li>
+        </exclusionTags>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_Hediff_BondedPainOffsetMinor</defName>
+        <label>psychic minor pain</label>
+        <description>My bonded weapon is putting me in constant discomfort.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_Bonded_PainOffsetUpMinor</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <painOffset>0.2</painOffset>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_Bonded_PainOffsetUpMajor</defName>
+        <label>agonizing</label>
+        <description>This weapon's persona an incident in this persona's past has left it emotionally scarred. This scar is manifest as physical pain to its bond.\nThe bonded pawn constantly experiences more pain.</description>
+        <marketValueOffset>-500</marketValueOffset>
+        <bondedHediffs>
+            <li>MPT_Hediff_BondedPainOffsetUpMajor</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_Bonded_PainOffset</li>
+            <li>NoPain</li>
+        </exclusionTags>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_Hediff_BondedPainOffsetUpMajor</defName>
+        <label>psychic major pain</label>
+        <description>My bonded weapon is putting me in constant pain.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_Bonded_PainOffsetUpMajor</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <painOffset>0.3</painOffset>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_Bonded_PainOffsetDownMinor</defName>
+        <label>relieving</label>
+        <description>This weapon's persona provides a constant minor analgesic that is relayed over a psychic bond.\nThe bonded pawn constantly experiences slightly less pain.</description>
+        <marketValueOffset>100</marketValueOffset>
+        <bondedHediffs>
+            <li>MPT_Hediff_BondedPainOffsetDownMinor</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_Bonded_PainOffset</li>
+            <li>NoPain</li>
+        </exclusionTags>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_Hediff_BondedPainOffsetDownMinor</defName>
+        <label>psychic minor pain relief</label>
+        <description>My bonded weapon is providing me with minor pain relief.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_Bonded_PainOffsetDownMinor</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <painOffset>-0.2</painOffset>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_Bonded_PainOffsetDownMajor</defName>
+        <label>mollifying</label>
+        <description>This weapon's persona smothers their bond's pain, allowing only the greatest of pains to shine through, but only weakly.\nThe bonded pawn constantly experiences less pain.</description>
+        <marketValueOffset>300</marketValueOffset>
+        <bondedHediffs>
+            <li>MPT_Hediff_BondedPainOffsetDownMajor</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_Bonded_PainOffset</li>
+            <li>NoPain</li>
+        </exclusionTags>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_Hediff_BondedPainOffsetDownMajor</defName>
+        <label>psychic major pain relief</label>
+        <description>My bonded weapon is providing me with pain relief.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_Bonded_PainOffsetDownMajor</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <painOffset>-0.35</painOffset>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_Bonded_Vomit</defName>
+        <label>disgorging</label>
+        <description>This weapon's persona sends their bonded pawn into a constant state of nausea.\nThe bonded pawn periodically throws up.</description>
+        <marketValueOffset>-500</marketValueOffset>
+        <bondedHediffs>
+            <li>MPT_Hediff_BondedVomit</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_Vomit</li>
+        </exclusionTags>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_Hediff_BondedVomit</defName>
+        <label>psychic nausea</label>
+        <description>My bonded weapon is giving me nausea.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_Bonded_Vomit</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <vomitMtbDays>4</vomitMtbDays>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_Bonded_BleedFactorUp</defName>
+        <label>hemophile</label>
+        <description>This weapon's persona This weapon's persona believes in an open hearted stance on life. Unfortunately, it took that quite literally.\nThe bonded pawn bleeds out faster.</description>
+        <marketValueOffset>-400</marketValueOffset>
+        <equippedHediffs>
+            <li>MPT_Hediff_HeldBleedFactorUp</li>
+        </equippedHediffs>
+        <exclusionTags>
+            <li>MPT_Bonded_BleedFactor</li>
+        </exclusionTags>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_Hediff_HeldBleedFactorUp</defName>
+        <label>psychic hemophilia</label>
+        <description>My bonded weapon is causing me to bleed out faster.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_Bonded_BleedFactorUp</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <totalBleedFactor>1.25</totalBleedFactor>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_Bonded_BleedFactorDown</defName>
+        <label>congealing</label>
+        <description>This weapon's persona knows the importance of the red liquid that comes out of most things and will try its best to make sure their bonded keeps all of theirs.\nThe bonded pawn bleeds out slower.</description>
+        <marketValueOffset>400</marketValueOffset>
+        <equippedHediffs>
+            <li>MPT_Hediff_HeldBleedFactorDown</li>
+        </equippedHediffs>
+        <exclusionTags>
+            <li>MPT_Bonded_BleedFactor</li>
+        </exclusionTags>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_Hediff_HeldBleedFactorDown</defName>
+        <label>psychic congealing</label>
+        <description>My bonded weapon is causing me to bleed out slower.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_Bonded_BleedFactorDown</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <totalBleedFactor>0.75</totalBleedFactor>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_Bonded_NaturalHealingFactorUp</defName>
+        <label>hermetic</label>
+        <description>This weapon's persona seems to transmit some sort of panacea via a psychic connection.\nThe bonded pawn gains increased healing speed.</description>
+        <bondedHediffs>
+            <li>MPT_Hediff_NaturalHealingFactorUp</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_Bonded_NaturalHealingFactor</li>
+        </exclusionTags>
+        <marketValueOffset>500</marketValueOffset>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_Hediff_NaturalHealingFactorUp</defName>
+        <label>psychic stem cell multiplier</label>
+        <description>My healing speed is being increased by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_Bonded_NaturalHealingFactorUp</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <naturalHealingFactor>1.3</naturalHealingFactor>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_Bonded_NaturalHealingFactorDown</defName>
+        <label>festering</label>
+        <description>This weapon's persona leaves their bonded's wounds irritated and swollen.\nThe bonded pawn loses healing speed.</description>
+        <bondedHediffs>
+            <li>MPT_Hediff_NaturalHealingFactorDown</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_Bonded_NaturalHealingFactor</li>
+        </exclusionTags>
+        <marketValueOffset>-500</marketValueOffset>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_Hediff_NaturalHealingFactorDown</defName>
+        <label>psychically induced necrosis</label>
+        <description>My healing speed is being hampered by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_Bonded_NaturalHealingFactorDown</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <naturalHealingFactor>0.7</naturalHealingFactor>
+            </li>
+        </stages>
+    </HediffDef>
+</Defs>
