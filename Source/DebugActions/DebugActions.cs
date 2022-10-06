@@ -138,5 +138,63 @@ namespace MorePersonaTraits.DebugActions
             else
                 GenPlace.TryPlaceThing(personaWeaponThing, c, Find.CurrentMap, ThingPlaceMode.Near);
         }
+
+        [DebugOutput(category = "PersonaWeapons",name = "Traits Table", onlyWhenPlaying = true)]
+        public static void AllWeaponTraits()
+        {
+            var traits = DefDatabase<WeaponTraitDef>.AllDefsListForReading
+                // .Where(trait => trait.modContentPack.ToStringSafe() == "Arquebus.MorePersonaTraits")
+                ;
+            TableDataGetter<WeaponTraitDef>[] array = new TableDataGetter<WeaponTraitDef>[8];
+            
+            
+            array[0] = new TableDataGetter<WeaponTraitDef>("defName", d => d.defName);
+            array[1] = new TableDataGetter<WeaponTraitDef>("label", d => d.label);
+            array[2] = new TableDataGetter<WeaponTraitDef>("description", d => d.description);
+            array[3] = new TableDataGetter<WeaponTraitDef>("commonality", d => d.commonality);
+            array[4] = new TableDataGetter<WeaponTraitDef>("exclusionTags", d =>
+            {
+                var txt = "";
+                if (!d.exclusionTags.NullOrEmpty())
+                {
+                    foreach (var tag in d.exclusionTags)
+                    {
+                        txt += tag + ",";
+                    }
+                }
+
+                return txt;
+            });
+            array[5] = new TableDataGetter<WeaponTraitDef>("marketValueOffset", d => d.marketValueOffset);
+            array[6] = new TableDataGetter<WeaponTraitDef>("equippedStatOffsets", d =>
+            {
+                var txt = "";
+                if (!d.equippedStatOffsets.NullOrEmpty())
+                {
+                    foreach (var offset in d.equippedStatOffsets)
+                    {
+                        txt += offset.stat + ": " + offset.value + "\n";
+                    }
+                }
+
+                return txt;
+            });
+            array[7] = new TableDataGetter<WeaponTraitDef>("bondedStatOffsets", d =>
+            {
+                var txt = "";
+                if (!d.bondedHediffs.NullOrEmpty() && !d.bondedHediffs[0].stages[0].statOffsets.NullOrEmpty())
+                {
+                    foreach (var offset in d.bondedHediffs[0].stages[0].statOffsets)
+                    {
+                        txt += offset.stat + ": " + offset.value + "\n";
+                    }
+                }
+
+                return txt;
+            });
+            
+            DebugTables.MakeTablesDialog(traits, array);
+        }
     }
+    
 }
