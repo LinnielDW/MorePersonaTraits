@@ -1256,4 +1256,62 @@
             </li>
         </stages>
     </HediffDef>
+
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_Bonded_LifespanDown</defName>
+        <label>shortlived</label>
+        <description>This weapon's persona believes that you either die a hero or see yourself become the villain. To that end, they try to make sure their bonded stays the hero.\nThe bonded pawn has a shorter lifespan.</description>
+        <bondedHediffs>
+            <li>MPT_Hediff_LifespanDown</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_Bonded_Lifespan</li>
+        </exclusionTags>
+        <marketValueOffset>-500</marketValueOffset>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_Hediff_LifespanDown</defName>
+        <label>psychically stunted lifespan</label>
+        <description>My lifespan is being shortened by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_Bonded_LifespanDown</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statOffsets>
+                    <LifespanFactor>-0.2</LifespanFactor>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_Bonded_LifespanUp</defName>
+        <label>longlived</label>
+        <description>This weapon's persona will do everything in their power to keep the sands of time from claiming their bonded.\nThe bonded pawn has a longer lifespan.</description>
+        <bondedHediffs>
+            <li>MPT_Hediff_LifespanUp</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_Bonded_Lifespan</li>
+        </exclusionTags>
+        <marketValueOffset>500</marketValueOffset>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_Hediff_LifespanUp</defName>
+        <label>psychically extended lifespan</label>
+        <description>My lifespan is being extended by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_Bonded_LifespanUp</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statOffsets>
+                    <LifespanFactor>0.2</LifespanFactor>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
 </Defs>
