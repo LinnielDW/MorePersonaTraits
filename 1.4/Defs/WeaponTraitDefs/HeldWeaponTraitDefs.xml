@@ -91,11 +91,12 @@
     <WeaponTraitDef>
         <defName>MPT_Held_MeleeDodgeChanceUp</defName>
         <label>edgedancer</label>
-        <description>This weapon's persona provides their wielder with astounding poise and grace. Even the most fumbling wielder will move through a battlefield like a ribbon on the wind.\nWhile held, it provides its wielder with increased melee dodge chance.</description>
+        <description>This weapon's persona provides their wielder with astounding poise and grace. Even the most fumbling wielder will move through a battlefield like a ribbon on the wind.\nWhile held, it provides its wielder with increased melee dodge chance and reduced trap spring chance.</description>
         <commonality>0.5</commonality>
         <marketValueOffset>400</marketValueOffset>
         <equippedStatOffsets>
             <MeleeDodgeChance>15</MeleeDodgeChance>
+            <PawnTrapSpringChance>-0.5</PawnTrapSpringChance>
         </equippedStatOffsets>
         <exclusionTags>
             <li>Radiant</li>
@@ -106,11 +107,12 @@
     <WeaponTraitDef>
         <defName>MPT_Held_MeleeDodgeChanceDown</defName>
         <label>death-marked</label>
-        <description>This weapon's persona seems to draw the ire of all its weapon cousins, sentient or otherwise.\nWhile held, it reduces its wielders melee dodge chance.</description>
+        <description>This weapon's persona seems to draw the ire of all its weapon cousins, sentient or otherwise.\nWhile held, it reduces its wielders melee dodge chance and increases trap spring chance.</description>
         <commonality>0.5</commonality>
         <marketValueOffset>-400</marketValueOffset>
         <equippedStatOffsets>
             <MeleeDodgeChance>-10</MeleeDodgeChance>
+            <PawnTrapSpringChance>0.5</PawnTrapSpringChance>
         </equippedStatOffsets>
         <exclusionTags>
             <li>MPT_Held_MeleeDodgeChance</li>
