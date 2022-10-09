@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
     <WeaponTraitDef>
         <defName>MPT_OnHit_SpawnAsh</defName>
@@ -170,6 +170,30 @@
                     <li Class="MorePersonaTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_Weather">
                         <ProcChance>0.5</ProcChance>
                         <RequiresBothLiving>true</RequiresBothLiving>
+                        <TargetSelf>true</TargetSelf>
+                    </li>
+                </OnHitWorkers>
+            </li>
+        </modExtensions>
+    </WeaponTraitDef>
+
+    <WeaponTraitDef>
+        <defName>MPT_OnHit_HealWielder</defName>
+        <label>life-tapping</label>
+        <description>This weapon's persona knows the art of siphoning the life from its enemies and says that it was taught it by a third level psycaster at her kitchen table using plasteel miniatures.\nUpon landing a hit on a living thing with this weapon, it has a chance to heal one of the wielder's injuries slightly.</description>
+        <commonality>0.3</commonality>
+        <marketValueOffset>1000</marketValueOffset>
+        <exclusionTags>
+            <li>MPT_OnHit_Weather</li>
+        </exclusionTags>
+        <modExtensions>
+            <li Class="MorePersonaTraits.Extensions.WeaponTraitOnHitExtension">
+                <OnHitWorkers>
+                    <li Class="MorePersonaTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_HealInjury">
+                        <ProcChance>0.8</ProcChance>
+                        <ProcMagnitude>0.125</ProcMagnitude>
+                        <RequiresBothLiving>true</RequiresBothLiving>
+                        <RequiresBio>true</RequiresBio>
                         <TargetSelf>true</TargetSelf>
                     </li>
                 </OnHitWorkers>
