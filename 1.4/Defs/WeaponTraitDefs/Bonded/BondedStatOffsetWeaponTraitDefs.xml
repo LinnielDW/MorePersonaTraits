@@ -1314,4 +1314,62 @@
             </li>
         </stages>
     </HediffDef>
+
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_Bonded_CleaningSpeedDown</defName>
+        <label>unkempt</label>
+        <description>This weapon's persona resolves to maintain an aloof way of life and meanders when their bonded is allocated tasks which it deems 'boring'.\nThe bonded pawn loses some cleaning speed.</description>
+        <bondedHediffs>
+            <li>MPT_Hediff_CleaningSpeedDown</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_Bonded_CleaningSpeed</li>
+        </exclusionTags>
+        <marketValueOffset>-500</marketValueOffset>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_Hediff_CleaningSpeedDown</defName>
+        <label>psychic broom shortening</label>
+        <description>My cleaning speed is being hampered by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_Bonded_CleaningSpeedDown</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statOffsets>
+                    <CleaningSpeed>-0.5</CleaningSpeed>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_Bonded_CleaningSpeedUp</defName>
+        <label>neat</label>
+        <description>This weapon's persona hums a catchy melody in the head of their bonded pawn. It's just so easy to clean to!\nThe bonded pawn has increased cleaning speed.</description>
+        <bondedHediffs>
+            <li>MPT_Hediff_CleaningSpeedUp</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_Bonded_CleaningSpeed</li>
+        </exclusionTags>
+        <marketValueOffset>500</marketValueOffset>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_Hediff_CleaningSpeedUp</defName>
+        <label>psychic cleaning song</label>
+        <description>My cleaning speed is increased by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_Bonded_CleaningSpeedUp</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statOffsets>
+                    <CleaningSpeed>0.5</CleaningSpeed>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
 </Defs>
