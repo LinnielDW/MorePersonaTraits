@@ -193,7 +193,7 @@
         <defName>MPT_OnHit_DrainBlood</defName>
         <label>vampiric</label>
         <description>This weapon's persona is able to absorb the blood of the wielder's target with every hit.\nUpon hitting a target, there is a chance that the target incurs blood loss and that the wielder recovers a portion of theirs.</description>
-        <commonality>0.5</commonality>
+        <commonality>0.3</commonality>
         <marketValueOffset>1000</marketValueOffset>
         <descriptionHyperlinks>
             <HediffDef>BloodLoss</HediffDef>
