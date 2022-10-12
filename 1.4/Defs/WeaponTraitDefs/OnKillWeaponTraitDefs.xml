@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
     <WeaponTraitDef>
         <defName>MPT_OnKill_NeedFilledFood</defName>
@@ -82,5 +82,19 @@
         <exclusionTags>
             <li>KillNeeds</li>
         </exclusionTags>
+    </WeaponTraitDef>
+
+    <WeaponTraitDef>
+        <defName>MPT_OnKill_Invis</defName>
+        <label>lightweaving</label>
+        <description>This weapon's persona has taken an immortal vow to master truth. It does however also know that truth can be stretched and manipulated.\nUpon slaying something with this weapon, the wielder becomes momentarily invisible.</description>
+        <workerClass>MorePersonaTraits.WorkerClasses.WeaponTraitWorkerClasses.WeaponTraitWorker_InvisibilityOnKill</workerClass>
+        <commonality>0.5</commonality>
+        <marketValueOffset>800</marketValueOffset>
+        <modExtensions>
+            <li Class="MorePersonaTraits.Extensions.WeaponTraitDefExtension">
+                <DurationSeconds>10</DurationSeconds>
+            </li>
+        </modExtensions>
     </WeaponTraitDef>
 </Defs>

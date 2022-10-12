@@ -1,4 +1,5 @@
 ﻿using RimWorld;
+using Verse;
 
 namespace MorePersonaTraits.Extensions
 {
@@ -26,5 +27,15 @@ namespace MorePersonaTraits.Extensions
             DefOfHelper.EnsureInitializedInCtor(typeof(MPT_WeaponTraitDefOf));
         }
     }
-    
+
+    [DefOf]
+    public static class MPT_InvisibilityHediffDefOf
+    {
+        public static HediffDef PsychicInvisibility;
+
+        static MPT_InvisibilityHediffDefOf()
+        {
+            DefOfHelper.EnsureInitializedInCtor(typeof(MPT_InvisibilityHediffDefOf));
+        }
+    }
 }

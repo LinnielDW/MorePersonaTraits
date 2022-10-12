@@ -10,5 +10,6 @@ namespace MorePersonaTraits.Extensions
         }
 
         public bool AllowNeverBond = true;
+        public int DurationSeconds = 0;
     }
 }

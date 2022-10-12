@@ -39,7 +39,7 @@
     <version1_4 Include="..\1.4\**">
       <Link>1.4\%(RecursiveDir)%(Filename)%(Extension)</Link>
     </version1_4>
-    <Reference Include="Assembly-CSharp, Version=1.4.8315.26675, Culture=neutral, PublicKeyToken=null">
+    <Reference Include="Assembly-CSharp, Version=1.4.8319.7908, Culture=neutral, PublicKeyToken=null">
       <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
@@ -94,6 +94,7 @@
     <Compile Include="WorkerClasses\ThoughtWorkerClasses\ThoughtWorker_WeaponTraitBondedAnimal.cs" />
     <Compile Include="WorkerClasses\ThoughtWorkerClasses\ThoughtWorker_WeaponTraitNoBondedAnimal.cs" />
     <Compile Include="WorkerClasses\ThoughtWorkerClasses\ThoughtWorker_WeaponTraitWeather.cs" />
+    <Compile Include="WorkerClasses\WeaponTraitWorkerClasses\WeaponTraitWorker_InvisibilityOnKill.cs" />
     <Compile Include="WorkerClasses\WeaponTraitWorkerClasses\WeaponTraitWorker_NeedFilledOnKill.cs" />
     <Compile Include="Patches\PatchOnDamage.cs" />
     <Compile Include="MorePersonaTraits.cs" />
