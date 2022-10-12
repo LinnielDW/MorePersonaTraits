@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
     <WeaponTraitDef>
         <defName>MPT_OnKill_NeedFilledFood</defName>
@@ -75,7 +75,7 @@
     <WeaponTraitDef>
         <defName>MPT_OnKill_NeedFilledChemical</defName>
         <label>kill-euphoric</label>
-        <description>This weapon's persona experiences a devilish release with every kill, potent enough to sate the most strongest cravings.\nUpon slaying a living thing with this weapon, it has a chance to fill one of the wielders chemical addiction needs.</description>
+        <description>This weapon's persona experiences a devilish release with every kill, potent enough to sate the strongest cravings.\nUpon slaying a living thing with this weapon, it has a chance to fill one of the wielders chemical addiction needs.</description>
         <workerClass>MorePersonaTraits.WorkerClasses.WeaponTraitWorkerClasses.WeaponTraitWorker_ChemicalFilledOnKill</workerClass>
         <commonality>0.5</commonality>
         <marketValueOffset>800</marketValueOffset>

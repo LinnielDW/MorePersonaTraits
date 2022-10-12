@@ -305,7 +305,7 @@
     <WeaponTraitDef ParentName="BondedWeaponTraitBase">
         <defName>MPT_Bonded_RestRateMultiplierUp</defName>
         <label>cosy</label>
-        <description>This weapon's persona sooothes their bonded helping them get a good nights sleep.\nThe bonded pawn has increased rest rate.</description>
+        <description>This weapon's persona soothes their bonded helping them get a good nights sleep.\nThe bonded pawn has increased rest rate.</description>
         <bondedHediffs>
             <li>MPT_Hediff_RestRateMultiplierUp</li>
         </bondedHediffs>
@@ -786,7 +786,7 @@
     <WeaponTraitDef ParentName="BondedWeaponTraitBase">
         <defName>MPT_Bonded_ConstructionUp</defName>
         <label>mason</label>
-        <description>This weapon's persona has a great knowledge of the local techtonics, ground stability and material load balancing, telling things that their bond would not otherwise immediately realise.\nThe bonded pawn gains increased construction speed, success chance and smoothing speed.</description>
+        <description>This weapon's persona has a great knowledge of the local tectonics, ground stability and material load balancing, telling things that their bond would not otherwise immediately realise.\nThe bonded pawn gains increased construction speed, success chance and smoothing speed.</description>
         <bondedHediffs>
             <li>MPT_Hediff_ConstructionUp</li>
         </bondedHediffs>
@@ -1259,7 +1259,7 @@
 
     <WeaponTraitDef ParentName="BondedWeaponTraitBase">
         <defName>MPT_Bonded_LifespanDown</defName>
-        <label>shortlived</label>
+        <label>short-lived</label>
         <description>This weapon's persona believes that you either die a hero or see yourself become the villain. To that end, they try to make sure their bonded stays the hero.\nThe bonded pawn has a shorter lifespan.</description>
         <bondedHediffs>
             <li>MPT_Hediff_LifespanDown</li>
@@ -1288,7 +1288,7 @@
 
     <WeaponTraitDef ParentName="BondedWeaponTraitBase">
         <defName>MPT_Bonded_LifespanUp</defName>
-        <label>longlived</label>
+        <label>long-lived</label>
         <description>This weapon's persona will do everything in their power to keep the sands of time from claiming their bonded.\nThe bonded pawn has a longer lifespan.</description>
         <bondedHediffs>
             <li>MPT_Hediff_LifespanUp</li>
