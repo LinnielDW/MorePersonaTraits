@@ -29,9 +29,7 @@
             <li Class="CompProperties_UseEffectArtifact">
                 <sound>PsychicInsanityLanceCast</sound>
             </li>
-            <li Class="CompProperties_UseEffect">
-                <compClass>CompUseEffect_DestroySelf</compClass>
-            </li>
+            <li Class="CompProperties_UseEffectDestroySelf" />
         </comps>
         <thingSetMakerTags>
             <li>RewardStandardMidFreq</li>
