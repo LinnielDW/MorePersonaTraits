@@ -39,6 +39,11 @@
     <version1_4 Include="..\1.4\**">
       <Link>1.4\%(RecursiveDir)%(Filename)%(Extension)</Link>
     </version1_4>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Lib.Harmony" Version="2.2.2" />
+  </ItemGroup>
+  <ItemGroup>
     <Reference Include="Assembly-CSharp, Culture=neutral, PublicKeyToken=null">
       <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
       <Private>False</Private>
@@ -64,8 +69,11 @@
     <Compile Include="Extensions\MPT_NeedDefOf.cs" />
     <Compile Include="Extensions\WeaponTraitDefExtension.cs" />
     <Compile Include="Extensions\WeaponTraitOnHitExtension.cs" />
+<!--    <Compile Include="MPT_CompBladelinkWeapon.cs" />-->
     <Compile Include="Patches\CompBladelinkWeaponPatches.cs" />
     <Compile Include="Patches\UIPatches.cs" />
+    <Compile Include="QuestNode_GetRandomLootLabel.cs" />
+    <Compile Include="QuestNode_SetItemBySetMakerTags.cs" />
     <Compile Include="Settings\MorePersonaTraitsSettings.cs" />
     <Compile Include="Utils\FieldRefUtils.cs" />
     <Compile Include="Utils\NeedFillUtils.cs" />
@@ -110,9 +118,6 @@
     <Content Include="Templates\Examples\OnHitTemplate.xml" />
     <Content Include="Templates\README.md" />
     <Content Include="Templates\WeaponTraitTemplateExplaination.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="Lib.Harmony" Version="2.2.2" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 
