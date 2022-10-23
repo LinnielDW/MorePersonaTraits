@@ -13,6 +13,7 @@
         <tradeTags>
             <li>PsychicWeapon</li>
         </tradeTags>
+        <smeltable>false</smeltable>
         <weaponTags>
             <li>EltexStaff</li>
         </weaponTags>
