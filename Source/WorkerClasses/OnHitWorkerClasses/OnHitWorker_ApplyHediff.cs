@@ -14,6 +14,13 @@ namespace MorePersonaTraits.WorkerClasses.OnHitWorkerClasses
 
         private void ApplyHediff(Thing thing)
         {
+            ImmunityHandler immunityHandler = (thing as Pawn)?.health.immunity;
+            if (immunityHandler != null && immunityHandler.ImmunityRecordExists(HediffDef))
+            {
+                // Log.Warning("pawn is immune to hediff, skipping.");
+                return;
+            }
+            
             //Workaround needed due to severity being clamped by minSeverity 
             if (ProcMagnitude < 0)
             {
