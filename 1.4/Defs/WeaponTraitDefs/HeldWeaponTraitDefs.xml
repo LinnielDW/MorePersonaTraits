@@ -156,7 +156,7 @@
         <commonality>0.5</commonality>
         <marketValueOffset>-400</marketValueOffset>
         <equippedStatOffsets>
-            <ToxicResistance>0.5</ToxicResistance>
+            <ToxicResistance>-0.5</ToxicResistance>
         </equippedStatOffsets>
         <exclusionTags>
             <li>MPT_Held_ToxicSensitivity</li>
@@ -170,7 +170,7 @@
         <commonality>0.5</commonality>
         <marketValueOffset>400</marketValueOffset>
         <equippedStatOffsets>
-            <ToxicResistance>-0.5</ToxicResistance>
+            <ToxicResistance>0.5</ToxicResistance>
         </equippedStatOffsets>
         <exclusionTags>
             <li>MPT_Held_ToxicSensitivity</li>

@@ -43,13 +43,13 @@
             <li Class="PatchOperationAdd" MayRequire="ludeon.rimworld.biotech">
                 <xpath>*/WeaponTraitDef[defName="MPT_Held_ToxicSensitivityDown"]/equippedStatOffsets</xpath>
                 <value>
-                    <ToxicEnvironmentResistance>-0.5</ToxicEnvironmentResistance>
+                    <ToxicEnvironmentResistance>0.5</ToxicEnvironmentResistance>
                 </value>
             </li>
             <li Class="PatchOperationAdd" MayRequire="ludeon.rimworld.biotech">
                 <xpath>*/WeaponTraitDef[defName="MPT_Held_ToxicSensitivityUp"]/equippedStatOffsets</xpath>
                 <value>
-                    <ToxicEnvironmentResistance>0.5</ToxicEnvironmentResistance>
+                    <ToxicEnvironmentResistance>-0.5</ToxicEnvironmentResistance>
                 </value>
             </li>
         </operations>
