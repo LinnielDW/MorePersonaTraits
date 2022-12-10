@@ -66,7 +66,9 @@ namespace MorePersonaTraits.WorkerClasses.WeaponTraitWorkerClasses
         public override void Notify_KilledPawn(Pawn pawn)
         {
             base.Notify_KilledPawn(pawn);
-            var chemNeed = pawn.needs.AllNeeds.Where(need => need is Need_Chemical).RandomElement();
+            var chemNeed = pawn.needs.AllNeeds.Where(need => need is Need_Chemical).RandomElementWithFallback();
+            if (chemNeed == null) return;
+
             pawn.AttemptToFillNeed(chemNeed.def);
         }
     }
