@@ -1566,4 +1566,63 @@
             </li>
         </stages>
     </HediffDef>
+    
+    <!--CertaintyLossFactor-->
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase"  MayRequire="ludeon.rimworld.ideology">
+        <defName>MPT_Bonded_CertaintyLossFactorUp</defName>
+        <label>uncertain</label>
+        <description>This weapon's persona seems to collect ideoligions like a thrumbo collects calories.\nThe bonded pawn becomes uncertain of their ideoligion quicker.</description>
+        <bondedHediffs>
+            <li>MPT_Hediff_CertaintyLossFactorUp</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_Bonded_CertaintyLossFactor</li>
+        </exclusionTags>
+        <marketValueOffset>-500</marketValueOffset>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_Hediff_CertaintyLossFactorUp</defName>
+        <label>psychic agnosticism</label>
+        <description>My ideoligion certainty loss rate is being increased by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_Bonded_CertaintyLossFactorUp</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statOffsets>
+                    <CertaintyLossFactor>0.3</CertaintyLossFactor>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase"  MayRequire="ludeon.rimworld.ideology">
+        <defName>MPT_Bonded_CertaintyLossFactorDown</defName>
+        <label>unwavering</label>
+        <description>This weapon's persona knows what to say at the right time to help the most tested pawn stay firm in their ideology.\nThe bonded pawn becomes uncertain of their ideoligion slower.</description>
+        <bondedHediffs>
+            <li>MPT_Hediff_CertaintyLossFactorDown</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_Bonded_CertaintyLossFactor</li>
+        </exclusionTags>
+        <marketValueOffset>500</marketValueOffset>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_Hediff_CertaintyLossFactorDown</defName>
+        <label>psychic faithfulness</label>
+        <description>My ideoligion certainty loss rate is being hampered by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_Bonded_CertaintyLossFactorDown</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statOffsets>
+                    <CertaintyLossFactor>-0.3</CertaintyLossFactor>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
 </Defs>
