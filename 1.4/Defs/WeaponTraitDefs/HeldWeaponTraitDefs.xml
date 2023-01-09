@@ -180,6 +180,35 @@
     </WeaponTraitDef>
 
     <WeaponTraitDef>
+        <defName>MPT_Held_PsychicEntropyMaxUp</defName>
+        <label>entropic heavyweight</label>
+        <description>This weapon's persona is able to assist their wielder resist some side effects of being exposed to psychic energies.\nWhile held, it increases the wielder's maximum psychic entropy.</description>
+        <commonality>0.5</commonality>
+        <marketValueOffset>500</marketValueOffset>
+        <equippedStatOffsets>
+            <PsychicEntropyMax>30</PsychicEntropyMax>
+        </equippedStatOffsets>
+        <exclusionTags>
+            <li>MPT_Held_PsychicEntropyMax</li>
+            <li>MPT_PsychicEntropyMax</li>
+        </exclusionTags>
+    </WeaponTraitDef>
+    <WeaponTraitDef>
+        <defName>MPT_Held_PsychicEntropyMaxDown</defName>
+        <label>entropic lightweight</label>
+        <description>This weapon's persona is extra vulnerable to chaotic psychic energies. Just a little exposure to these energies is enough to send the persona and their wielder into a daze.\nWhile held, it decreases the wielder's maximum psychic entropy.</description>
+        <commonality>0.5</commonality>
+        <marketValueOffset>-500</marketValueOffset>
+        <equippedStatOffsets>
+            <PsychicEntropyMax>-25</PsychicEntropyMax>
+        </equippedStatOffsets>
+        <exclusionTags>
+            <li>MPT_Held_PsychicEntropyMax</li>
+            <li>MPT_PsychicEntropyMax</li>
+        </exclusionTags>
+    </WeaponTraitDef>
+
+    <WeaponTraitDef>
         <defName>MPT_Held_Vomit</defName>
         <label>nauseating</label>
         <description>This weapon's persona is disgusted at being held anything and anyone. Anyone holding this will feel the same way about it too.\nHaving this weapon equipped will make the wielder throws up regularly.</description>

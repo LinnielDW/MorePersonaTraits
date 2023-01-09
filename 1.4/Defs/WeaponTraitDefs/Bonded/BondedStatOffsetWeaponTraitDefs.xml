@@ -1382,4 +1382,64 @@
             </li>
         </stages>
     </HediffDef>
+
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_Bonded_PsychicEntropyMaxDown</defName>
+        <label>resigned</label>
+        <description>This weapon's persona knows that one cannot resist entropy and doesn't even try to put up a fight.\nThe bonded pawn has decreased psychic entropy, even when it's not equipped.</description>
+        <bondedHediffs>
+            <li>MPT_Hediff_PsychicEntropyMaxDown</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_Bonded_PsychicEntropyMax</li>
+            <li>MPT_PsychicEntropyMax</li>
+        </exclusionTags>
+        <marketValueOffset>-500</marketValueOffset>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_Hediff_PsychicEntropyMaxDown</defName>
+        <label>psychic entropy resignation</label>
+        <description>My maximum psychic entropy is being hampered by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_Bonded_PsychicEntropyMaxDown</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statOffsets>
+                    <PsychicEntropyMax>-15</PsychicEntropyMax>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase">
+        <defName>MPT_Bonded_PsychicEntropyMaxUp</defName>
+        <label>reiner</label>
+        <description>This weapon's persona is able to rein in the worst effects of psychic entropy away from their bond's mind.\nThe bonded pawn has increased psychic entropy, even when it's not equipped.</description>
+        <bondedHediffs>
+            <li>MPT_Hediff_PsychicEntropyMaxUp</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_Bonded_PsychicEntropyMax</li>
+            <li>MPT_PsychicEntropyMax</li>
+        </exclusionTags>
+        <marketValueOffset>500</marketValueOffset>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_Hediff_PsychicEntropyMaxUp</defName>
+        <label>psychic entropy barrier</label>
+        <description>My maximum psychic entropy is increased by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_Bonded_PsychicEntropyMaxUp</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statOffsets>
+                    <PsychicEntropyMax>15</PsychicEntropyMax>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
 </Defs>
