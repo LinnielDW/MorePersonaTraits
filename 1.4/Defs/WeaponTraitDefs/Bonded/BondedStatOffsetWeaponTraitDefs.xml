@@ -1501,4 +1501,69 @@
             </li>
         </stages>
     </HediffDef>
+    
+    <!--MechStats-->
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase" MayRequire="ludeon.rimworld.biotech">
+        <defName>MPT_Bonded_MechStatsUp</defName>
+        <label>engineer</label>
+        <description>This weapon's persona is a real mech engineering wizard. They frequently drop useful tips and tricks to their bond to help them with their mechanoid related projects.\nThe bonded pawn gains increases to various Mechinator related stats.</description>
+        <bondedHediffs>
+            <li>MPT_Hediff_MechStatsUp</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_Bonded_MechStats</li>
+        </exclusionTags>
+        <marketValueOffset>500</marketValueOffset>
+    </WeaponTraitDef>
+    <HediffDef MayRequire="ludeon.rimworld.biotech">
+        <defName>MPT_Hediff_MechStatsUp</defName>
+        <label>psychic pit-stop assistant</label>
+        <description>Some of my mechinator related stats are being increased by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_Bonded_MechStatsUp</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statOffsets>
+                    <MechRemoteShieldDistance>3</MechRemoteShieldDistance>
+                    <MechRemoteRepairDistance>3</MechRemoteRepairDistance>
+                    <MechRemoteShieldEnergy>25</MechRemoteShieldEnergy>
+                    <MechRepairSpeed>0.25</MechRepairSpeed>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase" MayRequire="ludeon.rimworld.biotech">
+        <defName>MPT_Bonded_MechStatsDown</defName>
+        <label>frazzled</label>
+        <description>This weapon's persona has lasting trauma related to a botched mechanoid repair incident. Ever since then their hands shake uncontrollably when they are working on a mech, or at least they would if they had any.\nThe bonded pawn loses some various Mechinator related stats.</description>
+        <bondedHediffs>
+            <li>MPT_Hediff_MechStatsDown</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_Bonded_MechStats</li>
+        </exclusionTags>
+        <marketValueOffset>-500</marketValueOffset>
+    </WeaponTraitDef>
+    <HediffDef MayRequire="ludeon.rimworld.biotech">
+        <defName>MPT_Hediff_MechStatsDown</defName>
+        <label>psychic engineering fault</label>
+        <description>Some of my mechinator related stats are being hampered by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_Bonded_MechStatsDown</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statOffsets>
+                    <MechRemoteShieldDistance>-3</MechRemoteShieldDistance>
+                    <MechRemoteRepairDistance>-3</MechRemoteRepairDistance>
+                    <MechRemoteShieldEnergy>-25</MechRemoteShieldEnergy>
+                    <MechRepairSpeed>-0.25</MechRepairSpeed>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
 </Defs>
