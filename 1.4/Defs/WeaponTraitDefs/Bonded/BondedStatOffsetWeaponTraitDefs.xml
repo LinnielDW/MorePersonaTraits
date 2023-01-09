@@ -1442,4 +1442,63 @@
             </li>
         </stages>
     </HediffDef>
+
+    <!--Fertility-->
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase" MayRequire="ludeon.rimworld.biotech">
+        <defName>MPT_Bonded_FertilityUp</defName>
+        <label>exuberant</label>
+        <description>This weapon's persona dreams of being passed down a family line FOR GENERATIONS and will energize their bond's body with fettle energy.\nThe bonded pawn gains increased fertility.</description>
+        <bondedHediffs>
+            <li>MPT_Hediff_FertilityUp</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_Bonded_Fertility</li>
+        </exclusionTags>
+        <marketValueOffset>200</marketValueOffset>
+    </WeaponTraitDef>
+    <HediffDef MayRequire="ludeon.rimworld.biotech">
+        <defName>MPT_Hediff_FertilityUp</defName>
+        <label>psychic fertility treatment</label>
+        <description>My fertility is being increased by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_Bonded_FertilityUp</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statOffsets>
+                    <Fertility>0.5</Fertility>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase" MayRequire="ludeon.rimworld.biotech">
+        <defName>MPT_Bonded_FertilityDown</defName>
+        <label>ephebiphobia</label>
+        <description>This weapon's persona has a fear of the younglings and will do its best to not be around them.\nThe bonded pawn loses fertility.</description>
+        <bondedHediffs>
+            <li>MPT_Hediff_FertilityDown</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_Bonded_Fertility</li>
+        </exclusionTags>
+        <marketValueOffset>-200</marketValueOffset>
+    </WeaponTraitDef>
+    <HediffDef MayRequire="ludeon.rimworld.biotech">
+        <defName>MPT_Hediff_FertilityDown</defName>
+        <label>psychic meiosis blocker</label>
+        <description>My fertility is being hampered by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_Bonded_FertilityDown</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statOffsets>
+                    <Fertility>-0.5</Fertility>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
 </Defs>
