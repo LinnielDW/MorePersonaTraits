@@ -328,6 +328,7 @@
             <li>
                 <statOffsets>
                     <RestRateMultiplier>0.25</RestRateMultiplier>
+                    <BiosculpterOccupantSpeed MayRequire="ludeon.rimworld.ideology">0.25</BiosculpterOccupantSpeed>
                 </statOffsets>
             </li>
         </stages>
@@ -357,6 +358,7 @@
             <li>
                 <statOffsets>
                     <RestRateMultiplier>-0.25</RestRateMultiplier>
+                    <BiosculpterOccupantSpeed MayRequire="ludeon.rimworld.ideology">-0.25</BiosculpterOccupantSpeed>
                 </statOffsets>
             </li>
         </stages>
