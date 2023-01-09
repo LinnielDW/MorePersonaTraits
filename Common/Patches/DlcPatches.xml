@@ -2,56 +2,6 @@
 <Patch>
     <Operation Class="PatchOperationSequence">
         <operations>
-            <li Class="PatchOperationAdd" MayRequire="ludeon.rimworld.ideology">
-                <xpath>*/HediffDef[defName="MPT_Hediff_ResearchUp"]/stages/li/statOffsets</xpath>
-                <value>
-                    <HackingSpeed>0.25</HackingSpeed>
-                </value>
-            </li>
-            <li Class="PatchOperationAdd" MayRequire="ludeon.rimworld.ideology">
-                <xpath>*/HediffDef[defName="MPT_Hediff_ResearchDown"]/stages/li/statOffsets</xpath>
-                <value>
-                    <HackingSpeed>-0.25</HackingSpeed>
-                </value>
-            </li>
-            <li Class="PatchOperationAdd" MayRequire="ludeon.rimworld.ideology">
-                <xpath>*/HediffDef[defName="MPT_Hediff_PlantSpeedUp"]/stages/li/statOffsets</xpath>
-                <value>
-                    <PruningSpeed>0.15</PruningSpeed>
-                </value>
-            </li>
-            <li Class="PatchOperationAdd" MayRequire="ludeon.rimworld.ideology">
-                <xpath>*/HediffDef[defName="MPT_Hediff_PlantSpeedDown"]/stages/li/statOffsets</xpath>
-                <value>
-                    <PruningSpeed>-0.15</PruningSpeed>
-                </value>
-            </li>
-            <li Class="PatchOperationAdd" MayRequire="ludeon.rimworld.ideology">
-                <xpath>*/HediffDef[defName="MPT_Hediff_WardenUp"]/stages/li/statOffsets</xpath>
-                <value>
-                    <ConversionPower>0.5</ConversionPower>
-                    <SuppressionPower>0.5</SuppressionPower>
-                </value>
-            </li>
-            <li Class="PatchOperationAdd" MayRequire="ludeon.rimworld.ideology">
-                <xpath>*/HediffDef[defName="MPT_Hediff_WardenDown"]/stages/li/statOffsets</xpath>
-                <value>
-                    <ConversionPower>-0.5</ConversionPower>
-                    <SuppressionPower>-0.5</SuppressionPower>
-                </value>
-            </li>
-            <li Class="PatchOperationAdd" MayRequire="ludeon.rimworld.biotech">
-                <xpath>*/WeaponTraitDef[defName="MPT_Held_ToxicSensitivityDown"]/equippedStatOffsets</xpath>
-                <value>
-                    <ToxicEnvironmentResistance>0.5</ToxicEnvironmentResistance>
-                </value>
-            </li>
-            <li Class="PatchOperationAdd" MayRequire="ludeon.rimworld.biotech">
-                <xpath>*/WeaponTraitDef[defName="MPT_Held_ToxicSensitivityUp"]/equippedStatOffsets</xpath>
-                <value>
-                    <ToxicEnvironmentResistance>-0.5</ToxicEnvironmentResistance>
-                </value>
-            </li>
         </operations>
     </Operation>
 </Patch>

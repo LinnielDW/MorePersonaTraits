@@ -157,6 +157,7 @@
         <marketValueOffset>-400</marketValueOffset>
         <equippedStatOffsets>
             <ToxicResistance>-0.5</ToxicResistance>
+            <ToxicEnvironmentResistance MayRequire="ludeon.rimworld.biotech">0.5</ToxicEnvironmentResistance>
         </equippedStatOffsets>
         <exclusionTags>
             <li>MPT_Held_ToxicSensitivity</li>
@@ -171,6 +172,7 @@
         <marketValueOffset>400</marketValueOffset>
         <equippedStatOffsets>
             <ToxicResistance>0.5</ToxicResistance>
+            <ToxicEnvironmentResistance MayRequire="ludeon.rimworld.biotech">-0.5</ToxicEnvironmentResistance>
         </equippedStatOffsets>
         <exclusionTags>
             <li>MPT_Held_ToxicSensitivity</li>

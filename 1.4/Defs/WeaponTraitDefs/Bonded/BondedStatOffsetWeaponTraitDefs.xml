@@ -33,6 +33,7 @@
                 <statOffsets>
                     <ResearchSpeed>0.15</ResearchSpeed>
                     <ButcheryMechanoidSpeed>0.5</ButcheryMechanoidSpeed>
+                    <HackingSpeed MayRequire="ludeon.rimworld.ideology">0.25</HackingSpeed>
                 </statOffsets>
             </li>
         </stages>
@@ -63,6 +64,7 @@
                 <statOffsets>
                     <ResearchSpeed>-0.15</ResearchSpeed>
                     <ButcheryMechanoidSpeed>-0.5</ButcheryMechanoidSpeed>
+                    <HackingSpeed MayRequire="ludeon.rimworld.ideology">-0.25</HackingSpeed>
                 </statOffsets>
             </li>
         </stages>
@@ -749,6 +751,7 @@
             <li>
                 <statOffsets>
                     <PlantWorkSpeed>0.5</PlantWorkSpeed>
+                    <PruningSpeed MayRequire="ludeon.rimworld.ideology">0.15</PruningSpeed>
                 </statOffsets>
             </li>
         </stages>
@@ -778,6 +781,7 @@
             <li>
                 <statOffsets>
                     <PlantWorkSpeed>-0.5</PlantWorkSpeed>
+                    <PruningSpeed MayRequire="ludeon.rimworld.ideology">0.15</PruningSpeed>
                 </statOffsets>
             </li>
         </stages>
@@ -1222,6 +1226,8 @@
                 <statOffsets>
                     <ArrestSuccessChance>0.5</ArrestSuccessChance>
                     <NegotiationAbility>0.5</NegotiationAbility>
+                    <ConversionPower MayRequire="ludeon.rimworld.ideology">0.5</ConversionPower>
+                    <SuppressionPower MayRequire="ludeon.rimworld.ideology">0.5</SuppressionPower>
                 </statOffsets>
             </li>
         </stages>
@@ -1252,6 +1258,8 @@
                 <statOffsets>
                     <ArrestSuccessChance>-0.5</ArrestSuccessChance>
                     <NegotiationAbility>-0.5</NegotiationAbility>
+                    <ConversionPower MayRequire="ludeon.rimworld.ideology">-0.5</ConversionPower>
+                    <SuppressionPower MayRequire="ludeon.rimworld.ideology">-0.5</SuppressionPower>
                 </statOffsets>
             </li>
         </stages>
