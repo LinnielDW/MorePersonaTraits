@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
     <WeaponTraitDef>
-        <defName>MPT_HeldTemplate</defName>
+        <defName>MPT_Held_TemplateStatUp</defName>
         <label>held_trait_template</label>
         <description>This weapon shouldn't have this trait as this is a template. This effect will last for as long as the weapon is held.</description>
         <commonality>0.0</commonality>
