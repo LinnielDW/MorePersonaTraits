@@ -208,6 +208,35 @@
         </exclusionTags>
     </WeaponTraitDef>
 
+    <WeaponTraitDef MayRequire="ludeon.rimworld.biotech">
+        <defName>MPT_Held_MechBandwidthUp</defName>
+        <label>multithreaded</label>
+        <description>This weapon's persona is great at multitasking and will help their weilder focus on many machines all at once.\nWhile held, it increases the wielder's mech bandwidth.</description>
+        <commonality>0.5</commonality>
+        <marketValueOffset>600</marketValueOffset>
+        <equippedStatOffsets>
+            <MechBandwidth>4</MechBandwidth>
+        </equippedStatOffsets>
+        <exclusionTags>
+            <li>MPT_Held_MechBandwidth</li>
+            <li>MPT_MechBandwidth</li>
+        </exclusionTags>
+    </WeaponTraitDef>
+    <WeaponTraitDef MayRequire="ludeon.rimworld.biotech">
+        <defName>MPT_Held_MechBandwidthDown</defName>
+        <label>faint</label>
+        <description>This weapon's persona has a had time being understood by other machines. This effect seems to be rubbing off on their wielder.\nWhile held, it decreases the wielder's mech bandwidth.</description>
+        <commonality>0.5</commonality>
+        <marketValueOffset>-600</marketValueOffset>
+        <equippedStatOffsets>
+            <MechBandwidth>-4</MechBandwidth>
+        </equippedStatOffsets>
+        <exclusionTags>
+            <li>MPT_Held_MechBandwidth</li>
+            <li>MPT_MechBandwidth</li>
+        </exclusionTags>
+    </WeaponTraitDef>
+
     <WeaponTraitDef>
         <defName>MPT_Held_Vomit</defName>
         <label>nauseating</label>
