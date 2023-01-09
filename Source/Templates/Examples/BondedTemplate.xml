@@ -9,7 +9,7 @@
             <li>MPT_Hediff_TemplateStatUp</li>
         </bondedHediffs>
         <exclusionTags>
-            <li>MPT_BondedTemplateStat</li>
+            <li>MPT_Bonded_TemplateStat</li>
         </exclusionTags>
         <marketValueOffset>500</marketValueOffset>
     </WeaponTraitDef>
@@ -18,7 +18,7 @@
         <label>bonded_hediff_statoffset_template_up</label>
         <description>My TemplateStat is being increased by my bonded weapon.</description>
         <descriptionHyperlinks>
-            <WeaponTraitDef>MPT_BondedTemplateStatUp</WeaponTraitDef>
+            <WeaponTraitDef>MPT_Bonded_TemplateStatUp</WeaponTraitDef>
         </descriptionHyperlinks>
         <isBad>false</isBad>
         <stages>
@@ -38,7 +38,7 @@
             <li>MPT_Hediff_TemplateStatDown</li>
         </bondedHediffs>
         <exclusionTags>
-            <li>MPT_BondedTemplateStat</li>
+            <li>MPT_Bonded_TemplateStat</li>
         </exclusionTags>
         <marketValueOffset>-500</marketValueOffset>
     </WeaponTraitDef>
@@ -47,7 +47,7 @@
         <label>bonded_hediff_statoffset_template_down</label>
         <description>My TemplateStat is being hampered by my bonded weapon.</description>
         <descriptionHyperlinks>
-            <WeaponTraitDef>MPT_BondedTemplateStatDown</WeaponTraitDef>
+            <WeaponTraitDef>MPT_Bonded_TemplateStatDown</WeaponTraitDef>
         </descriptionHyperlinks>
         <isBad>false</isBad>
         <stages>
