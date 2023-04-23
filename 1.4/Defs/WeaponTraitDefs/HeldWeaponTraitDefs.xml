@@ -217,6 +217,7 @@
         <equippedStatOffsets>
             <MechBandwidth>4</MechBandwidth>
             <MechControlGroups>1</MechControlGroups>
+            <WorkSpeedGlobalOffsetMech>0.06</WorkSpeedGlobalOffsetMech>
         </equippedStatOffsets>
         <exclusionTags>
             <li>MPT_Held_MechBandwidth</li>
@@ -231,6 +232,7 @@
         <marketValueOffset>-600</marketValueOffset>
         <equippedStatOffsets>
             <MechBandwidth>-4</MechBandwidth>
+            <WorkSpeedGlobalOffsetMech>-0.06</WorkSpeedGlobalOffsetMech>
         </equippedStatOffsets>
         <exclusionTags>
             <li>MPT_Held_MechBandwidth</li>
