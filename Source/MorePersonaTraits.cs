@@ -44,7 +44,8 @@ public class MorePersonaTraitsSpawns : Mod
 
     public override void DoSettingsWindowContents(Rect inRect)
     {
-        MorePersonaTraitsSpawns.settings.DoWindowContents(inRect);
+        settings.DoWindowContents(inRect);
+        base.DoSettingsWindowContents(inRect);
     }
 
     public static MorePersonaTraitsSpawnsSettings settings;
