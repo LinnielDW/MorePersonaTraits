@@ -95,6 +95,7 @@
     <Compile Include="WorkerClasses\ItemWorkerClasses\CompTargetEffect_BladelinkChaos.cs" />
     <Compile Include="WorkerClasses\OnHitWorkerClasses\OnHitWorker.cs" />
     <Compile Include="WorkerClasses\OnHitWorkerClasses\OnHitWorker_AddedDamage.cs" />
+    <Compile Include="WorkerClasses\OnHitWorkerClasses\OnHitWorker_ApplyGeneResource.cs" />
     <Compile Include="WorkerClasses\OnHitWorkerClasses\OnHitWorker_ApplyHediff.cs" />
     <Compile Include="WorkerClasses\OnHitWorkerClasses\OnHitWorker_ApplyNeed.cs" />
     <Compile Include="WorkerClasses\OnHitWorkerClasses\OnHitWorker_ApplyStun.cs" />

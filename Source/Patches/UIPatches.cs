@@ -149,6 +149,8 @@ namespace MorePersonaTraits.Patches
             {
                 case OnHitWorker_ApplyHediff onHit:
                     return "MPT_ApplyHediffDesc".Translate(onHit.HediffDef.LabelCap);
+                case OnHitWorker_ApplyGeneResource onHit:
+                    return "MPT_ApplyGeneResourceDesc".Translate(onHit.GeneDef.resourceLabel);
                 case OnHitWorker_ApplyNeed onHit:
                     return onHit.ProcMagnitude > 0f ? "MPT_NeedOffsetTypeUpDesc".Translate(onHit.NeedDef.LabelCap) : "MPT_NeedOffsetTypeDownDesc".Translate(onHit.NeedDef.LabelCap);
                 case OnHitWorker_ApplyThought onHit:
@@ -163,11 +165,13 @@ namespace MorePersonaTraits.Patches
             switch (worker)
             {
                 case OnHitWorker_ApplyHediff onHit:
-                    return onHit.HediffDef.label;
+                    return onHit.HediffDef.LabelCap;
+                case OnHitWorker_ApplyGeneResource onHit:
+                    return onHit.GeneDef.resourceLabel;
                 case OnHitWorker_ApplyNeed onHit:
-                    return onHit.NeedDef.label;
+                    return onHit.NeedDef.LabelCap;
                 case OnHitWorker_ApplyThought onHit:
-                    return onHit.ThoughtDef.Label;
+                    return onHit.ThoughtDef.LabelCap;
                 default:
                     return "";
             }

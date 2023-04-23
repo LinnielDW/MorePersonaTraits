@@ -12,6 +12,7 @@
     <MPT_NeedOffsetTypeUpDesc>increase the {0} of</MPT_NeedOffsetTypeUpDesc>
     <MPT_NeedOffsetTypeDownDesc>decrease the {0} of</MPT_NeedOffsetTypeDownDesc>
     <MPT_ApplyHediffDesc>apply/increase the severity of {0} to</MPT_ApplyHediffDesc>
+    <MPT_ApplyGeneResourceDesc>increase the {0} (if they have it) of</MPT_ApplyGeneResourceDesc>
     <MPT_GiveThoughDesc>give {0}{1} to</MPT_GiveThoughDesc>
     <MPT_ThoughtStackDesc> (stacking up to {0} times)</MPT_ThoughtStackDesc>
     

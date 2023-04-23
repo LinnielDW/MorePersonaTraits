@@ -192,7 +192,7 @@
     <WeaponTraitDef>
         <defName>MPT_OnHit_DrainBlood</defName>
         <label>vampiric</label>
-        <description>This weapon's persona is able to absorb the blood of the wielder's target with every hit.\nUpon hitting a target, there is a chance that the target incurs blood loss and that the wielder recovers a portion of theirs.</description>
+        <description>This weapon's persona is able to absorb the blood of the wielder's target with every hit.\nUpon hitting a target, there is a chance that the target incurs blood loss and that the wielder recovers a portion of theirs and their hemogen (if they can have any).</description>
         <commonality>0.3</commonality>
         <marketValueOffset>1000</marketValueOffset>
         <descriptionHyperlinks>
@@ -206,6 +206,14 @@
                         <ProcMagnitude>0.1</ProcMagnitude>
                         <ProcChance>0.8</ProcChance>
                         <RequiresBothLiving>true</RequiresBothLiving>
+                        <RequiresBio>true</RequiresBio>
+                    </li>
+                    <li Class="MorePersonaTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_ApplyGeneResource" MayRequire="ludeon.rimworld.biotech">
+                        <GeneDef>Hemogenic</GeneDef>
+                        <ProcMagnitude>0.1</ProcMagnitude>
+                        <ProcChance>0.4</ProcChance>
+                        <RequiresBothLiving>true</RequiresBothLiving>
+                        <TargetSelf>true</TargetSelf>
                         <RequiresBio>true</RequiresBio>
                     </li>
                     <li Class="MorePersonaTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_ApplyHediff">
@@ -224,7 +232,7 @@
     <WeaponTraitDef>
         <defName>MPT_OnHit_BloodLossSelf</defName>
         <label>bloodtaker</label>
-        <description>This weapon's persona insists that the story of the Rim is written in blood and requires blood to write the wielder's story.\nUpon hitting a target, there is a chance that the wielder incurs blood loss.</description>
+        <description>This weapon's persona insists that the story of the Rim is written in blood and requires blood to write the wielder's story.\nUpon hitting a target, there is a chance that the wielder incurs blood loss and lose some of their hemogen (if they can have any).</description>
         <commonality>0.5</commonality>
         <marketValueOffset>-500</marketValueOffset>
         <descriptionHyperlinks>
@@ -240,6 +248,13 @@
                         <TargetSelf>true</TargetSelf>
                         <RequiresBio>true</RequiresBio>
                     </li>
+                    <li Class="MorePersonaTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_ApplyGeneResource" MayRequire="ludeon.rimworld.biotech">
+                        <GeneDef>Hemogenic</GeneDef>
+                        <ProcMagnitude>-0.05</ProcMagnitude>
+                        <ProcChance>0.35</ProcChance>
+                        <TargetSelf>true</TargetSelf>
+                        <RequiresBio>true</RequiresBio>
+                    </li>
                 </OnHitWorkers>
             </li>
         </modExtensions>
@@ -248,7 +263,7 @@
     <WeaponTraitDef>
         <defName>MPT_OnHit_BloodLoss</defName>
         <label>blood-letting</label>
-        <description>This weapon's persona pulls extra blood out of its victims.\nUpon hitting a target, there is a chance that the wielder's target incurs blood loss.</description>
+        <description>This weapon's persona pulls extra blood out of its victims.\nUpon hitting a target, there is a chance that the wielder's target incurs blood loss and lose some of their hemogen (if they can have any).</description>
         <commonality>0.5</commonality>
         <marketValueOffset>500</marketValueOffset>
         <descriptionHyperlinks>
@@ -261,6 +276,12 @@
                         <HediffDef>BloodLoss</HediffDef>
                         <ProcMagnitude>0.1</ProcMagnitude>
                         <ProcChance>0.8</ProcChance>
+                        <RequiresBio>true</RequiresBio>
+                    </li>
+                    <li Class="MorePersonaTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_ApplyGeneResource" MayRequire="ludeon.rimworld.biotech">
+                        <GeneDef>Hemogenic</GeneDef>
+                        <ProcMagnitude>-0.1</ProcMagnitude>
+                        <ProcChance>0.4</ProcChance>
                         <RequiresBio>true</RequiresBio>
                     </li>
                 </OnHitWorkers>
