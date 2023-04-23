@@ -6,6 +6,12 @@ using Verse;
 
 namespace MorePersonaTraits.Settings;
 
+[StaticConstructorOnStartup]
+public class MPTStatics
+{
+    public static readonly List<WeaponTraitDef> AllTraitsAlphabetically = DefDatabase<WeaponTraitDef>.AllDefs.OrderBy(x => x.label).ToList();
+}
+
 public class MorePersonaTraitsSpawnsSettings : ModSettings
 {
     public static Dictionary<string, bool> WeaponTraitSpawnSettings = new Dictionary<string, bool>();
@@ -23,7 +29,7 @@ public class MorePersonaTraitsSpawnsSettings : ModSettings
 
     public void DoWindowContents(Rect inRect)
     {
-        int rowCount = DefDatabase<WeaponTraitDef>.AllDefs.Count();
+        int rowCount = MPTStatics.AllTraitsAlphabetically.Count();
 
         Listing_Standard listingStandard = new Listing_Standard();
         
@@ -33,7 +39,7 @@ public class MorePersonaTraitsSpawnsSettings : ModSettings
 
         Rect resetRect = new Rect(0f, listingStandard.CurHeight, (listingStandard.ColumnWidth * 0.25f) - 6f, 30f);
         if (Widgets.ButtonText(resetRect, "reset")) {
-            foreach (var negativeTrait in DefDatabase<WeaponTraitDef>.AllDefs)
+            foreach (var negativeTrait in MPTStatics.AllTraitsAlphabetically)
             {
                 WeaponTraitSpawnSettings[negativeTrait.defName] = true;
             }
@@ -43,7 +49,7 @@ public class MorePersonaTraitsSpawnsSettings : ModSettings
         Rect disableBadTraitsRect = new Rect(resetRect.xMax + 6f, listingStandard.CurHeight, listingStandard.ColumnWidth * 0.25f - 6f, 30f);
         if (Widgets.ButtonText(disableBadTraitsRect, "disable all negative traits"))
         {
-            foreach (var negativeTrait in DefDatabase<WeaponTraitDef>.AllDefs.Where(t => t.marketValueOffset < 0))
+            foreach (var negativeTrait in MPTStatics.AllTraitsAlphabetically.Where(t => t.marketValueOffset < 0))
             {
                 WeaponTraitSpawnSettings[negativeTrait.defName] = false;
             }
@@ -53,7 +59,7 @@ public class MorePersonaTraitsSpawnsSettings : ModSettings
         Rect disableVanillaTraitsRect = new Rect(disableBadTraitsRect.xMax + 6f, listingStandard.CurHeight, listingStandard.ColumnWidth * 0.25f - 6f, 30f);
         if (Widgets.ButtonText(disableVanillaTraitsRect, "disable all vanilla traits"))
         {
-            foreach (var negativeTrait in DefDatabase<WeaponTraitDef>.AllDefs.Where(t => t.modContentPack.IsOfficialMod))
+            foreach (var negativeTrait in MPTStatics.AllTraitsAlphabetically.Where(t => t.modContentPack.IsOfficialMod))
             {
                 WeaponTraitSpawnSettings[negativeTrait.defName] = false;
             }
@@ -68,7 +74,7 @@ public class MorePersonaTraitsSpawnsSettings : ModSettings
         Widgets.BeginScrollView(viewRect, ref scrollPosition, scrollRect);
         listingStandard.Begin(scrollRect);
         
-        foreach (var trait in DefDatabase<WeaponTraitDef>.AllDefs)
+        foreach (var trait in MPTStatics.AllTraitsAlphabetically)
         {
             var enabledSetting = GetOrCreateStorytellerEnabledSetting(trait.defName);
             listingStandard.CheckboxLabeled(trait.LabelCap, ref enabledSetting, trait.description);
