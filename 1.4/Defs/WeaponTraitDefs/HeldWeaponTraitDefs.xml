@@ -238,6 +238,35 @@
         </exclusionTags>
     </WeaponTraitDef>
 
+    <WeaponTraitDef MayRequire="ludeon.rimworld.biotech">
+        <defName>MPT_Held_StaggerDurationDown</defName>
+        <label>dauntless</label>
+        <description>This weapon's persona is not phased so easily, whether it be raiders, monsterous insectoids or mechanoids.\nWhile held, it greatly reduces the duration the wielder is staggered.</description>
+        <commonality>0.5</commonality>
+        <marketValueOffset>500</marketValueOffset>
+        <statFactors>
+            <StaggerDurationFactor>0.1</StaggerDurationFactor>
+        </statFactors>
+        <exclusionTags>
+            <li>MPT_Held_StaggerDuration</li>
+            <li>MPT_StaggerDuration</li>
+        </exclusionTags>
+    </WeaponTraitDef>
+    <WeaponTraitDef MayRequire="ludeon.rimworld.biotech">
+        <defName>MPT_Held_StaggerDurationUp</defName>
+        <label>careening</label>
+        <description>This weapon's persona does not have a good sense of balance, often leaving their wielder exposed when caught flat footed.\nWhile held, it increases the duration the wielder is staggered.</description>
+        <commonality>0.5</commonality>
+        <marketValueOffset>-500</marketValueOffset>
+        <statFactors>
+            <StaggerDurationFactor>1.5</StaggerDurationFactor>
+        </statFactors>
+        <exclusionTags>
+            <li>MPT_Held_StaggerDuration</li>
+            <li>MPT_StaggerDuration</li>
+        </exclusionTags>
+    </WeaponTraitDef>
+
     <WeaponTraitDef>
         <defName>MPT_Held_Vomit</defName>
         <label>nauseating</label>
