@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using RimWorld;
@@ -74,9 +75,10 @@ public class MorePersonaTraitsSpawnsSettings : ModSettings
         listingStandard.Gap(32f);
 
         Rect viewRect = new Rect(inRect.x, listingStandard.CurHeight, inRect.width, inRect.height - listingStandard.CurHeight);
-        Rect scrollRect = new Rect(0f, 0f, viewRect.width - 32f, (Text.LineHeight + listingStandard.verticalSpacing) * rowCount);
+        Rect scrollRect = new Rect(0f, 0f, viewRect.width - 32f, (float)((Text.LineHeight + listingStandard.verticalSpacing) * Math.Ceiling(rowCount / 2f)));
 
         Widgets.BeginScrollView(viewRect, ref scrollPosition, scrollRect);
+        listingStandard.ColumnWidth = (scrollRect.width - 17f) / 2;
         listingStandard.Begin(scrollRect);
         
         foreach (var trait in MPTStatics.AllTraitsAlphabetically)
