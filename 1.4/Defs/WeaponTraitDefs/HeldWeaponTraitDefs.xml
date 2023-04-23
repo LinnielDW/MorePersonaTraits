@@ -246,57 +246,123 @@
         <description>This weapon's persona is not phased so easily, whether it be raiders, monsterous insectoids or mechanoids.\nWhile held, it greatly reduces the duration the wielder is staggered.</description>
         <commonality>0.5</commonality>
         <marketValueOffset>500</marketValueOffset>
-        <statFactors>
-            <StaggerDurationFactor>0.1</StaggerDurationFactor>
-        </statFactors>
+        <equippedHediffs>
+            <li>MPT_Hediff_HeldStaggerDurationDown</li>
+        </equippedHediffs>
         <exclusionTags>
             <li>MPT_Held_StaggerDuration</li>
             <li>MPT_StaggerDuration</li>
         </exclusionTags>
     </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_Hediff_HeldStaggerDurationDown</defName>
+        <label>psychic determination</label>
+        <description>My equipped weapon is causing me to hardly stagger at all.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_Held_StaggerDurationDown</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statFactors>
+                    <StaggerDurationFactor>0.1</StaggerDurationFactor>
+                </statFactors>
+            </li>
+        </stages>
+    </HediffDef>
+    
     <WeaponTraitDef MayRequire="ludeon.rimworld.biotech">
         <defName>MPT_Held_StaggerDurationUp</defName>
         <label>careening</label>
         <description>This weapon's persona does not have a good sense of balance, often leaving their wielder exposed when caught flat footed.\nWhile held, it increases the duration the wielder is staggered.</description>
         <commonality>0.5</commonality>
         <marketValueOffset>-500</marketValueOffset>
-        <statFactors>
-            <StaggerDurationFactor>1.5</StaggerDurationFactor>
-        </statFactors>
+        <equippedHediffs>
+            <li>MPT_Hediff_HeldStaggerDurationUp</li>
+        </equippedHediffs>
         <exclusionTags>
             <li>MPT_Held_StaggerDuration</li>
             <li>MPT_StaggerDuration</li>
         </exclusionTags>
     </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_Hediff_HeldStaggerDurationUp</defName>
+        <label>psychic stagger</label>
+        <description>My equipped weapon is causing me to stagger for much longer.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_Held_StaggerDurationUp</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statFactors>
+                    <StaggerDurationFactor>1.5</StaggerDurationFactor>
+                </statFactors>
+            </li>
+        </stages>
+    </HediffDef>
     
     <WeaponTraitDef MayRequire="ludeon.rimworld.biotech">
-        <defName>MPT_Held_MeleeDamageFactorDown</defName>
+        <defName>MPT_Held_MeleeDamageFactorUp</defName>
         <label>ruthless</label>
         <description>This weapon's persona has an idle state of watching the flatscreen and cruising the communications, and it makes an additional effort to get back to this.\nWhile held, it increases the wielder's melee damage output.</description>
         <commonality>0.5</commonality>
         <marketValueOffset>750</marketValueOffset>
-        <statFactors>
-            <MeleeDamageFactor>1.5</MeleeDamageFactor>
-        </statFactors>
+        <equippedHediffs>
+            <li>MPT_Hediff_HeldMeleeDamageFactorUp</li>
+        </equippedHediffs>
         <exclusionTags>
             <li>MPT_Held_MeleeDamageFactor</li>
             <li>MPT_MeleeDamageFactor</li>
         </exclusionTags>
     </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_Hediff_HeldMeleeDamageFactorUp</defName>
+        <label>psychic lethality</label>
+        <description>My equipped weapon is causing me to deal much more damage.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_Held_MeleeDamageFactorUp</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statFactors>
+                    <StaggerDurationFactor>1.5</StaggerDurationFactor>
+                </statFactors>
+            </li>
+        </stages>
+    </HediffDef>
+    
     <WeaponTraitDef MayRequire="ludeon.rimworld.biotech">
-        <defName>MPT_Held_MeleeDamageFactorUp</defName>
+        <defName>MPT_Held_MeleeDamageFactorDown</defName>
         <label>dull</label>
         <description>This weapon's persona makes a poor conversation partner and an even poorer killing tool.\nWhile held, the wielder deals decreased melee damage.</description>
         <commonality>0.5</commonality>
         <marketValueOffset>-750</marketValueOffset>
-        <statFactors>
-            <MeleeDamageFactor>0.5</MeleeDamageFactor>
-        </statFactors>
+        <equippedHediffs>
+            <li>MPT_Hediff_HeldMeleeDamageFactorDown</li>
+        </equippedHediffs>
         <exclusionTags>
             <li>MPT_Held_MeleeDamageFactor</li>
             <li>MPT_MeleeDamageFactor</li>
         </exclusionTags>
     </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_Hediff_HeldMeleeDamageFactorDown</defName>
+        <label>psychically dulled edge</label>
+        <description>My equipped weapon is causing me to deal less melee damage.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_Held_MeleeDamageFactorDown</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statFactors>
+                    <MeleeDamageFactor>0.75</MeleeDamageFactor>
+                </statFactors>
+            </li>
+        </stages>
+    </HediffDef>
 
     <WeaponTraitDef>
         <defName>MPT_Held_Vomit</defName>
