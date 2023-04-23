@@ -211,7 +211,7 @@
     <WeaponTraitDef MayRequire="ludeon.rimworld.biotech">
         <defName>MPT_Held_MechBandwidthUp</defName>
         <label>multithreaded</label>
-        <description>This weapon's persona is great at multitasking and will help their weilder focus on many machines all at once.\nWhile held, it increases the wielder's mech bandwidth.</description>
+        <description>This weapon's persona is great at multitasking and will help their wielder focus on many machines all at once.\nWhile held, it increases the wielder's mech bandwidth.</description>
         <commonality>0.5</commonality>
         <marketValueOffset>600</marketValueOffset>
         <equippedStatOffsets>
