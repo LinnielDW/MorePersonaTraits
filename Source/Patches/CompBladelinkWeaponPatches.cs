@@ -13,7 +13,7 @@ namespace MorePersonaTraits.Patches
     {
         static bool Prefix(WeaponTraitDef trait, ref bool __result)
         {
-            if (WeaponTraitSpawnSettings[trait.defName]) return true;
+            if (WeaponTraitSpawnSettings.TryGetValue(trait.defName, true)) return true;
             
             __result = false;
             return false;

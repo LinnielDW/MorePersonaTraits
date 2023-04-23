@@ -8,7 +8,7 @@ using Verse;
 namespace MorePersonaTraits.Settings;
 
 [StaticConstructorOnStartup]
-public class MPTStatics
+public static class MPTStatics
 {
     public static readonly List<WeaponTraitDef> AllTraitsAlphabetically = DefDatabase<WeaponTraitDef>.AllDefs.OrderBy(x => x.label).ToList();
 }
@@ -26,6 +26,11 @@ public class MorePersonaTraitsSpawnsSettings : ModSettings
     {
         base.ExposeData();
         Scribe_Collections.Look<string, bool>(ref WeaponTraitSpawnSettings, "WeaponTraitSpawnSettings", LookMode.Value, LookMode.Value, ref traitDefNames, ref boolValues, true);
+        
+        if (Scribe.mode == LoadSaveMode.LoadingVars)
+        {
+            if (WeaponTraitSpawnSettings == null) WeaponTraitSpawnSettings = new Dictionary<string, bool>();
+        }
     }
 
     public void DoWindowContents(Rect inRect)
@@ -83,7 +88,7 @@ public class MorePersonaTraitsSpawnsSettings : ModSettings
         
         foreach (var trait in MPTStatics.AllTraitsAlphabetically)
         {
-            var enabledSetting = GetOrCreateStorytellerEnabledSetting(trait.defName);
+            var enabledSetting = GetOrCreateTraitEnabledSetting(trait.defName);
             listingStandard.CheckboxLabeled(trait.LabelCap, ref enabledSetting, trait.description);
             WeaponTraitSpawnSettings[trait.defName] = enabledSetting;
         }
@@ -94,7 +99,7 @@ public class MorePersonaTraitsSpawnsSettings : ModSettings
         listingStandard.End();
     }
     
-    bool GetOrCreateStorytellerEnabledSetting(string traitDefName)
+    bool GetOrCreateTraitEnabledSetting(string traitDefName)
     {
         var settingsValue = WeaponTraitSpawnSettings.TryGetValue(traitDefName, true);
         return settingsValue;
