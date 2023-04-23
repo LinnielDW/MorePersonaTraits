@@ -93,7 +93,7 @@
         <marketValueOffset>800</marketValueOffset>
         <modExtensions>
             <li Class="MorePersonaTraits.Extensions.WeaponTraitDefExtension">
-                <DurationSeconds>10</DurationSeconds>
+                <DurationSeconds>8</DurationSeconds>
             </li>
         </modExtensions>
         <exclusionTags>

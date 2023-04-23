@@ -11,7 +11,7 @@ namespace MorePersonaTraits.WorkerClasses.WeaponTraitWorkerClasses
             base.Notify_KilledPawn(pawn);
             pawn.health.AddHediff(MPT_InvisibilityHediffDefOf.PsychicInvisibility);
             pawn.health.hediffSet.GetFirstHediffOfDef(MPT_InvisibilityHediffDefOf.PsychicInvisibility)
-                .TryGetComp<HediffComp_Disappears>().ticksToDisappear += 60 * def.GetModExtension<WeaponTraitDefExtension>().DurationSeconds;
+                .TryGetComp<HediffComp_Disappears>().ticksToDisappear = 60 * def.GetModExtension<WeaponTraitDefExtension>().DurationSeconds;
         }
     }
 }
