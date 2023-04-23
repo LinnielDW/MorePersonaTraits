@@ -268,6 +268,35 @@
             <li>MPT_StaggerDuration</li>
         </exclusionTags>
     </WeaponTraitDef>
+    
+    <WeaponTraitDef MayRequire="ludeon.rimworld.biotech">
+        <defName>MPT_Held_MeleeDamageFactorDown</defName>
+        <label>ruthless</label>
+        <description>This weapon's persona has an idle state of watching the flatscreen and cruising the communications, and it makes an additional effort to get back to this.\nWhile held, it increases the wielder's melee damage output.</description>
+        <commonality>0.5</commonality>
+        <marketValueOffset>750</marketValueOffset>
+        <statFactors>
+            <MeleeDamageFactor>1.5</MeleeDamageFactor>
+        </statFactors>
+        <exclusionTags>
+            <li>MPT_Held_MeleeDamageFactor</li>
+            <li>MPT_MeleeDamageFactor</li>
+        </exclusionTags>
+    </WeaponTraitDef>
+    <WeaponTraitDef MayRequire="ludeon.rimworld.biotech">
+        <defName>MPT_Held_MeleeDamageFactorUp</defName>
+        <label>dull</label>
+        <description>This weapon's persona makes a poor conversation partner and an even poorer killing tool.\nWhile held, the wielder deals decreased melee damage.</description>
+        <commonality>0.5</commonality>
+        <marketValueOffset>-750</marketValueOffset>
+        <statFactors>
+            <MeleeDamageFactor>0.5</MeleeDamageFactor>
+        </statFactors>
+        <exclusionTags>
+            <li>MPT_Held_MeleeDamageFactor</li>
+            <li>MPT_MeleeDamageFactor</li>
+        </exclusionTags>
+    </WeaponTraitDef>
 
     <WeaponTraitDef>
         <defName>MPT_Held_Vomit</defName>
