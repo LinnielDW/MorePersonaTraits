@@ -38,7 +38,5 @@
     <MPT_rangedProcChanceFactorTooltip>The proc chance multiplier for on-hit effects.</MPT_rangedProcChanceFactorTooltip>
     
     <MPT_SpawnSettingsTitle>More Persona Traits, Trait Spawn Settings</MPT_SpawnSettingsTitle>
-    <WeaponTraitSpawnSettingsTitle>Weapon Trait Spawn Settings</WeaponTraitSpawnSettingsTitle>
-    <WeaponTraitSpawnSettingsTooltip>A list of toggles which enables or disables a trait from spawning on a persona weapon. DOES NOT remove existing instances of the trait.</WeaponTraitSpawnSettingsTooltip>
-    <MPT_Disable>disable {0}</MPT_Disable>
+    <WeaponTraitSpawnSettingsTooltip>A list of toggles which enables or disables a trait from spawning on a persona weapon.\nDOES NOT remove existing instances of the trait.</WeaponTraitSpawnSettingsTooltip>
 </LanguageData>

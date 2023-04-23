@@ -23,15 +23,46 @@ public class MorePersonaTraitsSpawnsSettings : ModSettings
 
     public void DoWindowContents(Rect inRect)
     {
-        Listing_Standard listingStandard = new Listing_Standard();
-        
-        Text.Font = GameFont.Medium;
-        listingStandard.Label("WeaponTraitSpawnSettingsTitle".Translate(), -1, "WeaponTraitSpawnSettingsTooltip".Translate());
-        Text.Font = GameFont.Small;
-
         int rowCount = DefDatabase<WeaponTraitDef>.AllDefs.Count();
 
-        Rect viewRect = new Rect(inRect.x, inRect.y, inRect.width, inRect.height);
+        Listing_Standard listingStandard = new Listing_Standard();
+        
+        listingStandard.Begin(inRect);
+        
+        listingStandard.Label("WeaponTraitSpawnSettingsTooltip".Translate());
+
+        Rect resetRect = new Rect(0f, listingStandard.CurHeight, (listingStandard.ColumnWidth * 0.25f) - 6f, 30f);
+        if (Widgets.ButtonText(resetRect, "reset")) {
+            foreach (var negativeTrait in DefDatabase<WeaponTraitDef>.AllDefs)
+            {
+                WeaponTraitSpawnSettings[negativeTrait.defName] = true;
+            }
+            base.Write();
+        }
+        
+        Rect disableBadTraitsRect = new Rect(resetRect.xMax + 6f, listingStandard.CurHeight, listingStandard.ColumnWidth * 0.25f - 6f, 30f);
+        if (Widgets.ButtonText(disableBadTraitsRect, "disable all negative traits"))
+        {
+            foreach (var negativeTrait in DefDatabase<WeaponTraitDef>.AllDefs.Where(t => t.marketValueOffset < 0))
+            {
+                WeaponTraitSpawnSettings[negativeTrait.defName] = false;
+            }
+            base.Write();
+        }
+        
+        Rect disableVanillaTraitsRect = new Rect(disableBadTraitsRect.xMax + 6f, listingStandard.CurHeight, listingStandard.ColumnWidth * 0.25f - 6f, 30f);
+        if (Widgets.ButtonText(disableVanillaTraitsRect, "disable all vanilla traits"))
+        {
+            foreach (var negativeTrait in DefDatabase<WeaponTraitDef>.AllDefs.Where(t => t.modContentPack.IsOfficialMod))
+            {
+                WeaponTraitSpawnSettings[negativeTrait.defName] = false;
+            }
+            base.Write();
+        }
+        
+        listingStandard.Gap(32f);
+
+        Rect viewRect = new Rect(inRect.x, listingStandard.CurHeight, inRect.width, inRect.height - listingStandard.CurHeight);
         Rect scrollRect = new Rect(0f, 0f, viewRect.width - 32f, (Text.LineHeight + listingStandard.verticalSpacing) * rowCount);
 
         Widgets.BeginScrollView(viewRect, ref scrollPosition, scrollRect);
@@ -40,12 +71,14 @@ public class MorePersonaTraitsSpawnsSettings : ModSettings
         foreach (var trait in DefDatabase<WeaponTraitDef>.AllDefs)
         {
             var enabledSetting = GetOrCreateStorytellerEnabledSetting(trait.defName);
-            listingStandard.CheckboxLabeled("MPT_Disable".Translate(trait.LabelCap), ref enabledSetting, trait.description);
+            listingStandard.CheckboxLabeled(trait.LabelCap, ref enabledSetting, trait.description);
             WeaponTraitSpawnSettings[trait.defName] = enabledSetting;
         }
 
         listingStandard.End();
         Widgets.EndScrollView();
+        
+        listingStandard.End();
     }
     
     bool GetOrCreateStorytellerEnabledSetting(string traitDefName)
