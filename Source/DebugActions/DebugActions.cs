@@ -56,6 +56,31 @@ namespace MorePersonaTraits.DebugActions
                 weapon.TryGetComp<CompBladelinkWeapon>().RegainBond();
             }
         }
+        
+        [DebugAction("PersonaWeapons", "[MPT] Remove Weapon Trait", true, actionType = DebugActionType.ToolMap, allowedGameStates = AllowedGameStates.PlayingOnMap)]
+        private static void RemoveWeaponTrait()
+        {
+            List<DebugMenuOption> list = new List<DebugMenuOption>();
+            var weapon = (ThingWithComps)Find.CurrentMap.thingGrid.ThingsAt(UI.MouseCell()).First(t => t is ThingWithComps comps && comps.TryGetComp<CompBladelinkWeapon>() != null);
+            
+            foreach (var trait in weapon.TryGetComp<CompBladelinkWeapon>().TraitsListForReading)
+            {
+                list.Add(new DebugMenuOption(trait.defName, DebugMenuOptionMode.Action,
+                    delegate { RemoveTrait(weapon, trait); }));
+            }
+
+            Find.WindowStack.Add(new Dialog_DebugOptionListLister(list));
+        }
+
+        private static void RemoveTrait(
+            ThingWithComps weapon,
+            WeaponTraitDef weaponTraitDef)
+        {
+            weapon.TryGetComp<CompBladelinkWeapon>().TempUnbond();
+            weapon.TryGetComp<CompBladelinkWeapon>().TraitsListForReading.Remove(weaponTraitDef);
+            if (weapon.TryGetComp<CompBladelinkWeapon>().TraitsListForReading.NullOrEmpty()) weapon.TryGetComp<CompBladelinkWeapon>().InitializeTraits();
+            weapon.TryGetComp<CompBladelinkWeapon>().RegainBond();
+        }
 
         [DebugAction("PersonaWeapons", "[MPT] Reroll Weapon Traits", true, actionType = DebugActionType.ToolMap, allowedGameStates = AllowedGameStates.PlayingOnMap)]
         private static void RerollTraits()
