@@ -47,6 +47,11 @@ public class MorePersonaTraitsSpawnsSettings : ModSettings
         }
         
         Rect disableBadTraitsRect = new Rect(resetRect.xMax + 6f, listingStandard.CurHeight, listingStandard.ColumnWidth * 0.25f - 6f, 30f);
+        if (Mouse.IsOver(disableBadTraitsRect))
+        {
+            TooltipHandler.TipRegion(disableBadTraitsRect,"Disables all traits that reduce the price of a weapon.");
+        }
+
         if (Widgets.ButtonText(disableBadTraitsRect, "disable all negative traits"))
         {
             foreach (var negativeTrait in MPTStatics.AllTraitsAlphabetically.Where(t => t.marketValueOffset < 0))
