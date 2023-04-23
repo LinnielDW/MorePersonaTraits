@@ -3,8 +3,7 @@ using MorePersonaTraits.Utils;
 using RimWorld;
 using Verse;
 using static MorePersonaTraits.Settings.MorePersonaTraitsSettings;
-
-// ReSharper disable UnusedMember.Local
+using static MorePersonaTraits.Settings.MorePersonaTraitsSpawnsSettings;
 
 namespace MorePersonaTraits.Patches
 {
@@ -12,6 +11,14 @@ namespace MorePersonaTraits.Patches
     [HarmonyPatch("CanAddTrait")]
     public static class CompBladelinkWeaponPatches
     {
+        static bool Prefix(WeaponTraitDef trait, ref bool __result)
+        {
+            if (WeaponTraitSpawnSettings[trait.defName]) return true;
+            
+            __result = false;
+            return false;
+        }
+
         static void Postfix(WeaponTraitDef trait, ref bool __result, CompBladelinkWeapon __instance)
         {
             __result = __result && __instance.CanAddBondTrait(trait);
@@ -27,6 +34,4 @@ namespace MorePersonaTraits.Patches
             Traverse.Create<CompBladelinkWeapon>().Field("TraitsRange").SetValue(new IntRange(minTraits, maxTraits));
         }
     }
-    
-    //TODO: make defs disableable
 }

@@ -75,6 +75,7 @@
     <Compile Include="QuestNode_GetRandomLootLabel.cs" />
     <Compile Include="QuestNode_SetItemBySetMakerTags.cs" />
     <Compile Include="Settings\MorePersonaTraitsSettings.cs" />
+    <Compile Include="Settings\MorePersonaTraitsSpawnsSettings.cs" />
     <Compile Include="Utils\FieldRefUtils.cs" />
     <Compile Include="Utils\NeedFillUtils.cs" />
     <Compile Include="Utils\SettingsUtils.cs" />

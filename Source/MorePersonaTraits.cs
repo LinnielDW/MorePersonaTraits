@@ -8,7 +8,7 @@ namespace MorePersonaTraits;
 
 public class MorePersonaTraits : Mod
 {
-    readonly MorePersonaTraitsSettings settings;
+    public static MorePersonaTraitsSettings settings;
 
     public MorePersonaTraits(ModContentPack content) : base(content)
     {
@@ -28,4 +28,24 @@ public class MorePersonaTraits : Mod
     {
         return "MPT_SettingsTitle".Translate();
     }
+}
+
+public class MorePersonaTraitsSpawns : Mod
+{
+    public MorePersonaTraitsSpawns(ModContentPack content) : base(content)
+    {
+        settings = base.GetSettings<MorePersonaTraitsSpawnsSettings>();
+    }
+
+    public override string SettingsCategory()
+    {
+        return "MPT_SpawnSettingsTitle".Translate();
+    }
+
+    public override void DoSettingsWindowContents(Rect inRect)
+    {
+        MorePersonaTraitsSpawns.settings.DoWindowContents(inRect);
+    }
+
+    public static MorePersonaTraitsSpawnsSettings settings;
 }

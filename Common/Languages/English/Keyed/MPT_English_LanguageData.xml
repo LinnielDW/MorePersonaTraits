@@ -24,7 +24,7 @@
     <MPT_WeaponTraitGained>{0} has gained the trait {1}</MPT_WeaponTraitGained>
     <MPT_WeaponTraitsRerolled>{0}'s traits have been rerolled</MPT_WeaponTraitsRerolled>
     
-    <MPT_SettingsTitle>More Persona Traits</MPT_SettingsTitle>
+    <MPT_SettingsTitle>More Persona Traits, General Settings</MPT_SettingsTitle>
     <MPT_minTraits>Min Traits</MPT_minTraits>
     <MPT_minTraitsTooltip>The minimum amount of weapon traits generated when a weapon is spawned.\nIf this is defined as more than the max, it will take the max as its value.</MPT_minTraitsTooltip>
     
@@ -36,4 +36,9 @@
     
     <MPT_rangedProcChanceFactor>On-Hit Ranged Proc Factor</MPT_rangedProcChanceFactor>
     <MPT_rangedProcChanceFactorTooltip>The proc chance multiplier for on-hit effects.</MPT_rangedProcChanceFactorTooltip>
+    
+    <MPT_SpawnSettingsTitle>More Persona Traits, Trait Spawn Settings</MPT_SpawnSettingsTitle>
+    <WeaponTraitSpawnSettingsTitle>Weapon Trait Spawn Settings</WeaponTraitSpawnSettingsTitle>
+    <WeaponTraitSpawnSettingsTooltip>A list of toggles which enables or disables a trait from spawning on a persona weapon. DOES NOT remove existing instances of the trait.</WeaponTraitSpawnSettingsTooltip>
+    <MPT_Disable>disable {0}</MPT_Disable>
 </LanguageData>
