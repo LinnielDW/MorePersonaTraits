@@ -254,7 +254,7 @@
             <li>MPT_StaggerDuration</li>
         </exclusionTags>
     </WeaponTraitDef>
-    <HediffDef>
+    <HediffDef MayRequire="ludeon.rimworld.biotech">
         <defName>MPT_Hediff_HeldStaggerDurationDown</defName>
         <label>psychic determination</label>
         <description>My equipped weapon is causing me to hardly stagger at all.</description>
@@ -285,7 +285,7 @@
             <li>MPT_StaggerDuration</li>
         </exclusionTags>
     </WeaponTraitDef>
-    <HediffDef>
+    <HediffDef MayRequire="ludeon.rimworld.biotech">
         <defName>MPT_Hediff_HeldStaggerDurationUp</defName>
         <label>psychic stagger</label>
         <description>My equipped weapon is causing me to stagger for much longer.</description>
@@ -316,7 +316,7 @@
             <li>MPT_MeleeDamageFactor</li>
         </exclusionTags>
     </WeaponTraitDef>
-    <HediffDef>
+    <HediffDef MayRequire="ludeon.rimworld.biotech">
         <defName>MPT_Hediff_HeldMeleeDamageFactorUp</defName>
         <label>psychic lethality</label>
         <description>My equipped weapon is causing me to deal much more damage.</description>
@@ -347,7 +347,7 @@
             <li>MPT_MeleeDamageFactor</li>
         </exclusionTags>
     </WeaponTraitDef>
-    <HediffDef>
+    <HediffDef MayRequire="ludeon.rimworld.biotech">
         <defName>MPT_Hediff_HeldMeleeDamageFactorDown</defName>
         <label>psychically dulled edge</label>
         <description>My equipped weapon is causing me to deal less melee damage.</description>
