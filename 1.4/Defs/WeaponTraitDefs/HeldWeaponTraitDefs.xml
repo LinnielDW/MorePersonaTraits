@@ -327,7 +327,7 @@
         <stages>
             <li>
                 <statFactors>
-                    <StaggerDurationFactor>1.5</StaggerDurationFactor>
+                    <MeleeDamageFactor>1.5</MeleeDamageFactor>
                 </statFactors>
             </li>
         </stages>
