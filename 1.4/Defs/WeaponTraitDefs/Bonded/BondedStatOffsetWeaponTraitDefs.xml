@@ -732,7 +732,7 @@
     <WeaponTraitDef ParentName="BondedWeaponTraitBase">
         <defName>MPT_Bonded_PlantSpeedUp</defName>
         <label>flora-hater</label>
-        <description>This weapon's persona seems to have a personal vendetta against any and all that is green and is more than happy to assist in cutting it down.\nThe bonded pawn gains increased plat working and pruning speed.</description>
+        <description>This weapon's persona seems to have a personal vendetta against any and all that is green and is more than happy to assist in cutting it down.\nThe bonded pawn gains increased plant working and pruning speed.</description>
         <bondedHediffs>
             <li>MPT_Hediff_PlantSpeedUp</li>
         </bondedHediffs>
@@ -762,7 +762,7 @@
     <WeaponTraitDef ParentName="BondedWeaponTraitBase">
         <defName>MPT_Bonded_PlantSpeedDown</defName>
         <label>bonsai-ster</label>
-        <description>This weapon's persona takes more joy from the process of cutting plants into nice shapes, willing their bond to (impractically) cut plants in odd angles.\nThe bonded pawn loses plat working and pruning speed.</description>
+        <description>This weapon's persona takes more joy from the process of cutting plants into nice shapes, willing their bond to (impractically) cut plants in odd angles.\nThe bonded pawn loses plant working and pruning speed.</description>
         <bondedHediffs>
             <li>MPT_Hediff_PlantSpeedDown</li>
         </bondedHediffs>
