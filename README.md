@@ -13,4 +13,4 @@
         <img src="https://img.shields.io/steam/views/2863308112?style=plastic&logo=steam" />
     </a>
 </p>
-A mod that adds more than 100 new persona weapon traits for persona weapons with custom code effects and adds a handful of other additions &amp; QoL features relating to persona weapons in the game Rimworld
+A mod that adds more than 100 new persona weapon traits for persona weapons, an ingame way to edit them, &amp; QoL features relating to persona weapons in the game Rimworld and acts a framework for other mod developers to extend with their own traits.
