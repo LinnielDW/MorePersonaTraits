@@ -121,4 +121,30 @@
             </li>
         </comps>
     </ThingDef>
+
+
+    <ThingDef ParentName="PersonaEffectorBase">
+        <defName>MPT_BladelinkTargetedAnnul</defName>
+        <label>Persona Consolidation Effector</label>
+        <description>A very rare one-use psychic persona effector. The psychic surge collapses a portion of the persona's personality that the user dislikes the most, removing a specific trait from the targeted weapon. If this item were to be used on a persona with only one trait or none at all, the persona will be reformatted instead.</description>
+        <graphicData>
+            <!-- TODO: new sprite -->
+            <texPath>Things/Item/Equipment/bladelink_annul</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <statBases>
+            <MarketValue>4000</MarketValue>
+        </statBases>
+        <comps>
+            <li Class="MorePersonaTraits.WorkerClasses.ItemWorkerClasses.CompProperties_TargetableSingleBladelinkWithFloatMenu">
+                <compClass>MorePersonaTraits.WorkerClasses.ItemWorkerClasses.CompTargetable_SingleBladelinkWithFloatMenu</compClass>
+            </li>
+            <li>
+                <compClass>MorePersonaTraits.WorkerClasses.ItemWorkerClasses.CompTargetEffect_BladelinkTargetedAnnul</compClass>
+            </li>
+        </comps>
+        <thingSetMakerTags Inherit="False">
+            <li>RewardStandardCore</li>
+        </thingSetMakerTags>
+    </ThingDef>
 </Defs>
