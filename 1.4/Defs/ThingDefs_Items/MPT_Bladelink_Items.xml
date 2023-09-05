@@ -136,8 +136,8 @@
             <MarketValue>4000</MarketValue>
         </statBases>
         <comps>
-            <li Class="MorePersonaTraits.WorkerClasses.ItemWorkerClasses.CompProperties_TargetableSingleBladelinkWithFloatMenu">
-                <compClass>MorePersonaTraits.WorkerClasses.ItemWorkerClasses.CompTargetable_SingleBladelinkWithFloatMenu</compClass>
+            <li Class="MorePersonaTraits.WorkerClasses.ItemWorkerClasses.CompProperties_TargetableSingleBladelinkTargetedAnnul">
+                <compClass>MorePersonaTraits.WorkerClasses.ItemWorkerClasses.CompTargetable_SingleBladelinkTargetedAnnul</compClass>
             </li>
             <li>
                 <compClass>MorePersonaTraits.WorkerClasses.ItemWorkerClasses.CompTargetEffect_BladelinkTargetedAnnul</compClass>

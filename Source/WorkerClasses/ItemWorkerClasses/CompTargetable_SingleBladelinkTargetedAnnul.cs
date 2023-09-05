@@ -4,7 +4,7 @@ using Verse;
 
 namespace MorePersonaTraits.WorkerClasses.ItemWorkerClasses;
 
-public class CompTargetable_SingleBladelinkWithFloatMenu : CompTargetable_SingleBladelink
+public class CompTargetable_SingleBladelinkTargetedAnnul : CompTargetable_SingleBladelink
 {
     private Thing target;
 

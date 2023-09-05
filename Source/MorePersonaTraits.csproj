@@ -86,11 +86,11 @@
     <Compile Include="Utils\TargetUtils.cs" />
     <Compile Include="Utils\WeaponTraitUtils.cs" />
     <Compile Include="WorkerClasses\ItemWorkerClasses\CompProperties_TargetableSingleBladelink.cs" />
-    <Compile Include="WorkerClasses\ItemWorkerClasses\CompProperties_TargetableSingleBladelinkWithFloatMenu.cs" />
+    <Compile Include="WorkerClasses\ItemWorkerClasses\CompProperties_TargetableSingleBladelinkTargetedAnnul.cs" />
     <Compile Include="WorkerClasses\ItemWorkerClasses\CompTargetable_SingleBladelink.cs" />
     <Compile Include="WorkerClasses\ItemWorkerClasses\CompTargetable_SingleBladelinkTraitAddable.cs" />
     <Compile Include="WorkerClasses\ItemWorkerClasses\CompTargetable_SingleBladelinkTraitRemovable.cs" />
-    <Compile Include="WorkerClasses\ItemWorkerClasses\CompTargetable_SingleBladelinkWithFloatMenu.cs" />
+    <Compile Include="WorkerClasses\ItemWorkerClasses\CompTargetable_SingleBladelinkTargetedAnnul.cs" />
     <Compile Include="WorkerClasses\ItemWorkerClasses\CompTargetEffect_BladeDelinker.cs" />
     <Compile Include="WorkerClasses\ItemWorkerClasses\CompTargetEffect_BladelinkAnnul.cs" />
     <Compile Include="WorkerClasses\ItemWorkerClasses\CompTargetEffect_BladelinkExalt.cs" />
