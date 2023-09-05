@@ -4,9 +4,8 @@ using Verse;
 
 namespace MorePersonaTraits.WorkerClasses.ItemWorkerClasses;
 
-public class CompTargetable_SingleBladelinkTargetedAnnul : CompTargetable_SingleBladelink
+public class CompTargetable_TargetedAnnul : CompTargetable_SingleBladelink
 {
-    private Thing target;
 
 
     public override bool SelectedUseOption(Pawn p)
@@ -16,23 +15,23 @@ public class CompTargetable_SingleBladelinkTargetedAnnul : CompTargetable_Single
             Find.Targeter.BeginTargeting(this.GetTargetingParameters(), delegate(LocalTargetInfo t)
             {
                 target = t.Thing;
-                Find.WindowStack.Add(new FloatMenu(GetOptions(p)));
+                Find.WindowStack.Add(new FloatMenu(GetWeaponTraitFloatMenuOptions(p)));
             }, p, null, null);
             return true;
         }
 
-        this.target = null;
+        target = null;
         return false;
     }
 
-    private List<FloatMenuOption> GetOptions(Pawn p)
+    private List<FloatMenuOption> GetWeaponTraitFloatMenuOptions(Pawn p)
     {
         var list = new List<FloatMenuOption>();
         foreach (var trait in target.TryGetComp<CompBladelinkWeapon>().TraitsListForReading)
         {
             list.Add(new FloatMenuOption(trait.label, delegate
             {
-                var comp = parent.TryGetComp<CompTargetEffect_BladelinkTargetedAnnul>();
+                var comp = parent.TryGetComp<CompTargetEffect_TargetedAnnul>();
                 if (comp != null)
                 {
                     comp.targetTrait = trait;

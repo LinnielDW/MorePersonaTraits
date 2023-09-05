@@ -38,7 +38,7 @@ namespace MorePersonaTraits.Utils
             return DefDatabase<WeaponTraitDef>.AllDefs.ToList().Exists(possibleTrait => compBladelink.CanAddTrait(possibleTrait));
         }
 
-        private static bool CanAddTrait(this CompBladelinkWeapon compBladelinkWeapon, WeaponTraitDef traitToAdd)
+        public static bool CanAddTrait(this CompBladelinkWeapon compBladelinkWeapon, WeaponTraitDef traitToAdd)
         {
             if (!compBladelinkWeapon.TraitsListForReading.NullOrEmpty())
             {

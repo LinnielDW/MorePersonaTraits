@@ -16,6 +16,7 @@
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <LangVersion>latest</LangVersion>
+    <PublicizeAll>true</PublicizeAll>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>none</DebugType>
@@ -41,6 +42,10 @@
     </version1_4>
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Krafs.Publicizer" Version="2.2.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Lib.Harmony" Version="2.2.2" />
   </ItemGroup>
   <ItemGroup>
@@ -86,16 +91,19 @@
     <Compile Include="Utils\TargetUtils.cs" />
     <Compile Include="Utils\WeaponTraitUtils.cs" />
     <Compile Include="WorkerClasses\ItemWorkerClasses\CompProperties_TargetableSingleBladelink.cs" />
-    <Compile Include="WorkerClasses\ItemWorkerClasses\CompProperties_TargetableSingleBladelinkTargetedAnnul.cs" />
+    <Compile Include="WorkerClasses\ItemWorkerClasses\CompProperties_TargetedAnnul.cs" />
+    <Compile Include="WorkerClasses\ItemWorkerClasses\CompProperties_TargetedRecombinator.cs" />
     <Compile Include="WorkerClasses\ItemWorkerClasses\CompTargetable_SingleBladelink.cs" />
     <Compile Include="WorkerClasses\ItemWorkerClasses\CompTargetable_SingleBladelinkTraitAddable.cs" />
     <Compile Include="WorkerClasses\ItemWorkerClasses\CompTargetable_SingleBladelinkTraitRemovable.cs" />
-    <Compile Include="WorkerClasses\ItemWorkerClasses\CompTargetable_SingleBladelinkTargetedAnnul.cs" />
+    <Compile Include="WorkerClasses\ItemWorkerClasses\CompTargetable_TargetedAnnul.cs" />
+    <Compile Include="WorkerClasses\ItemWorkerClasses\CompTargetable_TargetedRecombinator.cs" />
     <Compile Include="WorkerClasses\ItemWorkerClasses\CompTargetEffect_BladeDelinker.cs" />
     <Compile Include="WorkerClasses\ItemWorkerClasses\CompTargetEffect_BladelinkAnnul.cs" />
     <Compile Include="WorkerClasses\ItemWorkerClasses\CompTargetEffect_BladelinkExalt.cs" />
     <Compile Include="WorkerClasses\ItemWorkerClasses\CompTargetEffect_BladelinkChaos.cs" />
-    <Compile Include="WorkerClasses\ItemWorkerClasses\CompTargetEffect_BladelinkTargetedAnnul.cs" />
+    <Compile Include="WorkerClasses\ItemWorkerClasses\CompTargetEffect_TargetedAnnul.cs" />
+    <Compile Include="WorkerClasses\ItemWorkerClasses\CompTargetEffect_TargetedRecombinator.cs" />
     <Compile Include="WorkerClasses\OnHitWorkerClasses\OnHitWorker.cs" />
     <Compile Include="WorkerClasses\OnHitWorkerClasses\OnHitWorker_AddedDamage.cs" />
     <Compile Include="WorkerClasses\OnHitWorkerClasses\OnHitWorker_ApplyGeneResource.cs" />

@@ -4,7 +4,7 @@ using Verse;
 
 namespace MorePersonaTraits.WorkerClasses.ItemWorkerClasses;
 
-public class CompTargetEffect_BladelinkTargetedAnnul : CompTargetEffect
+public class CompTargetEffect_TargetedAnnul : CompTargetEffect
 {
     public WeaponTraitDef targetTrait = null;
 
@@ -23,15 +23,15 @@ public class CompTargetEffect_BladelinkTargetedAnnul : CompTargetEffect
 
         compBladelink.TempUnbond();
 
-        if (compBladelink.TraitsListForReading.NullOrEmpty())
+        if (compBladelink.traits.NullOrEmpty())
         {
             WeaponTraitUtils.InitializeTraits(compBladelink);
         }
         else
         {
             Messages.Message("MPT_WeaponTraitLost".Translate(target.LabelShort, targetTrait.LabelCap), target, MessageTypeDefOf.NeutralEvent);
-            compBladelink.TraitsListForReading.Remove(targetTrait);
-            if (compBladelink.TraitsListForReading.NullOrEmpty()) WeaponTraitUtils.InitializeTraits(compBladelink);
+            compBladelink.traits.Remove(targetTrait);
+            if (compBladelink.traits.NullOrEmpty()) WeaponTraitUtils.InitializeTraits(compBladelink);
         }
 
         compBladelink.RegainBond();

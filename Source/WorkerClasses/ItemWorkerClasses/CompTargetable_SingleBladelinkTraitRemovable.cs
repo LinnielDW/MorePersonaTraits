@@ -8,7 +8,7 @@ namespace MorePersonaTraits.WorkerClasses.ItemWorkerClasses
     //Unused
     public class CompTargetable_SingleBladelinkTraitRemovable : CompTargetable
     {
-        protected override TargetingParameters GetTargetingParameters()
+        public override TargetingParameters GetTargetingParameters()
         {
             return new TargetingParameters
             {
@@ -27,6 +27,6 @@ namespace MorePersonaTraits.WorkerClasses.ItemWorkerClasses
             yield return targetChosenByPlayer;
         }
 
-        protected override bool PlayerChoosesTarget => true;
+        public override bool PlayerChoosesTarget => true;
     }
 }

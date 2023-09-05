@@ -122,7 +122,6 @@
         </comps>
     </ThingDef>
 
-
     <ThingDef ParentName="PersonaEffectorBase">
         <defName>MPT_BladelinkTargetedAnnul</defName>
         <label>Persona Consolidation Effector</label>
@@ -136,11 +135,36 @@
             <MarketValue>4000</MarketValue>
         </statBases>
         <comps>
-            <li Class="MorePersonaTraits.WorkerClasses.ItemWorkerClasses.CompProperties_TargetableSingleBladelinkTargetedAnnul">
-                <compClass>MorePersonaTraits.WorkerClasses.ItemWorkerClasses.CompTargetable_SingleBladelinkTargetedAnnul</compClass>
+            <li Class="MorePersonaTraits.WorkerClasses.ItemWorkerClasses.CompProperties_TargetedAnnul">
+                <compClass>MorePersonaTraits.WorkerClasses.ItemWorkerClasses.CompTargetable_TargetedAnnul</compClass>
             </li>
             <li>
-                <compClass>MorePersonaTraits.WorkerClasses.ItemWorkerClasses.CompTargetEffect_BladelinkTargetedAnnul</compClass>
+                <compClass>MorePersonaTraits.WorkerClasses.ItemWorkerClasses.CompTargetEffect_TargetedAnnul</compClass>
+            </li>
+        </comps>
+        <thingSetMakerTags Inherit="False">
+            <li>RewardStandardCore</li>
+        </thingSetMakerTags>
+    </ThingDef>
+
+    <ThingDef ParentName="PersonaEffectorBase">
+        <defName>MPT_BladelinkTargetedRecombinator</defName>
+        <label>Persona Targeted Recombination Effector</label>
+        <description>A very rare one-use psychic persona effector. TODO.</description>
+        <graphicData>
+            <!-- TODO: new sprite -->
+            <texPath>Things/Item/Equipment/bladelink_annul</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <statBases>
+            <MarketValue>3000</MarketValue>
+        </statBases>
+        <comps>
+            <li Class="MorePersonaTraits.WorkerClasses.ItemWorkerClasses.CompProperties_TargetedRecombinator">
+                <compClass>MorePersonaTraits.WorkerClasses.ItemWorkerClasses.CompTargetable_TargetedRecombinator</compClass>
+            </li>
+            <li>
+                <compClass>MorePersonaTraits.WorkerClasses.ItemWorkerClasses.CompTargetEffect_TargetedRecombinator</compClass>
             </li>
         </comps>
         <thingSetMakerTags Inherit="False">
