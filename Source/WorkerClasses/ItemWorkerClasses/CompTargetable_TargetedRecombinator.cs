@@ -7,9 +7,9 @@ namespace MorePersonaTraits.WorkerClasses.ItemWorkerClasses;
 
 public class CompTargetable_TargetedRecombinator : CompTargetable_SingleBladelink
 {
+    private Thing target;
     private Thing donor;
     private WeaponTraitDef donorTrait;
-
 
     public override bool SelectedUseOption(Pawn p)
     {
@@ -17,40 +17,42 @@ public class CompTargetable_TargetedRecombinator : CompTargetable_SingleBladelin
         {
             Find.Targeter.BeginTargeting(this.GetTargetingParameters(), delegate(LocalTargetInfo t)
             {
-                
                 donor = t.Thing;
-                var list = new List<FloatMenuOption>();
-                foreach (var trait in donor.TryGetComp<CompBladelinkWeapon>().TraitsListForReading)
-                {
-                    list.Add(new FloatMenuOption(trait.label, delegate
-                    {
-                        var comp = parent.TryGetComp<CompTargetEffect_TargetedRecombinator>();
-                        if (comp != null)
-                        {
-                            comp.donorWeapon = donor;
-                            
-                            donorTrait = trait;
-                            comp.donorTrait = donorTrait;
-
-                            PickRecipient(p);
-                        }
-                    }));
-                }
-
-                Find.WindowStack.Add(new FloatMenu(list));
+                Find.WindowStack.Add(new FloatMenu(FloatMenuOptions(p)));
             }, p, null, null);
             return true;
         }
 
-        target = null;
+        donor = null;
         return false;
+    }
+
+    private List<FloatMenuOption> FloatMenuOptions(Pawn p)
+    {
+        var list = new List<FloatMenuOption>();
+        foreach (var trait in donor.TryGetComp<CompBladelinkWeapon>().TraitsListForReading)
+        {
+            list.Add(new FloatMenuOption(trait.label, delegate
+            {
+                var comp = parent.TryGetComp<CompTargetEffect_TargetedRecombinator>();
+                if (comp != null)
+                {
+                    comp.DonorWeapon = donor;
+                    comp.DonorTrait = donorTrait = trait;
+
+                    PickRecipient(p);
+                }
+            }));
+        }
+
+        return list;
     }
 
     private void PickRecipient(Pawn p)
     {
         Find.Targeter.BeginTargeting(this.GetTargetingParameters(), delegate(LocalTargetInfo t)
         {
-            target = t.Thing;
+            this.Target() = target = t.Thing;
             var comp = parent.TryGetComp<CompTargetEffect_TargetedRecombinator>();
             if (comp != null)
             {

@@ -8,7 +8,7 @@ namespace MorePersonaTraits;
 
 public class QuestNode_SetItemBySetMakerTags : QuestNode
 {
-    public override void RunInt()
+    protected override void RunInt()
     {
         Slate slate = QuestGen.slate;
         slate.Set("itemStashThings", GetThingsByTags(slate), false);
@@ -25,7 +25,7 @@ public class QuestNode_SetItemBySetMakerTags : QuestNode
         yield break;
     }
 
-    public override bool TestRunInt(Slate slate)
+    protected override bool TestRunInt(Slate slate)
     {
         return true;
     }

@@ -5,7 +5,7 @@ namespace MorePersonaTraits.WorkerClasses.ThoughtWorkerClasses
 {
     public class ThoughtWorker_WeaponTraitBondedAnimal : ThoughtWorker_WeaponTrait
     {
-        public override ThoughtState CurrentStateInternal(Pawn p)
+        protected override ThoughtState CurrentStateInternal(Pawn p)
         {
             if (!base.CurrentStateInternal(p).Active)
             {

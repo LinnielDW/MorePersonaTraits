@@ -8,7 +8,7 @@ namespace MorePersonaTraits.WorkerClasses.ItemWorkerClasses
 {
     public class CompTargetable_SingleBladelinkTraitAddable: CompTargetable
     {
-        public override TargetingParameters GetTargetingParameters()
+        protected override TargetingParameters GetTargetingParameters()
         {
             return new TargetingParameters
             {
@@ -30,7 +30,7 @@ namespace MorePersonaTraits.WorkerClasses.ItemWorkerClasses
             yield return targetChosenByPlayer;
         }
 
-        public override bool PlayerChoosesTarget => true;
+        protected override bool PlayerChoosesTarget => true;
 
 
     }

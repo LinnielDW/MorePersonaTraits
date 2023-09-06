@@ -20,18 +20,19 @@ public class CompTargetEffect_TargetedAnnul : CompTargetEffect
         {
             return;
         }
-
+        
+        var existingTraits = compBladelink.TraitsListForReading;
+        
         compBladelink.TempUnbond();
-
-        if (compBladelink.traits.NullOrEmpty())
+        if (existingTraits.NullOrEmpty())
         {
             WeaponTraitUtils.InitializeTraits(compBladelink);
         }
         else
         {
             Messages.Message("MPT_WeaponTraitLost".Translate(target.LabelShort, targetTrait.LabelCap), target, MessageTypeDefOf.NeutralEvent);
-            compBladelink.traits.Remove(targetTrait);
-            if (compBladelink.traits.NullOrEmpty()) WeaponTraitUtils.InitializeTraits(compBladelink);
+            existingTraits.Remove(targetTrait);
+            if (existingTraits.NullOrEmpty()) WeaponTraitUtils.InitializeTraits(compBladelink);
         }
 
         compBladelink.RegainBond();

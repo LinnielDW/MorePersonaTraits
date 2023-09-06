@@ -9,7 +9,7 @@ namespace MorePersonaTraits;
 
 public class QuestNode_GetRandomLootLabel : QuestNode
 {
-    public override void RunInt()
+    protected override void RunInt()
     {
         Slate slate = QuestGen.slate;
         slate.Set("lootLabel", getLabel(slate), false);
@@ -22,7 +22,7 @@ public class QuestNode_GetRandomLootLabel : QuestNode
         return ele.LabelNoParenthesisCap;
     }
 
-    public override bool TestRunInt(Slate slate)
+    protected override bool TestRunInt(Slate slate)
     {
         return true;
     }
