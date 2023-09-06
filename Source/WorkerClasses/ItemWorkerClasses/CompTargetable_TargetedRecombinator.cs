@@ -7,27 +7,21 @@ namespace MorePersonaTraits.WorkerClasses.ItemWorkerClasses;
 
 public class CompTargetable_TargetedRecombinator : CompTargetable_SingleBladelink
 {
-    private Thing target;
-    private Thing donor;
-    private WeaponTraitDef donorTrait;
-
     public override bool SelectedUseOption(Pawn p)
     {
         if (this.PlayerChoosesTarget)
         {
             Find.Targeter.BeginTargeting(this.GetTargetingParameters(), delegate(LocalTargetInfo t)
             {
-                donor = t.Thing;
-                Find.WindowStack.Add(new FloatMenu(FloatMenuOptions(p)));
+                Find.WindowStack.Add(new FloatMenu(FloatMenuOptions(p, t.Thing)));
             }, p, null, null);
             return true;
         }
 
-        donor = null;
         return false;
     }
 
-    private List<FloatMenuOption> FloatMenuOptions(Pawn p)
+    private List<FloatMenuOption> FloatMenuOptions(Pawn p, Thing donor)
     {
         var list = new List<FloatMenuOption>();
         foreach (var trait in donor.TryGetComp<CompBladelinkWeapon>().TraitsListForReading)
@@ -38,9 +32,9 @@ public class CompTargetable_TargetedRecombinator : CompTargetable_SingleBladelin
                 if (comp != null)
                 {
                     comp.DonorWeapon = donor;
-                    comp.DonorTrait = donorTrait = trait;
+                    comp.DonorTrait = trait;
 
-                    PickRecipient(p);
+                    PickRecipient(p, trait);
                 }
             }));
         }
@@ -48,21 +42,21 @@ public class CompTargetable_TargetedRecombinator : CompTargetable_SingleBladelin
         return list;
     }
 
-    private void PickRecipient(Pawn p)
+    private void PickRecipient(Pawn p, WeaponTraitDef donorTrait)
     {
         Find.Targeter.BeginTargeting(this.GetTargetingParameters(), delegate(LocalTargetInfo t)
         {
-            this.Target() = target = t.Thing;
+            this.Target() = t.Thing;
             var comp = parent.TryGetComp<CompTargetEffect_TargetedRecombinator>();
             if (comp != null)
             {
-                if (!target.TryGetComp<CompBladelinkWeapon>().CanAddTrait(donorTrait))
+                if (!t.Thing.TryGetComp<CompBladelinkWeapon>().CanAddTrait(donorTrait))
                 {
-                    Messages.Message("MPT_WeaponCannotGainTrait".Translate(target.LabelShort, donorTrait.LabelCap), target, MessageTypeDefOf.NeutralEvent);
+                    Messages.Message("MPT_WeaponCannotGainTrait".Translate(t.Thing.LabelShort, donorTrait.LabelCap), t.Thing, MessageTypeDefOf.NeutralEvent);
                     return;
                 }
 
-                this.parent.GetComp<CompUsable>().TryStartUseJob(p, this.target, false);
+                this.parent.GetComp<CompUsable>().TryStartUseJob(p, t.Thing, false);
             }
         }, p, null, null);
     }

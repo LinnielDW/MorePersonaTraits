@@ -7,7 +7,6 @@ namespace MorePersonaTraits.WorkerClasses.ItemWorkerClasses;
 
 public class CompTargetable_TargetedAnnul : CompTargetable_SingleBladelink
 {
-    private Thing donor;
 
     public override bool SelectedUseOption(Pawn p)
     {
@@ -15,17 +14,16 @@ public class CompTargetable_TargetedAnnul : CompTargetable_SingleBladelink
         {
             Find.Targeter.BeginTargeting(this.GetTargetingParameters(), delegate(LocalTargetInfo t)
             {
-                this.Target() = donor = t.Thing;
-                Find.WindowStack.Add(new FloatMenu(FloatMenuOptions(p)));
+                this.Target() = t.Thing;
+                Find.WindowStack.Add(new FloatMenu(FloatMenuOptions(p, t.Thing)));
             }, p, null, null);
             return true;
         }
 
-        donor = null;
         return false;
     }
 
-    private List<FloatMenuOption> FloatMenuOptions(Pawn p)
+    private List<FloatMenuOption> FloatMenuOptions(Pawn p, Thing donor)
     {
         var list = new List<FloatMenuOption>();
         foreach (var trait in donor.TryGetComp<CompBladelinkWeapon>().TraitsListForReading)
@@ -36,7 +34,7 @@ public class CompTargetable_TargetedAnnul : CompTargetable_SingleBladelink
                 if (comp != null)
                 {
                     comp.targetTrait = trait;
-                    this.parent.GetComp<CompUsable>().TryStartUseJob(p, this.donor, false);
+                    this.parent.GetComp<CompUsable>().TryStartUseJob(p, donor, false);
                 }
             }));
         }
