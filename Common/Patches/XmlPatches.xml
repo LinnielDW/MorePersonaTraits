@@ -14,7 +14,7 @@
             <li Class="StockGenerator_Tag">
                 <tradeTag>BladelinkEffector</tradeTag>
                 <countRange>1~4</countRange>
-                <thingDefCountRange>1~2</thingDefCountRange>
+                <thingDefCountRange>1~3</thingDefCountRange>
             </li>
         </value>
     </Operation>
@@ -24,7 +24,7 @@
             <li Class="StockGenerator_Tag">
                 <tradeTag>BladelinkEffector</tradeTag>
                 <countRange>1~4</countRange>
-                <thingDefCountRange>0~2</thingDefCountRange>
+                <thingDefCountRange>0~3</thingDefCountRange>
             </li>
         </value>
     </Operation>
@@ -32,7 +32,7 @@
     <Operation Class="PatchOperationAdd">
         <xpath>*/FactionDef[defName="Empire"]/pawnGroupMakers/*/options</xpath>
         <value>
-            <MPT_BladeMonk>4</MPT_BladeMonk>
+            <MPT_BladeMonk>2</MPT_BladeMonk>
         </value>
     </Operation>
     
