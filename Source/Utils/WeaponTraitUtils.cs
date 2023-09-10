@@ -11,11 +11,7 @@ namespace MorePersonaTraits.Utils
     {
         public static void InitializeTraits(this CompBladelinkWeapon compBladelink)
         {
-            if (compBladelink.TraitsListForReading == null) FieldRefUtils.TraitsFieldRef.Invoke(compBladelink) = new List<WeaponTraitDef>();
-
-            var range = AccessTools
-                .FieldRefAccess<IntRange>(typeof(CompBladelinkWeapon), "TraitsRange")
-                .Invoke(compBladelink);
+            var range = FieldRefUtils.IntRangeFieldRef.Invoke(compBladelink);
 
             for (var index = 0; index < range.RandomInRange; ++index)
             {

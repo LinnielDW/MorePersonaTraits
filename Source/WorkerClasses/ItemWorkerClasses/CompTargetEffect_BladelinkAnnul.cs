@@ -9,12 +9,7 @@ namespace MorePersonaTraits.WorkerClasses.ItemWorkerClasses
         public override void DoEffectOn(Pawn user, Thing target)
         {
             var compBladelink = target.TryGetComp<CompBladelinkWeapon>();
-            var existingTraits = FieldRefUtils.TraitsFieldRef.Invoke(compBladelink);
-
-            if (compBladelink == null)
-            {
-                return;
-            }
+            var existingTraits = compBladelink.TraitsListForReading;
 
             compBladelink.TempUnbond();
 

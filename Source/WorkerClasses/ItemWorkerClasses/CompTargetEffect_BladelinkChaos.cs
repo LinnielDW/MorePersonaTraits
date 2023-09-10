@@ -26,11 +26,10 @@ namespace MorePersonaTraits.WorkerClasses.ItemWorkerClasses
 
         private void RerollTraits(CompBladelinkWeapon compBladelink)
         {
-            List<WeaponTraitDef> existingTraits = FieldRefUtils.TraitsFieldRef.Invoke(compBladelink);
 
             compBladelink.TempUnbond();
             
-            existingTraits.Clear();
+            compBladelink.TraitsListForReading.Clear();
             compBladelink.InitializeTraits();
             
             compBladelink.RegainBond();

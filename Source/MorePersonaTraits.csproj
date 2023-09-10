@@ -76,6 +76,7 @@
     <Compile Include="Extensions\MPT_NeedDefOf.cs" />
     <Compile Include="Extensions\WeaponTraitDefExtension.cs" />
     <Compile Include="Extensions\WeaponTraitOnHitExtension.cs" />
+    <Compile Include="MinMaxTraitsRangeChanger.cs" />
 <!--    <Compile Include="MPT_CompBladelinkWeapon.cs" />-->
     <Compile Include="Patches\CompBladelinkWeaponPatches.cs" />
     <Compile Include="Patches\UIPatches.cs" />
