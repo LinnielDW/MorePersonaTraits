@@ -1,4 +1,5 @@
-﻿using Verse;
+﻿using RimWorld;
+using Verse;
 
 namespace MorePersonaTraits.WorkerClasses.OnHitWorkerClasses
 {
@@ -14,6 +15,7 @@ namespace MorePersonaTraits.WorkerClasses.OnHitWorkerClasses
         {
             if (thing.Map.weatherManager.curWeatherAge < 1600) return;
             thing.Map.weatherDecider.StartNextWeather();
+            Messages.Message("MPT_WeatherChangedBy".Translate(thing.LabelShort) , thing, MessageTypeDefOf.NeutralEvent, true);
         }
     }
 }
