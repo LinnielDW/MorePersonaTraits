@@ -200,4 +200,47 @@
             </li>
         </modExtensions>
     </WeaponTraitDef>
+
+    <WeaponTraitDef>
+        <defName>MPT_OnHit_TeleportTarget</defName>
+        <label>proxemic</label>
+        <description>This weapon's persona likes to maintain a sphere of personal space and has the means of enforcing it.\nUpon landing a hit on something with this weapon, it has a chance to randomly teleport the target to a nearby location.</description>
+        <commonality>0.3</commonality>
+        <marketValueOffset>250</marketValueOffset>
+        <exclusionTags>
+            <li>MPT_OnHit_Teleport</li>
+        </exclusionTags>
+        <modExtensions>
+            <li Class="MorePersonaTraits.Extensions.WeaponTraitOnHitExtension">
+                <OnHitWorkers>
+                    <li Class="MorePersonaTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_ApplyTeleport">
+                        <ProcChance>0.25</ProcChance>
+                        <RandomRange>3.9~15.9</RandomRange>
+                        <TargetSelf>false</TargetSelf>
+                    </li>
+                </OnHitWorkers>
+            </li>
+        </modExtensions>
+    </WeaponTraitDef>
+    <WeaponTraitDef>
+        <defName>MPT_OnHit_TeleportSelf</defName>
+        <label>jittery</label>
+        <description>This weapon's persona suffers from a fidgety disposition and struggles to maintain a consistent position in spacetime.\nUpon landing a hit on something with this weapon, there is a low chance to randomly teleport the wielder to a nearby location.</description>
+        <commonality>0.1</commonality>
+        <marketValueOffset>-1000</marketValueOffset>
+        <exclusionTags>
+            <li>MPT_OnHit_Teleport</li>
+        </exclusionTags>
+        <modExtensions>
+            <li Class="MorePersonaTraits.Extensions.WeaponTraitOnHitExtension">
+                <OnHitWorkers>
+                    <li Class="MorePersonaTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_ApplyTeleport">
+                        <ProcChance>0.025</ProcChance>
+                        <RandomRange>1.9~7.9</RandomRange>
+                        <TargetSelf>true</TargetSelf>
+                    </li>
+                </OnHitWorkers>
+            </li>
+        </modExtensions>
+    </WeaponTraitDef>
 </Defs>
