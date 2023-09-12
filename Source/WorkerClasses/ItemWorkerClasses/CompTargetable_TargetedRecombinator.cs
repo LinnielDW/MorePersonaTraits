@@ -17,7 +17,8 @@ public class CompTargetable_TargetedRecombinator : CompTargetable_SingleBladelin
                 null,
                 null,
                 p,
-                onGuiAction: _ => OnGuiAction("MPT_SelectDonorWeapon"));
+                actionWhenFinished: FieldRefUtils.NullifyOnGuiAction,
+                onGuiAction: delegate { OnGuiAction("MPT_SelectDonorWeapon"); });
 
             return true;
         }
@@ -66,7 +67,7 @@ public class CompTargetable_TargetedRecombinator : CompTargetable_SingleBladelin
             null,
             null,
             p,
-            onGuiAction: _ => OnGuiAction()
-        );
+            actionWhenFinished: FieldRefUtils.NullifyOnGuiAction,
+            onGuiAction: delegate { OnGuiAction(); });
     }
 }

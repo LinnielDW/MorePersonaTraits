@@ -21,7 +21,8 @@ public class CompTargetable_TargetedAnnul : CompTargetable_SingleBladelink
                 null,
                 null,
                 p,
-                onGuiAction: _ => OnGuiAction());
+                actionWhenFinished: FieldRefUtils.NullifyOnGuiAction,
+                onGuiAction: delegate { OnGuiAction(); });
             return true;
         }
 
