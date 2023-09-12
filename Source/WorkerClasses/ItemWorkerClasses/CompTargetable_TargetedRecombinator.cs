@@ -11,10 +11,14 @@ public class CompTargetable_TargetedRecombinator : CompTargetable_SingleBladelin
     {
         if (this.PlayerChoosesTarget)
         {
-            Find.Targeter.BeginTargeting(this.GetTargetingParameters(), delegate(LocalTargetInfo t)
-            {
-                Find.WindowStack.Add(new FloatMenu(FloatMenuOptions(p, t.Thing)));
-            }, p, null, null);
+            Find.Targeter.BeginTargeting(
+                this.GetTargetingParameters(),
+                delegate(LocalTargetInfo t) { Find.WindowStack.Add(new FloatMenu(FloatMenuOptions(p, t.Thing))); },
+                null,
+                null,
+                p,
+                onGuiAction: _ => OnGuiAction("MPT_SelectDonorWeapon"));
+
             return true;
         }
 
@@ -45,19 +49,24 @@ public class CompTargetable_TargetedRecombinator : CompTargetable_SingleBladelin
     private void PickRecipient(Pawn p, WeaponTraitDef donorTrait)
     {
         Find.Targeter.BeginTargeting(this.GetTargetingParameters(), delegate(LocalTargetInfo t)
-        {
-            this.Target() = t.Thing;
-            var comp = parent.TryGetComp<CompTargetEffect_TargetedRecombinator>();
-            if (comp != null)
             {
-                if (!t.Thing.TryGetComp<CompBladelinkWeapon>().CanAddTrait(donorTrait))
+                this.Target() = t.Thing;
+                var comp = parent.TryGetComp<CompTargetEffect_TargetedRecombinator>();
+                if (comp != null)
                 {
-                    Messages.Message("MPT_WeaponCannotGainTrait".Translate(t.Thing.LabelShort, donorTrait.LabelCap), t.Thing, MessageTypeDefOf.NeutralEvent);
-                    return;
-                }
+                    if (!t.Thing.TryGetComp<CompBladelinkWeapon>().CanAddTrait(donorTrait))
+                    {
+                        Messages.Message("MPT_WeaponCannotGainTrait".Translate(t.Thing.LabelShort, donorTrait.LabelCap), t.Thing, MessageTypeDefOf.NeutralEvent);
+                        return;
+                    }
 
-                this.parent.GetComp<CompUsable>().TryStartUseJob(p, t.Thing, false);
-            }
-        }, p, null, null);
+                    this.parent.GetComp<CompUsable>().TryStartUseJob(p, t.Thing, false);
+                }
+            },
+            null,
+            null,
+            p,
+            onGuiAction: _ => OnGuiAction()
+        );
     }
 }

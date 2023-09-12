@@ -1,12 +1,10 @@
-﻿using System.Collections.Generic;
-using MorePersonaTraits.Utils;
-using RimWorld;
+﻿using RimWorld;
 using Verse;
 
 namespace MorePersonaTraits.WorkerClasses.ItemWorkerClasses
 {
     //Unused
-    public class CompTargetable_SingleBladelinkTraitRemovable : CompTargetable
+    public class CompTargetable_SingleBladelinkTraitRemovable : CompTargetable_SingleBladelink
     {
         protected override TargetingParameters GetTargetingParameters()
         {
@@ -17,16 +15,10 @@ namespace MorePersonaTraits.WorkerClasses.ItemWorkerClasses
                 canTargetItems = true,
                 mapObjectTargetsMustBeAutoAttackable = false,
                 validator = targetInfo =>
-                    targetInfo.Thing.TryGetComp<CompBladelinkWeapon>() != null && TargetUtils.ValidateRequiresBond(Props, targetInfo) && !targetInfo.Thing.TryGetComp<CompBladelinkWeapon>().TraitsListForReading.NullOrEmpty() &&
+                    ValidateRequiresBond(targetInfo) &&
+                    !targetInfo.Thing.TryGetComp<CompBladelinkWeapon>().TraitsListForReading.NullOrEmpty() &&
                     BaseTargetValidator(targetInfo.Thing)
             };
         }
-
-        public override IEnumerable<Thing> GetTargets(Thing targetChosenByPlayer = null)
-        {
-            yield return targetChosenByPlayer;
-        }
-
-        protected override bool PlayerChoosesTarget => true;
     }
 }

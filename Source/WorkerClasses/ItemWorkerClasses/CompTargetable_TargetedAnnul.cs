@@ -7,16 +7,21 @@ namespace MorePersonaTraits.WorkerClasses.ItemWorkerClasses;
 
 public class CompTargetable_TargetedAnnul : CompTargetable_SingleBladelink
 {
-
     public override bool SelectedUseOption(Pawn p)
     {
         if (this.PlayerChoosesTarget)
         {
-            Find.Targeter.BeginTargeting(this.GetTargetingParameters(), delegate(LocalTargetInfo t)
-            {
-                this.Target() = t.Thing;
-                Find.WindowStack.Add(new FloatMenu(FloatMenuOptions(p, t.Thing)));
-            }, p, null, null);
+            Find.Targeter.BeginTargeting(
+                this.GetTargetingParameters(),
+                delegate(LocalTargetInfo t)
+                {
+                    this.Target() = t.Thing;
+                    Find.WindowStack.Add(new FloatMenu(FloatMenuOptions(p, t.Thing)));
+                },
+                null,
+                null,
+                p,
+                onGuiAction: _ => OnGuiAction());
             return true;
         }
 
