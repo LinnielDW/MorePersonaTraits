@@ -104,6 +104,54 @@
             <li>noun->entropy</li>
             <li>noun->leviathan</li>
             <li>noun->asylum</li>
+            <li>noun->birthday</li>
+            <li>noun->spear</li>
+            <li>noun->ivory</li>
+            <li>noun->nova</li>
+            <li>noun->moon</li>
+            <li>noun->sun</li>
+            <li>noun->iron</li>
+            <li>noun->steel</li>
+            <li>noun->cobalt</li>
+            <li>noun->knowledge</li>
+            <li>noun->world</li>
+            <li>noun->pattern</li>
+            <li>noun->spark</li>
+            <li>noun->melody</li>
+            <li>noun->time</li>
+            <li>noun->agony</li>
+            <li>noun->decay</li>
+            <li>noun->ash</li>
+            <li>noun->crypt</li>
+            <li>noun->law</li>
+            <li>noun->honor</li>
+            <li>noun->ink</li>
+            <li>noun->light</li>
+            <li>noun->mist</li>
+            <li>noun->mountain</li>
+            <li>noun->monk</li>
+            <li>noun->ruin</li>
+            <!-- cultivation -->
+            <li>noun->growth</li>
+            <!-- devotion -->
+            <li>noun->zeal</li>
+            <li>noun->dominion</li>
+            <!-- preservation -->
+            <li>noun->ward</li>
+            <!-- odium -->
+            <li>noun->hatred</li>
+            <!-- endowment -->
+            <li>noun->gift</li>
+            <!-- autonomy -->
+            <li>noun->freedom</li>
+            <li>noun->ambition</li>
+            <!-- intervention -->
+            <li>noun->support</li>
+            <li>noun->mercy</li>
+            <li>noun->valor</li>
+            <li>noun->whim</li>
+            <li>noun->virtue</li>
+            <li>noun->muse</li>
 
             <li>verber->father</li>
             <li>verber->eater</li>
@@ -128,6 +176,10 @@
             <li>verber->shaper</li>
             <li>verber->overloader</li>
             <li>verber->betrayer</li>
+            <li>verber->hammer</li>
+            <li>verber->lancer</li>
+            <li>verber->impaler</li>
+            <li>verber->hopper</li>
 
 
             <li>beginSyl->syl</li>
