@@ -1,0 +1,339 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+    <!-- TODO: add descriptions -->
+    <!-- Flame -->
+    <WeaponTraitDef>
+        <defName>MPT_OnHit_AddedFlame_Minor</defName>
+        <label>flamer</label>
+        <description>todo.</description>
+        <commonality>0.5</commonality>
+        <marketValueOffset>300</marketValueOffset>
+        <descriptionHyperlinks>
+            <DamageDef>Flame</DamageDef>
+        </descriptionHyperlinks>
+        <exclusionTags>
+            <li>MPT_OnHit_AddedDamage</li>
+            <li>MPT_OnHit_AddedFlame</li>
+        </exclusionTags>
+        <modExtensions>
+            <li Class="MorePersonaTraits.Extensions.WeaponTraitOnHitExtension">
+                <OnHitWorkers>
+                    <li Class="MorePersonaTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_AddedDamage">
+                        <DamageDef>Flame</DamageDef>
+                        <ProcMagnitude>3</ProcMagnitude>
+                        <ProcChance>0.5</ProcChance>
+                    </li>
+                </OnHitWorkers>
+            </li>
+        </modExtensions>
+    </WeaponTraitDef>
+    <WeaponTraitDef>
+        <defName>MPT_OnHit_AddedFlame</defName>
+        <label>combusting</label>
+        <description>todo.</description>
+        <commonality>0.4</commonality>
+        <marketValueOffset>500</marketValueOffset>
+        <descriptionHyperlinks>
+            <DamageDef>Flame</DamageDef>
+        </descriptionHyperlinks>
+        <exclusionTags>
+            <li>MPT_OnHit_AddedDamage</li>
+            <li>MPT_OnHit_AddedFlame</li>
+        </exclusionTags>
+        <modExtensions>
+            <li Class="MorePersonaTraits.Extensions.WeaponTraitOnHitExtension">
+                <OnHitWorkers>
+                    <li Class="MorePersonaTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_AddedDamage">
+                        <DamageDef>Flame</DamageDef>
+                        <ProcMagnitude>5</ProcMagnitude>
+                        <ProcChance>0.5</ProcChance>
+                    </li>
+                </OnHitWorkers>
+            </li>
+        </modExtensions>
+    </WeaponTraitDef>
+    <WeaponTraitDef>
+        <defName>MPT_OnHit_AddedFlame_Major</defName>
+        <label>conflagrator</label>
+        <description>todo.</description>
+        <commonality>0.2</commonality>
+        <marketValueOffset>800</marketValueOffset>
+        <descriptionHyperlinks>
+            <DamageDef>Flame</DamageDef>
+        </descriptionHyperlinks>
+        <exclusionTags>
+            <li>MPT_OnHit_AddedDamage</li>
+            <li>MPT_OnHit_AddedFlame</li>
+        </exclusionTags>
+        <modExtensions>
+            <li Class="MorePersonaTraits.Extensions.WeaponTraitOnHitExtension">
+                <OnHitWorkers>
+                    <li Class="MorePersonaTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_AddedDamage">
+                        <DamageDef>Flame</DamageDef>
+                        <ProcMagnitude>8</ProcMagnitude>
+                        <ProcChance>0.5</ProcChance>
+                    </li>
+                </OnHitWorkers>
+            </li>
+        </modExtensions>
+    </WeaponTraitDef>
+
+    <!-- Blunt -->
+    <WeaponTraitDef>
+        <defName>MPT_OnHit_AddedBlunt_Minor</defName>
+        <label>moderator</label>
+        <description>(ban hammer joke).</description>
+        <commonality>0.5</commonality>
+        <marketValueOffset>300</marketValueOffset>
+        <descriptionHyperlinks>
+            <DamageDef>Flame</DamageDef>
+        </descriptionHyperlinks>
+        <exclusionTags>
+            <li>MPT_OnHit_AddedDamage</li>
+            <li>MPT_OnHit_AddedBlunt</li>
+        </exclusionTags>
+        <modExtensions>
+            <li Class="MorePersonaTraits.Extensions.WeaponTraitOnHitExtension">
+                <OnHitWorkers>
+                    <li Class="MorePersonaTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_AddedDamage">
+                        <DamageDef>Blunt</DamageDef>
+                        <ProcMagnitude>5</ProcMagnitude>
+                        <ProcChance>0.5</ProcChance>
+                    </li>
+                </OnHitWorkers>
+            </li>
+        </modExtensions>
+    </WeaponTraitDef>
+    <WeaponTraitDef>
+        <defName>MPT_OnHit_AddedBlunt</defName>
+        <label>impactful</label>
+        <description>todo.</description>
+        <commonality>0.4</commonality>
+        <marketValueOffset>500</marketValueOffset>
+        <descriptionHyperlinks>
+            <DamageDef>Flame</DamageDef>
+        </descriptionHyperlinks>
+        <exclusionTags>
+            <li>MPT_OnHit_AddedDamage</li>
+            <li>MPT_OnHit_AddedBlunt</li>
+        </exclusionTags>
+        <modExtensions>
+            <li Class="MorePersonaTraits.Extensions.WeaponTraitOnHitExtension">
+                <OnHitWorkers>
+                    <li Class="MorePersonaTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_AddedDamage">
+                        <DamageDef>Blunt</DamageDef>
+                        <ProcMagnitude>5</ProcMagnitude>
+                        <ProcChance>0.5</ProcChance>
+                    </li>
+                </OnHitWorkers>
+            </li>
+        </modExtensions>
+    </WeaponTraitDef>
+    <WeaponTraitDef>
+        <defName>MPT_OnHit_AddedBlunt_Major</defName>
+        <label>devistating</label>
+        <description>todo.</description>
+        <commonality>0.2</commonality>
+        <marketValueOffset>800</marketValueOffset>
+        <descriptionHyperlinks>
+            <DamageDef>Flame</DamageDef>
+        </descriptionHyperlinks>
+        <exclusionTags>
+            <li>MPT_OnHit_AddedDamage</li>
+            <li>MPT_OnHit_AddedBlunt</li>
+        </exclusionTags>
+        <modExtensions>
+            <li Class="MorePersonaTraits.Extensions.WeaponTraitOnHitExtension">
+                <OnHitWorkers>
+                    <li Class="MorePersonaTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_AddedDamage">
+                        <DamageDef>Blunt</DamageDef>
+                        <ProcMagnitude>5</ProcMagnitude>
+                        <ProcChance>0.5</ProcChance>
+                    </li>
+                </OnHitWorkers>
+            </li>
+        </modExtensions>
+    </WeaponTraitDef>
+
+    <!-- Cut -->
+    <WeaponTraitDef>
+        <defName>MPT_OnHit_AddedCut_Minor</defName>
+        <label>penny pincher</label>
+        <description>(bargin hunting).</description>
+        <commonality>0.5</commonality>
+        <marketValueOffset>300</marketValueOffset>
+        <descriptionHyperlinks>
+            <DamageDef>Flame</DamageDef>
+        </descriptionHyperlinks>
+        <exclusionTags>
+            <li>MPT_OnHit_AddedDamage</li>
+            <li>MPT_OnHit_AddedCut</li>
+        </exclusionTags>
+        <modExtensions>
+            <li Class="MorePersonaTraits.Extensions.WeaponTraitOnHitExtension">
+                <OnHitWorkers>
+                    <li Class="MorePersonaTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_AddedDamage">
+                        <DamageDef>Cut</DamageDef>
+                        <ProcMagnitude>5</ProcMagnitude>
+                        <ProcChance>0.5</ProcChance>
+                    </li>
+                </OnHitWorkers>
+            </li>
+        </modExtensions>
+    </WeaponTraitDef>
+    <WeaponTraitDef>
+        <defName>MPT_OnHit_AddedCut</defName>
+        <label>slasher fanatic</label>
+        <description>(loves to go to the movies).</description>
+        <commonality>0.4</commonality>
+        <marketValueOffset>500</marketValueOffset>
+        <descriptionHyperlinks>
+            <DamageDef>Flame</DamageDef>
+        </descriptionHyperlinks>
+        <exclusionTags>
+            <li>MPT_OnHit_AddedDamage</li>
+            <li>MPT_OnHit_AddedCut</li>
+        </exclusionTags>
+        <modExtensions>
+            <li Class="MorePersonaTraits.Extensions.WeaponTraitOnHitExtension">
+                <OnHitWorkers>
+                    <li Class="MorePersonaTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_AddedDamage">
+                        <DamageDef>Cut</DamageDef>
+                        <ProcMagnitude>5</ProcMagnitude>
+                        <ProcChance>0.5</ProcChance>
+                    </li>
+                </OnHitWorkers>
+            </li>
+        </modExtensions>
+    </WeaponTraitDef>
+    <WeaponTraitDef>
+        <defName>MPT_OnHit_AddedCut_Major</defName>
+        <label>lacerating</label>
+        <description>todo.</description>
+        <commonality>0.2</commonality>
+        <marketValueOffset>800</marketValueOffset>
+        <descriptionHyperlinks>
+            <DamageDef>Flame</DamageDef>
+        </descriptionHyperlinks>
+        <exclusionTags>
+            <li>MPT_OnHit_AddedDamage</li>
+            <li>MPT_OnHit_AddedCut</li>
+        </exclusionTags>
+        <modExtensions>
+            <li Class="MorePersonaTraits.Extensions.WeaponTraitOnHitExtension">
+                <OnHitWorkers>
+                    <li Class="MorePersonaTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_AddedDamage">
+                        <DamageDef>Cut</DamageDef>
+                        <ProcMagnitude>5</ProcMagnitude>
+                        <ProcChance>0.5</ProcChance>
+                    </li>
+                </OnHitWorkers>
+            </li>
+        </modExtensions>
+    </WeaponTraitDef>
+
+    <!-- EMP -->
+    <WeaponTraitDef>
+        <defName>MPT_OnHit_AddedEMP</defName>
+        <label>pulser</label>
+        <description>todo.</description>
+        <commonality>0.5</commonality>
+        <marketValueOffset>500</marketValueOffset>
+        <descriptionHyperlinks>
+            <DamageDef>EMP</DamageDef>
+        </descriptionHyperlinks>
+        <exclusionTags>
+            <li>MPT_OnHit_AddedDamage</li>
+            <li>MPT_OnHit_AddedEMP</li>
+        </exclusionTags>
+        <modExtensions>
+            <li Class="MorePersonaTraits.Extensions.WeaponTraitOnHitExtension">
+                <OnHitWorkers>
+                    <li Class="MorePersonaTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_AddedDamage">
+                        <DamageDef>EMP</DamageDef>
+                        <ProcMagnitude>9</ProcMagnitude>
+                        <ProcChance>0.5</ProcChance>
+                    </li>
+                </OnHitWorkers>
+            </li>
+        </modExtensions>
+    </WeaponTraitDef>
+
+    <!-- BulletToxic -->
+    <WeaponTraitDef>
+        <defName>MPT_OnHit_AddedBulletToxic_Minor</defName>
+        <label>trollish</label>
+        <description>todo.</description>
+        <commonality>0.3</commonality>
+        <marketValueOffset>800</marketValueOffset>
+        <descriptionHyperlinks>
+            <DamageDef>BulletToxic</DamageDef>
+        </descriptionHyperlinks>
+        <exclusionTags>
+            <li>MPT_OnHit_AddedDamage</li>
+            <li>MPT_OnHit_AddedBulletToxic</li>
+        </exclusionTags>
+        <modExtensions>
+            <li Class="MorePersonaTraits.Extensions.WeaponTraitOnHitExtension">
+                <OnHitWorkers>
+                    <li Class="MorePersonaTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_AddedDamage">
+                        <DamageDef>BulletToxic</DamageDef>
+                        <ProcMagnitude>3</ProcMagnitude>
+                        <ProcChance>0.5</ProcChance>
+                    </li>
+                </OnHitWorkers>
+            </li>
+        </modExtensions>
+    </WeaponTraitDef>
+    <WeaponTraitDef>
+        <defName>MPT_OnHit_AddedBulletToxic</defName>
+        <label>spiteful</label>
+        <description>todo.</description>
+        <commonality>0.3</commonality>
+        <marketValueOffset>800</marketValueOffset>
+        <descriptionHyperlinks>
+            <DamageDef>BulletToxic</DamageDef>
+        </descriptionHyperlinks>
+        <exclusionTags>
+            <li>MPT_OnHit_AddedDamage</li>
+            <li>MPT_OnHit_AddedBulletToxic</li>
+        </exclusionTags>
+        <modExtensions>
+            <li Class="MorePersonaTraits.Extensions.WeaponTraitOnHitExtension">
+                <OnHitWorkers>
+                    <li Class="MorePersonaTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_AddedDamage">
+                        <DamageDef>BulletToxic</DamageDef>
+                        <ProcMagnitude>5</ProcMagnitude>
+                        <ProcChance>0.5</ProcChance>
+                    </li>
+                </OnHitWorkers>
+            </li>
+        </modExtensions>
+    </WeaponTraitDef>
+    <WeaponTraitDef>
+        <defName>MPT_OnHit_AddedBulletToxic_Major</defName>
+        <label>corrupting</label>
+        <description>todo.</description>
+        <commonality>0.3</commonality>
+        <marketValueOffset>800</marketValueOffset>
+        <descriptionHyperlinks>
+            <DamageDef>BulletToxic</DamageDef>
+        </descriptionHyperlinks>
+        <exclusionTags>
+            <li>MPT_OnHit_AddedDamage</li>
+            <li>MPT_OnHit_AddedBulletToxic</li>
+        </exclusionTags>
+        <modExtensions>
+            <li Class="MorePersonaTraits.Extensions.WeaponTraitOnHitExtension">
+                <OnHitWorkers>
+                    <li Class="MorePersonaTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_AddedDamage">
+                        <DamageDef>BulletToxic</DamageDef>
+                        <ProcMagnitude>8</ProcMagnitude>
+                        <ProcChance>0.5</ProcChance>
+                    </li>
+                </OnHitWorkers>
+            </li>
+        </modExtensions>
+    </WeaponTraitDef>
+</Defs>
