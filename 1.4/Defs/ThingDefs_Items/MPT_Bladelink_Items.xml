@@ -160,11 +160,11 @@
             <MarketValue>4000</MarketValue>
         </statBases>
         <comps>
-            <li Class="MorePersonaTraits.WorkerClasses.ItemWorkerClasses.CompProperties_TargetedRecombinator">
-                <compClass>MorePersonaTraits.WorkerClasses.ItemWorkerClasses.CompTargetable_TargetedRecombinator</compClass>
+            <li Class="MorePersonaTraits.WorkerClasses.ItemWorkerClasses.CompProperties_TargetedTraitTransferer">
+                <compClass>MorePersonaTraits.WorkerClasses.ItemWorkerClasses.CompTargetable_TargetedTraitTransferer</compClass>
             </li>
             <li>
-                <compClass>MorePersonaTraits.WorkerClasses.ItemWorkerClasses.CompTargetEffect_TargetedRecombinator</compClass>
+                <compClass>MorePersonaTraits.WorkerClasses.ItemWorkerClasses.CompTargetEffect_TargetedTraitTransferer</compClass>
             </li>
         </comps>
         <thingSetMakerTags Inherit="False">

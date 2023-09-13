@@ -5,7 +5,7 @@ using Verse;
 
 namespace MorePersonaTraits.WorkerClasses.ItemWorkerClasses;
 
-public class CompTargetable_TargetedRecombinator : CompTargetable_SingleBladelink
+public class CompTargetable_TargetedTraitTransferer : CompTargetable_SingleBladelink
 {
     public override bool SelectedUseOption(Pawn p)
     {
@@ -33,7 +33,7 @@ public class CompTargetable_TargetedRecombinator : CompTargetable_SingleBladelin
         {
             list.Add(new FloatMenuOption(trait.label, delegate
             {
-                var comp = parent.TryGetComp<CompTargetEffect_TargetedRecombinator>();
+                var comp = parent.TryGetComp<CompTargetEffect_TargetedTraitTransferer>();
                 if (comp != null)
                 {
                     comp.DonorWeapon = donor;
@@ -52,7 +52,7 @@ public class CompTargetable_TargetedRecombinator : CompTargetable_SingleBladelin
         Find.Targeter.BeginTargeting(this.GetTargetingParameters(), delegate(LocalTargetInfo t)
             {
                 this.Target() = t.Thing;
-                var comp = parent.TryGetComp<CompTargetEffect_TargetedRecombinator>();
+                var comp = parent.TryGetComp<CompTargetEffect_TargetedTraitTransferer>();
                 if (comp != null)
                 {
                     if (!t.Thing.TryGetComp<CompBladelinkWeapon>().CanAddTrait(donorTrait))

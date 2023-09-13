@@ -1,11 +1,10 @@
-using System.Collections.Generic;
 using MorePersonaTraits.Utils;
 using RimWorld;
 using Verse;
 
 namespace MorePersonaTraits.WorkerClasses.ItemWorkerClasses;
 
-public class CompTargetEffect_TargetedRecombinator : CompTargetEffect
+public class CompTargetEffect_TargetedTraitTransferer : CompTargetEffect
 {
     public Thing DonorWeapon = null;
     public WeaponTraitDef DonorTrait = null;
