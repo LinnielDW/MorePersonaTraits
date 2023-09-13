@@ -89,9 +89,11 @@
     <Compile Include="Utils\SettingsUtils.cs" />
     <Compile Include="Utils\TargetUtils.cs" />
     <Compile Include="Utils\WeaponTraitUtils.cs" />
+    <Compile Include="WorkerClasses\ItemWorkerClasses\CompProperties_Recombinator.cs" />
     <Compile Include="WorkerClasses\ItemWorkerClasses\CompProperties_TargetableSingleBladelink.cs" />
     <Compile Include="WorkerClasses\ItemWorkerClasses\CompProperties_TargetedAnnul.cs" />
     <Compile Include="WorkerClasses\ItemWorkerClasses\CompProperties_TargetedTraitTransferer.cs" />
+    <Compile Include="WorkerClasses\ItemWorkerClasses\CompTargetable_Recombinator.cs" />
     <Compile Include="WorkerClasses\ItemWorkerClasses\CompTargetable_SingleBladelink.cs" />
     <Compile Include="WorkerClasses\ItemWorkerClasses\CompTargetable_SingleBladelinkTraitAddable.cs" />
     <Compile Include="WorkerClasses\ItemWorkerClasses\CompTargetable_SingleBladelinkTraitRemovable.cs" />
@@ -101,6 +103,7 @@
     <Compile Include="WorkerClasses\ItemWorkerClasses\CompTargetEffect_BladelinkAnnul.cs" />
     <Compile Include="WorkerClasses\ItemWorkerClasses\CompTargetEffect_BladelinkExalt.cs" />
     <Compile Include="WorkerClasses\ItemWorkerClasses\CompTargetEffect_BladelinkChaos.cs" />
+    <Compile Include="WorkerClasses\ItemWorkerClasses\CompTargetEffect_Recombinator.cs" />
     <Compile Include="WorkerClasses\ItemWorkerClasses\CompTargetEffect_TargetedAnnul.cs" />
     <Compile Include="WorkerClasses\ItemWorkerClasses\CompTargetEffect_TargetedTraitTransferer.cs" />
     <Compile Include="WorkerClasses\OnHitWorkerClasses\OnHitWorker.cs" />

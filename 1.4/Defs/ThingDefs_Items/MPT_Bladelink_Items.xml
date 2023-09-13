@@ -171,4 +171,26 @@
             <li>RewardStandardCore</li>
         </thingSetMakerTags>
     </ThingDef>
+
+    <ThingDef ParentName="PersonaEffectorBase">
+        <defName>MPT_BladelinkRecombinator</defName>
+        <label>Persona Recombination Affector</label>
+        <description>A single use psychic persona affector. The psychic surge destructively melds the personalities a chosen persona weapon into another, changing the personality of the latter with some traits chosen from either weapon. The donor weapon is destroyed in the process. If not enough compatible traits are found between both weapons, some new ones may also be added (depnding on the minimum amount of traits as defined in the mod settings).</description>
+        <graphicData>
+            <!-- TODO: new sprite -->
+            <texPath>Things/Item/Equipment/bladelink_annul</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <statBases>
+            <MarketValue>1750</MarketValue>
+        </statBases>
+        <comps>
+            <li Class="MorePersonaTraits.WorkerClasses.ItemWorkerClasses.CompProperties_Recombinator">
+                <compClass>MorePersonaTraits.WorkerClasses.ItemWorkerClasses.CompTargetable_Recombinator</compClass>
+            </li>
+            <li>
+                <compClass>MorePersonaTraits.WorkerClasses.ItemWorkerClasses.CompTargetEffect_Recombinator</compClass>
+            </li>
+        </comps>
+    </ThingDef>
 </Defs>

@@ -43,6 +43,15 @@ namespace MorePersonaTraits.Utils
 
             return true;
         }
+        public static bool CanAddAnyTraitFromList(this CompBladelinkWeapon compBladelinkWeapon, List<WeaponTraitDef> traitList)
+        {
+            return compBladelinkWeapon.TraitsListForReading.NullOrEmpty() || traitList.Any(compBladelinkWeapon.CanAddTrait);
+        }
+        
+        public static IEnumerable<WeaponTraitDef> AddableTraitsFromList(this CompBladelinkWeapon compBladelinkWeapon, IEnumerable<WeaponTraitDef> traitList)
+        {
+            return traitList.Where(compBladelinkWeapon.CanAddTrait);
+        }
 
         public static bool CanAddBondTrait(this CompBladelinkWeapon compBladelinkWeapon, WeaponTraitDef other)
         {
