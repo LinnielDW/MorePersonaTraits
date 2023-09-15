@@ -3,7 +3,7 @@
     <WeaponTraitDef>
         <defName>MPT_OnKill_NeedFilledFood</defName>
         <label>kill-satiating</label>
-        <description>This weapon's persona says it is connected to something about someones last meal and knows how to replicate it.\nUpon slaying a living thing with this weapon, it has a chance to fill the wielders hunger.</description>
+        <description>This weapon's persona says it is connected to something about someone's last meal and knows how to replicate it.\nUpon slaying a living thing with this weapon, it has a chance to fill the wielders hunger.</description>
         <workerClass>MorePersonaTraits.WorkerClasses.WeaponTraitWorkerClasses.WeaponTraitWorker_FoodFilledOnKill</workerClass>
         <commonality>0.2</commonality>
         <marketValueOffset>1000</marketValueOffset>
