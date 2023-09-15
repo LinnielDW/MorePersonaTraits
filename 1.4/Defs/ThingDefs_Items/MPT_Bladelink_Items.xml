@@ -153,7 +153,7 @@
         <description>A very rare single use psychic persona affector. The psychic surge destructively moves a portion of a chosen persona to another, extending the latter weapon persona with a chosen trait from the former. The donor weapon is destroyed in the process. Can only transfer to persona weapons that can accept the donor trait to add and that is under the absolute maximum number of traits (defined in the settings).</description>
         <graphicData>
             <!-- TODO: new sprite -->
-            <texPath>Things/Item/Equipment/bladelink_annul</texPath>
+            <texPath>Things/Item/Equipment/bladelink_exalt</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <statBases>
@@ -178,7 +178,7 @@
         <description>A single use psychic persona affector. The psychic surge destructively melds the personalities a chosen persona weapon into another, changing the personality of the latter with some traits chosen from either weapon. The donor weapon is destroyed in the process. If not enough compatible traits are found between both weapons, some new ones may also be added (depnding on the minimum amount of traits as defined in the mod settings).</description>
         <graphicData>
             <!-- TODO: new sprite -->
-            <texPath>Things/Item/Equipment/bladelink_annul</texPath>
+            <texPath>Things/Item/Equipment/bladelink_reroll</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <statBases>
