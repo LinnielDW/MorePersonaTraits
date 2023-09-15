@@ -24,7 +24,7 @@ namespace MorePersonaTraits.WorkerClasses.OnHitWorkerClasses
                 return;
             }
 
-            var damageInfo = new DamageInfo(DamageDef, ProcMagnitude, originVerb.verbProps.AdjustedArmorPenetration(originVerb, originPawn), -1f, originPawn, null, originPawn.equipment.Primary.def);
+            var damageInfo = new DamageInfo(DamageDef, ProcMagnitude, 0.5f, -1f, originPawn, null, originPawn.equipment.Primary.def);
             damageInfo.SetBodyRegion(BodyPartHeight.Undefined, BodyPartDepth.Outside);
             damageInfo.SetWeaponBodyPartGroup(originVerb.verbProps.AdjustedLinkedBodyPartsGroup(originVerb.tool));
             if (originVerb.HediffCompSource != null)
