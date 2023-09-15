@@ -76,9 +76,12 @@
     <Compile Include="Extensions\MPT_NeedDefOf.cs" />
     <Compile Include="Extensions\WeaponTraitDefExtension.cs" />
     <Compile Include="Extensions\WeaponTraitOnHitExtension.cs" />
+    <Compile Include="Extensions\WeaponTraitOnKillExtension.cs" />
+    <Compile Include="HediffComps\HediffComp_OnDeathSpawn.cs" />
     <Compile Include="MinMaxTraitsRangeChanger.cs" />
 <!--    <Compile Include="MPT_CompBladelinkWeapon.cs" />-->
     <Compile Include="Patches\CompBladelinkWeaponPatches.cs" />
+    <Compile Include="Patches\Pawn_Kill_Patches.cs" />
     <Compile Include="Patches\UIPatches.cs" />
     <Compile Include="QuestNode_GetRandomLootLabel.cs" />
     <Compile Include="QuestNode_SetItemBySetMakerTags.cs" />
@@ -122,6 +125,7 @@
     <Compile Include="WorkerClasses\ThoughtWorkerClasses\ThoughtWorker_WeaponTraitBondedAnimal.cs" />
     <Compile Include="WorkerClasses\ThoughtWorkerClasses\ThoughtWorker_WeaponTraitNoBondedAnimal.cs" />
     <Compile Include="WorkerClasses\ThoughtWorkerClasses\ThoughtWorker_WeaponTraitWeather.cs" />
+    <!-- <Compile Include="WorkerClasses\WeaponTraitWorkerClasses\WeaponTraitWorker_GambaOnEquip.cs" /> -->
     <Compile Include="WorkerClasses\WeaponTraitWorkerClasses\WeaponTraitWorker_InvisibilityOnKill.cs" />
     <Compile Include="WorkerClasses\WeaponTraitWorkerClasses\WeaponTraitWorker_NeedFilledOnKill.cs" />
     <Compile Include="Patches\PatchOnDamage.cs" />
