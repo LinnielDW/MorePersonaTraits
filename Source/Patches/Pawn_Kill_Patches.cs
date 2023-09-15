@@ -12,14 +12,14 @@ public static class Pawn_Kill_Patches
 {
     static void Prefix(Pawn __instance, DamageInfo? dinfo)
     {
-        if (!__instance.Spawned || __instance.Destroyed || __instance.Dead)
+        if (!__instance.Spawned || __instance.Destroyed || __instance.Dead || dinfo == null)
         {
             //Log.Warning("Already dead, skipping");
             return;
         }
 
-        var primary = (dinfo?.Instigator as Pawn)?.equipment.Primary;
-        if (primary == null || dinfo.Value.Weapon != primary.def)
+        var primary = (dinfo.Value.Instigator as Pawn)?.equipment?.Primary;
+        if (primary?.TryGetComp<CompBladelinkWeapon>() == null || dinfo.Value.Weapon != primary.def)
         {
             return;
         }
