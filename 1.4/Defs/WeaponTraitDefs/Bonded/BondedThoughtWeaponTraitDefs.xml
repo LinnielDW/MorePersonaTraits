@@ -130,7 +130,7 @@
         <stages>
             <li>
                 <label>{WEAPON}'s simpering</label>
-                <description>{WEAPON}, my bonded weapon, seems to worship the very ground I walk. It's boosting my self esteem.</description>
+                <description>{WEAPON}, my bonded weapon, seems to worship the very ground I walk. It's boosting my self-esteem.</description>
                 <baseMoodEffect>6</baseMoodEffect>
             </li>
         </stages>

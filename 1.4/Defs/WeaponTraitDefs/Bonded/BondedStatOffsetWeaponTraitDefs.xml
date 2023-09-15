@@ -491,7 +491,7 @@
     <WeaponTraitDef ParentName="BondedWeaponTraitBase">
         <defName>MPT_Bonded_GlobalLearningFactorUp</defName>
         <label>tutoring</label>
-        <description>This weapon's persona has taken an immortal vow to reach their full potential and will help their bonded in any and all cases of self improvement.\nThe bonded pawn gains increased learning speed.</description>
+        <description>This weapon's persona has taken an immortal vow to reach their full potential and will help their bonded in any and all cases of self-improvement.\nThe bonded pawn gains increased learning speed.</description>
         <bondedHediffs>
             <li>MPT_Hediff_GlobalLearningFactorUp</li>
         </bondedHediffs>
@@ -550,7 +550,7 @@
     <WeaponTraitDef ParentName="BondedWeaponTraitBase">
         <defName>MPT_Bonded_MentalBreakThresholdDown</defName>
         <label>hardened</label>
-        <description>This weapon's persona has endured far worse than anything the rim could throw at it. This resolve seems to rub off on their bond.\nThe bonded pawn does not breakdown so easily.</description>
+        <description>This weapon's persona has endured far worse than anything the rim could throw at it. This resolve seems to rub off on their bond.\nThe bonded pawn does not break down so easily.</description>
         <bondedHediffs>
             <li>MPT_Hediff_MentalBreakThresholdDown</li>
         </bondedHediffs>
@@ -1025,7 +1025,7 @@
     <WeaponTraitDef ParentName="BondedWeaponTraitBase">
         <defName>MPT_Bonded_PainShockThresholdUp</defName>
         <label>sturdy</label>
-        <description>This weapon's persona won't allow their bond to kowtow so easily. They will march on, even if its the last thing they'll do.\nThe bonded pawn has an increased pain threshold.</description>
+        <description>This weapon's persona won't allow their bond to kowtow so easily. They will march on, even if it's the last thing they'll do.\nThe bonded pawn has an increased pain threshold.</description>
         <bondedHediffs>
             <li>MPT_Hediff_PainShockThresholdUp</li>
         </bondedHediffs>

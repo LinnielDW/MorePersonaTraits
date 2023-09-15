@@ -137,7 +137,7 @@
     <WeaponTraitDef>
         <defName>MPT_Held_ComfyTempDown</defName>
         <label>thermally diffusing</label>
-        <description>This weapon's persona struggles to keep a stable temperature and is more influenced by its surroundings than its material might suggest.\nWhile held, it provides its wielder with an lower range of comfortable temperatures.</description>
+        <description>This weapon's persona struggles to keep a stable temperature and is more influenced by its surroundings than its material might suggest.\nWhile held, it provides its wielder with a lower range of comfortable temperatures.</description>
         <commonality>0.5</commonality>
         <marketValueOffset>-400</marketValueOffset>
         <equippedStatOffsets>
@@ -243,7 +243,7 @@
     <WeaponTraitDef MayRequire="ludeon.rimworld.biotech">
         <defName>MPT_Held_StaggerDurationDown</defName>
         <label>dauntless</label>
-        <description>This weapon's persona is not phased so easily, whether it be raiders, monsterous insectoids or mechanoids.\nWhile held, it greatly reduces the duration the wielder is staggered.</description>
+        <description>This weapon's persona is not phased so easily, whether it be raiders, monstrous insectoids or mechanoids.\nWhile held, it greatly reduces the duration the wielder is staggered.</description>
         <commonality>0.5</commonality>
         <marketValueOffset>500</marketValueOffset>
         <equippedHediffs>
@@ -274,7 +274,7 @@
     <WeaponTraitDef MayRequire="ludeon.rimworld.biotech">
         <defName>MPT_Held_StaggerDurationUp</defName>
         <label>careening</label>
-        <description>This weapon's persona does not have a good sense of balance, often leaving their wielder exposed when caught flat footed.\nWhile held, it increases the duration the wielder is staggered.</description>
+        <description>This weapon's persona does not have a good sense of balance, often leaving their wielder exposed when caught flat-footed.\nWhile held, it increases the duration the wielder is staggered.</description>
         <commonality>0.5</commonality>
         <marketValueOffset>-500</marketValueOffset>
         <equippedHediffs>
