@@ -48,7 +48,6 @@ public class CompTargetEffect_Recombinator : CompTargetEffect
         DonorWeapon.Destroy();
 
         compBladelink.RegainBond();
-        // TODO: add appropriate message
-        Messages.Message("MPT_TODO_ADD_TRANSLATION".Translate(target.LabelShort), target, MessageTypeDefOf.NeutralEvent);
+        Messages.Message("MPT_WeaponTraitsRecombinated".Translate(target.LabelShort), target, MessageTypeDefOf.NeutralEvent);
     }
 }

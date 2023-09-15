@@ -24,6 +24,7 @@
     <MPT_WeaponTraitLost>{0} has lost the trait {1}</MPT_WeaponTraitLost>
     <MPT_WeaponTraitGained>{0} has gained the trait {1}</MPT_WeaponTraitGained>
     <MPT_WeaponTraitsRerolled>{0}'s traits have been rerolled</MPT_WeaponTraitsRerolled>
+    <MPT_WeaponTraitsRecombinated>{0}'s traits have been recombinated</MPT_WeaponTraitsRecombinated>
     <MPT_WeaponCannotGainTrait>{0} cannot gain the trait {1}</MPT_WeaponCannotGainTrait>
     
     <MPT_WeatherChangedBy>{0} has caused a change in weather</MPT_WeatherChangedBy>
