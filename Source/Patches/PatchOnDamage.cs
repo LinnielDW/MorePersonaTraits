@@ -33,6 +33,8 @@ namespace MorePersonaTraits.Patches
     {
         static void Postfix(LocalTargetInfo target, Verb_MeleeAttackDamage __instance)
         {
+            if (__instance.EquipmentSource == null) return;
+
             if (OnHitWorkerUtils.hasOnHitWorker(__instance.EquipmentSource))
             {
                 OnHitUtils.attemptApplyOnHitEffects(
