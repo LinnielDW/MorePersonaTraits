@@ -250,7 +250,7 @@
     </WeaponTraitDef>
 
     <!-- BulletToxic -->
-    <WeaponTraitDef>
+    <WeaponTraitDef MayRequire="ludeon.rimworld.biotech">
         <defName>MPT_OnHit_AddedBulletToxic_Minor</defName>
         <label>toxic</label>
         <description>This weapon's persona is particularly nasty when it comes the theaters of both politics and war.\nUpon hitting a target, there is a chance that the target takes a small amount of extra toxic damage.</description>
@@ -274,7 +274,7 @@
             </li>
         </modExtensions>
     </WeaponTraitDef>
-    <WeaponTraitDef>
+    <WeaponTraitDef MayRequire="ludeon.rimworld.biotech">
         <defName>MPT_OnHit_AddedBulletToxic</defName>
         <label>spiteful</label>
         <description>This weapon's persona is still seething about once being called poisonous instead of venomous and just can't let it go.\nUpon hitting a target, there is a chance that the target takes a medium amount of extra toxic damage.</description>
@@ -298,7 +298,7 @@
             </li>
         </modExtensions>
     </WeaponTraitDef>
-    <WeaponTraitDef>
+    <WeaponTraitDef MayRequire="ludeon.rimworld.biotech">
         <defName>MPT_OnHit_AddedBulletToxic_Major</defName>
         <label>corrupting</label>
         <description>This weapon's persona knows how to make heroes die or at least see them live long enough to become the villain.\nUpon hitting a target, there is a chance that the target takes a significant amount of extra toxic damage.</description>
