@@ -1580,7 +1580,7 @@
         </exclusionTags>
         <marketValueOffset>-500</marketValueOffset>
     </WeaponTraitDef>
-    <HediffDef>
+    <HediffDef MayRequire="ludeon.rimworld.ideology">
         <defName>MPT_Hediff_CertaintyLossFactorUp</defName>
         <label>psychic agnosticism</label>
         <description>My ideoligion certainty loss rate is being increased by my bonded weapon.</description>
@@ -1609,7 +1609,7 @@
         </exclusionTags>
         <marketValueOffset>500</marketValueOffset>
     </WeaponTraitDef>
-    <HediffDef>
+    <HediffDef MayRequire="ludeon.rimworld.ideology">
         <defName>MPT_Hediff_CertaintyLossFactorDown</defName>
         <label>psychic faithfulness</label>
         <description>My ideoligion certainty loss rate is being hampered by my bonded weapon.</description>
