@@ -28,7 +28,8 @@
                 <li>situation->Origin</li>
                 <li>situation->Ruins</li>
                 <li>situation->Extradition</li>
-                <li>situation->Final restingplace</li>
+                <li>situation->Final Restingplace</li>
+                <li>situation->Rest</li>
                 <li>situation->Graveyard</li>
                 <li>situation->Cemetery</li>
                 <li>situation->Garden</li>
@@ -38,7 +39,7 @@
         <questDescriptionRules>
             <rulesStrings>
                 <!-- Weapon asker -->
-                <li>questDescription(askerIsNull==false)->We've intercepted messages from [lootLabel] not far from [map_definite]. It says that given it is a weapon, it cannot walk away on its own and requires picking up.</li>
+                <li>questDescription(askerIsNull==false)->We've intercepted messages from the persona weapon [lootLabel] not far from [map_definite]. It says that given it is a weapon, it cannot walk away on its own and requires picking up.</li>
                 <!-- No asker -->
                 <li>questDescription(askerIsNull==true)-&gt;We've intercepted messages about a powerful weapon not far from [map_definite].</li>
                 <!-- Faction leader asker -->
