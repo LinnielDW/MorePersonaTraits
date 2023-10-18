@@ -21,6 +21,7 @@ namespace MorePersonaTraits.Extensions
     public static class MPT_WeaponTraitDefOf
     {
         public static WeaponTraitDef NeverBond;
+        public static TraitDef MPT_BladeWhisperer;
 
         static MPT_WeaponTraitDefOf()
         {

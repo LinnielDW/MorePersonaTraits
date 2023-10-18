@@ -79,6 +79,7 @@
     <Compile Include="Extensions\WeaponTraitOnKillExtension.cs" />
     <Compile Include="HediffComps\HediffComp_OnDeathSpawn.cs" />
     <Compile Include="MinMaxTraitsRangeChanger.cs" />
+    <Compile Include="Patches\BladeWhispererPatches.cs" />
 <!--    <Compile Include="MPT_CompBladelinkWeapon.cs" />-->
     <Compile Include="Patches\CompBladelinkWeaponPatches.cs" />
     <Compile Include="Patches\Pawn_Kill_Patches.cs" />

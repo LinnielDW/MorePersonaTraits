@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <TraitDef>
+        <defName>MPT_BladeWhisperer</defName>
+        <commonality>0.3</commonality>
+        <degreeDatas>
+            <li>
+                <label>blade whisperer</label>
+                <description>{PAWN_nameDef} knows the spirit of all arms. If {PAWN_pronoun} is not bonded to a weapon already, upon equipping a non-persona melee weapon, it will generate persona weapon traits and will bond to them. Should {PAWN_nameDef} ever unequip the weapon, it will lose these traits.</description>
+                <skillGains>
+                    <li>
+                        <key>Melee</key>
+                        <value>4</value>
+                    </li>
+                </skillGains>
+            </li>
+        </degreeDatas>
+    </TraitDef>
+</Defs>
