@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Reflection;
+using System.Reflection.Emit;
 using HarmonyLib;
 using MorePersonaTraits.Extensions;
 using RimWorld;
@@ -54,21 +57,36 @@ public static class BladeWhisperer_Notify_Unequipped_Patch
 }
 
 [HarmonyPatch(typeof(ThingWithComps))]
-[HarmonyPatch("InitializeComps")]
-public static class BladeWhisperer_InitializeComps_Patch
+[HarmonyPatch("ExposeData")]
+public static class BladeWhisperer_ExposeData_Patch
 {
-    static void Postfix(ThingWithComps __instance)
+    static MethodInfo initializeCompsMethodInfo = AccessTools.Method(typeof(ThingWithComps), "InitializeComps");
+
+    static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)
     {
-        if (Scribe.EnterNode("traits") && Scribe.mode == LoadSaveMode.LoadingVars)
+        foreach (var c in instructions)
+        {
+            yield return c;
+            if (c.opcode == OpCodes.Call && c.operand == initializeCompsMethodInfo)
+            {
+                yield return new CodeInstruction(OpCodes.Ldarg_0);
+                yield return new CodeInstruction(OpCodes.Call, AccessTools.Method(typeof(BladeWhisperer_ExposeData_Patch), "AddBladelinkComp"));
+            }
+        }
+    }
+
+    static void AddBladelinkComp(ThingWithComps thingWithComps)
+    {
+        if (Scribe.EnterNode("traits"))
         {
             try
             {
-                if (!__instance.def.HasComp(typeof(CompBladelinkWeapon)) && __instance.TryGetComp<CompBladelinkWeapon>() == null)
+                if (!thingWithComps.def.HasComp(typeof(CompBladelinkWeapon)) && thingWithComps.TryGetComp<CompBladelinkWeapon>() == null)
                 {
                     CompBladelinkWeapon thingComp = new CompBladelinkWeapon();
-                    thingComp.parent = __instance;
+                    thingComp.parent = thingWithComps;
 
-                    __instance.AllComps.Add(thingComp);
+                    thingWithComps.AllComps.Add(thingComp);
                 }
             }
             finally
