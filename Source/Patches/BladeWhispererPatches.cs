@@ -116,6 +116,11 @@ public static class BladeWhisperer_ExposeData_Patch
 
                 thingWithComps.AllComps.Add(thingComp);
             }
+            catch (Exception ex)
+            {
+                Log.Error("Could not instantiate or initialize a bladelink: " + ex);
+                thingWithComps.AllComps.Remove(thingWithComps.TryGetComp<CompBladelinkWeapon>());
+            }
             finally
             {
                 Scribe.ExitNode();
