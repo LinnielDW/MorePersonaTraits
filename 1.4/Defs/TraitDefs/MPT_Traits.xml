@@ -2,7 +2,7 @@
 <Defs>
     <TraitDef>
         <defName>MPT_BladeWhisperer</defName>
-        <commonality>0.6</commonality>
+        <commonality>0.5</commonality>
         <degreeDatas>
             <li>
                 <label>blade whisperer</label>
