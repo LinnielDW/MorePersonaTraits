@@ -15,7 +15,7 @@ public static class BladeWhisperer_Notify_Equipped_Patch
 {
     static void Postfix(Pawn pawn, ThingWithComps __instance)
     {
-        if (pawn.story.traits.HasTrait(MPT_WeaponTraitDefOf.MPT_BladeWhisperer) && pawn is { equipment.bondedWeapon: null } && !__instance.def.IsRangedWeapon)
+        if (pawn != null && pawn.story?.traits.HasTrait(MPT_WeaponTraitDefOf.MPT_BladeWhisperer) == true && pawn.equipment.bondedWeapon == null && __instance.def.IsMeleeWeapon)
         {
             if (__instance.def.HasComp(typeof(CompBladelinkWeapon)) || __instance.TryGetComp<CompBladelinkWeapon>() != null)
             {
