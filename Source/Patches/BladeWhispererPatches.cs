@@ -26,6 +26,7 @@ public static class BladeWhisperer_Notify_Equipped_Patch
             try
             {
                 thingComp.parent = __instance;
+                //TODO: make this only initialize 1 trait instead (update the description too)
                 AccessTools.Method("CompBladelinkWeapon:InitializeTraits").Invoke(thingComp, null);
                 __instance.AllComps.Add(thingComp);
                 thingComp.CodeFor(pawn);
