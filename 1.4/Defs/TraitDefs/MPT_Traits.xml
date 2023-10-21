@@ -6,7 +6,7 @@
         <degreeDatas>
             <li>
                 <label>blade whisperer</label>
-                <description>{PAWN_nameDef} knows the spirit of all arms. If {PAWN_pronoun} is not bonded to a weapon already, upon equipping a non-persona melee weapon, it will generate persona weapon traits and will bond to them. Should {PAWN_nameDef} ever unequip the weapon, it will lose these traits.</description>
+                <description>{PAWN_nameDef} knows the spirit of all arms. If {PAWN_pronoun} is not bonded to a weapon already, upon equipping a non-biocoded melee weapon, it will generate persona weapon traits and will bond to them. Should {PAWN_nameDef} ever unequip the weapon, it will lose these traits.</description>
                 <skillGains>
                     <li>
                         <key>Melee</key>

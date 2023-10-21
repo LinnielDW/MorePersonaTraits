@@ -22,6 +22,11 @@ public static class BladeWhisperer_Notify_Equipped_Patch
                 return;
             }
 
+            if (__instance.def.HasComp(typeof(CompBiocodable)) && __instance.TryGetComp<CompBiocodable>()?.Biocoded == true)
+            {
+                return;
+            }
+
             CompBladelinkWeapon thingComp = new CompBladelinkWeapon();
             try
             {
@@ -78,17 +83,24 @@ public static class BladeWhisperer_ExposeData_Patch
 
     static void AddBladelinkComp(ThingWithComps thingWithComps)
     {
+        if (thingWithComps.def.HasComp(typeof(CompBladelinkWeapon)) || thingWithComps.TryGetComp<CompBladelinkWeapon>() != null)
+        {
+            return;
+        }
+
+        if (thingWithComps.def.HasComp(typeof(CompBiocodable)) && thingWithComps.TryGetComp<CompBiocodable>()?.Biocoded == true)
+        {
+            return;
+        }
+        
         if (Scribe.EnterNode("traits"))
         {
             try
             {
-                if (!thingWithComps.def.HasComp(typeof(CompBladelinkWeapon)) && thingWithComps.TryGetComp<CompBladelinkWeapon>() == null)
-                {
-                    CompBladelinkWeapon thingComp = new CompBladelinkWeapon();
-                    thingComp.parent = thingWithComps;
+                CompBladelinkWeapon thingComp = new CompBladelinkWeapon();
+                thingComp.parent = thingWithComps;
 
-                    thingWithComps.AllComps.Add(thingComp);
-                }
+                thingWithComps.AllComps.Add(thingComp);
             }
             finally
             {
