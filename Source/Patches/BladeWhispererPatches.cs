@@ -20,10 +20,12 @@ public static class BladeWhisperer_Notify_Equipped_Patch
         {
             return;
         }
+
         if (__instance.def.HasComp(typeof(CompBladelinkWeapon)) || __instance.TryGetComp<CompBladelinkWeapon>() != null)
         {
             return;
         }
+
         if (__instance.def.HasComp(typeof(CompBiocodable)) && __instance.TryGetComp<CompBiocodable>()?.Biocoded == true)
         {
             return;
@@ -104,7 +106,7 @@ public static class BladeWhisperer_ExposeData_Patch
         {
             return;
         }
-        
+
         if (Scribe.EnterNode("traits"))
         {
             try
