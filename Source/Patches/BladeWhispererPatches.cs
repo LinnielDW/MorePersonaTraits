@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Reflection;
 using System.Reflection.Emit;
 using HarmonyLib;
@@ -32,9 +33,9 @@ public static class BladeWhisperer_Notify_Equipped_Patch
         try
         {
             thingComp.parent = __instance;
-            //TODO: make this only initialize 1 trait instead (update the description too)
-            AccessTools.Method("CompBladelinkWeapon:InitializeTraits").Invoke(thingComp, null);
+            InitializeSingleTrait(thingComp);
             __instance.AllComps.Add(thingComp);
+
             thingComp.CodeFor(pawn);
         }
         catch (Exception ex)
@@ -42,6 +43,17 @@ public static class BladeWhisperer_Notify_Equipped_Patch
             Log.Error("Could not instantiate or initialize a bladelink: " + ex);
             __instance.AllComps.Remove(thingComp);
         }
+    }
+
+    private static void InitializeSingleTrait(CompBladelinkWeapon thingComp)
+    {
+        thingComp.TraitsListForReading.Clear();
+        Rand.PushState(thingComp.parent.HashOffset());
+        {
+            var list = DefDatabase<WeaponTraitDef>.AllDefsListForReading.Where(x => !x.neverBond);
+            thingComp.TraitsListForReading.Add(list.RandomElementByWeight(x => x.commonality));
+        }
+        Rand.PopState();
     }
 }
 
