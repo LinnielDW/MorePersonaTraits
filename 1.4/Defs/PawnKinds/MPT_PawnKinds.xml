@@ -61,6 +61,7 @@
         <race>Human</race>
         <combatPower>70</combatPower>
         <weaponMoney>3000~7000</weaponMoney>
+        <defaultFactionType>Empire</defaultFactionType>
         <weaponTags>
             <li>Bladelink</li>
         </weaponTags>
