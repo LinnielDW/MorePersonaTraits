@@ -21,12 +21,7 @@ public static class BladeWhisperer_Notify_Equipped_Patch
             return;
         }
 
-        if (__instance.def.HasComp(typeof(CompBladelinkWeapon)) || __instance.TryGetComp<CompBladelinkWeapon>() != null)
-        {
-            return;
-        }
-
-        if (__instance.def.HasComp(typeof(CompBiocodable)) && __instance.TryGetComp<CompBiocodable>()?.Biocoded == true)
+        if (__instance.def.HasComp(typeof(CompBladelinkWeapon)) || __instance.def.HasComp(typeof(CompBiocodable)) || __instance.TryGetComp<CompBladelinkWeapon>() != null)
         {
             return;
         }
@@ -97,12 +92,7 @@ public static class BladeWhisperer_ExposeData_Patch
 
     static void AddBladelinkComp(ThingWithComps thingWithComps)
     {
-        if (thingWithComps.def.HasComp(typeof(CompBladelinkWeapon)) || thingWithComps.TryGetComp<CompBladelinkWeapon>() != null)
-        {
-            return;
-        }
-
-        if (thingWithComps.def.HasComp(typeof(CompBiocodable)) && thingWithComps.TryGetComp<CompBiocodable>()?.Biocoded == true)
+        if (thingWithComps.def.HasComp(typeof(CompBladelinkWeapon)) || thingWithComps.def.HasComp(typeof(CompBiocodable)) || thingWithComps.TryGetComp<CompBladelinkWeapon>() != null)
         {
             return;
         }
