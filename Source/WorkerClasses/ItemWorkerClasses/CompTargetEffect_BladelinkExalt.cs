@@ -36,7 +36,7 @@ namespace MorePersonaTraits.WorkerClasses.ItemWorkerClasses
             }
             else
             {
-                Log.Error("[MorePersonaTraits]: Cannot add anymore traits to this weapon. This should have been caught by the targeting class. Please let the mod author know.");
+                Log.Warning("No new addable traits were found to add to this weapon. Skipping");
             }
         }
     }

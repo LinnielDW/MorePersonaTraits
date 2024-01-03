@@ -40,7 +40,16 @@ public class CompTargetEffect_Recombinator : CompTargetEffect
             {
                 if (compBladelink.TraitsListForReading.Count < FieldRefUtils.IntRangeFieldRef.Invoke().min)
                 {
-                    compBladelink.TraitsListForReading.Add(DefDatabase<WeaponTraitDef>.AllDefsListForReading.RandomElementByWeight(trait => trait.commonality));
+                    var availableTraits = compBladelink.AvailableTraits();
+                    if (!availableTraits.NullOrEmpty())
+                    {
+                        var traitToAdd = availableTraits.RandomElementByWeight(trait => trait.commonality);
+                        compBladelink.TraitsListForReading.Add(traitToAdd);
+                    }
+                    else
+                    {
+                        Log.Warning("No new addable traits were found to add to this weapon. Skipping");
+                    }
                 }
             }
         }

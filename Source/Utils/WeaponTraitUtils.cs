@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using HarmonyLib;
 using MorePersonaTraits.Extensions;
 using RimWorld;
 using Verse;
+using static MorePersonaTraits.Settings.MorePersonaTraitsSpawnsSettings;
 
 namespace MorePersonaTraits.Utils
 {
@@ -25,7 +25,7 @@ namespace MorePersonaTraits.Utils
         public static List<WeaponTraitDef> AvailableTraits(this CompBladelinkWeapon compBladelink)
         {
             return DefDatabase<WeaponTraitDef>.AllDefs
-                .Where(possibleTrait => compBladelink.CanAddTrait(possibleTrait))
+                .Where(possibleTrait => compBladelink.CanAddTrait(possibleTrait) && WeaponTraitSpawnSettings.TryGetValue(possibleTrait.defName, true))
                 .ToList();
         }
 
