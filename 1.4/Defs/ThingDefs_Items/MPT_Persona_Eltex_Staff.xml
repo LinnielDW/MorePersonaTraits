@@ -2,7 +2,7 @@
 <Defs>
     <ThingDef ParentName="BaseWeapon_Bladelink">
         <defName>MPT_MeleeWeapon_PsyfocusStaffBladelink</defName>
-        <label>persona eltex staff</label>
+        <label>persona amplifying rod</label>
         <description>An ultratech staff threaded with psychic focusing materials. While it is a solid melee weapon, its main purpose is to enhance the wielder's psychic sensitivity and neural heat dissipation, allowing more use of psychic powers.\nThis weapon has an onboard persona that can bond to only a single person. The wielder and intelligent weapon can synchronize their reflexes and attack with frightening speed, accuracy, and creativity. Once bonded to a wielder, the weapon's persona will refuse to be wielded by anyone else.</description>
         <graphicData>
             <texPath>Things/Item/Equipment/WeaponMelee/PsyfocusStaff</texPath>
