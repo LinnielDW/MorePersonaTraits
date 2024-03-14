@@ -19,7 +19,7 @@ namespace MorePersonaTraits.WorkerClasses.ItemWorkerClasses
                     ValidateRequiresBond(targetInfo) &&
                     targetInfo.Thing.TryGetComp<CompBladelinkWeapon>().HasAddableTrait() &&
                     targetInfo.Thing.TryGetComp<CompBladelinkWeapon>().TraitsListForReading.Count < absoluteMaxTraits && 
-                    BaseTargetValidator(targetInfo.Thing)
+                    ValidateTarget(targetInfo.Thing)
             };
         }
     }

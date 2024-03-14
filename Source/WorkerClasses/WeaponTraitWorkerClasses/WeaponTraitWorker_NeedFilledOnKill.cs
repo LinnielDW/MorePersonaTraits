@@ -29,7 +29,7 @@ namespace MorePersonaTraits.WorkerClasses.WeaponTraitWorkerClasses
         public override void Notify_KilledPawn(Pawn pawn)
         {
             base.Notify_KilledPawn(pawn);
-            pawn.AttemptToFillNeed(NeedDefOf.Joy);
+            pawn.AttemptToFillNeed(MPT_NeedDefOf.Joy);
         }
     }
 
@@ -38,7 +38,7 @@ namespace MorePersonaTraits.WorkerClasses.WeaponTraitWorkerClasses
         public override void Notify_KilledPawn(Pawn pawn)
         {
             base.Notify_KilledPawn(pawn);
-            pawn.AttemptToFillNeed(NeedDefOf.Indoors);
+            pawn.AttemptToFillNeed(MPT_NeedDefOf.Indoors);
             pawn.AttemptToFillNeed(MPT_NeedDefOf.Outdoors);
         }
     }

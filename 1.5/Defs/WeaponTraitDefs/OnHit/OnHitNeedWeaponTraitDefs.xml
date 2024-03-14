@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <WeaponTraitDef>
+        <defName>MPT_OnHit_FoodSelfUp</defName>
+        <label>replenishing</label>
+        <description>This weapon's persona insists that an army cannot march on an empty stomach.\nUpon hitting a living target, there is a chance that the wielders food will be increased slightly.</description>
+        <commonality>0.5</commonality>
+        <marketValueOffset>400</marketValueOffset>
+        <exclusionTags>
+            <li>MPT_OnHit_Food</li>
+        </exclusionTags>
+        <modExtensions>
+            <li Class="MorePersonaTraits.Extensions.WeaponTraitOnHitExtension">
+                <OnHitWorkers>
+                    <li Class="MorePersonaTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_ApplyNeed">
+                        <NeedDef>Food</NeedDef>
+                        <ProcChance>0.4</ProcChance>
+                        <ProcMagnitude>0.1</ProcMagnitude>
+                        <TargetSelf>true</TargetSelf>
+                        <RequiresBothLiving>true</RequiresBothLiving>
+                    </li>
+                </OnHitWorkers>
+            </li>
+        </modExtensions>
+    </WeaponTraitDef>
+    
+    <WeaponTraitDef>
+        <defName>MPT_OnHit_FoodSelfDown</defName>
+        <label>nutrient-siphoning</label>
+        <description>This weapon's persona requires a little extra to be convinced to do battle.\nUpon hitting a living thing, the wielder has a chance of losing a small amount of their food.</description>
+        <commonality>0.5</commonality>
+        <marketValueOffset>-400</marketValueOffset>
+        <exclusionTags>
+            <li>MPT_OnHit_Food</li>
+        </exclusionTags>
+        <modExtensions>
+            <li Class="MorePersonaTraits.Extensions.WeaponTraitOnHitExtension">
+                <OnHitWorkers>
+                    <li Class="MorePersonaTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_ApplyNeed">
+                        <NeedDef>Food</NeedDef>
+                        <ProcChance>0.4</ProcChance>
+                        <ProcMagnitude>-0.05</ProcMagnitude>
+                        <TargetSelf>true</TargetSelf>
+                        <RequiresBothLiving>true</RequiresBothLiving>
+                    </li>
+                </OnHitWorkers>
+            </li>
+        </modExtensions>
+    </WeaponTraitDef>
+    
+    <WeaponTraitDef>
+        <defName>MPT_OnHit_RestSelfUp</defName>
+        <label>energizing</label>
+        <description>This weapon's persona revels in the thrill of battle, jolting their user awake with every step and every blow.\nUpon hitting a living target, there is a chance that the wielders rest will be increased slightly.</description>
+        <commonality>0.5</commonality>
+        <marketValueOffset>400</marketValueOffset>
+        <exclusionTags>
+            <li>MPT_OnHit_Rest</li>
+        </exclusionTags>
+        <modExtensions>
+            <li Class="MorePersonaTraits.Extensions.WeaponTraitOnHitExtension">
+                <OnHitWorkers>
+                    <li Class="MorePersonaTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_ApplyNeed">
+                        <NeedDef>Rest</NeedDef>
+                        <ProcChance>0.4</ProcChance>
+                        <ProcMagnitude>0.05</ProcMagnitude>
+                        <TargetSelf>true</TargetSelf>
+                        <RequiresBothLiving>true</RequiresBothLiving>
+                    </li>
+                </OnHitWorkers>
+            </li>
+        </modExtensions>
+    </WeaponTraitDef>
+    
+    <WeaponTraitDef>
+        <defName>MPT_OnHit_RestSelfDown</defName>
+        <label>lethargic</label>
+        <description>This weapon's persona wishes to go back to the rack and while out its time in rest. Its wielder will have to give it some of its own rest if it wishes to wield it in battle.\nUpon hitting a living thing, the wielder has a chance of losing a small amount of their rest.</description>
+        <commonality>0.5</commonality>
+        <marketValueOffset>-400</marketValueOffset>
+        <exclusionTags>
+            <li>MPT_OnHit_Rest</li>
+        </exclusionTags>
+        <modExtensions>
+            <li Class="MorePersonaTraits.Extensions.WeaponTraitOnHitExtension">
+                <OnHitWorkers>
+                    <li Class="MorePersonaTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_ApplyNeed">
+                        <NeedDef>Rest</NeedDef>
+                        <ProcChance>0.4</ProcChance>
+                        <ProcMagnitude>-0.05</ProcMagnitude>
+                        <TargetSelf>true</TargetSelf>
+                        <RequiresBothLiving>true</RequiresBothLiving>
+                    </li>
+                </OnHitWorkers>
+            </li>
+        </modExtensions>
+    </WeaponTraitDef>
+</Defs>

@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <ThingDef Abstract="True" ParentName="ResourceBase" Name="PersonaEffectorBase">
+        <thingClass>ThingWithComps</thingClass>
+        <resourceReadoutPriority>Middle</resourceReadoutPriority>
+        <useHitPoints>true</useHitPoints>
+        <stackLimit>10</stackLimit>
+        <statBases>
+            <MaxHitPoints>80</MaxHitPoints>
+            <Mass>0.2</Mass>
+            <DeteriorationRate>2.0</DeteriorationRate>
+            <Flammability>0.2</Flammability>
+        </statBases>
+        <tradeability>All</tradeability>
+        <techLevel>Ultra</techLevel>
+        <thingCategories>
+            <li>Items</li>
+        </thingCategories>
+        <tradeTags>
+            <li>ExoticMisc</li>
+            <li>BladelinkEffector</li>
+        </tradeTags>
+        <comps>
+            <li Class="CompProperties_Usable">
+                <useJob>UseArtifact</useJob>
+                <useLabel>Use effector</useLabel>
+            </li>
+            <!--TODO: experiment with sound to find a good one.-->
+            <li Class="CompProperties_UseEffectArtifact">
+                <sound>PsychicInsanityLanceCast</sound>
+            </li>
+            <li Class="CompProperties_UseEffectDestroySelf"/>
+        </comps>
+        <thingSetMakerTags>
+            <li>RewardStandardMidFreq</li>
+        </thingSetMakerTags>
+    </ThingDef>
+
+    <ThingDef ParentName="PersonaEffectorBase">
+        <defName>MPT_BladelinkUncoder</defName>
+        <label>Persona Bond Affector</label>
+        <description>A single use psychic persona affector. The psychic surge destroys a weapon persona's connections; removing all memories of friendship, loyalties and severing their psychic bond. Can only be used on a bonded weapon.</description>
+        <graphicData>
+            <texPath>Things/Item/Equipment/bladelink_delink</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <statBases>
+            <MarketValue>1500</MarketValue>
+        </statBases>
+        <comps>
+            <li Class="MorePersonaTraits.WorkerClasses.ItemWorkerClasses.CompProperties_TargetableSingleBladelink">
+                <compClass>MorePersonaTraits.WorkerClasses.ItemWorkerClasses.CompTargetable_SingleBladelink</compClass>
+                <RequiresBond>true</RequiresBond>
+            </li>
+            <li>
+                <compClass>MorePersonaTraits.WorkerClasses.ItemWorkerClasses.CompTargetEffect_BladeDelinker</compClass>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="PersonaEffectorBase">
+        <defName>MPT_BladelinkReroller</defName>
+        <label>Persona Reformat Affector</label>
+        <description>A single use psychic persona affector. The psychic surge completely overwhelms a weapon persona, destroying who they were and completely rerolling the traits of the weapon's persona, while preserving their bond.</description>
+        <graphicData>
+            <texPath>Things/Item/Equipment/bladelink_reroll</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <statBases>
+            <MarketValue>500</MarketValue>
+        </statBases>
+        <comps>
+            <li Class="MorePersonaTraits.WorkerClasses.ItemWorkerClasses.CompProperties_TargetableSingleBladelink">
+                <compClass>MorePersonaTraits.WorkerClasses.ItemWorkerClasses.CompTargetable_SingleBladelink</compClass>
+            </li>
+            <li>
+                <compClass>MorePersonaTraits.WorkerClasses.ItemWorkerClasses.CompTargetEffect_BladelinkChaos</compClass>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="PersonaEffectorBase">
+        <defName>MPT_BladelinkExalt</defName>
+        <label>Persona Extension Affector</label>
+        <description>A single use psychic persona affector. The psychic surge uncovers previously sealed neural-pathways, extending the targeted weapon persona with a new trait. Can only be used on persona weapons that has a valid trait to add and that is under the absolute maximum number of traits (defined in the settings).</description>
+        <graphicData>
+            <texPath>Things/Item/Equipment/bladelink_exalt</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <statBases>
+            <MarketValue>1500</MarketValue>
+        </statBases>
+        <comps>
+            <li Class="MorePersonaTraits.WorkerClasses.ItemWorkerClasses.CompProperties_TargetableSingleBladelink">
+                <compClass>MorePersonaTraits.WorkerClasses.ItemWorkerClasses.CompTargetable_SingleBladelinkTraitAddable</compClass>
+            </li>
+            <li>
+                <compClass>MorePersonaTraits.WorkerClasses.ItemWorkerClasses.CompTargetEffect_BladelinkExalt</compClass>
+            </li>
+        </comps>
+    </ThingDef>
+
+
+    <ThingDef ParentName="PersonaEffectorBase">
+        <defName>MPT_BladelinkAnnul</defName>
+        <label>Persona Reduction Affector</label>
+        <description>A single use psychic persona affector. The psychic surge collapses a portion of the persona's personality, removing a random trait from the targeted weapon. If this item were to be used on a persona with only one trait or none at all, the persona will be reformatted instead.</description>
+        <graphicData>
+            <texPath>Things/Item/Equipment/bladelink_annul</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <statBases>
+            <MarketValue>1000</MarketValue>
+        </statBases>
+        <comps>
+            <li Class="MorePersonaTraits.WorkerClasses.ItemWorkerClasses.CompProperties_TargetableSingleBladelink">
+                <compClass>MorePersonaTraits.WorkerClasses.ItemWorkerClasses.CompTargetable_SingleBladelink</compClass>
+            </li>
+            <li>
+                <compClass>MorePersonaTraits.WorkerClasses.ItemWorkerClasses.CompTargetEffect_BladelinkAnnul</compClass>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="PersonaEffectorBase">
+        <defName>MPT_BladelinkTargetedAnnul</defName>
+        <label>Persona Consolidation Affector</label>
+        <description>A very rare single use psychic persona affector. The psychic surge targets a specific portion of the persona's personality, removing a specific trait from the targeted weapon. If this item were to be used on a persona with only one trait or none at all, the persona will be reformatted instead.</description>
+        <graphicData>
+            <!-- TODO: new sprite -->
+            <texPath>Things/Item/Equipment/bladelink_annul</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <statBases>
+            <MarketValue>4000</MarketValue>
+        </statBases>
+        <comps>
+            <li Class="MorePersonaTraits.WorkerClasses.ItemWorkerClasses.CompProperties_TargetedAnnul">
+                <compClass>MorePersonaTraits.WorkerClasses.ItemWorkerClasses.CompTargetable_TargetedAnnul</compClass>
+            </li>
+            <li>
+                <compClass>MorePersonaTraits.WorkerClasses.ItemWorkerClasses.CompTargetEffect_TargetedAnnul</compClass>
+            </li>
+        </comps>
+        <thingSetMakerTags Inherit="False">
+            <li>RewardStandardCore</li>
+        </thingSetMakerTags>
+    </ThingDef>
+
+    <ThingDef ParentName="PersonaEffectorBase">
+        <defName>MPT_BladelinkTargetedTraitTransferer</defName>
+        <label>Persona Transfer Affector</label>
+        <description>A very rare single use psychic persona affector. The psychic surge destructively moves a portion of a chosen persona to another, extending the latter weapon persona with a chosen trait from the former. The donor weapon is destroyed in the process. Can only transfer to persona weapons that can accept the donor trait to add and that is under the absolute maximum number of traits (defined in the settings).</description>
+        <graphicData>
+            <!-- TODO: new sprite -->
+            <texPath>Things/Item/Equipment/bladelink_exalt</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <statBases>
+            <MarketValue>4000</MarketValue>
+        </statBases>
+        <comps>
+            <li Class="MorePersonaTraits.WorkerClasses.ItemWorkerClasses.CompProperties_TargetedTraitTransferer">
+                <compClass>MorePersonaTraits.WorkerClasses.ItemWorkerClasses.CompTargetable_TargetedTraitTransferer</compClass>
+            </li>
+            <li>
+                <compClass>MorePersonaTraits.WorkerClasses.ItemWorkerClasses.CompTargetEffect_TargetedTraitTransferer</compClass>
+            </li>
+        </comps>
+        <thingSetMakerTags Inherit="False">
+            <li>RewardStandardCore</li>
+        </thingSetMakerTags>
+    </ThingDef>
+
+    <ThingDef ParentName="PersonaEffectorBase">
+        <defName>MPT_BladelinkRecombinator</defName>
+        <label>Persona Recombination Affector</label>
+        <description>A single use psychic persona affector. The psychic surge destructively melds the personalities a chosen persona weapon into another, changing the personality of the latter with some traits chosen from either weapon. The donor weapon is destroyed in the process. If not enough compatible traits are found between both weapons, some new ones may also be added (depnding on the minimum amount of traits as defined in the mod settings).</description>
+        <graphicData>
+            <!-- TODO: new sprite -->
+            <texPath>Things/Item/Equipment/bladelink_reroll</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <statBases>
+            <MarketValue>1750</MarketValue>
+        </statBases>
+        <comps>
+            <li Class="MorePersonaTraits.WorkerClasses.ItemWorkerClasses.CompProperties_Recombinator">
+                <compClass>MorePersonaTraits.WorkerClasses.ItemWorkerClasses.CompTargetable_Recombinator</compClass>
+            </li>
+            <li>
+                <compClass>MorePersonaTraits.WorkerClasses.ItemWorkerClasses.CompTargetEffect_Recombinator</compClass>
+            </li>
+        </comps>
+    </ThingDef>
+</Defs>

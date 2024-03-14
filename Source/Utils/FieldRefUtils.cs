@@ -15,7 +15,7 @@ namespace MorePersonaTraits.Utils
             .FieldRefAccess<IntRange>(typeof(CompBladelinkWeapon), "TraitsRange");
 
         public static AccessTools.FieldRef<object, Thing> TargetFieldRef = AccessTools
-            .FieldRefAccess<Thing>(typeof(CompTargetable), "target");
+            .FieldRefAccess<Thing>(typeof(CompTargetable), "selectedTarget");
         
         public static ref Thing Target(this CompTargetable comp) => ref TargetFieldRef(comp);
 

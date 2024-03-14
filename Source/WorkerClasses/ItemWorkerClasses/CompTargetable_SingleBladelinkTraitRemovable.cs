@@ -17,7 +17,7 @@ namespace MorePersonaTraits.WorkerClasses.ItemWorkerClasses
                 validator = targetInfo =>
                     ValidateRequiresBond(targetInfo) &&
                     !targetInfo.Thing.TryGetComp<CompBladelinkWeapon>().TraitsListForReading.NullOrEmpty() &&
-                    BaseTargetValidator(targetInfo.Thing)
+                    ValidateTarget(targetInfo.Thing)
             };
         }
     }

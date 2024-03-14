@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <StatCategoryDef>
+        <defName>MPT_OnHitEffects</defName>
+        <label>On-Hit Effect Details</label>
+        <displayOrder>49</displayOrder>
+    </StatCategoryDef>
+</Defs>

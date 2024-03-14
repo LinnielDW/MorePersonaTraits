@@ -20,8 +20,8 @@ public class MorePersonaTraits : Mod
 
     public override void DoSettingsWindowContents(Rect inRect)
     {
-        settings.DoSettingsWindowContents(inRect);
         base.DoSettingsWindowContents(inRect);
+        settings.DoSettingsWindowContents(inRect);
     }
 
     public override string SettingsCategory()

@@ -47,9 +47,9 @@ public class HediffComp_OnDeathSpawn : HediffComp
     }
 
     //Occurs after the pawn becomes a corpse
-    public override void Notify_PawnDied()
+    public override void Notify_PawnDied(DamageInfo? dinfo, Hediff culprit = null)
     {
-        base.Notify_PawnDied();
+        base.Notify_PawnDied(dinfo, culprit);
 
         valueToConvert += Pawn.Corpse.MarketValue;
         var thingToSpawn = ThingMaker.MakeThing(Props.ThingDef);

@@ -9,6 +9,8 @@ namespace MorePersonaTraits.Extensions
         public static NeedDef Beauty;
         public static NeedDef Comfort;
         public static NeedDef Outdoors;
+        public static NeedDef Indoors;
+        public static NeedDef Joy;
         // public static NeedDef DrugsDesire;
 
         static MPT_NeedDefOf()

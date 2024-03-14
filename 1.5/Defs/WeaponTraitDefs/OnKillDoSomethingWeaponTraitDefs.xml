@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+    <WeaponTraitDef>
+        <defName>MPT_OnKill_TransformToGold</defName>
+        <label>midas-touch</label>
+        <description>This weapon's persona is so bad at being bad at business that everything it kills seems to turn to gold!\nUpon slaying something with this weapon, it converts a fraction of the value of its corpse, equipment and inventory into gold.</description>
+        <commonality>0.05</commonality>
+        <marketValueOffset>2000</marketValueOffset>
+        <exclusionTags>
+            <li>OnKill_Transform</li>
+        </exclusionTags>
+        <modExtensions>
+            <li Class="MorePersonaTraits.Extensions.WeaponTraitOnKillExtension">
+                <HediffDef>MPT_TurnToGold</HediffDef>
+            </li>
+        </modExtensions>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_TurnToGold</defName>
+        <hediffClass>HediffWithComps</hediffClass>
+        <label>turning to gold</label>
+        <description>This pawn will turn to gold when they die.</description>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <becomeVisible>false</becomeVisible>
+            </li>
+        </stages>
+        <comps>
+            <li Class="MorePersonaTraits.HediffComps.HediffCompProperties_OnDeathSpawn">
+                <ThingDef>Gold</ThingDef>
+                <MultiplierRange>0.2~0.4</MultiplierRange>
+                <MaxStackToSpawn>30</MaxStackToSpawn>
+            </li>
+        </comps>
+    </HediffDef>
+    
+    <WeaponTraitDef>
+        <defName>MPT_OnKill_TransformToPlasteel</defName>
+        <label>fullmetal</label>
+        <description>This weapon's persona has mastered matter transmutation and can create plasteel at the mere cost of a raider's life.\nUpon slaying something with this weapon, it converts a fraction of the value of its corpse, equipment and inventory into plasteel.</description>
+        <commonality>0.05</commonality>
+        <marketValueOffset>2000</marketValueOffset>
+        <exclusionTags>
+            <li>OnKill_Transform</li>
+        </exclusionTags>
+        <modExtensions>
+            <li Class="MorePersonaTraits.Extensions.WeaponTraitOnKillExtension">
+                <HediffDef>MPT_TurnToPlasteel</HediffDef>
+            </li>
+        </modExtensions>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_TurnToPlasteel</defName>
+        <hediffClass>HediffWithComps</hediffClass>
+        <label>turning to plasteel</label>
+        <description>This pawn will turn to plasteel when they die.</description>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <becomeVisible>false</becomeVisible>
+            </li>
+        </stages>
+        <comps>
+            <li Class="MorePersonaTraits.HediffComps.HediffCompProperties_OnDeathSpawn">
+                <ThingDef>Plasteel</ThingDef>
+                <MultiplierRange>0.05~0.3</MultiplierRange>
+                <MaxStackToSpawn>40</MaxStackToSpawn>
+            </li>
+        </comps>
+    </HediffDef>
+    
+    <WeaponTraitDef>
+        <defName>MPT_OnKill_TransformToWood</defName>
+        <label>logger</label>
+        <description>This weapon's persona is really, really, good at keeping records of things. It can also turn things into wooden logs.\nUpon slaying something with this weapon, it converts a fraction of the value of its corpse, equipment and inventory into wood.</description>
+        <commonality>0.05</commonality>
+        <marketValueOffset>-600</marketValueOffset>
+        <exclusionTags>
+            <li>OnKill_Transform</li>
+        </exclusionTags>
+        <modExtensions>
+            <li Class="MorePersonaTraits.Extensions.WeaponTraitOnKillExtension">
+                <HediffDef>MPT_TurnToWood</HediffDef>
+            </li>
+        </modExtensions>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_TurnToWood</defName>
+        <hediffClass>HediffWithComps</hediffClass>
+        <label>turning to wood</label>
+        <description>This pawn will turn to wood when they die.</description>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <becomeVisible>false</becomeVisible>
+            </li>
+        </stages>
+        <comps>
+            <li Class="MorePersonaTraits.HediffComps.HediffCompProperties_OnDeathSpawn">
+                <ThingDef>WoodLog</ThingDef>
+                <MultiplierRange>0.2~0.4</MultiplierRange>
+                <MaxStackToSpawn>300</MaxStackToSpawn>
+            </li>
+        </comps>
+    </HediffDef>
+</Defs>

@@ -48,7 +48,7 @@ namespace MorePersonaTraits.WorkerClasses.ItemWorkerClasses
                 mapObjectTargetsMustBeAutoAttackable = false,
                 validator = targetInfo =>
                     ValidateRequiresBond(targetInfo) &&
-                    BaseTargetValidator(targetInfo.Thing)
+                    ValidateTarget(targetInfo.Thing)
             };
         }
 
