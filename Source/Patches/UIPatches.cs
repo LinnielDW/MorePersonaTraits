@@ -149,6 +149,18 @@ namespace MorePersonaTraits.Patches
             {
                 case OnHitWorker_ApplyHediff onHit:
                     return "MPT_ApplyHediffDesc".Translate(onHit.HediffDef.LabelCap);
+                case OnHitWorker_AddedDamage onHit:
+                    return "MPT_AddedDamageDesc".Translate(onHit.DamageDef.LabelCap);
+                case OnHitWorker_ApplyStun onHit:
+                    return "MPT_ApplyStunDesc".Translate();
+                case OnHitWorker_ApplyTeleport onHit:
+                    return "MPT_ApplyTeleportDesc".Translate();
+                case OnHitWorker_HealInjury onHit:
+                    return "MPT_ApplyHealInjuryDesc".Translate();
+                case OnHitWorker_SpawnFilth onHit:
+                    return "MPT_SpawnFilthDesc".Translate(onHit.Filth.LabelCap);
+                case OnHitWorker_Weather onHit:
+                    return "MPT_WeatherDesc".Translate();
                 case OnHitWorker_ApplyGeneResource onHit:
                     return "MPT_ApplyGeneResourceDesc".Translate(onHit.GeneDef.resourceLabel);
                 case OnHitWorker_ApplyNeed onHit:

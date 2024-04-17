@@ -17,9 +17,16 @@ public class QuestNode_GetRandomLootLabel : QuestNode
 
     private string getLabel(Slate slate)
     {
-        var ele = slate.Get<IEnumerable<Thing>>("generatedItemStashThings").ToList().RandomElement();
-        if (ele.TryGetComp<CompGeneratedNames>()?.Name is { } label) return label;
-        return ele.LabelNoParenthesisCap;
+        var eles = slate.Get<IEnumerable<Thing>>("generatedItemStashThings").ToList();
+        if (!eles.NullOrEmpty())
+        {
+            var ele = eles.RandomElement();
+            if (ele.TryGetComp<CompGeneratedNames>()?.Name is { } label) return label;
+            return ele.LabelNoParenthesisCap;
+        }
+
+        Log.Warning("generatedItemStashThings is empty. could not get label");
+        return "";
     }
 
     protected override bool TestRunInt(Slate slate)

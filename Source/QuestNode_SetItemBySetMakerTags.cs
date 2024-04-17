@@ -17,7 +17,7 @@ public class QuestNode_SetItemBySetMakerTags : QuestNode
     private IEnumerable<ThingDef> GetThingsByTags(Slate slate)
     {
         List<String> tags = thingSetMakerTags.GetValue(slate).ToList();
-        if (tags != null)
+        if (!tags.NullOrEmpty())
         {
             yield return DefDatabase<ThingDef>.AllDefs.Where(thing => !thing.thingSetMakerTags.NullOrEmpty() && thing.thingSetMakerTags.Intersect(tags).Any()).RandomElement();
         }

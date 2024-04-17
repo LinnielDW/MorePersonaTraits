@@ -15,7 +15,7 @@ namespace MorePersonaTraits.WorkerClasses.OnHitWorkerClasses
             var injuries = new List<Hediff_Injury>();
             (thing as Pawn)?.health.hediffSet.GetHediffs(ref injuries, h => h.CanHealNaturally());
 
-            injuries.RandomElement().Heal(ProcMagnitude * ((Pawn) thing).HealthScale);
+            injuries?.RandomElement().Heal(ProcMagnitude * ((Pawn) thing).HealthScale);
         }
     }
 }
