@@ -12,18 +12,14 @@
         </backstoryFiltersOverride>
         <specificApparelRequirements>
             <li>
-                <bodyPartGroup>UpperHead</bodyPartGroup>
-                <stuff>Cloth</stuff>
-            </li>
-            <li>
                 <bodyPartGroup>Torso</bodyPartGroup>
                 <apparelLayer>OnSkin</apparelLayer>
-                <stuff>Cloth</stuff>
+                <stuff>Synthread</stuff>
             </li>
             <li>
                 <bodyPartGroup>Legs</bodyPartGroup>
                 <apparelLayer>OnSkin</apparelLayer>
-                <stuff>Cloth</stuff>
+                <stuff>Synthread</stuff>
             </li>
         </specificApparelRequirements>
         <backstoryCryptosleepCommonality>0.02</backstoryCryptosleepCommonality>
@@ -31,7 +27,7 @@
         <combatEnhancingDrugsChance>0.15</combatEnhancingDrugsChance>
         <combatEnhancingDrugsCount>0~2</combatEnhancingDrugsCount>
         <invNutrition>2.55</invNutrition>
-        <apparelMoney>1000~2500</apparelMoney>
+        <apparelMoney>1000~4000</apparelMoney>
         <apparelTags>
             <li>IndustrialBasic</li>
             <li>IndustrialAdvanced</li>
