@@ -9,7 +9,7 @@ namespace MorePersonaTraits.Settings
     {
 
         public static int minTraits = 1;
-        public static int maxTraits = 5; //Default for vanilla is 3
+        public static int maxTraits = 4; //Default for vanilla is 3
         public static int absoluteMaxTraits = 10;
         public static float rangedProcChanceFactor = 0.5f;
         public static bool showBoundLetterForBladeWhisperer = true;
