@@ -5,6 +5,7 @@ using System.Reflection;
 using System.Reflection.Emit;
 using HarmonyLib;
 using MorePersonaTraits.Extensions;
+using MorePersonaTraits.Settings;
 using RimWorld;
 using Verse;
 
@@ -53,6 +54,43 @@ public static class BladeWhisperer_Notify_Equipped_Patch
         Rand.PopState();
     }
 }
+
+[HarmonyPatch(typeof(CompBladelinkWeapon))]
+[HarmonyPatch("CodeFor")]
+public static class CompBladelinkWeapon_CodeFor_Patch
+{
+    
+    static MethodInfo isColonistPlayerControlledMethodInfo = AccessTools.Method(typeof(Pawn), "get_IsColonistPlayerControlled");
+    static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)
+    {
+        var codeInstructions = instructions.ToList();
+        for (var i = 0; i < codeInstructions.Count; i++)
+        {
+            yield return codeInstructions[i];
+            if (i > 0 && codeInstructions[i-1].opcode == OpCodes.Callvirt && codeInstructions[i-1].operand == isColonistPlayerControlledMethodInfo)
+            {
+                yield return new CodeInstruction(OpCodes.Ldarg_0);
+                yield return new CodeInstruction(OpCodes.Ldarg_1);
+                yield return new CodeInstruction(OpCodes.Call, AccessTools.Method(typeof(CompBladelinkWeapon_CodeFor_Patch), "ShouldSendBoundLetter"));
+                yield return codeInstructions[i];
+            }
+            
+        }
+    }
+
+    static bool ShouldSendBoundLetter(CompBladelinkWeapon comp, Pawn pawn)
+    {
+        var shouldSendLetter = comp.parent.def.HasComp<CompBladelinkWeapon>() && MorePersonaTraitsSettings.showBoundLetterForBladeWhisperer;
+
+        if (!shouldSendLetter && MorePersonaTraitsSettings.showBoundMessageInsteadForBladeWhisperer)
+        {
+            Messages.Message("LetterBladelinkWeaponBondedLabel".Translate(pawn.Named("PAWN"), comp.Named("WEAPON")), pawn, MessageTypeDefOf.PositiveEvent);
+        }
+
+        return shouldSendLetter;
+    }
+}
+
 
 [HarmonyPatch(typeof(ThingWithComps))]
 [HarmonyPatch("Notify_Unequipped")]

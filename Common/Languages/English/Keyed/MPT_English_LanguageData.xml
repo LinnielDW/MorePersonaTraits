@@ -53,4 +53,10 @@
     
     <MPT_SelectDonorWeapon>Select persona weapon to sacrifice</MPT_SelectDonorWeapon>
     <MPT_SelectTargetWeapon>Select target persona weapon</MPT_SelectTargetWeapon>
+    
+    <MPT_showBoundLetterForBladeWhisperer>Show bond letter for blade whisperers</MPT_showBoundLetterForBladeWhisperer>
+    <MPT_showBoundLetterForBladeWhispererTooltip>Whether or not to show the bond letter when a blade whisperer bonds to a non-persona weapon.</MPT_showBoundLetterForBladeWhispererTooltip>
+    
+    <MPT_showBoundMessageInsteadForBladeWhisperer>Show bond message for blade whisperers</MPT_showBoundMessageInsteadForBladeWhisperer>
+    <MPT_showBoundMessageInsteadForBladeWhispererTooltip>Should letter notifications be turned off for blade whisperers, whether to show a message instead.</MPT_showBoundMessageInsteadForBladeWhispererTooltip>
 </LanguageData>
