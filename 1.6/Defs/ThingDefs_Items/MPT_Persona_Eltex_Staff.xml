@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <ThingDef ParentName="BaseWeapon_Bladelink">
+        <defName>MPT_MeleeWeapon_PsyfocusStaffBladelink</defName>
+        <label>persona amplifying rod</label>
+        <description>An ultratech staff threaded with psychic focusing materials. While it is a solid melee weapon, its main purpose is to enhance the wielder's psychic sensitivity and neural heat dissipation, allowing more use of psychic powers.\nThis weapon has an onboard persona that can bond to only a single person. The wielder and intelligent weapon can synchronize their reflexes and attack with frightening speed, accuracy, and creativity. Once bonded to a wielder, the weapon's persona will refuse to be wielded by anyone else.</description>
+        <graphicData>
+            <texPath>Things/Item/Equipment/WeaponMelee/PsyfocusStaff</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <techLevel>Ultra</techLevel>
+        <relicChance>3</relicChance>
+        <tradeTags>
+            <li>PsychicWeapon</li>
+        </tradeTags>
+        <smeltable>false</smeltable>
+        <weaponTags>
+            <li>EltexStaff</li>
+        </weaponTags>
+        <thingSetMakerTags>
+            <li>RewardStandardMidFreq</li>
+        </thingSetMakerTags>
+        <weaponClasses>
+            <li>MeleeBlunt</li>
+            <li>Ultratech</li>
+        </weaponClasses>
+        <statBases>
+            <MarketValue>2000</MarketValue>
+            <Mass>1.2</Mass>
+        </statBases>
+        <equippedAngleOffset>-65</equippedAngleOffset>
+        <equippedStatOffsets>
+            <PsychicSensitivityOffset>0.50</PsychicSensitivityOffset>
+            <PsychicEntropyRecoveryRate>0.083</PsychicEntropyRecoveryRate>
+        </equippedStatOffsets>
+        <tools>
+            <li>
+                <label>head</label>
+                <labelUsedInLogging>false</labelUsedInLogging>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>15</power>
+                <cooldownTime>2.3</cooldownTime>
+            </li>
+        </tools>
+    </ThingDef>
+</Defs>

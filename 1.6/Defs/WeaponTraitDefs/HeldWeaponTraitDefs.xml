@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <WeaponTraitDef>
+        <defName>MPT_Held_MeleeHitChanceUp</defName>
+        <label>conclusive</label>
+        <description>This weapon's persona has better things to be doing than being used to wave at things and thus seeks to end fights quickly. While held, it provides its wielder with an increased chance to hit their target.</description>
+        <commonality>0.5</commonality>
+        <marketValueOffset>400</marketValueOffset>
+        <equippedStatOffsets>
+            <MeleeHitChance>3</MeleeHitChance>
+        </equippedStatOffsets>
+        <exclusionTags>
+            <li>MPT_Held_MeleeHitChance</li>
+        </exclusionTags>
+    </WeaponTraitDef>
+
+    <WeaponTraitDef>
+        <defName>MPT_Held_MeleeHitChanceDown</defName>
+        <label>squeamish</label>
+        <description>This weapon's persona really doesn't like touching the soft warm insides of things.\nWhile held, it provides its wielder with a decreased chance to hit their target.</description>
+        <commonality>0.5</commonality>
+        <marketValueOffset>-400</marketValueOffset>
+        <equippedStatOffsets>
+            <MeleeHitChance>-3</MeleeHitChance>
+        </equippedStatOffsets>
+        <exclusionTags>
+            <li>MPT_Held_MeleeHitChance</li>
+        </exclusionTags>
+    </WeaponTraitDef>
+
+    <WeaponTraitDef>
+        <defName>MPT_Held_ArmorRatingUp</defName>
+        <label>non-newtonian</label>
+        <description>This weapon's persona subtly modifies the atoms near the wielders skin increasing their attenuation to kinetic energy before impact.\nWhile held, it provides its wielder with increased armor rating.</description>
+        <commonality>0.5</commonality>
+        <marketValueOffset>400</marketValueOffset>
+        <equippedStatOffsets>
+            <ArmorRating_Sharp>0.17</ArmorRating_Sharp>
+            <ArmorRating_Blunt>0.05</ArmorRating_Blunt>
+            <ArmorRating_Heat>0.15</ArmorRating_Heat>
+        </equippedStatOffsets>
+        <exclusionTags>
+            <li>MPT_Held_ArmorRating</li>
+        </exclusionTags>
+    </WeaponTraitDef>
+
+    <WeaponTraitDef>
+        <defName>MPT_Held_ArmorRatingDown</defName>
+        <label>flaw-maker</label>
+        <description>This weapon's persona weakens the natural forces binding molecular structures together around its wielder.\nWhile held, it provides its wielder with reduced armor rating.</description>
+        <commonality>0.5</commonality>
+        <marketValueOffset>-400</marketValueOffset>
+        <equippedStatOffsets>
+            <ArmorRating_Sharp>-0.17</ArmorRating_Sharp>
+            <ArmorRating_Blunt>-0.05</ArmorRating_Blunt>
+            <ArmorRating_Heat>-0.15</ArmorRating_Heat>
+        </equippedStatOffsets>
+        <exclusionTags>
+            <li>MPT_Held_ArmorRating</li>
+        </exclusionTags>
+    </WeaponTraitDef>
+
+    <WeaponTraitDef>
+        <defName>MPT_Held_PawnBeautyUp</defName>
+        <label>enchanting</label>
+        <description>This weapon's persona exudes an alluring psychic aura, leaving any who gaze upon their wielder nonplussed.\nWhile held, it provides its wielder with an increase to their beauty.</description>
+        <commonality>0.5</commonality>
+        <marketValueOffset>400</marketValueOffset>
+        <equippedStatOffsets>
+            <PawnBeauty>1.5</PawnBeauty>
+        </equippedStatOffsets>
+        <exclusionTags>
+            <li>MPT_Held_PawnBeauty</li>
+        </exclusionTags>
+    </WeaponTraitDef>
+
+    <WeaponTraitDef>
+        <defName>MPT_Held_PawnBeautyDown</defName>
+        <label>repellent</label>
+        <description>This weapon's persona emits an unnerving psychic aura, anyone gazing upon the wielder will immediately find themselves wishing to excuse themselves.\nWhile held, it conveys its wielder with a hit to their beauty.</description>
+        <commonality>0.5</commonality>
+        <marketValueOffset>-400</marketValueOffset>
+        <equippedStatOffsets>
+            <PawnBeauty>-1.5</PawnBeauty>
+        </equippedStatOffsets>
+        <exclusionTags>
+            <li>MPT_Held_PawnBeauty</li>
+        </exclusionTags>
+    </WeaponTraitDef>
+
+    <WeaponTraitDef>
+        <defName>MPT_Held_MeleeDodgeChanceUp</defName>
+        <label>edgedancer</label>
+        <description>This weapon's persona provides their wielder with astounding poise and grace. Even the most fumbling wielder will move through a battlefield like a ribbon on the wind.\nWhile held, it provides its wielder with increased melee dodge chance and reduced trap spring chance.</description>
+        <commonality>0.5</commonality>
+        <marketValueOffset>400</marketValueOffset>
+        <equippedStatOffsets>
+            <MeleeDodgeChance>15</MeleeDodgeChance>
+            <PawnTrapSpringChance>-0.5</PawnTrapSpringChance>
+        </equippedStatOffsets>
+        <exclusionTags>
+            <li>Radiant</li>
+            <li>MPT_Held_MeleeDodgeChance</li>
+        </exclusionTags>
+    </WeaponTraitDef>
+
+    <WeaponTraitDef>
+        <defName>MPT_Held_MeleeDodgeChanceDown</defName>
+        <label>death-marked</label>
+        <description>This weapon's persona seems to draw the ire of all its weapon cousins, sentient or otherwise.\nWhile held, it reduces its wielders melee dodge chance and increases trap spring chance.</description>
+        <commonality>0.5</commonality>
+        <marketValueOffset>-400</marketValueOffset>
+        <equippedStatOffsets>
+            <MeleeDodgeChance>-10</MeleeDodgeChance>
+            <PawnTrapSpringChance>0.5</PawnTrapSpringChance>
+        </equippedStatOffsets>
+        <exclusionTags>
+            <li>MPT_Held_MeleeDodgeChance</li>
+        </exclusionTags>
+    </WeaponTraitDef>
+
+    <WeaponTraitDef>
+        <defName>MPT_Held_ComfyTempUp</defName>
+        <label>thermoregulating</label>
+        <description>This weapon's persona posses an instinctual knowledge of how to balance ones internal temperature and can help their wielder do it too!\nWhile held, it provides its wielder with an increased range of comfortable temperatures.</description>
+        <commonality>0.5</commonality>
+        <marketValueOffset>400</marketValueOffset>
+        <equippedStatOffsets>
+            <ComfyTemperatureMin>-12</ComfyTemperatureMin>
+            <ComfyTemperatureMax>12</ComfyTemperatureMax>
+        </equippedStatOffsets>
+        <exclusionTags>
+            <li>MPT_Held_ComfyTemp</li>
+        </exclusionTags>
+    </WeaponTraitDef>
+
+    <WeaponTraitDef>
+        <defName>MPT_Held_ComfyTempDown</defName>
+        <label>thermally diffusing</label>
+        <description>This weapon's persona struggles to keep a stable temperature and is more influenced by its surroundings than its material might suggest.\nWhile held, it provides its wielder with a lower range of comfortable temperatures.</description>
+        <commonality>0.5</commonality>
+        <marketValueOffset>-400</marketValueOffset>
+        <equippedStatOffsets>
+            <ComfyTemperatureMin>12</ComfyTemperatureMin>
+            <ComfyTemperatureMax>-12</ComfyTemperatureMax>
+        </equippedStatOffsets>
+        <exclusionTags>
+            <li>MPT_Held_ComfyTemp</li>
+        </exclusionTags>
+    </WeaponTraitDef>
+    
+    <WeaponTraitDef>
+        <defName>MPT_Held_ToxicSensitivityUp</defName>
+        <label>baneful</label>
+        <description>This weapon's persona must turn their wielder into a grass type because they be taking toxic fumes very well.\nWhile held, it provides its wielder with increased toxic sensitivity.</description>
+        <commonality>0.5</commonality>
+        <marketValueOffset>-400</marketValueOffset>
+        <equippedStatOffsets>
+            <ToxicResistance>-0.5</ToxicResistance>
+            <ToxicEnvironmentResistance MayRequire="ludeon.rimworld.biotech">-0.5</ToxicEnvironmentResistance>
+        </equippedStatOffsets>
+        <exclusionTags>
+            <li>MPT_Held_ToxicSensitivity</li>
+        </exclusionTags>
+    </WeaponTraitDef>
+
+    <WeaponTraitDef>
+        <defName>MPT_Held_ToxicSensitivityDown</defName>
+        <label>non-reactive</label>
+        <description>This weapon's persona imparts an inertness to their wielder making them impervious to even the most toxic of environments.\nWhile held, it provides its wielder with lower toxic sensitivity.</description>
+        <commonality>0.5</commonality>
+        <marketValueOffset>400</marketValueOffset>
+        <equippedStatOffsets>
+            <ToxicResistance>0.5</ToxicResistance>
+            <ToxicEnvironmentResistance MayRequire="ludeon.rimworld.biotech">0.5</ToxicEnvironmentResistance>
+        </equippedStatOffsets>
+        <exclusionTags>
+            <li>MPT_Held_ToxicSensitivity</li>
+        </exclusionTags>
+    </WeaponTraitDef>
+
+    <WeaponTraitDef>
+        <defName>MPT_Held_PsychicEntropyMaxUp</defName>
+        <label>entropic heavyweight</label>
+        <description>This weapon's persona is able to assist their wielder resist some side effects of being exposed to psychic energies.\nWhile held, it increases the wielder's maximum psychic entropy.</description>
+        <commonality>0.5</commonality>
+        <marketValueOffset>500</marketValueOffset>
+        <equippedStatOffsets>
+            <PsychicEntropyMax>30</PsychicEntropyMax>
+        </equippedStatOffsets>
+        <exclusionTags>
+            <li>MPT_Held_PsychicEntropyMax</li>
+            <li>MPT_PsychicEntropyMax</li>
+        </exclusionTags>
+    </WeaponTraitDef>
+    <WeaponTraitDef>
+        <defName>MPT_Held_PsychicEntropyMaxDown</defName>
+        <label>entropic lightweight</label>
+        <description>This weapon's persona is extra vulnerable to chaotic psychic energies. Just a little exposure to these energies is enough to send the persona and their wielder into a daze.\nWhile held, it decreases the wielder's maximum psychic entropy.</description>
+        <commonality>0.5</commonality>
+        <marketValueOffset>-500</marketValueOffset>
+        <equippedStatOffsets>
+            <PsychicEntropyMax>-25</PsychicEntropyMax>
+        </equippedStatOffsets>
+        <exclusionTags>
+            <li>MPT_Held_PsychicEntropyMax</li>
+            <li>MPT_PsychicEntropyMax</li>
+        </exclusionTags>
+    </WeaponTraitDef>
+
+    <WeaponTraitDef MayRequire="ludeon.rimworld.biotech">
+        <defName>MPT_Held_MechBandwidthUp</defName>
+        <label>multithreaded</label>
+        <description>This weapon's persona is great at multitasking and will help their wielder focus on many machines all at once.\nWhile held, it increases the wielder's mech bandwidth.</description>
+        <commonality>0.5</commonality>
+        <marketValueOffset>600</marketValueOffset>
+        <equippedStatOffsets>
+            <MechBandwidth>4</MechBandwidth>
+            <MechControlGroups>1</MechControlGroups>
+            <WorkSpeedGlobalOffsetMech>0.06</WorkSpeedGlobalOffsetMech>
+        </equippedStatOffsets>
+        <exclusionTags>
+            <li>MPT_Held_MechBandwidth</li>
+            <li>MPT_MechBandwidth</li>
+        </exclusionTags>
+    </WeaponTraitDef>
+    <WeaponTraitDef MayRequire="ludeon.rimworld.biotech">
+        <defName>MPT_Held_MechBandwidthDown</defName>
+        <label>faint</label>
+        <description>This weapon's persona has a had time being understood by other machines. This effect seems to be rubbing off on their wielder.\nWhile held, it decreases the wielder's mech bandwidth.</description>
+        <commonality>0.5</commonality>
+        <marketValueOffset>-600</marketValueOffset>
+        <equippedStatOffsets>
+            <MechBandwidth>-4</MechBandwidth>
+            <WorkSpeedGlobalOffsetMech>-0.06</WorkSpeedGlobalOffsetMech>
+        </equippedStatOffsets>
+        <exclusionTags>
+            <li>MPT_Held_MechBandwidth</li>
+            <li>MPT_MechBandwidth</li>
+        </exclusionTags>
+    </WeaponTraitDef>
+
+    <WeaponTraitDef MayRequire="ludeon.rimworld.biotech">
+        <defName>MPT_Held_StaggerDurationDown</defName>
+        <label>dauntless</label>
+        <description>This weapon's persona is not phased so easily, whether it be raiders, monstrous insectoids or mechanoids.\nWhile held, it greatly reduces the duration the wielder is staggered.</description>
+        <commonality>0.5</commonality>
+        <marketValueOffset>500</marketValueOffset>
+        <equippedHediffs>
+            <li>MPT_Hediff_HeldStaggerDurationDown</li>
+        </equippedHediffs>
+        <exclusionTags>
+            <li>MPT_Held_StaggerDuration</li>
+            <li>MPT_StaggerDuration</li>
+        </exclusionTags>
+    </WeaponTraitDef>
+    <HediffDef MayRequire="ludeon.rimworld.biotech">
+        <defName>MPT_Hediff_HeldStaggerDurationDown</defName>
+        <label>psychic determination</label>
+        <description>My equipped weapon is causing me to hardly stagger at all.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_Held_StaggerDurationDown</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statFactors>
+                    <StaggerDurationFactor>0.1</StaggerDurationFactor>
+                </statFactors>
+            </li>
+        </stages>
+    </HediffDef>
+    
+    <WeaponTraitDef MayRequire="ludeon.rimworld.biotech">
+        <defName>MPT_Held_StaggerDurationUp</defName>
+        <label>careening</label>
+        <description>This weapon's persona does not have a good sense of balance, often leaving their wielder exposed when caught flat-footed.\nWhile held, it increases the duration the wielder is staggered.</description>
+        <commonality>0.5</commonality>
+        <marketValueOffset>-500</marketValueOffset>
+        <equippedHediffs>
+            <li>MPT_Hediff_HeldStaggerDurationUp</li>
+        </equippedHediffs>
+        <exclusionTags>
+            <li>MPT_Held_StaggerDuration</li>
+            <li>MPT_StaggerDuration</li>
+        </exclusionTags>
+    </WeaponTraitDef>
+    <HediffDef MayRequire="ludeon.rimworld.biotech">
+        <defName>MPT_Hediff_HeldStaggerDurationUp</defName>
+        <label>psychic stagger</label>
+        <description>My equipped weapon is causing me to stagger for much longer.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_Held_StaggerDurationUp</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statFactors>
+                    <StaggerDurationFactor>1.5</StaggerDurationFactor>
+                </statFactors>
+            </li>
+        </stages>
+    </HediffDef>
+    
+    <WeaponTraitDef MayRequire="ludeon.rimworld.biotech">
+        <defName>MPT_Held_MeleeDamageFactorUp</defName>
+        <label>ruthless</label>
+        <description>This weapon's persona has an idle state of watching the flatscreen and cruising the communications, and it makes an additional effort to get back to this.\nWhile held, it increases the wielder's melee damage output.</description>
+        <commonality>0.5</commonality>
+        <marketValueOffset>750</marketValueOffset>
+        <equippedHediffs>
+            <li>MPT_Hediff_HeldMeleeDamageFactorUp</li>
+        </equippedHediffs>
+        <exclusionTags>
+            <li>MPT_Held_MeleeDamageFactor</li>
+            <li>MPT_MeleeDamageFactor</li>
+        </exclusionTags>
+    </WeaponTraitDef>
+    <HediffDef MayRequire="ludeon.rimworld.biotech">
+        <defName>MPT_Hediff_HeldMeleeDamageFactorUp</defName>
+        <label>psychic lethality</label>
+        <description>My equipped weapon is causing me to deal much more damage.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_Held_MeleeDamageFactorUp</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statFactors>
+                    <MeleeDamageFactor>1.5</MeleeDamageFactor>
+                </statFactors>
+            </li>
+        </stages>
+    </HediffDef>
+    
+    <WeaponTraitDef MayRequire="ludeon.rimworld.biotech">
+        <defName>MPT_Held_MeleeDamageFactorDown</defName>
+        <label>dull</label>
+        <description>This weapon's persona makes a poor conversation partner and an even poorer killing tool.\nWhile held, the wielder deals decreased melee damage.</description>
+        <commonality>0.5</commonality>
+        <marketValueOffset>-750</marketValueOffset>
+        <equippedHediffs>
+            <li>MPT_Hediff_HeldMeleeDamageFactorDown</li>
+        </equippedHediffs>
+        <exclusionTags>
+            <li>MPT_Held_MeleeDamageFactor</li>
+            <li>MPT_MeleeDamageFactor</li>
+        </exclusionTags>
+    </WeaponTraitDef>
+    <HediffDef MayRequire="ludeon.rimworld.biotech">
+        <defName>MPT_Hediff_HeldMeleeDamageFactorDown</defName>
+        <label>psychically dulled edge</label>
+        <description>My equipped weapon is causing me to deal less melee damage.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_Held_MeleeDamageFactorDown</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statFactors>
+                    <MeleeDamageFactor>0.75</MeleeDamageFactor>
+                </statFactors>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <WeaponTraitDef>
+        <defName>MPT_Held_Vomit</defName>
+        <label>nauseating</label>
+        <description>This weapon's persona is disgusted at being held anything and anyone. Anyone holding this will feel the same way about it too.\nHaving this weapon equipped will make the wielder throws up regularly.</description>
+        <commonality>0.4</commonality>
+        <marketValueOffset>-800</marketValueOffset>
+        <equippedHediffs>
+            <li>MPT_Hediff_HeldVomit</li>
+        </equippedHediffs>
+        <exclusionTags>
+            <li>MPT_Vomit</li>
+        </exclusionTags>
+    </WeaponTraitDef>
+    <HediffDef>
+        <defName>MPT_Hediff_HeldVomit</defName>
+        <label>psychic nausea</label>
+        <description>Just holding this weapon makes me want to retch.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_Held_Vomit</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <vomitMtbDays>0.75</vomitMtbDays>
+            </li>
+        </stages>
+    </HediffDef>
+</Defs>

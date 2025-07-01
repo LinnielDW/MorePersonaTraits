@@ -18,7 +18,7 @@
         <LangVersion>latest</LangVersion>
         <EnableNETAnalyzers>True</EnableNETAnalyzers>
         <AnalysisLevel>preview-all</AnalysisLevel>
-        <OutputPath>..\1.5\Assemblies\</OutputPath>
+        <OutputPath>..\1.6\Assemblies\</OutputPath>
         <WarningLevel>4</WarningLevel>
         <ErrorReport>prompt</ErrorReport>
         <PlatformTarget>AnyCPU</PlatformTarget>
@@ -46,10 +46,13 @@
         <version1_5 Include="..\1.5\**">
             <Link>1.5\%(RecursiveDir)%(Filename)%(Extension)</Link>
         </version1_5>
+        <version1_6 Include="..\1.6\**">
+            <Link>1.5\%(RecursiveDir)%(Filename)%(Extension)</Link>
+        </version1_6>
     </ItemGroup>
     <ItemGroup>
-        <PackageReference Include="Krafs.Rimworld.Ref" Version="1.5.4034-beta"/>
-        <PackageReference Include="Lib.Harmony" Version="2.3.2">
+        <PackageReference Include="Krafs.Rimworld.Ref" Version="1.6.4507-beta" />
+        <PackageReference Include="Lib.Harmony" Version="2.3.6">
             <ExcludeAssets>runtime</ExcludeAssets>
             <IncludeAssets>compile; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
@@ -159,6 +162,8 @@
         <Copy SourceFiles="@(version1_4)" DestinationFolder="$(ModLocation)\1.4\%(RecursiveDir)"
               SkipUnchangedFiles="true" />
         <Copy SourceFiles="@(version1_5)" DestinationFolder="$(ModLocation)\1.5\%(RecursiveDir)"
+              SkipUnchangedFiles="true" />
+        <Copy SourceFiles="@(version1_6)" DestinationFolder="$(ModLocation)\1.6\%(RecursiveDir)"
               SkipUnchangedFiles="true" />
         <Copy SourceFiles="..\LoadFolders.xml" DestinationFolder="$(ModLocation)" SkipUnchangedFiles="true" />
     </Target>
