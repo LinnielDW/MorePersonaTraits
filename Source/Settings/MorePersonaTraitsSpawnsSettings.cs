@@ -77,6 +77,16 @@ public class MorePersonaTraitsSpawnsSettings : ModSettings
             base.Write();
         }
         
+        Rect disableModdedTraitsRect = new Rect(disableVanillaTraitsRect.xMax + 6f, listingStandard.CurHeight, listingStandard.ColumnWidth * 0.25f - 6f, 30f);
+        if (Widgets.ButtonText(disableModdedTraitsRect, "disable all modded traits"))
+        {
+            foreach (var negativeTrait in MPTStatics.AllTraitsAlphabetically.Where(t => !t.modContentPack.IsOfficialMod))
+            {
+                WeaponTraitSpawnSettings[negativeTrait.defName] = false;
+            }
+            base.Write();
+        }
+        
         listingStandard.Gap(32f);
 
         Rect viewRect = new Rect(inRect.x, listingStandard.CurHeight, inRect.width, inRect.height - listingStandard.CurHeight);
