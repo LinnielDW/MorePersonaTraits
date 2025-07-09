@@ -93,7 +93,7 @@
                 <OnHitWorkers>
                     <li Class="MorePersonaTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_AddedDamage">
                         <DamageDef>Blunt</DamageDef>
-                        <ProcMagnitude>5</ProcMagnitude>
+                        <ProcMagnitude>3</ProcMagnitude>
                         <ProcChance>0.5</ProcChance>
                     </li>
                 </OnHitWorkers>
@@ -141,7 +141,7 @@
                 <OnHitWorkers>
                     <li Class="MorePersonaTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_AddedDamage">
                         <DamageDef>Blunt</DamageDef>
-                        <ProcMagnitude>5</ProcMagnitude>
+                        <ProcMagnitude>8</ProcMagnitude>
                         <ProcChance>0.5</ProcChance>
                     </li>
                 </OnHitWorkers>
@@ -167,7 +167,7 @@
                 <OnHitWorkers>
                     <li Class="MorePersonaTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_AddedDamage">
                         <DamageDef>Cut</DamageDef>
-                        <ProcMagnitude>5</ProcMagnitude>
+                        <ProcMagnitude>3</ProcMagnitude>
                         <ProcChance>0.5</ProcChance>
                     </li>
                 </OnHitWorkers>
@@ -215,7 +215,7 @@
                 <OnHitWorkers>
                     <li Class="MorePersonaTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_AddedDamage">
                         <DamageDef>Cut</DamageDef>
-                        <ProcMagnitude>5</ProcMagnitude>
+                        <ProcMagnitude>8</ProcMagnitude>
                         <ProcChance>0.5</ProcChance>
                     </li>
                 </OnHitWorkers>
