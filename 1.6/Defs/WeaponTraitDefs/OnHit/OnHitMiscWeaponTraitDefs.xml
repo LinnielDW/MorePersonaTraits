@@ -177,6 +177,28 @@
         </modExtensions>
     </WeaponTraitDef>
 
+    <WeaponTraitDef MayRequire="ludeon.rimworld.anomaly">
+        <defName>MPT_OnHit_ChangeWeatherToPall</defName>
+        <label>appalled</label>
+        <description>This weapon's persona strikes with tears of ash and sorrow. The world cries for the horrors it casts.\nUpon landing a hit with this weapon, it has a chance to change the weather to a horrific pall, but will not change it if the weather has changed recently or if there are other forces affecting it.</description>
+        <commonality>0.2</commonality>
+        <marketValueOffset>300</marketValueOffset>
+        <exclusionTags>
+            <li>MPT_OnHit_Weather</li>
+        </exclusionTags>
+        <modExtensions>
+            <li Class="MorePersonaTraits.Extensions.WeaponTraitOnHitExtension">
+                <OnHitWorkers>
+                    <li Class="MorePersonaTraits.WorkerClasses.OnHitWorkerClasses.OnHitWorker_PallWeather">
+                        <ProcChance>0.01</ProcChance>
+                        <RequiresBothLiving>true</RequiresBothLiving>
+                        <TargetSelf>true</TargetSelf>
+                    </li>
+                </OnHitWorkers>
+            </li>
+        </modExtensions>
+    </WeaponTraitDef>
+
     <WeaponTraitDef>
         <defName>MPT_OnHit_HealWielder</defName>
         <label>life-tapping</label>
@@ -184,7 +206,7 @@
         <commonality>0.3</commonality>
         <marketValueOffset>1000</marketValueOffset>
         <exclusionTags>
-            <li>MPT_OnHit_Weather</li>
+            <li>MPT_OnHit_Heal</li>
         </exclusionTags>
         <modExtensions>
             <li Class="MorePersonaTraits.Extensions.WeaponTraitOnHitExtension">

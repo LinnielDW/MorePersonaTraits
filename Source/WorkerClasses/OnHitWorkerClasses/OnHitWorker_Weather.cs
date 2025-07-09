@@ -13,7 +13,7 @@ namespace MorePersonaTraits.WorkerClasses.OnHitWorkerClasses
         //TODO: move this to a util
         private void TryMakeWeather(Thing thing)
         {
-            if (thing.Map.weatherManager.curWeatherAge < 1600) return;
+            if (thing.Map.weatherManager.curWeatherAge < 1600 || thing.Map.weatherDecider.ForcedWeather != null) return;
             thing.Map.weatherDecider.StartNextWeather();
             Messages.Message("MPT_WeatherChangedBy".Translate(thing.LabelShort) , thing, MessageTypeDefOf.NeutralEvent, true);
         }

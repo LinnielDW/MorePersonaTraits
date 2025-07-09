@@ -126,6 +126,7 @@
         <Compile Include="WorkerClasses\OnHitWorkerClasses\OnHitWorker_ApplyTeleport.cs" />
         <Compile Include="WorkerClasses\OnHitWorkerClasses\OnHitWorker_ApplyThought.cs" />
         <Compile Include="WorkerClasses\OnHitWorkerClasses\OnHitWorker_HealInjury.cs" />
+        <Compile Include="WorkerClasses\OnHitWorkerClasses\OnHitWorker_PallWeather.cs" />
         <Compile Include="WorkerClasses\OnHitWorkerClasses\OnHitWorker_SpawnFilth.cs" />
         <Compile Include="WorkerClasses\OnHitWorkerClasses\OnHitWorker_Weather.cs" />
         <Compile Include="WorkerClasses\ThoughtWorkerClasses\ThoughtWorker_WeaponTraitGenderFemale.cs" />
