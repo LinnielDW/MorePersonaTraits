@@ -6,6 +6,8 @@ using Verse;
 
 namespace MorePersonaTraits.Patches;
 
+//TODO: refactor this to just spawn the items from here without using HediffComp_OnDeathSpawn. I don't know why I chose to do it like this.
+
 [HarmonyPatch(typeof(Pawn))]
 [HarmonyPatch("Kill")]
 public static class Pawn_Kill_Patches
