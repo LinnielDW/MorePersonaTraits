@@ -105,4 +105,74 @@
             </li>
         </comps>
     </HediffDef>
+    
+    <WeaponTraitDef MayRequire="ludeon.rimworld.anomaly">
+        <defName>MPT_OnKill_TransformToBioferrite</defName>
+        <label>ferrous</label>
+        <description>This weapon's persona extracts the micro metals from the corpses it creates and its associated gear.\nUpon slaying something with this weapon, it converts a fraction of the value of its corpse, equipment and inventory into bioferrite.</description>
+        <commonality>0.05</commonality>
+        <marketValueOffset>0</marketValueOffset>
+        <exclusionTags>
+            <li>OnKill_Transform</li>
+        </exclusionTags>
+        <modExtensions>
+            <li Class="MorePersonaTraits.Extensions.WeaponTraitOnKillExtension">
+                <HediffDef>MPT_TurnToBioferrite</HediffDef>
+            </li>
+        </modExtensions>
+    </WeaponTraitDef>
+    <HediffDef MayRequire="ludeon.rimworld.anomaly">
+        <defName>MPT_TurnToBioferrite</defName>
+        <hediffClass>HediffWithComps</hediffClass>
+        <label>turning to bioferrite</label>
+        <description>This pawn will turn to bioferrite when they die.</description>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <becomeVisible>false</becomeVisible>
+            </li>
+        </stages>
+        <comps>
+            <li Class="MorePersonaTraits.HediffComps.HediffCompProperties_OnDeathSpawn">
+                <ThingDef>Bioferrite</ThingDef>
+                <MultiplierRange>0.1~0.4</MultiplierRange>
+                <MaxStackToSpawn>300</MaxStackToSpawn>
+            </li>
+        </comps>
+    </HediffDef>
+    
+    <WeaponTraitDef MayRequire="ludeon.rimworld.anomaly">
+        <defName>MPT_OnKill_TransformToMeat_Twisted</defName>
+        <label>twisting</label>
+        <description>This weapon's persona mashes its victims thoroughly and so completely, their corpse is twisted and unrecognisable.\nUpon slaying something with this weapon, it converts a fraction of the value of its corpse, equipment and inventory into twisted meat.</description>
+        <commonality>0.05</commonality>
+        <marketValueOffset>-500</marketValueOffset>
+        <exclusionTags>
+            <li>OnKill_Transform</li>
+        </exclusionTags>
+        <modExtensions>
+            <li Class="MorePersonaTraits.Extensions.WeaponTraitOnKillExtension">
+                <HediffDef>MPT_TurnToMeat_Twisted</HediffDef>
+            </li>
+        </modExtensions>
+    </WeaponTraitDef>
+    <HediffDef MayRequire="ludeon.rimworld.anomaly">
+        <defName>MPT_TurnToMeat_Twisted</defName>
+        <hediffClass>HediffWithComps</hediffClass>
+        <label>turning to twisted meat</label>
+        <description>This pawn will turn to twisted meat when they die.</description>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <becomeVisible>false</becomeVisible>
+            </li>
+        </stages>
+        <comps>
+            <li Class="MorePersonaTraits.HediffComps.HediffCompProperties_OnDeathSpawn">
+                <ThingDef>Meat_Twisted</ThingDef>
+                <MultiplierRange>0.2~0.4</MultiplierRange>
+                <MaxStackToSpawn>300</MaxStackToSpawn>
+            </li>
+        </comps>
+    </HediffDef>
 </Defs>
