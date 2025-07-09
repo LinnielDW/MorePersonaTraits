@@ -6,6 +6,7 @@ using System.Reflection.Emit;
 using HarmonyLib;
 using MorePersonaTraits.Extensions;
 using MorePersonaTraits.Settings;
+using MorePersonaTraits.Utils;
 using RimWorld;
 using Verse;
 
@@ -48,7 +49,7 @@ public static class BladeWhisperer_Notify_Equipped_Patch
         thingComp.TraitsListForReading.Clear();
         Rand.PushState(thingComp.parent.HashOffset());
         {
-            var list = DefDatabase<WeaponTraitDef>.AllDefsListForReading.Where(x => !x.neverBond);
+            var list = thingComp.AvailableTraits().Where(trait => !trait.neverBond);
             thingComp.TraitsListForReading.Add(list.RandomElementByWeight(x => x.commonality));
         }
         Rand.PopState();
