@@ -5,7 +5,8 @@ using Verse;
 
 namespace MorePersonaTraits.Patches
 {
-    // Implementation originally inspired by alattalatta's bullet patch implementation from Infusion 2, but has undergone tweaks since original impl :)
+    // Implementation for proj impact patch originally inspired by alattalatta's bullet patch implementation from Infusion 2,
+    // but has undergone refactoring over the years.
     [HarmonyPatch(typeof(Projectile))]
     [HarmonyPatch("Impact")]
     public static class PatchOnDamageBullet
