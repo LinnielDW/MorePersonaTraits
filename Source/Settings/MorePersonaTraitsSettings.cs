@@ -9,7 +9,7 @@ namespace MorePersonaTraits.Settings
     {
 
         public static int minTraits = 1;
-        public static int maxTraits = 4; //Default for vanilla is 3
+        public static int maxTraits = 3; //Default for vanilla is 3
         public static int absoluteMaxTraits = 10;
         public static float rangedProcChanceFactor = 0.5f;
         public static bool showBoundLetterForBladeWhisperer = true;
@@ -28,7 +28,7 @@ namespace MorePersonaTraits.Settings
             }
 
             Scribe_Values.Look(ref minTraits, "minTraits", 1);
-            Scribe_Values.Look(ref maxTraits, "maxTraits", 5);
+            Scribe_Values.Look(ref maxTraits, "maxTraits", 3);
             Scribe_Values.Look(ref absoluteMaxTraits, "absoluteMaxTraits", 10);
             Scribe_Values.Look(ref rangedProcChanceFactor, "rangedProcChanceFactor", 0.5f);
             Scribe_Values.Look(ref showBoundLetterForBladeWhisperer, "showBoundLetterForBladeWhisperer", true);
