@@ -1230,6 +1230,7 @@
                     <NegotiationAbility>0.5</NegotiationAbility>
                     <ConversionPower MayRequire="ludeon.rimworld.ideology">0.5</ConversionPower>
                     <SuppressionPower MayRequire="ludeon.rimworld.ideology">0.5</SuppressionPower>
+                    <ActivitySuppressionRate MayRequire="ludeon.rimworld.anomaly">0.5</ActivitySuppressionRate>
                 </statOffsets>
             </li>
         </stages>
@@ -1262,6 +1263,7 @@
                     <NegotiationAbility>-0.5</NegotiationAbility>
                     <ConversionPower MayRequire="ludeon.rimworld.ideology">-0.5</ConversionPower>
                     <SuppressionPower MayRequire="ludeon.rimworld.ideology">-0.5</SuppressionPower>
+                    <ActivitySuppressionRate MayRequire="ludeon.rimworld.anomaly">-0.5</ActivitySuppressionRate>
                 </statOffsets>
             </li>
         </stages>
@@ -1621,6 +1623,66 @@
             <li>
                 <statOffsets>
                     <CertaintyLossFactor>-0.3</CertaintyLossFactor>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase" MayRequire="ludeon.rimworld.anomaly">
+        <defName>MPT_Bonded_AnomalyStudyUp</defName>
+        <label>occult</label>
+        <description>This weapon's persona has stared infinite madness and has come out changed but wiser.\nThe bonded pawn studies anomalous entities faster.</description>
+        <bondedHediffs>
+            <li>MPT_Hediff_AnomalyStudyUp</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_Bonded_AnomalyStudy</li>
+        </exclusionTags>
+        <marketValueOffset>500</marketValueOffset>
+    </WeaponTraitDef>
+    <HediffDef MayRequire="ludeon.rimworld.anomaly">
+        <defName>MPT_Hediff_AnomalyStudyUp</defName>
+        <label>psychic occultic whispers</label>
+        <description>My understanding of the occult is being accelerated by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_Bonded_AnomalyStudyUp</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statOffsets>
+                    <StudyEfficiency>1</StudyEfficiency>
+                    <EntityStudyRate>0.5</EntityStudyRate>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <WeaponTraitDef ParentName="BondedWeaponTraitBase" MayRequire="ludeon.rimworld.anomaly">
+        <defName>MPT_Bonded_AnomalyStudyDown</defName>
+        <label>unwitnessing</label>
+        <description>This weapon's persona knows the eye of madness and wishes to have nothing to do with it ever again.\nThe bonded pawn studies anomalous entities slower.</description>
+        <bondedHediffs>
+            <li>MPT_Hediff_AnomalyStudyDown</li>
+        </bondedHediffs>
+        <exclusionTags>
+            <li>MPT_Bonded_AnomalyStudy</li>
+        </exclusionTags>
+        <marketValueOffset>-500</marketValueOffset>
+    </WeaponTraitDef>
+    <HediffDef MayRequire="ludeon.rimworld.anomaly">
+        <defName>MPT_Hediff_AnomalyStudyDown</defName>
+        <label>psychic horror obfuscation</label>
+        <description>My understanding of the occult is being hampered by my bonded weapon.</description>
+        <descriptionHyperlinks>
+            <WeaponTraitDef>MPT_Bonded_AnomalyStudyDown</WeaponTraitDef>
+        </descriptionHyperlinks>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statOffsets>
+                    <StudyEfficiency>-1</StudyEfficiency>
+                    <EntityStudyRate>-0.5</EntityStudyRate>
                 </statOffsets>
             </li>
         </stages>
