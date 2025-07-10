@@ -47,7 +47,7 @@
             <Link>1.5\%(RecursiveDir)%(Filename)%(Extension)</Link>
         </version1_5>
         <version1_6 Include="..\1.6\**">
-            <Link>1.5\%(RecursiveDir)%(Filename)%(Extension)</Link>
+            <Link>1.6\%(RecursiveDir)%(Filename)%(Extension)</Link>
         </version1_6>
     </ItemGroup>
     <ItemGroup>
