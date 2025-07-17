@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-    <WeaponTraitDef Name="BondedWeaponTraitBase" Abstract="True">
+    <WeaponTraitDef Name="BondedWeaponTraitBase" Abstract="True" ParentName="BladelinkBase">
         <commonality>0.4</commonality>
         <modExtensions>
             <li Class="MorePersonaTraits.Extensions.WeaponTraitDefExtension">

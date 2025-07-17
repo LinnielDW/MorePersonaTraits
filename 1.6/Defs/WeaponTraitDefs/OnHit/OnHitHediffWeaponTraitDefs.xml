@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-    <WeaponTraitDef>
+     <WeaponTraitDef ParentName="BladelinkBase">
         <defName>MPT_OnHit_Plague</defName>
         <label>plague bringer</label>
         <description>This weapon's persona revels in the art of slow and agonizing death.\nUpon hitting a target, this weapon has a chance to apply/increase the targets plague.</description>
@@ -24,7 +24,7 @@
         </modExtensions>
     </WeaponTraitDef>
     
-    <WeaponTraitDef>
+     <WeaponTraitDef ParentName="BladelinkBase">
         <defName>MPT_OnHit_PlagueSelf</defName>
         <label>plague magnet</label>
         <description>This weapon's persona seems to attract the most exotic of bacterium at the most inopportune times.\nUpon hitting a target, there is a small chance that the user will contract the plague.</description>
@@ -51,7 +51,7 @@
         </modExtensions>
     </WeaponTraitDef>
     
-    <WeaponTraitDef>
+     <WeaponTraitDef ParentName="BladelinkBase">
         <defName>MPT_OnHit_Flu</defName>
         <label>flu carrier</label>
         <description>This weapon's persona once experienced flight and now wishes that any and all that it comes into contact with 'flu'.\nUpon hitting a target, this weapon has a chance to apply/increase the targets flu.</description>
@@ -75,7 +75,7 @@
         </modExtensions>
     </WeaponTraitDef>
     
-    <WeaponTraitDef>
+     <WeaponTraitDef ParentName="BladelinkBase">
         <defName>MPT_OnHit_FluSelf</defName>
         <label>flu-prone</label>
         <description>This weapon's persona attracts maladies anywhere it goes. Their bond will always be suffering from a runny nose or shortness of breath.\nUpon hitting a target, there is a small chance that the user will contract the flu.</description>
@@ -102,7 +102,7 @@
         </modExtensions>
     </WeaponTraitDef>
     
-    <WeaponTraitDef>
+     <WeaponTraitDef ParentName="BladelinkBase">
         <defName>MPT_OnHit_Pain</defName>
         <label>pain-dealer</label>
         <description>This weapon's persona helps its wielder in combat by overstimulating their enemies brain; firing all their neurons in a flurry of painful pulses.\nUpon hitting a target, there is a chance that the target will experience mounting pain.</description>
@@ -165,7 +165,7 @@
         </stages>
     </HediffDef>
 
-    <WeaponTraitDef>
+     <WeaponTraitDef ParentName="BladelinkBase">
         <defName>MPT_OnHit_PainSelf</defName>
         <label>pain-filling</label>
         <description>This weapon's persona hates suffering, and will do their best to not be used for such acts, even if it means that their wielder might suffer instead.\nUpon hitting a target, there is a chance that the wielder will experience an increase in pain.</description>
@@ -189,7 +189,7 @@
         </modExtensions>
     </WeaponTraitDef>
     
-    <WeaponTraitDef>
+     <WeaponTraitDef ParentName="BladelinkBase">
         <defName>MPT_OnHit_DrainBlood</defName>
         <label>vampiric</label>
         <description>This weapon's persona is able to absorb the blood of the wielder's target with every hit.\nUpon hitting a target, there is a chance that the target incurs blood loss and that the wielder recovers a portion of theirs and their hemogen (if they can have any).</description>
@@ -229,7 +229,7 @@
         </modExtensions>
     </WeaponTraitDef>
     
-    <WeaponTraitDef>
+     <WeaponTraitDef ParentName="BladelinkBase">
         <defName>MPT_OnHit_BloodLossSelf</defName>
         <label>bloodtaker</label>
         <description>This weapon's persona insists that the story of the Rim is written in blood and requires blood to write the wielder's story.\nUpon hitting a target, there is a chance that the wielder incurs blood loss and lose some of their hemogen (if they can have any).</description>
@@ -260,7 +260,7 @@
         </modExtensions>
     </WeaponTraitDef>
     
-    <WeaponTraitDef>
+     <WeaponTraitDef ParentName="BladelinkBase">
         <defName>MPT_OnHit_BloodLoss</defName>
         <label>blood-letting</label>
         <description>This weapon's persona pulls extra blood out of its victims.\nUpon hitting a target, there is a chance that the wielder's target incurs blood loss and lose some of their hemogen (if they can have any).</description>

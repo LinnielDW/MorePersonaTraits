@@ -2,7 +2,7 @@
 
 <Defs>
     <!-- Flame -->
-    <WeaponTraitDef>
+     <WeaponTraitDef ParentName="BladelinkBase">
         <defName>MPT_OnHit_AddedFlame_Minor</defName>
         <label>flamer</label>
         <description>This weapon's persona has a volatile temperament and is prone to outbursts of the exothermic variety.\nUpon hitting a target, there is a chance that the target takes a small amount of extra flame damage.</description>
@@ -26,7 +26,7 @@
             </li>
         </modExtensions>
     </WeaponTraitDef>
-    <WeaponTraitDef>
+     <WeaponTraitDef ParentName="BladelinkBase">
         <defName>MPT_OnHit_AddedFlame</defName>
         <label>combusting</label>
         <description>This weapon's persona has excellent bushwhacking skills and can start a fire in almost any climate.\nUpon hitting a target, there is a chance that the target takes a medium amount of extra flame damage.</description>
@@ -50,7 +50,7 @@
             </li>
         </modExtensions>
     </WeaponTraitDef>
-    <WeaponTraitDef>
+     <WeaponTraitDef ParentName="BladelinkBase">
         <defName>MPT_OnHit_AddedFlame_Major</defName>
         <label>conflagrator</label>
         <description>This weapon's persona has a burning passion for violence, much to the chagrin of those on the receiving end.\nUpon hitting a target, there is a chance that the target takes a substantial amount of extra flame damage.</description>
@@ -76,7 +76,7 @@
     </WeaponTraitDef>
 
     <!-- Blunt -->
-    <WeaponTraitDef>
+     <WeaponTraitDef ParentName="BladelinkBase">
         <defName>MPT_OnHit_AddedBlunt_Minor</defName>
         <label>hammerer</label>
         <description>This weapon's persona maintains a social media group and is well versed in utilizing the (ban) hammer.\nUpon hitting a target, there is a chance that the target takes a small amount of extra blunt damage.</description>
@@ -100,7 +100,7 @@
             </li>
         </modExtensions>
     </WeaponTraitDef>
-    <WeaponTraitDef>
+     <WeaponTraitDef ParentName="BladelinkBase">
         <defName>MPT_OnHit_AddedBlunt</defName>
         <label>impactful</label>
         <description>This weapon's persona is great at public speaking, with words carrying weight to them. And to their attacks too as it turns out.\nUpon hitting a target, there is a chance that the target takes a medium amount of extra blunt damage.</description>
@@ -124,7 +124,7 @@
             </li>
         </modExtensions>
     </WeaponTraitDef>
-    <WeaponTraitDef>
+     <WeaponTraitDef ParentName="BladelinkBase">
         <defName>MPT_OnHit_AddedBlunt_Major</defName>
         <label>crushing</label>
         <description>This weapon's persona fights more like a natural disaster than a weapon.\nUpon hitting a target, there is a chance that the target takes a significant amount of extra blunt damage.</description>
@@ -150,7 +150,7 @@
     </WeaponTraitDef>
 
     <!-- Cut -->
-    <WeaponTraitDef>
+     <WeaponTraitDef ParentName="BladelinkBase">
         <defName>MPT_OnHit_AddedCut_Minor</defName>
         <label>slicer</label>
         <description>This weapon's persona has very good knife discipline and is the best at cutting carrots!\nUpon hitting a target, there is a chance that the target takes a small amount of extra cutting damage.</description>
@@ -174,7 +174,7 @@
             </li>
         </modExtensions>
     </WeaponTraitDef>
-    <WeaponTraitDef>
+     <WeaponTraitDef ParentName="BladelinkBase">
         <defName>MPT_OnHit_AddedCut</defName>
         <label>slasher</label>
         <description>This weapon's persona has an unhealthy curiosity in horror movies.\nUpon hitting a target, there is a chance that the target takes a medium amount of extra cutting damage.</description>
@@ -198,7 +198,7 @@
             </li>
         </modExtensions>
     </WeaponTraitDef>
-    <WeaponTraitDef>
+     <WeaponTraitDef ParentName="BladelinkBase">
         <defName>MPT_OnHit_AddedCut_Major</defName>
         <label>lacerating</label>
         <description>This weapon's persona does actually hope people take it personally.\nUpon hitting a target, there is a chance that the target takes a medium amount of extra cutting damage.</description>
@@ -224,7 +224,7 @@
     </WeaponTraitDef>
 
     <!-- EMP -->
-    <WeaponTraitDef>
+     <WeaponTraitDef ParentName="BladelinkBase">
         <defName>MPT_OnHit_AddedEMP</defName>
         <label>pulser</label>
         <description>This weapon's persona can destabilize electromagnetic interactions at the quantum level, but only when it's upset.\nUpon hitting a target, there is a chance that the target takes of extra EMP damage.</description>
@@ -250,7 +250,7 @@
     </WeaponTraitDef>
 
     <!-- BulletToxic -->
-    <WeaponTraitDef MayRequire="ludeon.rimworld.biotech">
+    <WeaponTraitDef MayRequire="ludeon.rimworld.biotech" ParentName="BladelinkBase">
         <defName>MPT_OnHit_AddedBulletToxic_Minor</defName>
         <label>toxic</label>
         <description>This weapon's persona is particularly nasty when it comes the theaters of both politics and war.\nUpon hitting a target, there is a chance that the target takes a small amount of extra toxic damage.</description>
@@ -274,7 +274,7 @@
             </li>
         </modExtensions>
     </WeaponTraitDef>
-    <WeaponTraitDef MayRequire="ludeon.rimworld.biotech">
+    <WeaponTraitDef MayRequire="ludeon.rimworld.biotech" ParentName="BladelinkBase">
         <defName>MPT_OnHit_AddedBulletToxic</defName>
         <label>spiteful</label>
         <description>This weapon's persona is still seething about once being called poisonous instead of venomous and just can't let it go.\nUpon hitting a target, there is a chance that the target takes a medium amount of extra toxic damage.</description>
@@ -298,7 +298,7 @@
             </li>
         </modExtensions>
     </WeaponTraitDef>
-    <WeaponTraitDef MayRequire="ludeon.rimworld.biotech">
+    <WeaponTraitDef MayRequire="ludeon.rimworld.biotech" ParentName="BladelinkBase">
         <defName>MPT_OnHit_AddedBulletToxic_Major</defName>
         <label>corrupting</label>
         <description>This weapon's persona knows how to make heroes die or at least see them live long enough to become the villain.\nUpon hitting a target, there is a chance that the target takes a significant amount of extra toxic damage.</description>

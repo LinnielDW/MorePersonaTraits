@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-    <WeaponTraitDef>
+     <WeaponTraitDef ParentName="BladelinkBase">
         <defName>MPT_Held_MeleeHitChanceUp</defName>
         <label>conclusive</label>
         <description>This weapon's persona has better things to be doing than being used to wave at things and thus seeks to end fights quickly. While held, it provides its wielder with an increased chance to hit their target.</description>
@@ -14,7 +14,7 @@
         </exclusionTags>
     </WeaponTraitDef>
 
-    <WeaponTraitDef>
+     <WeaponTraitDef ParentName="BladelinkBase">
         <defName>MPT_Held_MeleeHitChanceDown</defName>
         <label>squeamish</label>
         <description>This weapon's persona really doesn't like touching the soft warm insides of things.\nWhile held, it provides its wielder with a decreased chance to hit their target.</description>
@@ -28,7 +28,7 @@
         </exclusionTags>
     </WeaponTraitDef>
 
-    <WeaponTraitDef>
+     <WeaponTraitDef ParentName="BladelinkBase">
         <defName>MPT_Held_ArmorRatingUp</defName>
         <label>non-newtonian</label>
         <description>This weapon's persona subtly modifies the atoms near the wielders skin increasing their attenuation to kinetic energy before impact.\nWhile held, it provides its wielder with increased armor rating.</description>
@@ -44,7 +44,7 @@
         </exclusionTags>
     </WeaponTraitDef>
 
-    <WeaponTraitDef>
+     <WeaponTraitDef ParentName="BladelinkBase">
         <defName>MPT_Held_ArmorRatingDown</defName>
         <label>flaw-maker</label>
         <description>This weapon's persona weakens the natural forces binding molecular structures together around its wielder.\nWhile held, it provides its wielder with reduced armor rating.</description>
@@ -60,7 +60,7 @@
         </exclusionTags>
     </WeaponTraitDef>
 
-    <WeaponTraitDef>
+     <WeaponTraitDef ParentName="BladelinkBase">
         <defName>MPT_Held_PawnBeautyUp</defName>
         <label>enchanting</label>
         <description>This weapon's persona exudes an alluring psychic aura, leaving any who gaze upon their wielder nonplussed.\nWhile held, it provides its wielder with an increase to their beauty.</description>
@@ -74,7 +74,7 @@
         </exclusionTags>
     </WeaponTraitDef>
 
-    <WeaponTraitDef>
+     <WeaponTraitDef ParentName="BladelinkBase">
         <defName>MPT_Held_PawnBeautyDown</defName>
         <label>repellent</label>
         <description>This weapon's persona emits an unnerving psychic aura, anyone gazing upon the wielder will immediately find themselves wishing to excuse themselves.\nWhile held, it conveys its wielder with a hit to their beauty.</description>
@@ -88,7 +88,7 @@
         </exclusionTags>
     </WeaponTraitDef>
 
-    <WeaponTraitDef>
+     <WeaponTraitDef ParentName="BladelinkBase">
         <defName>MPT_Held_MeleeDodgeChanceUp</defName>
         <label>edgedancer</label>
         <description>This weapon's persona provides their wielder with astounding poise and grace. Even the most fumbling wielder will move through a battlefield like a ribbon on the wind.\nWhile held, it provides its wielder with increased melee dodge chance and reduced trap spring chance.</description>
@@ -104,7 +104,7 @@
         </exclusionTags>
     </WeaponTraitDef>
 
-    <WeaponTraitDef>
+     <WeaponTraitDef ParentName="BladelinkBase">
         <defName>MPT_Held_MeleeDodgeChanceDown</defName>
         <label>death-marked</label>
         <description>This weapon's persona seems to draw the ire of all its weapon cousins, sentient or otherwise.\nWhile held, it reduces its wielders melee dodge chance and increases trap spring chance.</description>
@@ -119,7 +119,7 @@
         </exclusionTags>
     </WeaponTraitDef>
 
-    <WeaponTraitDef>
+     <WeaponTraitDef ParentName="BladelinkBase">
         <defName>MPT_Held_ComfyTempUp</defName>
         <label>thermoregulating</label>
         <description>This weapon's persona posses an instinctual knowledge of how to balance ones internal temperature and can help their wielder do it too!\nWhile held, it provides its wielder with an increased range of comfortable temperatures.</description>
@@ -134,7 +134,7 @@
         </exclusionTags>
     </WeaponTraitDef>
 
-    <WeaponTraitDef>
+     <WeaponTraitDef ParentName="BladelinkBase">
         <defName>MPT_Held_ComfyTempDown</defName>
         <label>thermally diffusing</label>
         <description>This weapon's persona struggles to keep a stable temperature and is more influenced by its surroundings than its material might suggest.\nWhile held, it provides its wielder with a lower range of comfortable temperatures.</description>
@@ -149,7 +149,7 @@
         </exclusionTags>
     </WeaponTraitDef>
     
-    <WeaponTraitDef>
+     <WeaponTraitDef ParentName="BladelinkBase">
         <defName>MPT_Held_ToxicSensitivityUp</defName>
         <label>baneful</label>
         <description>This weapon's persona must turn their wielder into a grass type because they be taking toxic fumes very well.\nWhile held, it provides its wielder with increased toxic sensitivity.</description>
@@ -164,7 +164,7 @@
         </exclusionTags>
     </WeaponTraitDef>
 
-    <WeaponTraitDef>
+     <WeaponTraitDef ParentName="BladelinkBase">
         <defName>MPT_Held_ToxicSensitivityDown</defName>
         <label>non-reactive</label>
         <description>This weapon's persona imparts an inertness to their wielder making them impervious to even the most toxic of environments.\nWhile held, it provides its wielder with lower toxic sensitivity.</description>
@@ -179,7 +179,7 @@
         </exclusionTags>
     </WeaponTraitDef>
 
-    <WeaponTraitDef>
+     <WeaponTraitDef ParentName="BladelinkBase">
         <defName>MPT_Held_PsychicEntropyMaxUp</defName>
         <label>entropic heavyweight</label>
         <description>This weapon's persona is able to assist their wielder resist some side effects of being exposed to psychic energies.\nWhile held, it increases the wielder's maximum psychic entropy.</description>
@@ -193,7 +193,7 @@
             <li>MPT_PsychicEntropyMax</li>
         </exclusionTags>
     </WeaponTraitDef>
-    <WeaponTraitDef>
+     <WeaponTraitDef ParentName="BladelinkBase">
         <defName>MPT_Held_PsychicEntropyMaxDown</defName>
         <label>entropic lightweight</label>
         <description>This weapon's persona is extra vulnerable to chaotic psychic energies. Just a little exposure to these energies is enough to send the persona and their wielder into a daze.\nWhile held, it decreases the wielder's maximum psychic entropy.</description>
@@ -208,7 +208,7 @@
         </exclusionTags>
     </WeaponTraitDef>
 
-    <WeaponTraitDef MayRequire="ludeon.rimworld.biotech">
+    <WeaponTraitDef MayRequire="ludeon.rimworld.biotech" ParentName="BladelinkBase">
         <defName>MPT_Held_MechBandwidthUp</defName>
         <label>multithreaded</label>
         <description>This weapon's persona is great at multitasking and will help their wielder focus on many machines all at once.\nWhile held, it increases the wielder's mech bandwidth.</description>
@@ -224,7 +224,7 @@
             <li>MPT_MechBandwidth</li>
         </exclusionTags>
     </WeaponTraitDef>
-    <WeaponTraitDef MayRequire="ludeon.rimworld.biotech">
+    <WeaponTraitDef MayRequire="ludeon.rimworld.biotech" ParentName="BladelinkBase">
         <defName>MPT_Held_MechBandwidthDown</defName>
         <label>faint</label>
         <description>This weapon's persona has a had time being understood by other machines. This effect seems to be rubbing off on their wielder.\nWhile held, it decreases the wielder's mech bandwidth.</description>
@@ -240,7 +240,7 @@
         </exclusionTags>
     </WeaponTraitDef>
 
-    <WeaponTraitDef MayRequire="ludeon.rimworld.biotech">
+    <WeaponTraitDef MayRequire="ludeon.rimworld.biotech" ParentName="BladelinkBase">
         <defName>MPT_Held_StaggerDurationDown</defName>
         <label>dauntless</label>
         <description>This weapon's persona is not phased so easily, whether it be raiders, monstrous insectoids or mechanoids.\nWhile held, it greatly reduces the duration the wielder is staggered.</description>
@@ -271,7 +271,7 @@
         </stages>
     </HediffDef>
     
-    <WeaponTraitDef MayRequire="ludeon.rimworld.biotech">
+    <WeaponTraitDef MayRequire="ludeon.rimworld.biotech" ParentName="BladelinkBase">
         <defName>MPT_Held_StaggerDurationUp</defName>
         <label>careening</label>
         <description>This weapon's persona does not have a good sense of balance, often leaving their wielder exposed when caught flat-footed.\nWhile held, it increases the duration the wielder is staggered.</description>
@@ -302,7 +302,7 @@
         </stages>
     </HediffDef>
     
-    <WeaponTraitDef MayRequire="ludeon.rimworld.biotech">
+    <WeaponTraitDef MayRequire="ludeon.rimworld.biotech" ParentName="BladelinkBase">
         <defName>MPT_Held_MeleeDamageFactorUp</defName>
         <label>ruthless</label>
         <description>This weapon's persona has an idle state of watching the flatscreen and cruising the communications, and it makes an additional effort to get back to this.\nWhile held, it increases the wielder's melee damage output.</description>
@@ -333,7 +333,7 @@
         </stages>
     </HediffDef>
     
-    <WeaponTraitDef MayRequire="ludeon.rimworld.biotech">
+    <WeaponTraitDef MayRequire="ludeon.rimworld.biotech" ParentName="BladelinkBase">
         <defName>MPT_Held_MeleeDamageFactorDown</defName>
         <label>dull</label>
         <description>This weapon's persona makes a poor conversation partner and an even poorer killing tool.\nWhile held, the wielder deals decreased melee damage.</description>
@@ -364,7 +364,7 @@
         </stages>
     </HediffDef>
 
-    <WeaponTraitDef>
+     <WeaponTraitDef ParentName="BladelinkBase">
         <defName>MPT_Held_Vomit</defName>
         <label>nauseating</label>
         <description>This weapon's persona is disgusted at being held anything and anyone. Anyone holding this will feel the same way about it too.\nHaving this weapon equipped will make the wielder throws up regularly.</description>

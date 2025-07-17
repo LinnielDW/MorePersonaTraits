@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 
 <Defs>
-    <WeaponTraitDef>
+     <WeaponTraitDef ParentName="BladelinkBase">
         <defName>MPT_OnKill_TransformToGold</defName>
         <label>midas-touch</label>
         <description>This weapon's persona is so bad at being bad at business that everything it kills seems to turn to gold!\nUpon slaying something with this weapon, it converts a fraction of the value of its corpse, equipment and inventory into gold.</description>
@@ -36,7 +36,7 @@
         </comps>
     </HediffDef>
     
-    <WeaponTraitDef>
+     <WeaponTraitDef ParentName="BladelinkBase">
         <defName>MPT_OnKill_TransformToPlasteel</defName>
         <label>fullmetal</label>
         <description>This weapon's persona has mastered matter transmutation and can create plasteel at the mere cost of a raider's life.\nUpon slaying something with this weapon, it converts a fraction of the value of its corpse, equipment and inventory into plasteel.</description>
@@ -71,7 +71,7 @@
         </comps>
     </HediffDef>
     
-    <WeaponTraitDef>
+     <WeaponTraitDef ParentName="BladelinkBase">
         <defName>MPT_OnKill_TransformToWood</defName>
         <label>logger</label>
         <description>This weapon's persona is really, really, good at keeping records of things. It can also turn things into wooden logs.\nUpon slaying something with this weapon, it converts a fraction of the value of its corpse, equipment and inventory into wood.</description>
@@ -106,7 +106,7 @@
         </comps>
     </HediffDef>
     
-    <WeaponTraitDef MayRequire="ludeon.rimworld.anomaly">
+    <WeaponTraitDef MayRequire="ludeon.rimworld.anomaly" ParentName="BladelinkBase">
         <defName>MPT_OnKill_TransformToBioferrite</defName>
         <label>ferrous</label>
         <description>This weapon's persona extracts the micro metals from the corpses it creates and its associated gear.\nUpon slaying something with this weapon, it converts a fraction of the value of its corpse, equipment and inventory into bioferrite.</description>
@@ -141,7 +141,7 @@
         </comps>
     </HediffDef>
     
-    <WeaponTraitDef MayRequire="ludeon.rimworld.anomaly">
+    <WeaponTraitDef MayRequire="ludeon.rimworld.anomaly" ParentName="BladelinkBase">
         <defName>MPT_OnKill_TransformToMeat_Twisted</defName>
         <label>twisting</label>
         <description>This weapon's persona mashes its victims thoroughly and so completely, their corpse is twisted and unrecognisable.\nUpon slaying something with this weapon, it converts a fraction of the value of its corpse, equipment and inventory into twisted meat.</description>
