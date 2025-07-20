@@ -9,6 +9,7 @@ namespace MorePersonaTraits.Utils
 {
     public static class WeaponTraitUtils
     {
+        //TODO: this should be migrated to a transpiler patch
         public static void InitializeTraits(this CompBladelinkWeapon compBladelink)
         {
             var range = FieldRefUtils.IntRangeFieldRef.Invoke(compBladelink);
@@ -36,6 +37,10 @@ namespace MorePersonaTraits.Utils
 
         public static bool CanAddTrait(this CompBladelinkWeapon compBladelinkWeapon, WeaponTraitDef traitToAdd)
         {
+            if (traitToAdd.weaponCategory != WeaponCategoryDefOf.BladeLink)
+            {
+                return false;
+            }
             if (!compBladelinkWeapon.TraitsListForReading.NullOrEmpty())
             {
                 return !compBladelinkWeapon.TraitsListForReading.Exists(existingTrait => traitToAdd.Overlaps(existingTrait) || !compBladelinkWeapon.CanAddBondTrait(traitToAdd));
