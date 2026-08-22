@@ -23,7 +23,10 @@ public static class BladeWhisperer_Notify_Equipped_Patch
             return;
         }
 
-        if (__instance.def.HasComp(typeof(CompBladelinkWeapon)) || __instance.def.HasComp(typeof(CompBiocodable)) || __instance.TryGetComp<CompBladelinkWeapon>() != null)
+        // CompUniqueWeapon is excluded because it scribes a "traits" node of its own: a
+        // coexisting bladelink comp would save a second sibling node with the same name,
+        // and both comps would read back the first one (issue #16).
+        if (__instance.def.HasComp(typeof(CompBladelinkWeapon)) || __instance.def.HasComp(typeof(CompBiocodable)) || __instance.def.HasComp(typeof(CompUniqueWeapon)) || __instance.TryGetComp<CompBladelinkWeapon>() != null)
         {
             return;
         }
@@ -32,6 +35,11 @@ public static class BladeWhisperer_Notify_Equipped_Patch
         try
         {
             thingComp.parent = __instance;
+            // Runtime-created comps never get props assigned (InitializeComps only does that
+            // for def-borne comps), and vanilla CompBiocodable.Notify_Equipped dereferences
+            // Props on every equip - a props-less comp NREs and makes the weapon
+            // permanently unequippable (issue #16). Mirror the vanilla persona weapon defs.
+            thingComp.props = new CompProperties_BladelinkWeapon { biocodeOnEquip = true };
             InitializeSingleTrait(thingComp);
             __instance.AllComps.Add(thingComp);
 
@@ -131,17 +139,24 @@ public static class BladeWhisperer_ExposeData_Patch
 
     static void AddBladelinkComp(ThingWithComps thingWithComps)
     {
-        if (thingWithComps.def.HasComp(typeof(CompBladelinkWeapon)) || thingWithComps.def.HasComp(typeof(CompBiocodable)) || thingWithComps.TryGetComp<CompBladelinkWeapon>() != null)
+        if (thingWithComps.def.HasComp(typeof(CompBladelinkWeapon)) || thingWithComps.def.HasComp(typeof(CompBiocodable)) || thingWithComps.def.HasComp(typeof(CompUniqueWeapon)) || thingWithComps.TryGetComp<CompBladelinkWeapon>() != null)
         {
             return;
         }
 
-        if (Scribe.EnterNode("traits"))
+        // A saved whispered bond is always biocoded (CodeFor runs on equip, and the comp is
+        // removed on unequip), and Scribe_Values only writes "biocoded" when it is true - so
+        // this node identifies exactly our own saved comp. The previous check,
+        // EnterNode("traits"), false-positived on any other comp that scribes a list named
+        // "traits" - e.g. Odyssey's CompUniqueWeapon - grafting a broken bladelink comp onto
+        // every unique weapon on load (issue #16).
+        if (Scribe.EnterNode("biocoded"))
         {
             try
             {
                 CompBladelinkWeapon thingComp = new CompBladelinkWeapon();
                 thingComp.parent = thingWithComps;
+                thingComp.props = new CompProperties_BladelinkWeapon { biocodeOnEquip = true };
 
                 thingWithComps.AllComps.Add(thingComp);
             }
